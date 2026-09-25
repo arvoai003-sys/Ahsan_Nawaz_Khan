@@ -258,6 +258,28 @@ var Art = (function () {
       '<path d="M43 60h14l-7 9z" fill="#FF9F1C"' + O.replace("3.5", "2.5") + "/>" +
       '<circle cx="26" cy="62" r="6" fill="#FF7BAC" opacity=".6"/><circle cx="74" cy="62" r="6" fill="#FF7BAC" opacity=".6"/>' + shine(34, 24, 10, 5)
   };
+  /* body parts, book p.38 style: a child's portrait with a red arrow to the part */
+  function kid(tipX, tipY, fromX, fromY, longHair) {
+    var hair = longHair ?
+      '<path d="M26 44c-2-22 10-34 24-34s26 12 24 34c4 10 4 22-2 30-2-14-4-24-6-30-8 4-24 4-32 0-2 6-4 16-6 30-6-8-6-20-2-30z" fill="#4A2E24"' + O + "/>" :
+      '<path d="M28 42c0-18 10-28 22-28s22 10 22 28c-6-8-14-11-22-11s-16 3-22 11z" fill="#4A2E24"' + O + "/>";
+    var dx = tipX - fromX, dy = tipY - fromY, len = Math.sqrt(dx * dx + dy * dy), ux = dx / len, uy = dy / len;
+    var bx = tipX - ux * 9, by = tipY - uy * 9, px = -uy * 6, py = ux * 6;
+    return '<path d="M22 100c2-14 12-20 28-20s26 6 28 20z" fill="#2EA7FF"' + O + "/>" +
+      '<rect x="42" y="64" width="16" height="18" fill="#FFC99E"' + O + "/>" +
+      (longHair ? hair : "") +
+      '<circle cx="27" cy="48" r="6" fill="#FFC99E"' + O.replace("3.5", "3") + '/><circle cx="73" cy="48" r="6" fill="#FFC99E"' + O.replace("3.5", "3") + "/>" +
+      '<ellipse cx="50" cy="46" rx="23" ry="25" fill="#FFC99E"' + O + "/>" +
+      (longHair ? '<path d="M28 40c4-14 12-20 22-20s18 6 22 20c-8-6-14-8-22-8s-14 2-22 8z" fill="#4A2E24"/>' : hair) +
+      face(50, 46, 0.75) +
+      '<path d="M' + fromX + " " + fromY + "L" + bx.toFixed(1) + " " + by.toFixed(1) + '" stroke="#FF3B3B" stroke-width="4.5" stroke-linecap="round"/>' +
+      '<path d="M' + tipX + " " + tipY + "L" + (bx + px).toFixed(1) + " " + (by + py).toFixed(1) + "L" + (bx - px).toFixed(1) + " " + (by - py).toFixed(1) + 'z" fill="#FF3B3B" stroke="#FF3B3B" stroke-width="2" stroke-linejoin="round"/>';
+  }
+  lib.chin = kid(52, 70, 88, 92);
+  lib.ear = kid(80, 48, 99, 30);
+  lib.neck = kid(54, 74, 92, 70);
+  lib.hair = kid(40, 18, 10, 4, true);
+
   A.has = function (key) { return lib.hasOwnProperty(key); };
   A.get = function (key) { return SVG + (lib[key] || "") + "</svg>"; };
   A.add = function (key, body) { lib[key] = body; };

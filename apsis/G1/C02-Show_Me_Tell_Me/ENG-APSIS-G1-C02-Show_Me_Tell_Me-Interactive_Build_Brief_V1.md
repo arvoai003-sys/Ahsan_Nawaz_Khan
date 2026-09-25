@@ -18,8 +18,8 @@ other 17 are:
 | A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | Needs D1 |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-02** |
-| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `SIGNLETTER` | Ready |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-03** |
+| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-01** |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
@@ -163,3 +163,6 @@ and is delivered as a new version in `builds/`.
 |---|---|---|---|
 | 2026-09-25 | A6 Same First Sound | `builds/ENG01CH02SAMESOUND_v-01.html` | 7 items in 3 rounds, all from the 2D A word box (p.31): starts-like (3), find two (3), the book's six-word task (1). Whole words spoken only. QA passed at 360×640, 740×360 and 1280×720. First build of the shared shell and the tap-to-identify engine. |
 | 2026-09-25 | A6 Same First Sound | `builds/ENG01CH02SAMESOUND_v-02.html` | Home page with 6 levels chosen by the child (stars saved per level), Home button, bright theme, 41 code-drawn icons. Levels: 1 Warm Up (2 choices), 2 Sign Words (book items, verbatim), 3 Same Start (3 choices), 4 Find Two, 5 Odd One Out, 6 Super Star (book six-word task + two new). Levels 1, 3–6 draw from an authored word bank (10 sounds, 41 words on chapter topics), new each play; **bank needs Champ's approval**. QA: 7,206 generated items checked; every level played at 360×640, 740×360, 1280×720. |
+| 2026-09-25 | A6 Same First Sound | `builds/ENG01CH02SAMESOUND_v-03.html` | New voice and sound (below); friendlier spoken lines. Content unchanged from v-02. |
+| 2026-09-25 | A7 Finish the Sign Word | `builds/ENG01CH02FINISHSIGN_v-01.html` | Letter-fill (tap or drag). Levels: 1 Warm Up (first letter, 2 choices), 2 Sign Words (book 2D B, p.31, verbatim with e h o), 3 First Letter (3 choices), 4 Middle Letter, 5 Body Words (book 2I B2, p.38: ch_n e_r n_ck ha_r; letter choices ours), 6 Super Signs (Stop, Slow, Exit, Books, Toys, Danger from the chapter + Push, Open, Closed). Every wrong letter checked not to make a real word (650 items). **Beyond-book words/signs need Champ's approval.** |
+| 2026-09-25 | Shared voice and sound | `apsis/shared/g1-shell.js` | Device voice now prefers English (Pakistan), then English (India), female and natural voices, softer pitch and pace. Recorded clips replace it line by line: recording scripts in `voice/*_voice_script.csv` (76 and 74 lines). Background tune with Music on/off; xylophone, soft boing and fanfare effects. |

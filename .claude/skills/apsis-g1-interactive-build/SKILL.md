@@ -39,9 +39,11 @@ gets wrong is flagged, not silently used.
    version already committed).
 6. **QA** with `references/qa-checklist.md`. For tap games:
    `node tools/qa_tap.js <build.html> <answer-key.json> <outdir>` plays the
-   game at 360×640 and 1280×720 with a speech stub, taps wrong three times
-   to exercise hints, checks layout, errors, stars and restart, and writes
-   screenshots plus everything spoken. Also check 740×360 (phone sideways).
+   game's levels from the home page at 360×640, 740×360 and 1280×720 with a
+   speech stub, taps wrong to exercise hints, checks layout, errors, stars,
+   Home and Pause > Home, and writes screenshots plus everything spoken.
+   Letter-fill games: `node tools/qa_fill.js <build.html> <outdir>` (also
+   drags a tile). Generated content: `node tools/check_tap_content.js <src>`.
    Chromium is pre-installed; never run `playwright install`.
 7. **Commit** the build in `builds/`. A committed version is never
    overwritten; a fix is `v-02`.
@@ -69,6 +71,23 @@ gets wrong is flagged, not silently used.
 - **Feedback.** Right: green ring, tick, a spoken praise word, chime, star.
   Wrong: soft tone, the card wobbles back, the instruction is replayed, then
   a hint (the target glows). Never show or speak the answer.
+- **Voice.** Soft, warm and friendly, never formal: short lines such as
+  "Oops! Try again." and "Can you find it?". Speech is always passed as an
+  array of short parts (["Which word starts like", word]) so each part can be
+  recorded once and reused. The device voice is a stop-gap: English
+  (Pakistan) first, then English (India), female and natural/neural voices
+  preferred, pitch 1.2, rate 0.88. The real target is a recorded Pakistani
+  voice: `node tools/voice_lines.js <src>` writes
+  `voice/<ASSET>_voice_script.csv`; record each line as
+  `voice/clips/<key>.mp3` and rebuild — `tools/build.py` packs the clips in
+  and they replace the device voice line by line.
+- **Sound.** A quiet, bouncy background tune (dips under the voice; Music
+  on/off on the home page and in Pause), xylophone for right answers, a soft
+  "boing" for wrong ones, a fanfare at the end. No harsh buzzers.
+- **Letter choices never make another word.** For letter-fill games, run
+  `python3 tools/letter_options.py "<pattern>" <word>` to get safe wrong
+  letters (wordfreq), and check a game with
+  `node tools/check_letterfill.js <src> | python3 tools/check_letterfill.py`.
 - **Phonics audio.** Browser TTS cannot say a single sound such as /s/ or
   /ch/; it reads letters by name ("see aitch"). Phonics games speak **whole
   words only** until recorded phoneme clips exist. Never make a child match

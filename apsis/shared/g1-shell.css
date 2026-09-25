@@ -76,6 +76,11 @@ button { font: inherit; color: inherit; }
 .icon-btn.home { background: var(--green); }
 .icon-btn.home svg { width: 36px; height: 36px; }
 .icon-btn.pause { background: var(--yellow); }
+.icon-btn.music { background: var(--pink); }
+.icon-btn.music svg { width: 30px; height: 30px; }
+.icon-btn.music.off { background: #C9C4DA; }
+.icon-btn.music.off::after { content: ""; position: absolute; width: 40px; height: 5px; background: var(--ink); border-radius: 3px; transform: rotate(-45deg); }
+.icon-btn { position: relative; }
 
 /* ---------- home: level picker ---------- */
 .home-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 14px 16px 18px; min-height: 0; overflow-y: auto; }
@@ -92,7 +97,9 @@ button { font: inherit; color: inherit; }
   color: #fff; -webkit-text-stroke: 2px var(--ink); text-shadow: 0 4px 0 var(--ink);
 }
 .home-head .icon-btn { margin-left: 4px; }
-.choose { font-family: var(--font-title); font-weight: 800; font-size: 24px; color: var(--ink); margin: 0 0 10px; }
+.choose { font-family: var(--font-title); font-weight: 800; font-size: 24px; color: var(--ink); margin: 0; }
+.choose-row { display: flex; align-items: center; gap: 14px; margin: 0 0 16px; }
+.choose-row .icon-btn { width: 54px; height: 54px; }
 
 .levels { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 760px; }
 .level {
@@ -231,7 +238,9 @@ button { font: inherit; color: inherit; }
   .home-head .mascot { width: 64px; height: 64px; }
   .home-title h1 { font-size: 28px; }
   .home-title .kicker { font-size: 12px; }
-  .choose { font-size: 20px; margin-bottom: 12px; }
+  .choose { font-size: 20px; }
+  .choose-row { margin-bottom: 14px; gap: 10px; }
+  .choose-row .icon-btn { width: 48px; height: 48px; }
   .levels { gap: 16px 12px; }
   .level { width: 46%; min-height: 122px; padding: 8px 6px 6px; border-radius: 24px; }
   .level .art { width: 54px; height: 54px; padding: 5px; }
@@ -255,6 +264,8 @@ button { font: inherit; color: inherit; }
   .home-head .mascot { width: 60px; height: 60px; }
   .home-title h1 { font-size: 30px; }
   .choose { display: none; }
+  .choose-row { position: absolute; top: 8px; right: 10px; margin: 0; }
+  .choose-row .icon-btn { width: 48px; height: 48px; }
   .levels { max-width: none; flex-wrap: nowrap; gap: 10px; }
   .level { width: 112px; min-height: 150px; padding: 10px 4px 6px; }
   .level .art { width: 58px; height: 58px; padding: 5px; }

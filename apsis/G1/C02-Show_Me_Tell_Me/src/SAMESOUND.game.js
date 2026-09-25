@@ -1,5 +1,5 @@
 // @asset ENG01CH02SAMESOUND
-// @version v-02
+// @version v-03
 // @title Same First Sound
 // @engine tap-identify
 /* A6 · Same First Sound · Phonics and Spelling > Sounds at the Start of Word · O4
@@ -65,9 +65,9 @@
     for (i = 0; i < others.length; i++) { opts.push(W(oneWord(others[i], used))); }
     return {
       text: "Which word starts like <b>" + pair[0] + "</b>?",
-      say: "Which word starts with the same sound as " + pair[0] + "?",
+      say: ["Which word starts like", pair[0]],
       target: W(pair[0]), options: opts, answer: [pair[1]],
-      hint2: "Listen. " + pair[0] + ". " + pair[0] + "."
+      hint2: ["Listen.", pair[0], pair[0]]
     };
   }
   function findTwo(sound, used) {
@@ -77,7 +77,7 @@
     var odd = oneWord(otherSounds(sound, 1)[0], used);
     return {
       text: "Two words start the same. Tap them both.",
-      say: "Two words start with the same sound. Tap them both.",
+      say: "Two words start the same. Can you tap them both?",
       options: [W(pair[0]), W(pair[1]), W(odd)], answer: pair
     };
   }
@@ -88,7 +88,7 @@
     var odd = oneWord(otherSounds(sound, 1)[0], used);
     return {
       text: "Which word starts with a <b>different</b> sound?",
-      say: "Two words start the same. One word is different. Which word starts with a different sound?",
+      say: "One word starts with a different sound. Can you find it?",
       options: [W(pair[0]), W(pair[1]), W(odd)], answer: [odd]
     };
   }
@@ -100,7 +100,7 @@
     for (i = 0; i < others.length; i++) { opts.push(W(oneWord(others[i], used))); }
     return {
       text: "Find three words that start with the same sound.",
-      say: "Find three words that start with the same sound.",
+      say: "Can you find three words that start the same?",
       options: opts, answer: three
     };
   }
@@ -121,21 +121,21 @@
   function bookSame(target, a, b, c, answer) {
     return {
       text: "Which word starts like <b>" + target + "</b>?",
-      say: "Which word starts with the same sound as " + target + "?",
+      say: ["Which word starts like", target],
       target: B[target], options: [B[a], B[b], B[c]], answer: [answer],
-      hint2: "Listen. " + target + ". " + target + "."
+      hint2: ["Listen.", target, target]
     };
   }
   function bookTwo(a, b, c, answers) {
     return {
       text: "Two words start the same. Tap them both.",
-      say: "Two words start with the same sound. Tap them both.",
+      say: "Two words start the same. Can you tap them both?",
       options: [B[a], B[b], B[c]], answer: answers
     };
   }
   var BOOK_SIX = {
     text: "Find three words that start with the same sound.",
-    say: "Read the words. Find three words that start with the same sound.",
+    say: "Read the words. Can you find three words that start the same?",
     options: [B.book, B.stop, B.exit, B.staff, B.hand, B.sign],
     answer: ["stop", "staff", "sign"]
   };
@@ -144,38 +144,38 @@
     levels: [
       { name: "Warm Up", art: "sun",
         make: function () {
-          return [{ banner: "Level 1", bannerSay: "Level one. Warm up! Find the word that starts the same.", markFirst: true,
+          return [{ banner: "Level 1", bannerSay: "Level one! Let's warm up!", markFirst: true,
             items: manyStarts(5, 2) }];
         } },
       { name: "Sign Words", art: "stop", ribbon: "Book",
         rounds: [
-          { banner: "Level 2", bannerSay: "Level two. Sign words from your book!", markFirst: true,
+          { banner: "Level 2", bannerSay: "Level two! Sign words from your book!", markFirst: true,
             items: [bookSame("stop", "staff", "book", "hand", "staff"),
                     bookSame("sign", "exit", "stop", "hand", "stop"),
                     bookSame("staff", "book", "sign", "exit", "sign")] },
-          { banner: "Find two", bannerSay: "Now find two words that start the same.", markFirst: true,
+          { banner: "Find two", bannerSay: "Now find two!", markFirst: true,
             items: [bookTwo("stop", "hand", "sign", ["stop", "sign"]),
                     bookTwo("book", "staff", "stop", ["staff", "stop"]),
                     bookTwo("exit", "sign", "staff", ["sign", "staff"])] }
         ] },
       { name: "Same Start", art: "ball",
         make: function () {
-          return [{ banner: "Level 3", bannerSay: "Level three. Which word starts the same?", markFirst: true,
+          return [{ banner: "Level 3", bannerSay: "Level three! Same start!", markFirst: true,
             items: manyStarts(6, 3) }];
         } },
       { name: "Find Two", art: "fish",
         make: function () {
-          return [{ banner: "Level 4", bannerSay: "Level four. Find two words that start the same.", markFirst: true,
+          return [{ banner: "Level 4", bannerSay: "Level four! Find two!", markFirst: true,
             items: many(findTwo, 5, 2) }];
         } },
       { name: "Odd One Out", art: "duck",
         make: function () {
-          return [{ banner: "Level 5", bannerSay: "Level five. Odd one out! Find the word that starts with a different sound.", markFirst: true,
+          return [{ banner: "Level 5", bannerSay: "Level five! Odd one out!", markFirst: true,
             items: many(oddOneOut, 5, 2) }];
         } },
       { name: "Super Star", art: "lion",
         make: function () {
-          return [{ banner: "Level 6", bannerSay: "Level six. Super star challenge! Find three words that start the same.", markFirst: true,
+          return [{ banner: "Level 6", bannerSay: "Level six! Super star challenge!", markFirst: true,
             shuffle: false,
             items: [BOOK_SIX].concat(many(findThree, 2, 3)) }];
         } }
@@ -185,7 +185,7 @@
   TapIdentify.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SAMESOUND",
-    version: "v-02",
+    version: "v-03",
     title: "Same First Sound",
     kicker: "Grade 1 · Chapter 2",
     intro: "Find words that start with the same sound.",

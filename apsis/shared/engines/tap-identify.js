@@ -28,7 +28,11 @@ var TapIdentify = (function () {
     return card;
   }
 
-  function instruction() { return item.say || item.text; }
+  /* the spoken instruction, always as an array of recordable parts */
+  function instruction() {
+    var x = item.say || item.text;
+    return Object.prototype.toString.call(x) === "[object Array]" ? x : [x];
+  }
   /* locked: taps are ignored (speech or tutorial running). data-ready mirrors it for tests. */
   function lock(v) {
     locked = v;
@@ -128,11 +132,11 @@ var TapIdentify = (function () {
         lock(true);
         if (firstTry) { T.score++; }
         starTotal++; Shell.setStars(starTotal);
-        Shell.say(card.optText + ". " + praise, Shell.guard(function () {
+        Shell.say([card.optText, praise], Shell.guard(function () {
           Shell.wait(Shell.guard(next), 500);
         }));
       } else {
-        Shell.say(card.optText + ". " + praise + " Find one more.");
+        Shell.say([card.optText, praise, "Find one more!"]);
       }
     } else {
       firstTry = false;
@@ -145,13 +149,13 @@ var TapIdentify = (function () {
   function hint() {
     var cards = allCards(), i;
     if (attempts === 1) {
-      Shell.say("Try again. " + instruction());
+      Shell.say(["Oops! Try again."].concat(instruction()));
     } else if (attempts === 2) {
       if (item.target) {
         var t = Shell.$("stage").querySelector(".card.target .first");
         if (t) { Shell.flash(t, "mark", 2600); }
         lock(true);
-        Shell.say(item.hint2 || ("Listen. " + item.target.text + ". " + item.target.text + "."),
+        Shell.say(item.hint2 || ["Listen.", item.target.text, item.target.text],
           Shell.guard(function () { listenAll(cards); }));
       } else {
         listenAll(cards);
@@ -178,7 +182,7 @@ var TapIdentify = (function () {
       Shell.flash(c, "pulse", 800);
       Shell.say(c.optText, function () { Shell.wait(step, 200); });
     });
-    Shell.say("Listen to each word.", step);
+    Shell.say("Let's listen to each word.", step);
   }
 
   function next() {
@@ -217,6 +221,7 @@ var TapIdentify = (function () {
   T.total = function () { return flat ? flat.length : 0; };
   T.max = function () { return flat ? flat.length : 0; };
 
+  T.LINES = ["Tap here to hear the question again.", "Tap a speaker to hear a word. Then tap the word you choose.", "Find one more!", "Oops! Try again.", "Listen.", "Let's listen to each word."];
   T.init = function (content) {
     C = content;
     window.addEventListener("resize", function () { T.refit(); });
