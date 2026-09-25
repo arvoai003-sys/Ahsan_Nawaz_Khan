@@ -27,15 +27,24 @@ gets wrong is flagged, not silently used.
    `verbatim` (use as printed), `authored` (needs approval before it ships),
    `withheld` (do not build). If an item is missing, go back to the scan
    (see "Reading the book scan" below), add it with its page, then build.
-4. **Pick the engine** from `references/engines.md` and build from the
-   shared shell (`apsis/shared/g1-shell.html` once it exists; until then
-   ask for the Pack It Right! engine `ENG04CH10WORDSORT_v-01.html`, and
-   build the shell from it rather than from scratch).
-5. **QA** with `references/qa-checklist.md`, in a narrow portrait and a wide
-   landscape viewport, with Playwright (Chromium is pre-installed; never
-   run `playwright install`).
-6. **Save** to `apsis/G#/C##-*/builds/` as a new version. Never overwrite a
-   version.
+4. **Pick the engine** from `references/engines.md`. Write the game source
+   `apsis/G#/C##-*/src/<TASK>.game.js` (header lines `// @asset`,
+   `// @version`, `// @title`, `// @engine`, then the content and
+   `Shell.boot`; copy `src/SAMESOUND.game.js` for the shape). The shared
+   parts are in `apsis/shared/`: `g1-frame.html`, `g1-shell.css/js`,
+   `g1-art.js` (add new pictures here) and `engines/<engine>.css/js`.
+5. **Build** the single file:
+   `python3 tools/build.py apsis/G1/C02-Show_Me_Tell_Me/src/<TASK>.game.js`
+   (it inlines everything, rejects ES6 syntax, and refuses to overwrite a
+   version already committed).
+6. **QA** with `references/qa-checklist.md`. For tap games:
+   `node tools/qa_tap.js <build.html> <answer-key.json> <outdir>` plays the
+   game at 360×640 and 1280×720 with a speech stub, taps wrong three times
+   to exercise hints, checks layout, errors, stars and restart, and writes
+   screenshots plus everything spoken. Also check 740×360 (phone sideways).
+   Chromium is pre-installed; never run `playwright install`.
+7. **Commit** the build in `builds/`. A committed version is never
+   overwritten; a fix is `v-02`.
 
 ## Grade 1 rules (on top of the ARVO game-build conventions)
 
@@ -47,7 +56,9 @@ gets wrong is flagged, not silently used.
   (it only plays the word). Tapping the card body is the answer. A child
   must never get a "wrong" by trying to listen.
 - **At most three choices on a screen.** Longer book lists become several
-  screens of three.
+  screens of three. One exception: a book box printed as one task (e.g. 2D A's
+  six words) may appear once, as printed, as the final "Book challenge"
+  round.
 - **Big targets.** At least 64 px for cards and tiles (ARVO's 44 px is the
   floor for older pupils), with 12 px or more between targets.
 - **Pictures on every screen.** Signs, body parts, senses and actions are

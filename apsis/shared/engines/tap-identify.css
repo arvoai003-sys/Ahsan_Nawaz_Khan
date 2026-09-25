@@ -1,0 +1,80 @@
+/* Tap-to-identify board */
+.board { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 760px; }
+.target-row { display: flex; align-items: center; gap: 14px; }
+.target-row .label { font-family: var(--font-title); font-weight: 700; font-size: 22px; color: var(--ink-soft); }
+.cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; width: 100%; }
+.cards.six { max-width: 560px; }
+
+.card {
+  position: relative; width: 150px; min-height: 172px; background: var(--card); border-radius: var(--radius);
+  box-shadow: var(--shadow); border: 4px solid transparent; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  padding: 14px 10px 12px; transition: transform .12s, border-color .2s; outline: none;
+}
+.card:active { transform: scale(.96); }
+.card:focus-visible { border-color: var(--teal); }
+.card .art { width: 92px; height: 92px; margin-bottom: 6px; }
+.card .art svg { width: 100%; height: 100%; }
+.card .word { font-family: var(--font-read); font-size: 32px; line-height: 1.1; color: var(--ink); }
+.card .word .first { transition: color .2s, background .2s; border-radius: 6px; padding: 0 1px; }
+.card .word .first.mark { background: #FFF1C2; box-shadow: inset 0 -4px 0 var(--sun); }
+.card .badge { position: absolute; top: -12px; right: -12px; width: 52px; height: 52px; }
+.card .badge svg { width: 26px; height: 26px; }
+.card.got { border-color: var(--right); cursor: default; }
+.card.got::after {
+  content: ""; position: absolute; left: -12px; top: -12px; width: 46px; height: 46px; border-radius: 50%;
+  background: var(--right) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/30px no-repeat;
+  animation: pop .35s cubic-bezier(.2,1.6,.4,1);
+}
+.card.got .word .first { color: var(--teal-deep); }
+.card.dim { opacity: .55; }
+.card.pulse { animation: glow .8s ease-in-out 1; }
+
+.card.target { width: 132px; min-height: 150px; border: 4px dashed var(--teal); cursor: default; background: #F6FCFE; }
+.card.target .art { width: 76px; height: 76px; }
+.card.target .word { font-size: 28px; }
+
+.cards.six .card { width: 140px; min-height: 150px; }
+.cards.six .card .art { width: 70px; height: 70px; }
+.cards.six .card .word { font-size: 28px; }
+
+@media (min-width: 900px) and (min-height: 640px) {
+  .card { width: 190px; min-height: 216px; }
+  .card .art { width: 120px; height: 120px; }
+  .card .word { font-size: 40px; }
+  .card.target { width: 160px; min-height: 184px; }
+  .card.target .art { width: 92px; height: 92px; }
+  .cards.six { max-width: 700px; }
+  .cards.six .card { width: 180px; min-height: 180px; }
+  .cards.six .card .art { width: 88px; height: 88px; }
+  .cards.six .card .word { font-size: 34px; }
+  .prompt-text { font-size: 30px; }
+}
+@media (max-width: 520px) {
+  .stage { padding-left: 12px; padding-right: 12px; }
+  .card { width: 96px; min-height: 136px; padding: 10px 6px; }
+  .card .art { width: 64px; height: 64px; }
+  .card .word { font-size: 26px; }
+  .card .badge { width: 46px; height: 46px; top: -10px; right: -10px; }
+  .cards { gap: 12px; }
+  .cards.six { max-width: 336px; }
+  .cards.six .card { width: 96px; min-height: 124px; }
+  .cards.six .card .art { width: 54px; height: 54px; }
+  .cards.six .card .word { font-size: 24px; }
+  .card.target { width: 104px; min-height: 124px; }
+  .card.target .art { width: 56px; height: 56px; }
+}
+@media (max-height: 520px) {
+  .board { flex-direction: row; justify-content: center; align-items: center; gap: 30px; }
+  .cards { width: auto; flex-wrap: nowrap; gap: 12px; }
+  .card { width: 118px; min-height: 124px; padding: 8px; }
+  .card .art { width: 58px; height: 58px; }
+  .card .word { font-size: 28px; }
+  .card.target { width: 108px; min-height: 116px; }
+  .card.target .art { width: 50px; height: 50px; }
+  .card.target .word { font-size: 24px; }
+  .cards.six { max-width: none; gap: 10px; }
+  .cards.six .card { width: 104px; min-height: 112px; }
+  .cards.six .card .art { width: 48px; height: 48px; }
+  .cards.six .card .word { font-size: 24px; }
+}

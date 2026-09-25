@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="asset" content="ENG01CH02SAMESOUND v-01">
+<title>Same First Sound</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;700;800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ARVO Grade 1 shell: shared styles for every APSIS G1 interactive asset. */
+:root {
+  --sky: #EAF6FB;
+  --sky-deep: #CDEBF5;
+  --ink: #213547;
+  --ink-soft: #5A6B7B;
+  --teal: #1E9FB4;
+  --teal-deep: #147A8B;
+  --sun: #FFC845;
+  --coral: #F3A184;
+  --lilac: #B4A4EC;
+  --mint: #8FD6A8;
+  --right: #3DBE6E;
+  --wrong: #F08A5D;
+  --card: #FFFFFF;
+  --shadow: 0 6px 0 rgba(33, 53, 71, 0.12), 0 10px 24px rgba(33, 53, 71, 0.10);
+  --radius: 22px;
+  --font-title: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --font-read: "Andika", "Century Gothic", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--sky);
+  background-image: radial-gradient(circle at 12% 18%, #fff 0 38px, transparent 39px),
+                    radial-gradient(circle at 88% 12%, #fff 0 26px, transparent 27px),
+                    radial-gradient(circle at 78% 92%, #DDF0F7 0 60px, transparent 61px);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow: hidden;
+  -webkit-user-select: none; user-select: none;
+  touch-action: manipulation;
+}
+button { font: inherit; color: inherit; }
+
+#app { position: fixed; top: 0; right: 0; bottom: 0; left: 0; display: flex; flex-direction: column; }
+
+/* ---------- screens ---------- */
+.screen { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: none; flex-direction: column; }
+.screen.on { display: flex; }
+
+/* start + end panels */
+.panel-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.panel {
+  background: var(--card); border-radius: 32px; box-shadow: var(--shadow);
+  padding: 28px 24px 26px; width: 92vw; max-width: 480px; text-align: center;
+  position: relative;
+}
+.panel h1 {
+  font-family: var(--font-title); font-weight: 800; font-size: 48px; font-size: clamp(34px, 9vw, 48px);
+  line-height: 1.02; margin: 6px 0 8px; color: var(--teal-deep);
+}
+.panel .kicker {
+  font-family: var(--font-title); font-weight: 700; letter-spacing: 0.12em;
+  font-size: 14px; color: var(--ink-soft); text-transform: uppercase;
+}
+.panel .mascot { width: 118px; height: 118px; margin: 0 auto 4px; display: block; }
+.panel .sub { font-size: 18px; color: var(--ink-soft); margin: 4px 0 18px; }
+
+.big-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-width: 200px; min-height: 72px; padding: 0 30px; border: 0; border-radius: 40px;
+  background: var(--sun); color: var(--ink); font-family: var(--font-title);
+  font-weight: 800; font-size: 30px; cursor: pointer;
+  box-shadow: 0 6px 0 #D9A21F; transition: transform .08s;
+}
+.big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #D9A21F; }
+.big-btn.alt { background: var(--sky-deep); box-shadow: 0 6px 0 #A9D3E2; font-size: 24px; min-width: 150px; }
+.btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+
+/* ---------- top bar ---------- */
+.topbar {
+  flex: 0 0 auto; height: 76px; display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px;
+}
+.icon-btn {
+  width: 60px; height: 60px; border-radius: 50%; border: 0; background: var(--card);
+  box-shadow: 0 4px 0 rgba(33,53,71,.12); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex: 0 0 auto;
+}
+.icon-btn svg { width: 30px; height: 30px; }
+.icon-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(33,53,71,.12); }
+.icon-btn.talk { background: var(--teal); }
+.icon-btn.talk svg { fill: #fff; }
+.progress { flex: 1; display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; }
+.progress i {
+  width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid var(--sky-deep);
+  display: block;
+}
+.progress i.done { background: var(--right); border-color: var(--right); }
+.progress i.now { border-color: var(--teal); transform: scale(1.2); }
+.star-count {
+  display: flex; align-items: center; gap: 4px; font-family: var(--font-title);
+  font-weight: 800; font-size: 24px; background: var(--card); border-radius: 30px;
+  padding: 4px 14px 4px 8px; box-shadow: 0 4px 0 rgba(33,53,71,.12);
+}
+.star-count svg { width: 30px; height: 30px; }
+
+/* ---------- stage ---------- */
+.stage { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 4px 16px 20px; gap: 18px; min-height: 0; }
+.prompt {
+  display: flex; align-items: center; gap: 12px; background: var(--card);
+  border-radius: 26px; padding: 10px 18px 10px 10px; box-shadow: var(--shadow);
+  max-width: 640px;
+}
+.prompt .say { width: 56px; height: 56px; flex: 0 0 auto; }
+.prompt-text { font-family: var(--font-read); font-size: 26px; font-size: clamp(20px, 5vw, 26px); line-height: 1.25; }
+.counter { display: flex; gap: 6px; margin-left: 4px; }
+.counter b { width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--right); display: block; }
+.counter b.got { background: var(--right); }
+
+/* round banner */
+.banner {
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: none; align-items: center; justify-content: center;
+  background: rgba(234,246,251,.85); z-index: 30;
+}
+.banner.on { display: flex; }
+.banner div {
+  font-family: var(--font-title); font-weight: 800; font-size: 60px; font-size: clamp(36px, 10vw, 60px);
+  color: var(--teal-deep); background: #fff; border-radius: 30px; padding: 16px 36px;
+  box-shadow: var(--shadow); animation: pop .5s cubic-bezier(.2,1.6,.4,1);
+}
+
+/* ---------- pause overlay ---------- */
+.overlay {
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(33,53,71,.45); display: none;
+  align-items: center; justify-content: center; z-index: 50; padding: 16px;
+}
+.overlay.on { display: flex; }
+.menu { display: flex; flex-direction: column; gap: 14px; }
+.menu .big-btn { width: 100%; }
+
+/* ---------- feedback ---------- */
+.shake { animation: shake .45s; }
+.glow { animation: glow 1s ease-in-out 3; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-12px) rotate(-3deg)} 40%{transform:translateX(10px) rotate(2deg)} 60%{transform:translateX(-7px)} 80%{transform:translateX(5px)} }
+@keyframes glow { 0%,100%{box-shadow: var(--shadow)} 50%{box-shadow: 0 0 0 8px var(--sun), var(--shadow)} }
+@keyframes pop { 0%{transform:scale(.3);opacity:0} 100%{transform:scale(1);opacity:1} }
+@keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+.praise {
+  position: fixed; left: 50%; top: 42%; transform: translate(-50%, -50%);
+  font-family: var(--font-title); font-weight: 800; font-size: 72px; font-size: clamp(40px, 12vw, 72px);
+  color: var(--right); text-shadow: 0 4px 0 #fff, 0 0 18px #fff; pointer-events: none;
+  z-index: 40; display: none;
+}
+.praise.on { display: block; animation: pop .45s cubic-bezier(.2,1.6,.4,1); }
+
+#confetti { position: fixed; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; z-index: 45; }
+
+/* tutorial hand */
+.hand {
+  position: fixed; width: 72px; height: 72px; z-index: 60; pointer-events: none;
+  display: none; transition: left .9s ease-in-out, top .9s ease-in-out;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,.2));
+}
+.hand.on { display: block; }
+.hand.tap { animation: tap .5s ease-in-out 2; }
+@keyframes tap { 0%,100%{transform:scale(1)} 50%{transform:scale(.82)} }
+.dots { position: fixed; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; z-index: 59; }
+
+/* end stars */
+.end-stars { display: flex; justify-content: center; gap: 6px; margin: 6px 0 10px; }
+.end-stars svg { width: 72px; height: 72px; }
+.end-stars svg.lit { animation: pop .5s cubic-bezier(.2,1.6,.4,1) both; }
+.end-stars svg:nth-child(2) { animation-delay: .25s; margin-top: -14px; }
+.end-stars svg:nth-child(3) { animation-delay: .5s; }
+
+@media (max-height: 520px) {
+  .topbar { height: 64px; }
+  .icon-btn { width: 52px; height: 52px; }
+  .stage { gap: 10px; padding-bottom: 10px; }
+  .panel { padding: 16px; }
+  .panel .mascot { width: 80px; height: 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Tap-to-identify board */
+.board { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 760px; }
+.target-row { display: flex; align-items: center; gap: 14px; }
+.target-row .label { font-family: var(--font-title); font-weight: 700; font-size: 22px; color: var(--ink-soft); }
+.cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; width: 100%; }
+.cards.six { max-width: 560px; }
+
+.card {
+  position: relative; width: 150px; min-height: 172px; background: var(--card); border-radius: var(--radius);
+  box-shadow: var(--shadow); border: 4px solid transparent; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  padding: 14px 10px 12px; transition: transform .12s, border-color .2s; outline: none;
+}
+.card:active { transform: scale(.96); }
+.card:focus-visible { border-color: var(--teal); }
+.card .art { width: 92px; height: 92px; margin-bottom: 6px; }
+.card .art svg { width: 100%; height: 100%; }
+.card .word { font-family: var(--font-read); font-size: 32px; line-height: 1.1; color: var(--ink); }
+.card .word .first { transition: color .2s, background .2s; border-radius: 6px; padding: 0 1px; }
+.card .word .first.mark { background: #FFF1C2; box-shadow: inset 0 -4px 0 var(--sun); }
+.card .badge { position: absolute; top: -12px; right: -12px; width: 52px; height: 52px; }
+.card .badge svg { width: 26px; height: 26px; }
+.card.got { border-color: var(--right); cursor: default; }
+.card.got::after {
+  content: ""; position: absolute; left: -12px; top: -12px; width: 46px; height: 46px; border-radius: 50%;
+  background: var(--right) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/30px no-repeat;
+  animation: pop .35s cubic-bezier(.2,1.6,.4,1);
+}
+.card.got .word .first { color: var(--teal-deep); }
+.card.dim { opacity: .55; }
+.card.pulse { animation: glow .8s ease-in-out 1; }
+
+.card.target { width: 132px; min-height: 150px; border: 4px dashed var(--teal); cursor: default; background: #F6FCFE; }
+.card.target .art { width: 76px; height: 76px; }
+.card.target .word { font-size: 28px; }
+
+.cards.six .card { width: 140px; min-height: 150px; }
+.cards.six .card .art { width: 70px; height: 70px; }
+.cards.six .card .word { font-size: 28px; }
+
+@media (min-width: 900px) and (min-height: 640px) {
+  .card { width: 190px; min-height: 216px; }
+  .card .art { width: 120px; height: 120px; }
+  .card .word { font-size: 40px; }
+  .card.target { width: 160px; min-height: 184px; }
+  .card.target .art { width: 92px; height: 92px; }
+  .cards.six { max-width: 700px; }
+  .cards.six .card { width: 180px; min-height: 180px; }
+  .cards.six .card .art { width: 88px; height: 88px; }
+  .cards.six .card .word { font-size: 34px; }
+  .prompt-text { font-size: 30px; }
+}
+@media (max-width: 520px) {
+  .stage { padding-left: 12px; padding-right: 12px; }
+  .card { width: 96px; min-height: 136px; padding: 10px 6px; }
+  .card .art { width: 64px; height: 64px; }
+  .card .word { font-size: 26px; }
+  .card .badge { width: 46px; height: 46px; top: -10px; right: -10px; }
+  .cards { gap: 12px; }
+  .cards.six { max-width: 336px; }
+  .cards.six .card { width: 96px; min-height: 124px; }
+  .cards.six .card .art { width: 54px; height: 54px; }
+  .cards.six .card .word { font-size: 24px; }
+  .card.target { width: 104px; min-height: 124px; }
+  .card.target .art { width: 56px; height: 56px; }
+}
+@media (max-height: 520px) {
+  .board { flex-direction: row; justify-content: center; align-items: center; gap: 30px; }
+  .cards { width: auto; flex-wrap: nowrap; gap: 12px; }
+  .card { width: 118px; min-height: 124px; padding: 8px; }
+  .card .art { width: 58px; height: 58px; }
+  .card .word { font-size: 28px; }
+  .card.target { width: 108px; min-height: 116px; }
+  .card.target .art { width: 50px; height: 50px; }
+  .card.target .word { font-size: 24px; }
+  .cards.six { max-width: none; gap: 10px; }
+  .cards.six .card { width: 104px; min-height: 112px; }
+  .cards.six .card .art { width: 48px; height: 48px; }
+  .cards.six .card .word { font-size: 24px; }
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+
+  <section class="screen on" id="start">
+    <div class="panel-wrap">
+      <div class="panel">
+        <div class="mascot" id="start-mascot"></div>
+        <div class="kicker" id="start-kicker"></div>
+        <h1 id="start-title"></h1>
+        <p class="sub" id="start-sub"></p>
+        <button class="big-btn" id="play-btn" type="button">&#9654; Play</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="game">
+    <div class="topbar">
+      <button class="icon-btn" id="pause-btn" type="button" aria-label="Pause"></button>
+      <div class="progress" id="progress"></div>
+      <div class="star-count" aria-label="Stars"><span id="star-icon"></span><span id="star-num">0</span></div>
+    </div>
+    <div class="stage" id="stage"></div>
+    <div class="banner" id="banner"></div>
+  </section>
+
+  <section class="screen" id="end">
+    <div class="panel-wrap">
+      <div class="panel">
+        <div class="mascot" id="end-mascot"></div>
+        <h1>Well done!</h1>
+        <div class="end-stars" id="end-stars"></div>
+        <div class="btn-row">
+          <button class="big-btn alt" id="again-btn" type="button">&#8635; Again</button>
+          <button class="big-btn" id="next-btn" type="button">Next &#9654;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="overlay" id="pause">
+  <div class="panel">
+    <h1>Paused</h1>
+    <div class="menu">
+      <button class="big-btn" id="resume-btn" type="button">&#9654; Resume</button>
+      <button class="big-btn alt" id="sound-btn" type="button">Sound: on</button>
+      <button class="big-btn alt" id="restart-btn" type="button">&#8635; Restart</button>
+      <button class="big-btn alt" id="exit-btn" type="button">Exit</button>
+    </div>
+  </div>
+</div>
+
+<div class="praise" id="praise"></div>
+<canvas id="confetti"></canvas>
+<div class="hand" id="hand"></div>
+
+<script>
+/* ---- g1-shell.js ---- */
+/* ARVO Grade 1 shell: audio, speech, feedback, pause menu, tutorial hand,
+   progress, stars and the LMS result contract. ES5 only. */
+var Shell = (function () {
+  var S = {};
+  var soundOn = true;
+  var ctx = null;
+  var voice = null;
+  var cfg = {};
+  var wrongTaps = 0;
+  var resultSent = false;
+
+  function $(id) { return document.getElementById(id); }
+  S.$ = $;
+
+  /* ---------- helpers ---------- */
+  S.shuffle = function (arr) {
+    var a = arr.slice(), i, j, t;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  };
+  S.el = function (tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) { e.className = cls; }
+    if (html !== undefined) { e.innerHTML = html; }
+    return e;
+  };
+  S.later = function (fn, ms) { return window.setTimeout(fn, ms); };
+
+  /* ---------- Web Audio ---------- */
+  function audio() {
+    if (!ctx) {
+      try {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) { ctx = new AC(); }
+      } catch (e) { ctx = null; }
+    }
+    if (ctx && ctx.state === "suspended") { try { ctx.resume(); } catch (e2) {} }
+    return ctx;
+  }
+  function tone(freq, start, dur, type, vol) {
+    var c = audio();
+    if (!c || !soundOn) { return; }
+    var o = c.createOscillator(), g = c.createGain();
+    o.type = type || "sine";
+    o.frequency.value = freq;
+    g.gain.setValueAtTime(0.0001, c.currentTime + start);
+    g.gain.exponentialRampToValueAtTime(vol || 0.18, c.currentTime + start + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + start + dur);
+    o.connect(g); g.connect(c.destination);
+    o.start(c.currentTime + start);
+    o.stop(c.currentTime + start + dur + 0.05);
+  }
+  S.sfx = {
+    right: function () { tone(660, 0, 0.18, "sine"); tone(880, 0.1, 0.22, "sine"); tone(1320, 0.2, 0.3, "triangle", 0.1); },
+    wrong: function () { tone(330, 0, 0.22, "sine", 0.12); tone(262, 0.14, 0.3, "sine", 0.1); },
+    pop: function () { tone(520, 0, 0.08, "triangle", 0.12); },
+    fanfare: function () {
+      var n = [523, 659, 784, 1047], i;
+      for (i = 0; i < n.length; i++) { tone(n[i], i * 0.14, 0.3, "triangle", 0.14); }
+      tone(1047, 0.6, 0.6, "sine", 0.12);
+    }
+  };
+
+  /* ---------- speech ---------- */
+  function pickVoice() {
+    if (!window.speechSynthesis) { return; }
+    var vs = window.speechSynthesis.getVoices() || [], order = ["en-PK", "en-IN", "en-GB"], i, j;
+    if (!vs.length) { return; }
+    for (i = 0; i < order.length; i++) {
+      for (j = 0; j < vs.length; j++) {
+        if ((vs[j].lang || "").replace("_", "-").toLowerCase() === order[i].toLowerCase()) { voice = vs[j]; return; }
+      }
+    }
+    for (j = 0; j < vs.length; j++) {
+      if ((vs[j].lang || "").toLowerCase().indexOf("en") === 0) { voice = vs[j]; return; }
+    }
+    voice = vs[0];
+  }
+  if (window.speechSynthesis) {
+    pickVoice();
+    try { window.speechSynthesis.onvoiceschanged = pickVoice; } catch (e) {}
+  }
+  /* say(text, done): speaks one line; cancels anything already speaking.
+     done() always runs, even with no speech engine (estimated time). */
+  S.say = function (text, done) {
+    var finished = false;
+    function end() { if (!finished) { finished = true; if (done) { done(); } } }
+    var guess = 700 + String(text).split(" ").length * 420;
+    if (!window.speechSynthesis || !soundOn) { S.later(end, soundOn ? guess : 300); return; }
+    try {
+      window.speechSynthesis.cancel();
+      var u = new window.SpeechSynthesisUtterance(text);
+      if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-GB"; }
+      u.rate = 0.85; u.pitch = 1.05;
+      u.onend = end; u.onerror = end;
+      window.speechSynthesis.speak(u);
+      S.later(end, guess + 2500); /* safety net: some engines never fire onend */
+    } catch (e) { S.later(end, guess); }
+  };
+  S.hush = function () { try { if (window.speechSynthesis) { window.speechSynthesis.cancel(); } } catch (e) {} };
+
+  /* ---------- icons ---------- */
+  S.icon = {
+    speaker: '<svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    pause: '<svg viewBox="0 0 24 24" fill="#213547"><rect x="6" y="5" width="4" height="14" rx="1.5"/><rect x="14" y="5" width="4" height="14" rx="1.5"/></svg>',
+    star: '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.1 6.1 20.3l1.3-6.5L2.5 9.3l6.6-.8z" fill="#FFC845" stroke="#E0A415" stroke-width="1.2" stroke-linejoin="round"/></svg>',
+    starOff: '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17.1 6.1 20.3l1.3-6.5L2.5 9.3l6.6-.8z" fill="#E3EEF3" stroke="#C5D8E0" stroke-width="1.2" stroke-linejoin="round"/></svg>',
+    hand: '<svg viewBox="0 0 64 64"><path d="M26 6c3 0 5 2 5 5v18l2-1c2-1 5 0 6 2l1 1c2-1 5 0 6 2 2-1 5 0 6 3l2 12c1 7-4 14-11 14H33c-5 0-9-3-11-7l-8-15c-1-3 0-5 3-6 2-1 4 0 6 2l3 4V11c0-3 0-5 0-5z" fill="#FFE0C2" stroke="#8A5A3C" stroke-width="2.5" stroke-linejoin="round"/></svg>',
+    mascot: '<svg viewBox="0 0 120 120"><circle cx="60" cy="64" r="46" fill="#FFC845"/><circle cx="60" cy="64" r="46" fill="none" stroke="#E0A415" stroke-width="4"/><circle cx="44" cy="58" r="7" fill="#213547"/><circle cx="76" cy="58" r="7" fill="#213547"/><circle cx="46" cy="56" r="2.2" fill="#fff"/><circle cx="78" cy="56" r="2.2" fill="#fff"/><path d="M42 76q18 16 36 0" fill="none" stroke="#213547" stroke-width="5" stroke-linecap="round"/><circle cx="34" cy="74" r="6" fill="#F3A184" opacity=".7"/><circle cx="86" cy="74" r="6" fill="#F3A184" opacity=".7"/><path d="M60 18v-8M60 10l-6 -4M60 10l6 -4" stroke="#1E9FB4" stroke-width="4" stroke-linecap="round"/></svg>'
+  };
+  S.speakerBtn = function (cls, label) {
+    var b = S.el("button", "icon-btn talk " + (cls || ""), S.icon.speaker);
+    b.setAttribute("aria-label", label || "Listen");
+    b.setAttribute("type", "button");
+    return b;
+  };
+
+  /* ---------- confetti ---------- */
+  var cv, cx2, bits = [], running = false;
+  function confettiLoop() {
+    var i, b, alive = 0;
+    cx2.clearRect(0, 0, cv.width, cv.height);
+    for (i = 0; i < bits.length; i++) {
+      b = bits[i];
+      if (b.life <= 0) { continue; }
+      alive++;
+      b.x += b.vx; b.y += b.vy; b.vy += 0.35; b.vx *= 0.99; b.r += b.vr; b.life--;
+      cx2.save(); cx2.translate(b.x, b.y); cx2.rotate(b.r);
+      cx2.fillStyle = b.c; cx2.fillRect(-b.s / 2, -b.s / 3, b.s, b.s / 1.6);
+      cx2.restore();
+    }
+    if (alive) { window.requestAnimationFrame(confettiLoop); } else { running = false; bits = []; cx2.clearRect(0, 0, cv.width, cv.height); }
+  }
+  S.confetti = function (x, y, n) {
+    if (!cv) { return; }
+    cv.width = window.innerWidth; cv.height = window.innerHeight;
+    var cols = ["#FFC845", "#1E9FB4", "#F3A184", "#B4A4EC", "#8FD6A8"], i, a, sp;
+    for (i = 0; i < (n || 40); i++) {
+      a = Math.random() * Math.PI * 2; sp = 4 + Math.random() * 8;
+      bits.push({ x: x, y: y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 6, r: Math.random() * 6,
+        vr: (Math.random() - 0.5) * 0.4, s: 8 + Math.random() * 8, c: cols[i % cols.length], life: 70 + Math.random() * 30 });
+    }
+    if (!running) { running = true; window.requestAnimationFrame(confettiLoop); }
+  };
+
+  /* ---------- praise ---------- */
+  var praises = ["Well done!", "Great!", "Super!", "Yes!", "Good job!"];
+  S.praise = function () {
+    var p = $("praise"), w = praises[Math.floor(Math.random() * praises.length)];
+    p.innerHTML = w; p.className = "praise"; void p.offsetWidth; p.className = "praise on";
+    S.later(function () { p.className = "praise"; }, 1000);
+    return w;
+  };
+
+  /* ---------- feedback on an element ---------- */
+  S.flash = function (node, cls, ms) {
+    node.classList.remove(cls); void node.offsetWidth; node.classList.add(cls);
+    S.later(function () { node.classList.remove(cls); }, ms || 1000);
+  };
+  S.centre = function (node) {
+    var r = node.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  };
+  S.right = function (node) {
+    S.sfx.right();
+    var c = S.centre(node);
+    S.confetti(c.x, c.y, 36);
+    return S.praise();
+  };
+  S.wrong = function (node) {
+    wrongTaps++;
+    S.sfx.wrong();
+    if (node) { S.flash(node, "shake", 500); }
+  };
+  S.wrongCount = function () { return wrongTaps; };
+
+  /* ---------- tutorial hand ---------- */
+  /* points: [{node, say}] ; moves the hand from one to the next, tapping at each. */
+  S.tutorial = function (points, done) {
+    var h = $("hand"), i = 0;
+    h.className = "hand on";
+    var first = S.centre(points[0].node);
+    h.style.left = (first.x - 10) + "px"; h.style.top = (window.innerHeight + 20) + "px";
+    var step = S.guard(function () {
+      if (i >= points.length) { S.later(function () { h.className = "hand"; if (done) { done(); } }, 300); return; }
+      var p = points[i], c = S.centre(p.node);
+      h.className = "hand on";
+      h.style.left = (c.x - 14) + "px"; h.style.top = (c.y - 6) + "px";
+      S.later(function () {
+        h.className = "hand on tap";
+        S.say(p.say, function () { i++; S.later(step, 250); });
+      }, 950);
+    });
+    S.later(step, 60);
+  };
+
+  /* ---------- progress dots ---------- */
+  S.progress = function (total, doneCount) {
+    var box = $("progress"), i, h = "";
+    for (i = 0; i < total; i++) {
+      h += '<i class="' + (i < doneCount ? "done" : (i === doneCount ? "now" : "")) + '"></i>';
+    }
+    box.innerHTML = h;
+  };
+  S.setStars = function (n) { $("star-num").innerHTML = String(n); };
+
+  /* ---------- banner ---------- */
+  S.banner = function (text, spoken, done) {
+    var b = $("banner");
+    b.innerHTML = "<div>" + text + "</div>";
+    b.className = "banner on";
+    S.say(spoken || text, function () {
+      S.later(function () { b.className = "banner"; if (done) { done(); } }, 250);
+    });
+  };
+
+  /* ---------- screens ---------- */
+  S.show = function (id) {
+    var list = document.querySelectorAll(".screen"), i;
+    for (i = 0; i < list.length; i++) { list[i].className = "screen" + (list[i].id === id ? " on" : ""); }
+  };
+
+  /* ---------- stars + result contract ---------- */
+  S.starsFor = function (wrong) { return wrong === 0 ? 3 : (wrong <= 2 ? 2 : 1); };
+  S.sendResult = function (r) {
+    if (resultSent) { return; }
+    resultSent = true;
+    r.asset = cfg.asset; r.version = cfg.version;
+    try { window.parent.postMessage({ type: "arvo-asset-result", result: r }, "*"); } catch (e) {}
+    try {
+      var key = "arvo:" + cfg.asset, old = JSON.parse(window.localStorage.getItem(key) || "{}");
+      if (!old.stars || r.stars > old.stars) { window.localStorage.setItem(key, JSON.stringify({ stars: r.stars })); }
+    } catch (e2) {}
+    S.lastResult = r;
+  };
+  S.bestStars = function () {
+    try { return (JSON.parse(window.localStorage.getItem("arvo:" + cfg.asset) || "{}").stars) || 0; } catch (e) { return 0; }
+  };
+
+  S.finish = function (score, max) {
+    var stars = S.starsFor(wrongTaps), i, h = "";
+    S.sendResult({ completed: true, score: score, max: max, stars: stars });
+    for (i = 0; i < 3; i++) { h += i < stars ? S.icon.star.replace("<svg", '<svg class="lit"') : S.icon.starOff; }
+    $("end-stars").innerHTML = h;
+    S.show("end");
+    S.sfx.fanfare();
+    S.confetti(window.innerWidth / 2, window.innerHeight / 3, 120);
+    S.say(stars === 3 ? "Amazing! You got three stars!" : "Well done! You finished the game!");
+  };
+
+  /* ---------- boot ---------- */
+  /* config: { asset, version, title, kicker, intro, start(fn) , restart(fn) } */
+  S.boot = function (config) {
+    cfg = config;
+    document.title = config.title;
+    cv = $("confetti"); cx2 = cv.getContext("2d");
+    $("hand").innerHTML = S.icon.hand;
+    $("start-mascot").innerHTML = S.icon.mascot;
+    $("end-mascot").innerHTML = S.icon.mascot;
+    $("start-title").innerHTML = config.title;
+    $("start-kicker").innerHTML = config.kicker;
+    $("star-icon").innerHTML = S.icon.star;
+    $("pause-btn").innerHTML = S.icon.pause;
+    var best = S.bestStars();
+    $("start-sub").innerHTML = best ? ("Best: " + best + (best === 1 ? " star" : " stars")) : config.sub || "";
+
+    function begin() {
+      audio(); S.sfx.pop();
+      S.gen++;
+      $("hand").className = "hand";
+      wrongTaps = 0; resultSent = false;
+      S.setStars(0);
+      S.show("game");
+      config.start();
+    }
+    $("play-btn").onclick = begin;
+    $("again-btn").onclick = function () { S.hush(); begin(); };
+    $("next-btn").onclick = function () {
+      S.hush();
+      try { window.parent.postMessage({ type: "arvo-asset-next", asset: cfg.asset }, "*"); } catch (e) {}
+      S.show("start");
+    };
+    $("pause-btn").onclick = function () { S.hush(); S.sfx.pop(); $("pause").className = "overlay on"; S.paused = true; };
+    $("resume-btn").onclick = function () { $("pause").className = "overlay"; S.paused = false; if (config.resume) { config.resume(); } };
+    $("sound-btn").onclick = function () {
+      soundOn = !soundOn;
+      $("sound-btn").innerHTML = "Sound: " + (soundOn ? "on" : "off");
+      if (!soundOn) { S.hush(); }
+    };
+    $("restart-btn").onclick = function () { $("pause").className = "overlay"; S.paused = false; S.hush(); S.cancelTimers(); begin(); };
+    $("exit-btn").onclick = function () {
+      $("pause").className = "overlay"; S.paused = false; S.gen++; $("hand").className = "hand"; S.hush(); S.cancelTimers();
+      S.sendResult({ completed: false, score: config.score ? config.score() : 0, max: config.max || 0, stars: 0 });
+      S.show("start");
+    };
+    S.show("start");
+  };
+
+  /* play generation: callbacks from an earlier play (after Restart/Exit) are ignored */
+  S.gen = 0;
+  S.guard = function (fn) {
+    var g = S.gen;
+    return function () { if (g === S.gen) { return fn.apply(this, arguments); } };
+  };
+
+  /* timers that a restart must clear */
+  var timers = [];
+  S.wait = function (fn, ms) { var t = window.setTimeout(fn, ms); timers.push(t); return t; };
+  S.cancelTimers = function () { var i; for (i = 0; i < timers.length; i++) { window.clearTimeout(timers[i]); } timers = []; };
+
+  return S;
+})();
+
+/* ---- g1-art.js ---- */
+/* ARVO Grade 1 art: flat, friendly SVG pictures drawn in code (no image files).
+   Art.get(key) returns an SVG string sized by its container. ES5 only. */
+var Art = (function () {
+  var A = {};
+  var SVG = '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+  var lib = {
+    book:
+      '<path d="M18 22h28c4 0 6 2 6 6v54c0-3-2-5-6-5H18z" fill="#1E9FB4"/>' +
+      '<path d="M82 22H56c-4 0-6 2-6 6v54c0-3 2-5 6-5h26z" fill="#F3A184"/>' +
+      '<path d="M22 28h22v44H22zM56 28h22v44H56z" fill="#fff" opacity=".92"/>' +
+      '<path d="M26 36h14M26 44h14M26 52h10M60 36h14M60 44h14M60 52h10" stroke="#9FB3C0" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M50 28v54" stroke="#213547" stroke-width="2.5" opacity=".35"/>',
+    stop:
+      '<rect x="47" y="60" width="6" height="36" rx="2" fill="#8C9AA5"/>' +
+      '<path d="M34 6h32l22 22v32L66 82H34L12 60V28z" fill="#E4453A" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>' +
+      '<text x="50" y="52" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#fff" text-anchor="middle">STOP</text>',
+    exit:
+      '<rect x="8" y="16" width="84" height="68" rx="10" fill="#2FA84F" stroke="#fff" stroke-width="4"/>' +
+      '<text x="50" y="46" font-family="Arial, sans-serif" font-weight="900" font-size="24" fill="#fff" text-anchor="middle">EXIT</text>' +
+      '<path d="M34 76l26-22M48 52h13v13" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>',
+    staff:
+      '<circle cx="50" cy="28" r="15" fill="#E7B38D"/>' +
+      '<path d="M35 26c0-12 7-18 15-18s15 6 15 18c-3-5-9-8-15-8s-12 3-15 8z" fill="#3B2A22"/>' +
+      '<circle cx="45" cy="29" r="2" fill="#213547"/><circle cx="55" cy="29" r="2" fill="#213547"/>' +
+      '<path d="M45 35q5 4 10 0" fill="none" stroke="#213547" stroke-width="2" stroke-linecap="round"/>' +
+      '<path d="M22 96c0-26 12-42 28-42s28 16 28 42z" fill="#1E9FB4"/>' +
+      '<path d="M42 55l8 18 8-18" fill="none" stroke="#FFC845" stroke-width="3"/>' +
+      '<rect x="41" y="72" width="18" height="15" rx="3" fill="#fff" stroke="#213547" stroke-width="2"/>' +
+      '<path d="M45 78h10M45 83h7" stroke="#1E9FB4" stroke-width="2.5" stroke-linecap="round"/>',
+    hand:
+      '<path d="M34 92c-8-6-14-16-16-26l-6-18c-1-4 1-7 5-8 3-1 6 1 7 4l5 12V22c0-4 3-6 6-6s6 2 6 6v24-30c0-4 3-6 6-6s6 2 6 6v30-24c0-4 3-6 6-6s6 2 6 6v28-16c0-4 3-6 6-6s5 2 5 6v30c0 16-10 30-26 30z" fill="#F2C29B" stroke="#B9835C" stroke-width="3" stroke-linejoin="round"/>',
+    sign:
+      '<rect x="46" y="40" width="8" height="56" rx="3" fill="#A0714F"/>' +
+      '<path d="M10 14h64l16 14-16 14H10z" fill="#FFC845" stroke="#D99A12" stroke-width="3" stroke-linejoin="round"/>' +
+      '<path d="M20 28h44" stroke="#213547" stroke-width="5" stroke-linecap="round" opacity=".55"/>' +
+      '<ellipse cx="50" cy="95" rx="20" ry="4" fill="#213547" opacity=".12"/>'
+  };
+  A.has = function (key) { return lib.hasOwnProperty(key); };
+  A.get = function (key) { return SVG + (lib[key] || "") + "</svg>"; };
+  A.add = function (key, body) { lib[key] = body; };
+  return A;
+})();
+
+/* ---- tap-identify.js ---- */
+/* Tap-to-identify engine. The child hears a prompt and taps one or more
+   cards. Content shape:
+   { rounds: [ { banner, bannerSay, markFirst, items: [
+       { say, text, target: {text, art}, options: [{text, art}], answer: ["..."], hint2 } ] } ] }
+   ES5 only. Needs Shell and Art. */
+var TapIdentify = (function () {
+  var T = {};
+  var C, flat, idx, item, got, attempts, locked, firstTry, starTotal, tutorialDone;
+
+  function wordHtml(text, markFirst) {
+    if (!markFirst) { return text; }
+    return '<span class="first">' + text.charAt(0) + "</span>" + text.slice(1);
+  }
+
+  function makeCard(opt, markFirst, isTarget) {
+    var card = Shell.el("div", "card" + (isTarget ? " target" : ""));
+    card.setAttribute("role", isTarget ? "img" : "button");
+    card.setAttribute("aria-label", opt.text);
+    if (!isTarget) { card.setAttribute("tabindex", "0"); }
+    card.innerHTML = '<div class="art">' + Art.get(opt.art) + '</div><div class="word">' + wordHtml(opt.text, markFirst) + "</div>";
+    var badge = Shell.speakerBtn("badge", "Listen to " + opt.text);
+    badge.onclick = function (e) {
+      e.stopPropagation();
+      Shell.say(opt.say || opt.text);
+    };
+    card.appendChild(badge);
+    card.optText = opt.text;
+    return card;
+  }
+
+  function instruction() { return item.say || item.text; }
+
+  function render() {
+    var st = Shell.$("stage"), i, round = item.round;
+    st.innerHTML = "";
+    got = {}; attempts = 0; locked = true; firstTry = true;
+
+    var prompt = Shell.el("div", "prompt");
+    var sayBtn = Shell.speakerBtn("say", "Hear the question again");
+    sayBtn.onclick = function () { Shell.say(instruction()); };
+    prompt.appendChild(sayBtn);
+    prompt.appendChild(Shell.el("div", "prompt-text", item.text));
+    if (item.answer.length > 1) {
+      var ctr = Shell.el("div", "counter"), h = "";
+      for (i = 0; i < item.answer.length; i++) { h += "<b></b>"; }
+      ctr.innerHTML = h; ctr.id = "counter";
+      prompt.appendChild(ctr);
+    }
+    st.appendChild(prompt);
+
+    var board = Shell.el("div", "board");
+    if (item.target) {
+      var tr = Shell.el("div", "target-row");
+      tr.appendChild(makeCard(item.target, round.markFirst, true));
+      board.appendChild(tr);
+    }
+    var opts = Shell.shuffle(item.options);
+    var cards = Shell.el("div", "cards" + (opts.length > 3 ? " six" : ""));
+    for (i = 0; i < opts.length; i++) {
+      (function (card) {
+        card.onclick = function () { tap(card); };
+        card.onkeydown = function (e) { if (e.keyCode === 13 || e.keyCode === 32) { e.preventDefault(); tap(card); } };
+        cards.appendChild(card);
+      })(makeCard(opts[i], round.markFirst, false));
+    }
+    board.appendChild(cards);
+    st.appendChild(board);
+    Shell.progress(flat.length, idx);
+
+    var go = Shell.guard(function () {
+      if (!tutorialDone && T.tutorial !== false) {
+        tutorialDone = true;
+        var badge = cards.querySelector(".badge");
+        Shell.say(instruction(), Shell.guard(function () {
+          Shell.tutorial([
+            { node: sayBtn, say: "Tap here to hear the question again." },
+            { node: badge, say: "Tap a speaker to hear a word. Then tap the word you choose." }
+          ], Shell.guard(function () { locked = false; }));
+        }));
+      } else {
+        locked = false;
+        Shell.say(instruction());
+      }
+    });
+    go();
+  }
+
+  function allCards() { return Shell.$("stage").querySelectorAll(".cards .card"); }
+
+  function tap(card) {
+    if (locked || card.className.indexOf("got") > -1) { return; }
+    var ok = false, i;
+    for (i = 0; i < item.answer.length; i++) { if (item.answer[i] === card.optText) { ok = true; } }
+    if (ok) {
+      got[card.optText] = true;
+      card.className += " got";
+      var n = 0, k;
+      for (k in got) { if (got.hasOwnProperty(k)) { n++; } }
+      var ctr = Shell.$("counter");
+      if (ctr) { ctr.children[n - 1].className = "got"; }
+      var praise = Shell.right(card);
+      if (n === item.answer.length) {
+        locked = true;
+        if (firstTry) { T.score++; }
+        starTotal++; Shell.setStars(starTotal);
+        Shell.say(card.optText + ". " + praise, Shell.guard(function () {
+          Shell.wait(Shell.guard(next), 500);
+        }));
+      } else {
+        Shell.say(card.optText + ". " + praise + " Find one more.");
+      }
+    } else {
+      firstTry = false;
+      attempts++;
+      Shell.wrong(card);
+      hint();
+    }
+  }
+
+  function hint() {
+    var cards = allCards(), i;
+    if (attempts === 1) {
+      Shell.say("Try again. " + instruction());
+    } else if (attempts === 2) {
+      if (item.target) {
+        var t = Shell.$("stage").querySelector(".card.target .first");
+        if (t) { Shell.flash(t, "mark", 2600); }
+        locked = true;
+        Shell.say(item.hint2 || ("Listen. " + item.target.text + ". " + item.target.text + "."),
+          Shell.guard(function () { listenAll(cards); }));
+      } else {
+        listenAll(cards);
+      }
+    } else {
+      /* third and later: mark every first letter the same way (reveals nothing) and model listening */
+      for (i = 0; i < cards.length; i++) {
+        var f = cards[i].querySelector(".first");
+        if (f) { Shell.flash(f, "mark", 4000); }
+      }
+      listenAll(cards);
+    }
+  }
+
+  /* speak each option in turn while its card pulses */
+  function listenAll(cards) {
+    var list = [], i;
+    for (i = 0; i < cards.length; i++) { if (cards[i].className.indexOf("got") < 0) { list.push(cards[i]); } }
+    locked = true;
+    var j = 0;
+    var step = Shell.guard(function () {
+      if (j >= list.length) { locked = false; Shell.say(instruction()); return; }
+      var c = list[j]; j++;
+      Shell.flash(c, "pulse", 800);
+      Shell.say(c.optText, function () { Shell.wait(step, 200); });
+    });
+    Shell.say("Listen to each word.", step);
+  }
+
+  function next() {
+    idx++;
+    if (idx >= flat.length) {
+      Shell.progress(flat.length, flat.length);
+      Shell.wait(Shell.guard(function () { Shell.finish(T.score, flat.length); }), 400);
+      return;
+    }
+    item = flat[idx];
+    if (item.round !== flat[idx - 1].round && item.round.banner) {
+      Shell.$("stage").innerHTML = "";
+      Shell.banner(item.round.banner, item.round.bannerSay, Shell.guard(render));
+    } else {
+      render();
+    }
+  }
+
+  T.start = function () {
+    var r, i;
+    flat = [];
+    for (r = 0; r < C.rounds.length; r++) {
+      var its = C.rounds[r].shuffle === false ? C.rounds[r].items : Shell.shuffle(C.rounds[r].items);
+      for (i = 0; i < its.length; i++) { its[i].round = C.rounds[r]; flat.push(its[i]); }
+    }
+    idx = 0; T.score = 0; starTotal = 0;
+    item = flat[0];
+    if (item.round.banner) {
+      Shell.banner(item.round.banner, item.round.bannerSay, Shell.guard(render));
+    } else {
+      render();
+    }
+  };
+  T.resume = function () { if (item) { Shell.say(instruction()); } };
+  T.total = function () { return flat ? flat.length : 0; };
+
+  T.init = function (content) {
+    C = content;
+    tutorialDone = false;
+    T.score = 0;
+  };
+  return T;
+})();
+
+/* ---- SAMESOUND.game.js ---- */
+// @asset ENG01CH02SAMESOUND
+// @version v-01
+// @title Same First Sound
+// @engine tap-identify
+/* A6 · Same First Sound · Phonics and Spelling > Sounds at the Start of Word · O4
+   Source: book p.31, 2D A (verbatim word box): book stop exit staff hand sign.
+   Answer set: stop, staff, sign. Words only are spoken (no isolated /s/: TTS
+   cannot say a single sound). Round 3 is the book task as printed (six words),
+   the one screen allowed more than three cards. */
+(function () {
+  var W = {
+    book: { text: "book", art: "book" },
+    stop: { text: "stop", art: "stop" },
+    exit: { text: "exit", art: "exit" },
+    staff: { text: "staff", art: "staff" },
+    hand: { text: "hand", art: "hand" },
+    sign: { text: "sign", art: "sign" }
+  };
+  function same(target, a, b, c, answer) {
+    return {
+      text: "Which word starts like <b>" + target + "</b>?",
+      say: "Which word starts with the same sound as " + target + "?",
+      target: W[target],
+      options: [W[a], W[b], W[c]],
+      answer: [answer],
+      hint2: "Listen. " + target + ". " + target + "."
+    };
+  }
+  function two(a, b, c, answers) {
+    return {
+      text: "Two words start the same. Tap them both.",
+      say: "Two words start with the same sound. Tap them both.",
+      options: [W[a], W[b], W[c]],
+      answer: answers
+    };
+  }
+
+  var CONTENT = {
+    rounds: [
+      {
+        banner: "Round 1", bannerSay: "Round one. Find the word that starts the same.",
+        markFirst: true,
+        items: [
+          same("stop", "staff", "book", "hand", "staff"),
+          same("sign", "exit", "stop", "hand", "stop"),
+          same("staff", "book", "sign", "exit", "sign")
+        ]
+      },
+      {
+        banner: "Round 2", bannerSay: "Round two. Find two words that start the same.",
+        markFirst: true,
+        items: [
+          two("stop", "hand", "sign", ["stop", "sign"]),
+          two("book", "staff", "stop", ["staff", "stop"]),
+          two("exit", "sign", "staff", ["sign", "staff"])
+        ]
+      },
+      {
+        banner: "Book challenge", bannerSay: "Book challenge! Find three words that start with the same sound.",
+        markFirst: true,
+        items: [
+          {
+            text: "Find three words that start with the same sound.",
+            say: "Read the words. Find three words that start with the same sound.",
+            options: [W.book, W.stop, W.exit, W.staff, W.hand, W.sign],
+            answer: ["stop", "staff", "sign"]
+          }
+        ]
+      }
+    ]
+  };
+
+  TapIdentify.init(CONTENT);
+  Shell.boot({
+    asset: "ENG01CH02SAMESOUND",
+    version: "v-01",
+    title: "Same First Sound",
+    kicker: "Grade 1 · English · Chapter 2",
+    sub: "Find words that start the same.",
+    start: TapIdentify.start,
+    resume: TapIdentify.resume,
+    score: function () { return TapIdentify.score || 0; },
+    max: 7
+  });
+})();
+
+</script>
+</body>
+</html>

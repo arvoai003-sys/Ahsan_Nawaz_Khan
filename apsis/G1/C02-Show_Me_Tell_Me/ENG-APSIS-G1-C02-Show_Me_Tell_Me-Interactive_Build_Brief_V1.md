@@ -18,7 +18,7 @@ other 17 are:
 | A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | Needs D1 |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | Ready (whole-word audio, see F12) |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-01** |
 | A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `SIGNLETTER` | Ready |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
@@ -156,3 +156,9 @@ All of these can be auto-graded and are printed in the book:
 
 Each build goes through `.claude/skills/apsis-g1-interactive-build/references/qa-checklist.md`
 and is delivered as a new version in `builds/`.
+
+## 5. Build log
+
+| Date | Asset | File | Notes |
+|---|---|---|---|
+| 2026-09-25 | A6 Same First Sound | `builds/ENG01CH02SAMESOUND_v-01.html` | 7 items in 3 rounds, all from the 2D A word box (p.31): starts-like (3), find two (3), the book's six-word task (1). Whole words spoken only. QA passed at 360×640, 740×360 and 1280×720. First build of the shared shell and the tap-to-identify engine. |
