@@ -7,29 +7,44 @@
 <title>{{TITLE}}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;700;800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 {{CSS}}
 </style>
 </head>
 <body>
+<div id="scenery" aria-hidden="true">
+  <svg class="cloud c1" viewBox="0 0 150 70"><path d="M30 60a22 22 0 0 1 4-43 30 30 0 0 1 56-6 24 24 0 0 1 36 20 16 16 0 0 1-2 29z" fill="#fff"/></svg>
+  <svg class="cloud c2" viewBox="0 0 150 70"><path d="M30 60a22 22 0 0 1 4-43 30 30 0 0 1 56-6 24 24 0 0 1 36 20 16 16 0 0 1-2 29z" fill="#fff"/></svg>
+  <svg class="cloud c3" viewBox="0 0 150 70"><path d="M30 60a22 22 0 0 1 4-43 30 30 0 0 1 56-6 24 24 0 0 1 36 20 16 16 0 0 1-2 29z" fill="#fff"/></svg>
+  <svg class="hills" viewBox="0 0 400 100" preserveAspectRatio="none">
+    <path d="M0 50C60 10 120 20 180 45S300 30 400 40V100H0z" fill="#8EE06B"/>
+    <path d="M0 70C80 45 150 55 230 72S340 55 400 62V100H0z" fill="#5CCB52"/>
+  </svg>
+</div>
+
 <div id="app">
 
-  <section class="screen on" id="start">
-    <div class="panel-wrap">
-      <div class="panel">
-        <div class="mascot" id="start-mascot"></div>
-        <div class="kicker" id="start-kicker"></div>
-        <h1 id="start-title"></h1>
-        <p class="sub" id="start-sub"></p>
-        <button class="big-btn" id="play-btn" type="button">&#9654; Play</button>
+  <section class="screen on" id="home">
+    <div class="home-wrap">
+      <div class="home-head">
+        <div class="mascot" id="home-mascot"></div>
+        <div class="home-title">
+          <span class="kicker" id="home-kicker"></span>
+          <h1 id="home-title"></h1>
+        </div>
+        <button class="icon-btn talk" id="home-say" type="button" aria-label="Listen"></button>
       </div>
+      <p class="choose">Choose a level!</p>
+      <div class="levels" id="levels"></div>
     </div>
   </section>
 
   <section class="screen" id="game">
     <div class="topbar">
-      <button class="icon-btn" id="pause-btn" type="button" aria-label="Pause"></button>
+      <button class="icon-btn home" id="home-btn" type="button" aria-label="Home"></button>
+      <button class="icon-btn pause" id="pause-btn" type="button" aria-label="Pause"></button>
+      <span class="level-tag" id="level-tag"></span>
       <div class="progress" id="progress"></div>
       <div class="star-count" aria-label="Stars"><span id="star-icon"></span><span id="star-num">0</span></div>
     </div>
@@ -41,11 +56,13 @@
     <div class="panel-wrap">
       <div class="panel">
         <div class="mascot" id="end-mascot"></div>
-        <h1>Well done!</h1>
+        <h1 id="end-title">Well done!</h1>
+        <p class="sub" id="end-sub"></p>
         <div class="end-stars" id="end-stars"></div>
         <div class="btn-row">
-          <button class="big-btn alt" id="again-btn" type="button">&#8635; Again</button>
-          <button class="big-btn" id="next-btn" type="button">Next &#9654;</button>
+          <button class="big-btn blue" id="again-btn" type="button">&#8635; Again</button>
+          <button class="big-btn green" id="next-btn" type="button">Next level &#9654;</button>
+          <button class="big-btn" id="end-home-btn" type="button"><span class="ic" id="end-home-ic"></span>Home</button>
         </div>
       </div>
     </div>
@@ -57,10 +74,10 @@
   <div class="panel">
     <h1>Paused</h1>
     <div class="menu">
-      <button class="big-btn" id="resume-btn" type="button">&#9654; Resume</button>
-      <button class="big-btn alt" id="sound-btn" type="button">Sound: on</button>
-      <button class="big-btn alt" id="restart-btn" type="button">&#8635; Restart</button>
-      <button class="big-btn alt" id="exit-btn" type="button">Exit</button>
+      <button class="big-btn green" id="resume-btn" type="button">&#9654; Resume</button>
+      <button class="big-btn blue" id="sound-btn" type="button">Sound: on</button>
+      <button class="big-btn pink" id="restart-btn" type="button">&#8635; Restart</button>
+      <button class="big-btn" id="menu-home-btn" type="button">Home</button>
     </div>
   </div>
 </div>

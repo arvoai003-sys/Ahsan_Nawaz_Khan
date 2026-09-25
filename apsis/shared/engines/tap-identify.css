@@ -1,36 +1,47 @@
 /* Tap-to-identify board */
 .board { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; max-width: 760px; }
 .target-row { display: flex; align-items: center; gap: 14px; }
-.target-row .label { font-family: var(--font-title); font-weight: 700; font-size: 22px; color: var(--ink-soft); }
 .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; width: 100%; }
 .cards.six { max-width: 560px; }
 
 .card {
-  position: relative; width: 150px; min-height: 172px; background: var(--card); border-radius: var(--radius);
-  box-shadow: var(--shadow); border: 4px solid transparent; cursor: pointer;
+  position: relative; width: 150px; min-height: 176px; background: var(--card); border-radius: var(--radius);
+  border: 4px solid var(--ink); box-shadow: 0 8px 0 var(--ink); cursor: pointer;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-  padding: 14px 10px 12px; transition: transform .12s, border-color .2s; outline: none;
+  padding: 12px 10px 10px; transition: transform .12s, box-shadow .12s; outline: none;
+  animation: pop .35s cubic-bezier(.2,1.6,.4,1) both;
 }
-.card:active { transform: scale(.96); }
-.card:focus-visible { border-color: var(--teal); }
-.card .art { width: 92px; height: 92px; margin-bottom: 6px; }
+.cards .card:nth-child(2) { animation-delay: .06s; } .cards .card:nth-child(3) { animation-delay: .12s; }
+.cards .card:nth-child(4) { animation-delay: .18s; } .cards .card:nth-child(5) { animation-delay: .24s; }
+.cards .card:nth-child(6) { animation-delay: .3s; }
+.card:active { transform: translateY(5px); box-shadow: 0 3px 0 var(--ink); }
+.card:focus-visible { outline: 5px solid var(--yellow); }
+.card .art {
+  width: 100px; height: 100px; margin-bottom: 6px; border-radius: 50%; padding: 8px;
+  background: #FFF4C2; border: 3px solid var(--ink);
+}
+.card.k0 .art { background: #FFF1B8; } .card.k1 .art { background: #FFD6DE; } .card.k2 .art { background: #CDEBFF; }
+.card.k3 .art { background: #CFF5DE; } .card.k4 .art { background: #FFE2C2; } .card.k5 .art { background: #E6D6FA; }
+.card.k0 { border-bottom-color: var(--yellow-d); } .card.k1 { border-bottom-color: var(--red-d); } .card.k2 { border-bottom-color: var(--blue-d); }
 .card .art svg { width: 100%; height: 100%; }
-.card .word { font-family: var(--font-read); font-size: 32px; line-height: 1.1; color: var(--ink); }
-.card .word .first { transition: color .2s, background .2s; border-radius: 6px; padding: 0 1px; }
-.card .word .first.mark { background: #FFF1C2; box-shadow: inset 0 -4px 0 var(--sun); }
-.card .badge { position: absolute; top: -12px; right: -12px; width: 52px; height: 52px; }
+.card .word { font-family: var(--font-read); font-weight: 700; font-size: 32px; line-height: 1.1; color: var(--ink); white-space: nowrap; }
+.card .word .first { transition: color .2s, background .2s; border-radius: 6px; padding: 0 1px; color: var(--red); }
+.card .word .first.mark { background: #FFF1B8; box-shadow: inset 0 -5px 0 var(--yellow); }
+.card .badge { position: absolute; top: -14px; right: -14px; width: 52px; height: 52px; box-shadow: 0 4px 0 var(--ink); }
 .card .badge svg { width: 26px; height: 26px; }
-.card.got { border-color: var(--right); cursor: default; }
+.card.got { border-color: var(--green); box-shadow: 0 8px 0 var(--green-d), 0 0 0 6px #B8F0CE; cursor: default; animation: wiggle .5s; }
 .card.got::after {
-  content: ""; position: absolute; left: -12px; top: -12px; width: 46px; height: 46px; border-radius: 50%;
-  background: var(--right) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/30px no-repeat;
+  content: ""; position: absolute; left: -14px; top: -14px; width: 50px; height: 50px; border-radius: 50%;
+  border: 4px solid var(--ink);
+  background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/30px no-repeat;
   animation: pop .35s cubic-bezier(.2,1.6,.4,1);
 }
-.card.got .word .first { color: var(--teal-deep); }
 .card.dim { opacity: .55; }
-.card.pulse { animation: glow .8s ease-in-out 1; }
+.card.pulse { animation: glowpulse .8s ease-in-out 1; }
+@keyframes glowpulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); box-shadow: 0 8px 0 var(--ink), 0 0 0 8px var(--yellow); } }
 
-.card.target { width: 132px; min-height: 150px; border: 4px dashed var(--teal); cursor: default; background: #F6FCFE; }
+.card.target { width: 132px; min-height: 156px; border: 4px dashed var(--ink); box-shadow: none; cursor: default; background: #FFF9E0; animation: none; }
+.target-row .label { font-family: var(--font-title); font-weight: 800; font-size: 22px; }
 .card.target .art { width: 76px; height: 76px; }
 .card.target .word { font-size: 28px; }
 
@@ -52,13 +63,13 @@
 }
 @media (max-width: 520px) {
   .stage { padding-left: 12px; padding-right: 12px; }
-  .card { width: 96px; min-height: 136px; padding: 10px 6px; }
+  .card { width: 100px; min-height: 136px; padding: 10px 5px; }
   .card .art { width: 64px; height: 64px; }
   .card .word { font-size: 26px; }
   .card .badge { width: 46px; height: 46px; top: -10px; right: -10px; }
   .cards { gap: 12px; }
-  .cards.six { max-width: 336px; }
-  .cards.six .card { width: 96px; min-height: 124px; }
+  .cards.six { max-width: 340px; }
+  .cards.six .card { width: 98px; min-height: 124px; }
   .cards.six .card .art { width: 54px; height: 54px; }
   .cards.six .card .word { font-size: 24px; }
   .card.target { width: 104px; min-height: 124px; }
@@ -78,3 +89,9 @@
   .cards.six .card .art { width: 48px; height: 48px; }
   .cards.six .card .word { font-size: 24px; }
 }
+
+/* long words (7+ letters) shrink so they stay inside the card */
+.card .word.long { font-size: 26px; }
+@media (max-width: 520px) { .card .word.long, .cards.six .card .word.long { font-size: 19px; } }
+@media (max-height: 520px) { .card .word.long, .cards.six .card .word.long { font-size: 20px; } }
+@media (min-width: 900px) and (min-height: 640px) { .card .word.long { font-size: 32px; } .cards.six .card .word.long { font-size: 27px; } }

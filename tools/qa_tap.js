@@ -1,9 +1,13 @@
-// QA driver for tap-identify games: node tools/qa_tap.js <build.html> <answers.json> <outdir>
-// answers.json: [["staff"],["stop"],...] is not used; answers are read from the screen by text list per item
+// QA driver for tap-identify games with a level picker.
+//   node tools/qa_tap.js <build.html> <outdir>
+// Plays every level from the home page at 360x640 (touch), 740x360 (touch) and
+// 1280x720 with a speech stub. Answers are worked out from the screen by first
+// letter (same-sound games). On level 1 it taps wrong three times to run the
+// hint ladder. Checks layout, console errors, stars on the home tiles, the Home
+// button mid-level, Pause > Home, and writes screenshots plus all speech.
 const { chromium } = require(require('child_process').execSync('npm root -g').toString().trim() + '/playwright');
 const path = require('path'), fs = require('fs');
-const [,, file, keyFile, out] = process.argv;
-const KEY = JSON.parse(fs.readFileSync(keyFile, 'utf8')); // { "<prompt contains>": { "<target or set>": [answers] } } simplified below
+const [, , file, out] = process.argv;
 fs.mkdirSync(out, { recursive: true });
 
 const STUB = `
@@ -20,10 +24,23 @@ const STUB = `
     Object.defineProperty(window, 'speechSynthesis', { value: fake, configurable: true });
   })();`;
 
+function answersFor(state) {
+  const groups = {};
+  state.words.forEach(w => (groups[w[0]] = groups[w[0]] || []).push(w));
+  if (state.target) return groups[state.target[0]] || [];
+  if (/different/.test(state.prompt)) return Object.values(groups).filter(g => g.length === 1).map(g => g[0]);
+  return Object.values(groups).sort((a, b) => b.length - a.length)[0];
+}
+
 (async () => {
-  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' }).catch(() => chromium.launch());
-  const results = [];
-  for (const vp of [{ name: 'portrait', width: 360, height: 640, touch: true }, { name: 'landscape', width: 1280, height: 720, touch: false }]) {
+  const browser = await chromium.launch();
+  const report = [];
+  const viewports = [
+    { name: 'portrait', width: 360, height: 640, touch: true },
+    { name: 'phone-land', width: 740, height: 360, touch: true },
+    { name: 'landscape', width: 1280, height: 720, touch: false }
+  ];
+  for (const vp of viewports) {
     const ctx = await browser.newContext({ viewport: { width: vp.width, height: vp.height }, hasTouch: vp.touch });
     const page = await ctx.newPage();
     const errors = [];
@@ -32,64 +49,84 @@ const STUB = `
     await page.addInitScript(STUB);
     await page.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
     await page.goto('file://' + path.resolve(file));
-    await page.screenshot({ path: `${out}/${vp.name}-0-start.png` });
-    await page.click('#play-btn');
-    let shot = 1, wrongDone = false, items = 0;
-    const ov = async () => {
-      const o = await page.evaluate(() => { const r = [], els = document.querySelectorAll('.cards .card, .cards .badge'); for (const e of els) { const b = e.getBoundingClientRect(); r.push([e.className, b.left, b.top, b.right, b.bottom, b.width, b.height]); } return { r, w: innerWidth, h: innerHeight, sw: document.documentElement.scrollWidth, sh: document.documentElement.scrollHeight }; });
-      const bad = o.r.filter(x => x[1] < -1 || x[2] < -1 || x[3] > o.w + 1 || x[4] > o.h + 1);
-      const small = o.r.filter(x => !/badge/.test(x[0]) && (x[5] < 64 || x[6] < 64));
-      return { bad, small, sw: o.sw, sh: o.sh, w: o.w, h: o.h };
-    };
-    for (let guard = 0; guard < 60; guard++) {
-      // wait for board ready or end screen
-      await page.waitForFunction(() => document.querySelector('#end.on') || (document.querySelector('.cards .card') && !document.querySelector('.cards .card.got') && !document.querySelector('#banner.on') && !document.querySelector('#hand.on')), null, { timeout: 30000 });
-      if (await page.$('#end.on')) break;
-      await page.waitForTimeout(150);
-      const state = await page.evaluate(() => ({ prompt: document.querySelector('.prompt-text').innerText, target: (document.querySelector('.card.target .word') || {}).innerText || '', words: [...document.querySelectorAll('.cards .card:not(.got) .word')].map(e => e.innerText) }));
-      const keyId = state.target ? 'same:' + state.target + ':' + [...state.words].sort().join(',') : 'set:' + [...state.words].sort().join(',');
-      const answers = KEY[keyId];
-      if (!answers) { console.log(`${vp.name}: NO KEY for ${keyId}`); break; }
-      const o = await ov();
-      if (o.bad.length || o.small.length || o.sw > o.w || o.sh > o.h) results.push(`${vp.name} item ${items}: layout bad=${JSON.stringify(o.bad)} small=${JSON.stringify(o.small)} scroll=${o.sw}x${o.sh}`);
-      await page.screenshot({ path: `${out}/${vp.name}-${shot++}.png` });
-      if (!wrongDone) {
-        const wrong = state.words.find(w => !answers.includes(w));
-        for (let k = 0; k < 3; k++) {
-          await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + wrong + '$') }) }).first().click({ position: { x: 20, y: 60 } });
-          await page.waitForTimeout(700);
-          await page.waitForFunction(() => !document.querySelector('#hand.on'), null, { timeout: 30000 });
+    await page.waitForTimeout(300);
+    await page.screenshot({ path: `${out}/${vp.name}-home.png` });
+    const homeOv = await page.evaluate(() => [document.querySelector('.home-wrap').scrollHeight, document.querySelector('.home-wrap').clientHeight, document.documentElement.scrollWidth]);
+    if (homeOv[2] > vp.width) report.push(`${vp.name}: home scrolls sideways`);
+    if (homeOv[0] > homeOv[1] + 2) report.push(`${vp.name}: home needs vertical scroll (${homeOv[0]} > ${homeOv[1]})`);
+    const nLevels = await page.$$eval('.level', l => l.length);
+    const layoutIssues = new Set();
+
+    for (let L = 0; L < nLevels; L++) {
+      await page.locator('.level').nth(L).click();
+      let items = 0, shot = 0;
+      for (let guard = 0; guard < 40; guard++) {
+        await page.waitForFunction(() => document.querySelector('#end.on') ||
+          (document.querySelector('#stage[data-ready="1"] .cards .card') && !document.querySelector('.cards .card.got') && !document.querySelector('#banner.on') && !document.querySelector('#hand.on')), null, { timeout: 30000 });
+        if (await page.$('#end.on')) break;
+        await page.waitForTimeout(450);
+        const state = await page.evaluate(() => ({
+          prompt: document.querySelector('.prompt-text').innerText,
+          target: (document.querySelector('.card.target .word') || {}).innerText || '',
+          words: [...document.querySelectorAll('.cards .card .word')].map(e => e.innerText.trim())
+        }));
+        const ans = answersFor(state);
+        const lay = await page.evaluate(() => {
+          const r = [], W = innerWidth, H = innerHeight;
+          document.querySelectorAll('.cards .card, .card.target, .prompt, .topbar .icon-btn').forEach(e => { const b = e.getBoundingClientRect(); if (b.left < -1 || b.top < -1 || b.right > W + 1 || b.bottom > H + 1) r.push(e.className + ' off-screen'); if (/card/.test(e.className) && (b.width < 64 || b.height < 64)) r.push('small card'); });
+          if (document.documentElement.scrollWidth > W) r.push('page scrolls sideways');
+          document.querySelectorAll('.card .word').forEach(w => { const c = w.parentNode.getBoundingClientRect(), b = w.getBoundingClientRect(); if (b.left < c.left + 2 || b.right > c.right - 2) r.push('word overflows card: ' + w.innerText); });
+          document.querySelectorAll('.big-btn').forEach(bt => { if (bt.offsetParent && bt.getBoundingClientRect().height > 90) r.push('button label wraps'); });
+          return r;
+        });
+        lay.forEach(x => layoutIssues.add(`L${L + 1} ${x}`));
+        if (shot < 2) await page.screenshot({ path: `${out}/${vp.name}-L${L + 1}-${shot++}.png` });
+        if (L === 0 && items === 0) {
+          const wrong = state.words.find(w => !ans.includes(w));
+          for (let k = 0; k < 3; k++) {
+            await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + wrong + '$') }) }).first().click({ position: { x: 22, y: 70 } });
+            await page.waitForTimeout(250);
+            await page.waitForFunction(() => document.querySelector('#stage[data-ready="1"]'), null, { timeout: 30000 });
+            await page.waitForTimeout(200);
+          }
+          await page.screenshot({ path: `${out}/${vp.name}-hints.png` });
         }
-        await page.screenshot({ path: `${out}/${vp.name}-hints.png` });
-        wrongDone = true;
-        // hint 3 listens to all words; wait until unlocked
-        await page.waitForTimeout(800);
+        for (const a of ans) {
+          await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + a + '$') }) }).first().click({ position: { x: 22, y: 70 } });
+          await page.waitForTimeout(200);
+        }
+        items++;
       }
-      for (const a of answers) {
-        await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + a + '$') }) }).first().click({ position: { x: 20, y: 60 } });
-        await page.waitForTimeout(250);
-      }
-      items++;
-      await page.waitForTimeout(400);
+      await page.waitForSelector('#end.on', { timeout: 30000 });
+      await page.waitForTimeout(900);
+      if (L === 0 || L === nLevels - 1) await page.screenshot({ path: `${out}/${vp.name}-L${L + 1}-end.png` });
+      const lit = await page.$$eval('#end-stars .lit', s => s.length);
+      report.push(`${vp.name} L${L + 1}: items=${items} stars=${lit}`);
+      await page.click('#end-home-btn');
+      await page.waitForSelector('#home.on');
     }
-    await page.waitForSelector('#end.on', { timeout: 30000 });
-    await page.waitForTimeout(1200);
-    await page.screenshot({ path: `${out}/${vp.name}-end.png` });
-    const res = await page.evaluate(() => ({ stars: document.querySelectorAll('#end-stars .lit').length, spoken: window.__spoken, stored: (function(){ try { return localStorage.getItem('arvo:ENG01CH02SAMESOUND'); } catch(e) { return 'blocked'; } })() }));
-    results.push(`${vp.name}: items=${items} stars=${res.stars} stored=${res.stored} errors=${JSON.stringify(errors)}`);
-    if (vp.name === 'landscape') {
-      fs.writeFileSync(`${out}/spoken.txt`, res.spoken.join('\n'));
-      // restart test from pause mid-game
-      await page.click('#again-btn');
-      await page.waitForFunction(() => document.querySelector('.cards .card') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
-      await page.click('#pause-btn'); await page.screenshot({ path: `${out}/pause.png` });
-      await page.click('#restart-btn');
-      await page.waitForTimeout(300);
-      const dots = await page.evaluate(() => document.querySelectorAll('#progress i.done').length);
-      results.push(`restart: done dots=${dots} stars=${await page.textContent('#star-num')} errors=${JSON.stringify(errors)}`);
-    }
+    const tileStars = await page.$$eval('.level', ts => ts.map(t => t.querySelectorAll('.lstars svg path[fill="#FFC845"]').length));
+    report.push(`${vp.name}: home tile stars ${JSON.stringify(tileStars)}`);
+    await page.screenshot({ path: `${out}/${vp.name}-home-after.png` });
+
+    // Home button mid-level, then Pause > Home
+    await page.locator('.level').nth(2).click();
+    await page.waitForFunction(() => document.querySelector('.cards .card') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
+    await page.click('#home-btn');
+    const atHome1 = await page.$('#home.on');
+    await page.locator('.level').nth(3).click();
+    await page.waitForFunction(() => document.querySelector('.cards .card') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
+    await page.click('#pause-btn');
+    if (vp.name === 'landscape') await page.screenshot({ path: `${out}/${vp.name}-pause.png` });
+    await page.click('#menu-home-btn');
+    const atHome2 = await page.$('#home.on');
+    await page.waitForTimeout(1500);
+    const stray = await page.evaluate(() => !!document.querySelector('#game.on') || document.querySelector('#hand.on') !== null);
+    report.push(`${vp.name}: home button ok=${!!atHome1} pause>home ok=${!!atHome2} stray-after-home=${stray}`);
+    report.push(`${vp.name}: layout issues ${JSON.stringify([...layoutIssues])} errors=${JSON.stringify(errors)}`);
+    if (vp.name === 'landscape') fs.writeFileSync(`${out}/spoken.txt`, (await page.evaluate(() => window.__spoken)).join('\n'));
     await ctx.close();
   }
   await browser.close();
-  console.log(results.join('\n'));
+  console.log(report.join('\n'));
 })().catch(e => { console.error(e); process.exit(1); });

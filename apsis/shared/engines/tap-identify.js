@@ -17,7 +17,7 @@ var TapIdentify = (function () {
     card.setAttribute("role", isTarget ? "img" : "button");
     card.setAttribute("aria-label", opt.text);
     if (!isTarget) { card.setAttribute("tabindex", "0"); }
-    card.innerHTML = '<div class="art">' + Art.get(opt.art) + '</div><div class="word">' + wordHtml(opt.text, markFirst) + "</div>";
+    card.innerHTML = '<div class="art">' + Art.get(opt.art) + '</div><div class="word' + (opt.text.length >= 7 ? " long" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>";
     var badge = Shell.speakerBtn("badge", "Listen to " + opt.text);
     badge.onclick = function (e) {
       e.stopPropagation();
@@ -29,11 +29,17 @@ var TapIdentify = (function () {
   }
 
   function instruction() { return item.say || item.text; }
+  /* locked: taps are ignored (speech or tutorial running). data-ready mirrors it for tests. */
+  function lock(v) {
+    locked = v;
+    var st = Shell.$("stage");
+    if (st) { st.setAttribute("data-ready", v ? "0" : "1"); }
+  }
 
   function render() {
     var st = Shell.$("stage"), i, round = item.round;
     st.innerHTML = "";
-    got = {}; attempts = 0; locked = true; firstTry = true;
+    got = {}; attempts = 0; lock(true); firstTry = true;
 
     var prompt = Shell.el("div", "prompt");
     var sayBtn = Shell.speakerBtn("say", "Hear the question again");
@@ -56,8 +62,10 @@ var TapIdentify = (function () {
     }
     var opts = Shell.shuffle(item.options);
     var cards = Shell.el("div", "cards" + (opts.length > 3 ? " six" : ""));
+    var tint = Math.floor(Math.random() * 6);
     for (i = 0; i < opts.length; i++) {
       (function (card) {
+        card.className += " k" + ((tint + i) % 6);
         card.onclick = function () { tap(card); };
         card.onkeydown = function (e) { if (e.keyCode === 13 || e.keyCode === 32) { e.preventDefault(); tap(card); } };
         cards.appendChild(card);
@@ -65,6 +73,7 @@ var TapIdentify = (function () {
     }
     board.appendChild(cards);
     st.appendChild(board);
+    fitWords(st);
     Shell.progress(flat.length, idx);
 
     var go = Shell.guard(function () {
@@ -75,15 +84,31 @@ var TapIdentify = (function () {
           Shell.tutorial([
             { node: sayBtn, say: "Tap here to hear the question again." },
             { node: badge, say: "Tap a speaker to hear a word. Then tap the word you choose." }
-          ], Shell.guard(function () { locked = false; }));
+          ], Shell.guard(function () { lock(false); }));
         }));
       } else {
-        locked = false;
+        lock(false);
         Shell.say(instruction());
       }
     });
     go();
   }
+
+  /* shrink any word that is wider than its card until it fits */
+  function fitWords(root) {
+    var words = root.querySelectorAll(".card .word"), i, w, size, room;
+    for (i = 0; i < words.length; i++) {
+      w = words[i];
+      w.style.fontSize = "";
+      room = w.parentNode.clientWidth - 12;
+      size = parseFloat(window.getComputedStyle(w).fontSize);
+      while (w.scrollWidth > room && size > 14) {
+        size -= 1;
+        w.style.fontSize = size + "px";
+      }
+    }
+  }
+  T.refit = function () { var st = Shell.$("stage"); if (st) { fitWords(st); } };
 
   function allCards() { return Shell.$("stage").querySelectorAll(".cards .card"); }
 
@@ -100,7 +125,7 @@ var TapIdentify = (function () {
       if (ctr) { ctr.children[n - 1].className = "got"; }
       var praise = Shell.right(card);
       if (n === item.answer.length) {
-        locked = true;
+        lock(true);
         if (firstTry) { T.score++; }
         starTotal++; Shell.setStars(starTotal);
         Shell.say(card.optText + ". " + praise, Shell.guard(function () {
@@ -125,7 +150,7 @@ var TapIdentify = (function () {
       if (item.target) {
         var t = Shell.$("stage").querySelector(".card.target .first");
         if (t) { Shell.flash(t, "mark", 2600); }
-        locked = true;
+        lock(true);
         Shell.say(item.hint2 || ("Listen. " + item.target.text + ". " + item.target.text + "."),
           Shell.guard(function () { listenAll(cards); }));
       } else {
@@ -145,10 +170,10 @@ var TapIdentify = (function () {
   function listenAll(cards) {
     var list = [], i;
     for (i = 0; i < cards.length; i++) { if (cards[i].className.indexOf("got") < 0) { list.push(cards[i]); } }
-    locked = true;
+    lock(true);
     var j = 0;
     var step = Shell.guard(function () {
-      if (j >= list.length) { locked = false; Shell.say(instruction()); return; }
+      if (j >= list.length) { lock(false); Shell.say(instruction()); return; }
       var c = list[j]; j++;
       Shell.flash(c, "pulse", 800);
       Shell.say(c.optText, function () { Shell.wait(step, 200); });
@@ -172,12 +197,13 @@ var TapIdentify = (function () {
     }
   }
 
-  T.start = function () {
-    var r, i;
+  T.start = function (levelIndex) {
+    var r, i, L = C.levels[levelIndex || 0];
+    var rounds = L.make ? L.make() : L.rounds;
     flat = [];
-    for (r = 0; r < C.rounds.length; r++) {
-      var its = C.rounds[r].shuffle === false ? C.rounds[r].items : Shell.shuffle(C.rounds[r].items);
-      for (i = 0; i < its.length; i++) { its[i].round = C.rounds[r]; flat.push(its[i]); }
+    for (r = 0; r < rounds.length; r++) {
+      var its = rounds[r].shuffle === false ? rounds[r].items : Shell.shuffle(rounds[r].items);
+      for (i = 0; i < its.length; i++) { its[i].round = rounds[r]; flat.push(its[i]); }
     }
     idx = 0; T.score = 0; starTotal = 0;
     item = flat[0];
@@ -189,9 +215,11 @@ var TapIdentify = (function () {
   };
   T.resume = function () { if (item) { Shell.say(instruction()); } };
   T.total = function () { return flat ? flat.length : 0; };
+  T.max = function () { return flat ? flat.length : 0; };
 
   T.init = function (content) {
     C = content;
+    window.addEventListener("resize", function () { T.refit(); });
     tutorialDone = false;
     T.score = 0;
   };
