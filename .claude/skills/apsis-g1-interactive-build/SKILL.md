@@ -1,0 +1,128 @@
+---
+name: apsis-g1-interactive-build
+description: Build the interactive HTML assets (tap-to-identify, matching, letter-fill, drag-assemble, word-builder, read-along, gate runner) named in an APSIS Grade 1 English Asset Plan. Use when asked to build, spec, verify or QA a game or read-along for an APSIS G1 chapter (e.g. "build A6", "make the sign games for Chapter 2", "next interactive asset"), or to check an Asset Plan row against the book scan before building.
+---
+
+# APSIS Grade 1: interactive asset builds
+
+This skill turns rows of an approved APSIS Grade 1 Asset Plan into
+self-contained HTML games for six-year-olds. It extends the ARVO
+self-paced LMS skill (`anthropic-skills:arvo-self-paced-lms`, especially
+`references/game-build.md` and `references/standards.md`); where the two
+differ, this file wins for Grade 1 APSIS.
+
+The plan row is the brief. The **book scan is the authority**: every item is
+checked against the printed page before it is built, and anything the plan
+gets wrong is flagged, not silently used.
+
+## Pipeline for one asset
+
+1. **Read the plan row** (`apsis/G#/C##-*/source/*Asset_Plan_V#.docx`):
+   type, description, objectives served, FET tag.
+2. **Read the chapter's build brief** (`apsis/G#/C##-*/*Interactive_Build_Brief_V#.md`).
+   It records the decisions already taken and the open flags. Do not build
+   an asset whose flags are still open unless the user says to go ahead.
+3. **Take items from the content file** (`apsis/G#/C##-*/content/*_content.json`),
+   never from memory. Each item carries its page and a `status`:
+   `verbatim` (use as printed), `authored` (needs approval before it ships),
+   `withheld` (do not build). If an item is missing, go back to the scan
+   (see "Reading the book scan" below), add it with its page, then build.
+4. **Pick the engine** from `references/engines.md` and build from the
+   shared shell (`apsis/shared/g1-shell.html` once it exists; until then
+   ask for the Pack It Right! engine `ENG04CH10WORDSORT_v-01.html`, and
+   build the shell from it rather than from scratch).
+5. **QA** with `references/qa-checklist.md`, in a narrow portrait and a wide
+   landscape viewport, with Playwright (Chromium is pre-installed; never
+   run `playwright install`).
+6. **Save** to `apsis/G#/C##-*/builds/` as a new version. Never overwrite a
+   version.
+
+## Grade 1 rules (on top of the ARVO game-build conventions)
+
+- **Children, not pupils**, in every pupil-facing and teacher-facing line.
+- **Audio-first.** Every instruction plays on its own when a screen opens and
+  has a replay button. Every word, option and sentence can be heard. A child
+  who cannot read yet must still be able to finish the asset.
+- **Hearing is not answering.** Each option card has its own speaker badge
+  (it only plays the word). Tapping the card body is the answer. A child
+  must never get a "wrong" by trying to listen.
+- **At most three choices on a screen.** Longer book lists become several
+  screens of three.
+- **Big targets.** At least 64 px for cards and tiles (ARVO's 44 px is the
+  floor for older pupils), with 12 px or more between targets.
+- **Pictures on every screen.** Signs, body parts, senses and actions are
+  drawn in code as flat, friendly vectors. Do not copy the book's photos or
+  published book covers.
+- **Short.** 2 to 3 minutes: two or three rounds of three to five items.
+  No timers, no lives, no penalties.
+- **Feedback.** Right: green ring, tick, a spoken praise word, chime, star.
+  Wrong: soft tone, the card wobbles back, the instruction is replayed, then
+  a hint (the target glows). Never show or speak the answer.
+- **Phonics audio.** Browser TTS cannot say a single sound such as /s/ or
+  /ch/; it reads letters by name ("see aitch"). Phonics games speak **whole
+  words only** until recorded phoneme clips exist. Never make a child match
+  a TTS-spoken letter name to a sound.
+- **Letters are shown, not spoken, as symbols.** In letter-fill games show
+  the letter tile large; speak the completed word after a right answer.
+- **Signs rule.** Signs appear with a capital first letter and no full
+  stop (book Language tip, p.31 in C02). Sentences have both.
+
+## Technical conventions (from ARVO game-build, unchanged)
+
+One HTML file, no external files except Google Fonts (Baloo 2, Manrope)
+with system fallbacks. ES5 only (`var`, `function`, IIFE; no `let`,
+`const`, `=>`, classes, template literals). Canvas 2D or inline SVG art
+drawn in code. Procedural Web Audio with a sound toggle. TTS voice order
+`en-PK → en-IN → en-GB → any en → first voice`, rate about 0.85 for Grade 1.
+Hand-written pointer and touch drag (not HTML5 drag and drop). Portrait and
+landscape. `localStorage` only for best stars, inside `try/catch`.
+
+## LMS hand-off
+
+Every game reports completion and score the same way so the LMS can gate on
+it (see `references/engines.md`, "Result contract"). Until the LMS team
+confirms its protocol, fire the result as a `postMessage` to the parent
+frame and also store it locally; do not invent a SCORM/xAPI layer.
+
+## Reading the book scan
+
+APSIS chapter uploads are image-only PDFs and may be upside down.
+
+```bash
+pip install pymupdf opencv-python-headless
+python3 - <<'EOF'
+import pymupdf as fitz
+d = fitz.open("BOOK.pdf")
+for i, p in enumerate(d):
+    p.set_rotation(180)            # only if the scan is upside down
+    p.get_pixmap(dpi=120).save(f"p{i+1:02d}.png")
+EOF
+```
+
+Read each PNG with the Read tool; re-render at 300 dpi to read small print
+or decode QR codes with `cv2.QRCodeDetector().detectAndDecode(img)`.
+Do not commit the book scan to the repository (it is the publisher's
+copyright); commit the page-cited content file instead.
+
+## Naming and versions
+
+- Game file: `ENG01CH02<TASK>_v-01.html` in the chapter's `builds/` folder
+  (task names are listed in the build brief). The version label is owned by
+  the developer; a fix is a new `v-02`, never an overwrite.
+- Documents: `ENG-APSIS-G1-C02-…_V1`. Bump to `V2` after a correction and
+  say what changed.
+
+## Approval points
+
+Before building, the brief's open decisions that touch the asset must be
+closed (the user says "go ahead" or answers them). Authored items (new
+distractors, sign wordings, extra word lists) go to Champ for approval
+before the asset ships; build them but label the file as a draft in the
+reply.
+
+## Files
+
+| Path | Use |
+|---|---|
+| `references/engines.md` | the seven engine families, item schema, result contract |
+| `references/qa-checklist.md` | pre-delivery checks for every build |

@@ -1,0 +1,547 @@
+{
+  "_about": "Page-cited content for the APSIS Grade 1 Chapter 2 interactive assets. Read from the book scan English-APSIS-G1-C2.pdf (printed pp.26-41, pages upside down in the scan, read after rotating). status: verbatim = printed in the book; authored = not printed, needs approval before it ships; withheld = do not build until the flag in the build brief is closed.",
+  "chapter": {
+    "system": "APSIS",
+    "grade": 1,
+    "chapter": 2,
+    "title_printed": "Show me, tell me",
+    "pages": "26-41"
+  },
+  "reading_signs_2B": {
+    "source": "p.28 2B Non-fiction Reading",
+    "status": "verbatim",
+    "panels": [
+      {
+        "text": "Signs show us where to go in.",
+        "sign": "ENTRANCE",
+        "art": "school door with ENTRANCE sign"
+      },
+      {
+        "text": "Signs tell us what to do.",
+        "sign": "Wash your hands",
+        "art": "boy washing hands at a sink"
+      },
+      {
+        "text": "In the classroom, signs help us to find things.",
+        "sign": [
+          "BOOKS",
+          "TOYS"
+        ],
+        "art": "classroom shelf and toy box"
+      },
+      {
+        "text": "Signs tell us where we must not go.",
+        "sign": "Danger Deep Water",
+        "art": "lake with a fence"
+      }
+    ],
+    "bold_words": [
+      "Signs",
+      "not"
+    ],
+    "glossary": {
+      "word": "signs",
+      "meaning": "writing or pictures that tell or show people something."
+    }
+  },
+  "comprehension_2C": {
+    "source": "p.29 2C Comprehension",
+    "A_signs": [
+      {
+        "id": "exit",
+        "printed_text": "EXIT",
+        "art": "green square, white EXIT and up-right arrow"
+      },
+      {
+        "id": "slippery",
+        "printed_text": null,
+        "art": "yellow diamond, car with skid lines (slippery road)"
+      },
+      {
+        "id": "no-water",
+        "printed_text": null,
+        "art": "white diamond, red crossed-out circle over a dripping tap"
+      }
+    ],
+    "A_items": [
+      {
+        "n": 1,
+        "question": "Which sign tells you to do something?",
+        "answer": null,
+        "status": "withheld",
+        "flag": "F2: no sign on the page clearly tells you to do something; the plan also names the third sign 'no skating'."
+      },
+      {
+        "n": 2,
+        "question": "Which sign shows you where to go?",
+        "answer": "exit",
+        "status": "verbatim"
+      }
+    ],
+    "B_item": {
+      "question": "Which sign tells you where you can read a book? Point to it and read it aloud.",
+      "options": [
+        "BOOKS",
+        "TOYS"
+      ],
+      "answer": "BOOKS",
+      "status": "verbatim",
+      "source": "p.29 2C B"
+    }
+  },
+  "book_covers_2A_2C": {
+    "source": "p.27 2A C; p.30 2C C",
+    "status": "authored",
+    "note": "Book asks children to talk about which books are stories and which are about real life. Classification below is ours; covers are published titles and must not be reproduced (text titles only). Optional asset, see brief.",
+    "stories": [
+      "The Tale of Little Red Riding Hood",
+      "Pippi Longstocking",
+      "Monkey's Magic Pipe",
+      "Hero Academy: Super Coldo's Revenge"
+    ],
+    "real_life": [
+      "First Atlas",
+      "Bugs",
+      "Our Oceans",
+      "How to Play Guitar",
+      "The Human Body"
+    ]
+  },
+  "phonics_2D": {
+    "source": "p.31 2D Phonics and spelling",
+    "A": {
+      "instruction": "Read the words below. Find three words that start with the same sound. Write them down.",
+      "words": [
+        "book",
+        "stop",
+        "exit",
+        "staff",
+        "hand",
+        "sign"
+      ],
+      "answer": [
+        "stop",
+        "staff",
+        "sign"
+      ],
+      "status": "verbatim"
+    },
+    "B": {
+      "instruction": "Copy the signs. Add in the missing letters to complete the words.",
+      "letter_bank": [
+        "e",
+        "h",
+        "o"
+      ],
+      "items": [
+        {
+          "printed": "Wash your _ands",
+          "answer": "h",
+          "complete": "Wash your hands"
+        },
+        {
+          "printed": "Staff _nly",
+          "answer": "o",
+          "complete": "Staff only"
+        },
+        {
+          "printed": "No _ntry",
+          "answer": "e",
+          "complete": "No entry"
+        }
+      ],
+      "status": "verbatim"
+    },
+    "C": {
+      "instruction": "Signs start with capital letters. Copy the words and add capital letters.",
+      "items": [
+        {
+          "printed": "_ook corner",
+          "answer": "B",
+          "complete": "Book corner",
+          "cue": "BOOKS shelf picture, p.31 margin"
+        },
+        {
+          "printed": "_anger",
+          "answer": "D",
+          "complete": "Danger",
+          "cue": "no picture on p.31; 'Danger Deep Water' is on p.28"
+        },
+        {
+          "printed": "_top",
+          "answer": "S",
+          "complete": "Stop",
+          "cue": "STOP sign picture, p.31 margin"
+        }
+      ],
+      "letter_bank": null,
+      "letter_bank_note": "No letters printed. The game offers B D S with lower-case b d s as distractors (authored).",
+      "status": "verbatim"
+    },
+    "language_tip": {
+      "text": "Signs don't have a full stop at the end.",
+      "bold": "full stop",
+      "source": "p.31"
+    }
+  },
+  "writing_2E": {
+    "source": "p.32 2E Writing",
+    "part1_instruction": "Tell a partner what each sign is telling you to do, or not to do.",
+    "part1_signs": [
+      {
+        "n": 1,
+        "printed_text": "SLOW",
+        "art": "yellow diamond",
+        "meaning": "Go slowly.",
+        "do_or_dont": "do",
+        "status": "authored"
+      },
+      {
+        "n": 2,
+        "printed_text": null,
+        "art": "blue square, tap and soapy hands",
+        "meaning": "Wash your hands.",
+        "do_or_dont": "do",
+        "status": "authored"
+      },
+      {
+        "n": 3,
+        "printed_text": null,
+        "art": "red crossed circle over a person diving into water",
+        "meaning": "Do not dive.",
+        "do_or_dont": "dont",
+        "status": "authored"
+      },
+      {
+        "n": 4,
+        "printed_text": null,
+        "art": "red crossed circle over a tap filling a glass",
+        "meaning": "Do not drink this water.",
+        "do_or_dont": "dont",
+        "status": "authored"
+      }
+    ],
+    "language_tip": {
+      "text": "Remember to start each sentence with a capital letter and add a full stop at the end.",
+      "source": "p.32",
+      "flag": "F4: sits beside sign writing but says 'add a full stop'; p.31 says signs have none."
+    },
+    "part2": "With a partner, write your own sign to put on a door in your school.",
+    "qr": {
+      "url": "https://oupqr.pk/9789697340187_DR",
+      "source": "p.32",
+      "checked": "not reachable from the build environment (network policy)"
+    },
+    "margin_signs_p31": [
+      "BOOKS",
+      "slippery road (no text)",
+      "STOP"
+    ]
+  },
+  "reading_senses_2F": {
+    "source": "p.33-34 2F Non-fiction Reading",
+    "status": "verbatim",
+    "title": "Our senses",
+    "p33_labels": [
+      "see",
+      "hear",
+      "smell",
+      "taste",
+      "touch"
+    ],
+    "intro": "We have five senses.",
+    "senses": [
+      {
+        "n": 1,
+        "sense": "Sight",
+        "verb": "see",
+        "body_part": "eyes",
+        "text": "We see things with our eyes. We see light and colour."
+      },
+      {
+        "n": 2,
+        "sense": "Hearing",
+        "verb": "hear",
+        "body_part": "ears",
+        "text": "We hear with our ears."
+      },
+      {
+        "n": 3,
+        "sense": "Smell",
+        "verb": "smell",
+        "body_part": "nose",
+        "text": "We smell with our nose."
+      },
+      {
+        "n": 4,
+        "sense": "Taste",
+        "verb": "taste",
+        "body_part": "tongue",
+        "text": "We taste with our tongue."
+      },
+      {
+        "n": 5,
+        "sense": "Touch",
+        "verb": "touch",
+        "body_part": "hands",
+        "text": "We touch and feel things with our hands."
+      }
+    ],
+    "qr": {
+      "url": "https://oupqr.pk/9789697340187_DR",
+      "source": "p.33",
+      "note": "same link as p.32"
+    }
+  },
+  "comprehension_2G": {
+    "source": "p.35 2G Comprehension",
+    "A_items": [
+      {
+        "n": 1,
+        "question": "How many senses are there?",
+        "answer": "five",
+        "answer_source": "p.34 'We have five senses.'",
+        "status": "verbatim"
+      },
+      {
+        "n": 2,
+        "question": "What can you do with your hands? Point to the word and say it.",
+        "options": [
+          "see",
+          "hear",
+          "smell",
+          "taste",
+          "touch"
+        ],
+        "answer": "touch",
+        "status": "verbatim"
+      }
+    ],
+    "C_word_box": [
+      "sight",
+      "hearing",
+      "smell",
+      "taste",
+      "touch"
+    ]
+  },
+  "phonics_2H": {
+    "source": "p.36 2H Phonics and spelling",
+    "lesson_goals": [
+      "Look at the sound /ch/",
+      "Find rhyming words"
+    ],
+    "A": {
+      "instruction": "On page 33, find a word that has the same end spelling as lunch.",
+      "key_word": "lunch",
+      "answer": "touch",
+      "status": "verbatim",
+      "note": "end spelling -ch, not start"
+    },
+    "B": {
+      "instruction": "These letters are mixed up. Which sense do they spell? Write the word.",
+      "letters": [
+        "l",
+        "m",
+        "e",
+        "s",
+        "l"
+      ],
+      "answer": "smell",
+      "status": "verbatim"
+    },
+    "C": {
+      "instruction": "The letters of the words below are mixed up. Rearrange the letters to form a word.",
+      "items": [
+        {
+          "printed": "areh",
+          "answer": "hear",
+          "also_a_word": [
+            "hare"
+          ]
+        },
+        {
+          "printed": "staet",
+          "answer": "taste",
+          "also_a_word": [
+            "state"
+          ]
+        },
+        {
+          "printed": "cuhot",
+          "answer": "touch",
+          "also_a_word": []
+        },
+        {
+          "printed": "tighs",
+          "answer": "sight",
+          "also_a_word": []
+        }
+      ],
+      "status": "verbatim"
+    },
+    "D": {
+      "instruction": "Read the sentence below. Point to the words that rhyme in each sentence.",
+      "items": [
+        {
+          "sentence": "I hear with my ears.",
+          "rhymes": [
+            "hear",
+            "ears"
+          ],
+          "worked_example": true
+        },
+        {
+          "sentence": "I can see a tree.",
+          "rhymes": [
+            "see",
+            "tree"
+          ]
+        },
+        {
+          "sentence": "I spot a bright light.",
+          "rhymes": [
+            "bright",
+            "light"
+          ]
+        },
+        {
+          "sentence": "Honey is a treat; it tastes sweet.",
+          "rhymes": [
+            "treat",
+            "sweet"
+          ]
+        }
+      ],
+      "status": "verbatim"
+    },
+    "language_tip": {
+      "text": "Words that rhyme sound the same, like fun and run.",
+      "source": "p.36"
+    }
+  },
+  "writing_2I": {
+    "source": "pp.37-39 2I Writing: The human body",
+    "word_box": [
+      "head",
+      "arm",
+      "leg",
+      "eyes",
+      "nose",
+      "mouth",
+      "face",
+      "chest",
+      "foot",
+      "hand"
+    ],
+    "word_box_status": "verbatim",
+    "language_tip_nouns": {
+      "text": "Words that name things are called nouns.",
+      "source": "p.37"
+    },
+    "B2_missing_letters": {
+      "source": "p.38 2I B2",
+      "instruction": "Copy the words below in your notebook. Add the missing letters to complete the body parts.",
+      "items": [
+        {
+          "printed": "ch_n",
+          "answer": "i",
+          "complete": "chin"
+        },
+        {
+          "printed": "e_r",
+          "answer": "a",
+          "complete": "ear"
+        },
+        {
+          "printed": "n_ck",
+          "answer": "e",
+          "complete": "neck"
+        },
+        {
+          "printed": "ha_r",
+          "answer": "i",
+          "complete": "hair"
+        }
+      ],
+      "letter_bank": null,
+      "status": "verbatim"
+    },
+    "B4_activity_to_sense": {
+      "source": "p.38 2I B4",
+      "instruction": "Look at the activities in the box. Which sense does each one use? Tell a partner.",
+      "items": [
+        {
+          "activity": "stroke a pet",
+          "sense": "touch",
+          "status": "verbatim"
+        },
+        {
+          "activity": "sniff a flower",
+          "sense": "smell",
+          "status": "verbatim"
+        },
+        {
+          "activity": "eat an ice cream",
+          "sense": "taste",
+          "status": "verbatim"
+        },
+        {
+          "activity": "play in the playground",
+          "sense": null,
+          "status": "withheld",
+          "flag": "open answer: sight, hearing and touch all fit"
+        }
+      ]
+    },
+    "C2_punctuation": {
+      "source": "p.39 2I C2",
+      "instruction": "Copy these sentences. Add two full stops and two capital letters.",
+      "printed": "we see things with our eyes we see light and colour",
+      "answer": "We see things with our eyes. We see light and colour.",
+      "status": "verbatim"
+    }
+  },
+  "verbs_2J": {
+    "source": "p.40 2J Speaking and listening",
+    "word_box": [
+      "run",
+      "jump",
+      "sing",
+      "dance",
+      "skip",
+      "play football"
+    ],
+    "status": "verbatim",
+    "language_tip": {
+      "text": "Doing words are called verbs.",
+      "source": "p.40"
+    }
+  },
+  "ch_words_in_chapter": {
+    "note": "The /ch/ words in the children's content (reading texts, word boxes, exercise items), for A16/A17. Instruction lines also contain ch words (which, each, chooses) but these are not taught items.",
+    "end": [
+      {
+        "word": "lunch",
+        "source": "p.36"
+      },
+      {
+        "word": "touch",
+        "source": "p.33, p.34"
+      }
+    ],
+    "start": [
+      {
+        "word": "chin",
+        "source": "p.38"
+      },
+      {
+        "word": "chest",
+        "source": "p.37, p.38"
+      }
+    ],
+    "not_in_book": [
+      "cheese (named in plan A16)"
+    ]
+  }
+}
