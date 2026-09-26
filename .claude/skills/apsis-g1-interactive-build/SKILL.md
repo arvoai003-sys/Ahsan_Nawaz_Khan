@@ -158,9 +158,14 @@ copyright); commit the page-cited content file instead.
 
 ## Naming and versions
 
-- Game file: `ENG01CH02<TASK>_v-01.html` in the chapter's `builds/` folder
-  (task names are listed in the build brief). The version label is owned by
-  the developer; a fix is a new `v-02`, never an overwrite.
+- **Delivered file:** `apsis/G#/C##-*/games/ENG-APSIS-G1-C02-<Asset_Name>.html`,
+  named after the asset (the game's `@title`, spaces as underscores, e.g.
+  `ENG-APSIS-G1-C02-What_Does_the_Sign_Say.html`). Only the current release
+  lives there; `tools/build.py` writes it on every build. Always hand the user
+  these files, never the archive.
+- **Version history:** `builds/archive/<ASSET-CODE>_v-NN.html`. A committed
+  version is never overwritten; a change is a new `@version`, and the named
+  release file is replaced.
 - Documents: `ENG-APSIS-G1-C02-…_V1`. Bump to `V2` after a correction and
   say what changed.
 

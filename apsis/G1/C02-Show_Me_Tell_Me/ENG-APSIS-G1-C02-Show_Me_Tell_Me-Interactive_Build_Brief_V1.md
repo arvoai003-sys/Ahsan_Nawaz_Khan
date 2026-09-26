@@ -32,7 +32,7 @@ other 17 are:
 | A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Needs D8 |
 | A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
 
-File names: `ENG01CH02<TASK>_v-01.html` in `builds/` (see D10).
+File names: `games/ENG-APSIS-G1-C02-<Asset_Name>.html` (current release; D10 closed 2026-09-26). Earlier versions are in `builds/archive/`.
 
 Seven engines cover all 17: tap-to-identify (6 assets), drag-to-target (2),
 letter-fill (2 plus a round in A19), read-along (2), drag-assemble (1),
@@ -171,3 +171,4 @@ and is delivered as a new version in `builds/`.
 | 2026-09-26 | D1 closed (Champ) | — | The p.29 crossed-out tap means "Don't waste water / don't leave the tap open". 2C also covers story books vs real-life books (2A C p.27, 2C C p.30). 2C A1 itself stays withheld; each p.29 sign is asked about by its own meaning. |
 | 2026-09-26 | A3 What Does the Sign Say? | `builds/ENG01CH02SIGNSAY_v-01.html` | Levels: 1 Sign Hunt (printed signs, 2 choices), 2 Read the Signs (book p.28 sentences, verbatim), 3 What Does It Mean? (p.29 trio + 2 of p.32), 4 Do or Don't? (p.32 2E Part 1 + 2 more), 5 Story or Real Life? (the book's 9 titles + "How to draw cartoons"; covers drawn by us), 6 Super Star (mix). 121 lines in Sarah's voice. Sign cards show no label or speaker (would give the answer away). |
 | 2026-09-26 | Home pages, Asma | all four games | Each game has its own theme (A6 meadow, A7 sunset town, A14 flower garden, A3 school street), a large title with a hero icon, and no "Grade 1 · Chapter 2" label. Asma (ARVO character, Grade 1 look from the character bible) and Fluffy are the on-screen buddies: she waves on the home page, her mouth moves while the narrator speaks, she cheers at right answers and tilts her head at wrong ones; Fluffy runs across when a level ends. She steps out of view on any screen where she would cover a game piece. A6 v-05, A7 v-03, A14 v-02. |
+| 2026-09-26 | Naming (D10 closed) | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |

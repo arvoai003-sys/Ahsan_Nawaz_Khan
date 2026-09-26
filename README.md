@@ -9,7 +9,8 @@ Interactive HTML assets for the ARVO self-paced LMS, built from approved Asset P
 apsis/G1/C02-Show_Me_Tell_Me/
   source/     the approved Asset Plan (.docx)
   content/    page-cited item content read from the book scan (JSON)
-  builds/     delivered games, ENG01CH02<TASK>_v-01.html (never overwritten)
+  games/      THE GAMES: one file per asset, ENG-APSIS-G1-C02-<Asset_Name>.html (current release)
+  builds/archive/  every earlier version, <code>_v-NN.html (history only; do not deliver)
   ENG-APSIS-G1-C02-Show_Me_Tell_Me-Interactive_Build_Brief_V1.md
 ```
 

@@ -10,8 +10,9 @@ The game source starts with a header comment naming what it needs:
     // @title Same First Sound
     // @engine tap-identify
 
-Output: <chapter>/builds/<asset>_<version>.html. A version that is already
-committed to git is never overwritten; bump @version instead.
+Output: <chapter>/games/ENG-APSIS-G1-C02-<Asset_Name>.html (the current release,
+named after the asset) and <chapter>/builds/archive/<asset>_<version>.html (the
+version history). A version already committed is never overwritten; bump @version.
 """
 import base64
 import csv
@@ -81,6 +82,15 @@ def voice_clips(chapter, asset):
     return "/* ---- recorded voice clips ---- */\nwindow.VOICE_CLIPS = {\n%s\n};" % body, len(found)
 
 
+def release_name(chapter, title):
+    """games/ENG-APSIS-G<grade>-C<chapter>-<Asset_Name>.html, from the chapter folder
+    (apsis/G1/C02-...) and the game's @title."""
+    parts = os.path.normpath(chapter).split(os.sep)
+    system, grade, chap = parts[-3].upper(), parts[-2].upper(), parts[-1].split("-")[0].upper()
+    name = re.sub(r"[^A-Za-z0-9]+", "_", title).strip("_")
+    return os.path.join(chapter, "games", "ENG-%s-%s-%s-%s.html" % (system, grade, chap, name))
+
+
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
@@ -114,12 +124,18 @@ def main():
                      ("{{TITLE}}", meta["title"]), ("{{CSS}}", css), ("{{JS}}", js)):
         html = html.replace(key, val)
 
-    out = os.path.join(chapter, "builds", "%s_%s.html" % (meta["asset"], meta["version"]))
+    out = os.path.join(chapter, "builds", "archive", "%s_%s.html" % (meta["asset"], meta["version"]))
     if os.path.exists(out) and committed(out):
         sys.exit("%s is already committed; bump @version instead of overwriting" % os.path.relpath(out, ROOT))
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(html)
+    # the release copy, named after the asset: games/ENG-APSIS-G1-C02-<Title>.html
+    release = release_name(chapter, meta["title"])
+    os.makedirs(os.path.dirname(release), exist_ok=True)
+    with open(release, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("release", os.path.relpath(release, ROOT))
     print("built", os.path.relpath(out, ROOT), "(%d KB)" % (len(html.encode("utf-8")) // 1024),
           "with %d recorded clips" % n_clips if n_clips else "(device voice only; no recorded clips yet)")
 
