@@ -294,6 +294,10 @@ body.theme-meadow { background: linear-gradient(180deg, #6CCBFF 0%, #CFF0FF 70%)
 body.theme-sunset { background: linear-gradient(180deg, #FF8A5B 0%, #FFB36B 40%, #FFE0B2 78%); }
 body.theme-garden { background: linear-gradient(180deg, #C9B6FF 0%, #E6DCFF 45%, #E8FFF0 80%); }
 body.theme-school { background: linear-gradient(180deg, #3FD0C9 0%, #A8F0E8 55%, #E6FFFB 80%); }
+body.theme-library { background: linear-gradient(180deg, #FFE3C8 0%, #FFF1DE 55%, #FFF8EE 80%); --t-title: #9B5DE5; }
+body.theme-library .level { border-radius: 14px 30px 30px 14px; border-left-width: 12px; }
+body.theme-library .level.c0 { background: #9B5DE5; } body.theme-library .level.c1 { background: #FF9F1C; } body.theme-library .level.c2 { background: #23C16B; }
+body.theme-library .banner div { background: #9B5DE5; } body.theme-library .progress i.now { background: #9B5DE5; }
 body.theme-rainbow { background: linear-gradient(180deg, #FFE9A8 0%, #FFD6E8 50%, #FFF3F8 80%); --t-title: #2EA7FF; }
 #scenery .rainbow { position: absolute; left: 50%; bottom: 14%; width: 70%; max-width: 760px; transform: translateX(-50%); opacity: .55; }
 body.theme-rainbow .level { border-radius: 36px; }

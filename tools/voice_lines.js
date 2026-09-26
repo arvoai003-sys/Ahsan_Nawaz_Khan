@@ -19,7 +19,7 @@ vm.createContext(ctx);
 ['g1-shell.js', 'g1-art.js', 'g1-buddy.js', 'engines/' + engine + '.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
 var bootCfg = null;
 vm.runInContext('Shell.boot = function (c) { this.__cfg = c; };', ctx);
-var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match' }[engine];
+var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match', 'read-along': 'ReadAlong' }[engine];
 var captured;
 vm.runInContext('var __init = ' + ENGINE + '.init; ' + ENGINE + '.init = function (c) { this.__content = c; __init(c); };', ctx);
 vm.runInContext(src, ctx);
@@ -47,7 +47,9 @@ function addEach(list) { (list || []).forEach(function (x) { add(x); }); }
 addEach(vm.runInContext('Shell.LINES', ctx));
 addEach(vm.runInContext(ENGINE + '.LINES', ctx));
 addEach([bootCfg.title, bootCfg.intro]);
-captured.levels.forEach(function (L) {
+var engineAll = vm.runInContext(ENGINE, ctx);
+if (engineAll.allLines) engineAll.allLines().forEach(add);
+if (!engineAll.allLines) captured.levels.forEach(function (L) {
   for (var r = 0; r < (L.make ? runs : 1); r++) {
     (L.make ? L.make() : L.rounds).forEach(function (R) {
       add(R.bannerSay);

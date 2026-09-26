@@ -92,7 +92,7 @@ var Buddy = (function () {
     fresh = false;
     box.className = "game-buddy";
     var g = box.getBoundingClientRect(), list = document.querySelectorAll(
-      "#stage .card, #stage .tile, #stage .chip, #stage .target, #stage .prompt, #stage .lf-word, #stage .lf-pic, #stage .sign"), i, b;
+      "#stage .card, #stage .tile, #stage .chip, #stage .target, #stage .prompt, #stage .lf-word, #stage .lf-pic, #stage .sign, #stage .ra-book, #stage .ra-nav .icon-btn"), i, b;
     for (i = 0; i < list.length; i++) {
       b = layoutRect(list[i]);
       if (b.width && b.left < g.right - 4 && b.right > g.left + 4 && b.top < g.bottom - 4 && b.bottom > g.top + 4) {

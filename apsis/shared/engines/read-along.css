@@ -1,0 +1,56 @@
+/* Read-along: a picture book page with tappable words */
+.ra-book {
+  background: #FFFDF6; border: 5px solid var(--ink); border-radius: 30px; box-shadow: 0 10px 0 var(--ink);
+  width: 92vw; max-width: 760px; padding: 18px 20px 20px; display: flex; flex-direction: column; align-items: center; gap: 14px;
+  animation: pop .45s cubic-bezier(.2,1.6,.4,1) both;
+}
+.ra-pic {
+  display: flex; justify-content: center; align-items: flex-end; gap: 10px; width: 100%; min-height: 150px;
+  background: linear-gradient(180deg, #E4F6FF, #F4FFF0); border: 4px solid var(--ink); border-radius: 22px; padding: 10px; cursor: pointer;
+}
+.ra-pic.cover { background: linear-gradient(180deg, #FFE9A8, #FFD6E8); }
+.ra-art { width: 150px; height: 150px; animation: bob 3s ease-in-out infinite; }
+.ra-art:nth-child(2) { animation-delay: -1s; } .ra-art:nth-child(3) { animation-delay: -2s; }
+.ra-art svg { width: 100%; height: 100%; }
+.ra-text { font-family: var(--font-read); font-size: 44px; line-height: 1.35; text-align: center; color: var(--ink); }
+.ra-text.cover { font-family: var(--font-title); font-size: 72px; font-weight: 800; color: #FF9F1C; -webkit-text-stroke: 2px var(--ink); }
+.ra-text .w { border-radius: 12px; padding: 0 4px; cursor: pointer; transition: background .12s, color .12s, transform .12s; display: inline-block; }
+.ra-text .w.bold { font-weight: 700; }
+.ra-text .w.on { background: var(--yellow); box-shadow: 0 4px 0 #E0A800; transform: translateY(-3px); }
+.ra-text .w.tap { animation: wordpop .4s; }
+.ra-text .w.found { background: var(--green); color: #fff; }
+@keyframes wordpop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+.ra-gloss {
+  font-family: var(--font-read); font-size: 22px; background: #F3EBFF; border: 3px dashed var(--purple); border-radius: 16px;
+  padding: 8px 14px; cursor: pointer; max-width: 560px; text-align: center;
+}
+.ra-gloss b { color: var(--purple-d); font-size: 26px; margin-right: 6px; }
+.ra-nav { display: flex; gap: 24px; justify-content: center; }
+.ra-nav .icon-btn { width: 72px; height: 72px; font-size: 30px; font-weight: 800; background: var(--green); color: #fff; }
+.ra-nav .ra-back { background: #fff; color: var(--ink); }
+.ra-nav .icon-btn.pulse { animation: bob 1s ease-in-out infinite; box-shadow: 0 5px 0 var(--ink), 0 0 0 8px #FFF1B8; }
+
+@media (max-width: 520px) {
+  .ra-book { padding: 12px; gap: 10px; }
+  .ra-pic { min-height: 110px; gap: 4px; }
+  .ra-art { width: 96px; height: 96px; }
+  .ra-text { font-size: 32px; }
+  .ra-text.cover { font-size: 54px; }
+  .ra-gloss { font-size: 18px; }
+  .ra-nav .icon-btn { width: 62px; height: 62px; }
+}
+@media (max-height: 520px) {
+  .stage { flex-direction: row; flex-wrap: wrap; }
+  .ra-book { flex-direction: row; max-width: 640px; padding: 10px 14px; gap: 12px; }
+  .ra-pic { width: 42%; min-height: 0; flex: 0 0 auto; }
+  .ra-art { width: 78px; height: 78px; }
+  .ra-text { font-size: 28px; }
+  .ra-text.cover { font-size: 44px; }
+  .ra-gloss { font-size: 16px; }
+  .ra-nav { flex-direction: column; gap: 12px; }
+  .ra-nav .icon-btn { width: 56px; height: 56px; }
+}
+@media (min-width: 900px) and (min-height: 640px) {
+  .ra-art { width: 190px; height: 190px; }
+  .ra-text { font-size: 54px; }
+}

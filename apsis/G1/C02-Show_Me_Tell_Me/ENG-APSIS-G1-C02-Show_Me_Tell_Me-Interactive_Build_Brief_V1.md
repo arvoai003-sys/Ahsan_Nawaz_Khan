@@ -14,7 +14,7 @@ other 17 are:
 
 | # | Asset | Plan type | Engine | File task name | Ready? |
 |---|---|---|---|---|---|
-| A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | Ready |
+| A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | **Built v-01** |
 | A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-02** |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
@@ -174,3 +174,4 @@ and is delivered as a new version in `builds/`.
 | 2026-09-26 | Naming (D10 closed) | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |
 | 2026-09-26 | A19 Name the Body Part | `games/ENG-APSIS-G1-C02-Name_the_Body_Part.html` (v-01) | Levels: 1 Warm Up (2 pictures), 2 Body Words (book p.37 word box), 3 Point to Asma (arrow on Asma, name the part; book 2I A2), 4 Naming Words (book p.37 Language tip on nouns; non-nouns authored), 5 Where Does It Go? (authored), 6 Super Star. Pictures that contain each other (face/eyes/nose/mouth, leg/foot) never share a screen. The p.38 missing letters stay in Finish the Sign Word only. Rainbow theme. 90 lines in Sarah's voice. **Authored parts need Champ's approval.** |
 | 2026-09-26 | ARVO characters removed (Champ) | all five games | Asma and Fluffy replaced by an unnamed, happy, lively, fair-skinned child (buddy and body-part model). No names are spoken; Name the Body Part asks "What is the arrow pointing to?" and confirms with the part ("Head!"); its Level 3 is now "Follow the Arrow". Reissued: A3 v-02, A6 v-06, A7 v-04, A14 v-03, A19 v-03. |
+| 2026-09-26 | A2 Read-along: Signs | `games/ENG-APSIS-G1-C02-Read_along_Signs.html` (v-01) | New read-along engine. Book p.28 2B text verbatim (4 sentences, book bold words) + the page's glossary entry for "signs"; cover page "Signs". Modes: Read to Me (Sarah reads, words light up), Read by Myself (tap any word to hear it), Word Hunt (find go / do / find / not). No score. Library theme. 60 lines in Sarah's voice. |

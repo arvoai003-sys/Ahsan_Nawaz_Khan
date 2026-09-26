@@ -167,6 +167,41 @@
   "text": "Can you find the nose",
   "voice": "sarah"
  },
+ "can-you-find-the-word": {
+  "mood": "instruction",
+  "said_as": "Can you find the word?",
+  "sig": "d0c801f57893",
+  "text": "Can you find the word",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-do": {
+  "mood": "instruction",
+  "said_as": "Can you find the word do?",
+  "sig": "88e93b0cdb68",
+  "text": "Can you find the word do",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-find": {
+  "mood": "instruction",
+  "said_as": "Can you find the word find?",
+  "sig": "5d81488c1e24",
+  "text": "Can you find the word find",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-go": {
+  "mood": "instruction",
+  "said_as": "Can you find the word go?",
+  "sig": "707f28920a95",
+  "text": "Can you find the word go",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-not": {
+  "mood": "instruction",
+  "said_as": "Can you find the word not?",
+  "sig": "4503ea22aa4c",
+  "text": "Can you find the word not",
+  "voice": "sarah"
+ },
  "can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Can you find three words that start the same?",
@@ -216,6 +251,13 @@
   "text": "Choose a level!",
   "voice": "sarah"
  },
+ "classroom": {
+  "mood": "word",
+  "said_as": "classroom.",
+  "sig": "e2a820acf962",
+  "text": "classroom",
+  "voice": "sarah"
+ },
  "closed": {
   "mood": "word",
   "said_as": "Closed.",
@@ -232,9 +274,9 @@
  },
  "do": {
   "mood": "word",
-  "said_as": "Do.",
-  "sig": "c738075fb28c",
-  "text": "Do",
+  "said_as": "do.",
+  "sig": "9803fc3d0291",
+  "text": "do",
   "voice": "sarah"
  },
  "don-t": {
@@ -405,6 +447,13 @@
   "text": "fan",
   "voice": "sarah"
  },
+ "find": {
+  "mood": "word",
+  "said_as": "find.",
+  "sig": "877644826995",
+  "text": "find",
+  "voice": "sarah"
+ },
  "find-one-more": {
   "mood": "excited",
   "said_as": "Find one more!",
@@ -473,6 +522,13 @@
   "said_as": "funny.",
   "sig": "faa2b5a47b03",
   "text": "funny",
+  "voice": "sarah"
+ },
+ "go": {
+  "mood": "word",
+  "said_as": "go.",
+  "sig": "413c3e351922",
+  "text": "go",
   "voice": "sarah"
  },
  "great-job": {
@@ -545,6 +601,13 @@
   "text": "hear",
   "voice": "sarah"
  },
+ "help": {
+  "mood": "word",
+  "said_as": "help.",
+  "sig": "937b53dfdaa1",
+  "text": "help",
+  "voice": "sarah"
+ },
  "hen": {
   "mood": "word",
   "said_as": "hen.",
@@ -615,6 +678,13 @@
   "text": "Hug a teddy!",
   "voice": "sarah"
  },
+ "in": {
+  "mood": "word",
+  "said_as": "in.",
+  "sig": "3d08f1528417",
+  "text": "in",
+  "voice": "sarah"
+ },
  "in-the-classroom-signs-help-us-to-find-things": {
   "mood": "instruction",
   "said_as": "In the classroom, signs help us to find things.",
@@ -683,6 +753,13 @@
   "said_as": "Let's name the parts of the body!",
   "sig": "cb9f7d02e45c",
   "text": "Let's name the parts of the body!",
+  "voice": "sarah"
+ },
+ "let-s-read-about-signs": {
+  "mood": "instruction",
+  "said_as": "Let's read about signs!",
+  "sig": "0c2fb47f2bee",
+  "text": "Let's read about signs!",
   "voice": "sarah"
  },
  "let-s-read-signs-and-books": {
@@ -979,6 +1056,13 @@
   "text": "Mouth is a naming word!",
   "voice": "sarah"
  },
+ "must": {
+  "mood": "word",
+  "said_as": "must.",
+  "sig": "977f233641da",
+  "text": "must",
+  "voice": "sarah"
+ },
  "name-the-body-part": {
   "mood": "instruction",
   "said_as": "Name the Body Part",
@@ -1035,6 +1119,13 @@
   "text": "Nose is a naming word!",
   "voice": "sarah"
  },
+ "not": {
+  "mood": "word",
+  "said_as": "not.",
+  "sig": "d37b488a6d9c",
+  "text": "not",
+  "voice": "sarah"
+ },
  "now-find-two": {
   "mood": "cheer",
   "said_as": "Now find two!",
@@ -1061,6 +1152,13 @@
   "said_as": "Open.",
   "sig": "602fbc2777d6",
   "text": "Open",
+  "voice": "sarah"
+ },
+ "or": {
+  "mood": "word",
+  "said_as": "or.",
+  "sig": "a80ee48ca3b0",
+  "text": "or",
   "voice": "sarah"
  },
  "or-does-it-tell-us-true-things": {
@@ -1091,6 +1189,20 @@
   "text": "Our teeth are in our mouth.",
   "voice": "sarah"
  },
+ "people": {
+  "mood": "word",
+  "said_as": "people.",
+  "sig": "d6b935018f5c",
+  "text": "people",
+  "voice": "sarah"
+ },
+ "pictures": {
+  "mood": "word",
+  "said_as": "pictures.",
+  "sig": "a4352aa1f8d7",
+  "text": "pictures",
+  "voice": "sarah"
+ },
  "pippi-longstocking": {
   "mood": "word",
   "said_as": "Pippi Longstocking.",
@@ -1112,11 +1224,32 @@
   "text": "Push",
   "voice": "sarah"
  },
+ "read-along-signs": {
+  "mood": "word",
+  "said_as": "Read-along: Signs.",
+  "sig": "dd476b63e35e",
+  "text": "Read-along: Signs",
+  "voice": "sarah"
+ },
+ "read-by-myself-tap-a-word-to-hear-it": {
+  "mood": "instruction",
+  "said_as": "Read by myself! Tap a word to hear it.",
+  "sig": "a3c04b30fbb9",
+  "text": "Read by myself! Tap a word to hear it.",
+  "voice": "sarah"
+ },
  "read-the-words-can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Read the words. Can you find three words that start the same?",
   "sig": "ca8058c0fc10",
   "text": "Read the words. Can you find three words that start the same?",
+  "voice": "sarah"
+ },
+ "read-to-me-listen-and-look-at-the-words": {
+  "mood": "instruction",
+  "said_as": "Read to me! Listen and look at the words.",
+  "sig": "30bce3024f53",
+  "text": "Read to me! Listen and look at the words.",
   "voice": "sarah"
  },
  "real-life": {
@@ -1147,11 +1280,25 @@
   "text": "Sense and Body Part",
   "voice": "sarah"
  },
+ "show": {
+  "mood": "word",
+  "said_as": "show.",
+  "sig": "86495b6ef28c",
+  "text": "show",
+  "voice": "sarah"
+ },
  "sign": {
   "mood": "word",
   "said_as": "sign.",
   "sig": "18558879936a",
   "text": "sign",
+  "voice": "sarah"
+ },
+ "signs": {
+  "mood": "word",
+  "said_as": "Signs.",
+  "sig": "fa372670ae58",
+  "text": "Signs",
   "voice": "sarah"
  },
  "signs-show-us-where-to-go-in": {
@@ -1173,6 +1320,13 @@
   "said_as": "Signs tell us where we must not go.",
   "sig": "3e6066be192d",
   "text": "Signs tell us where we must not go.",
+  "voice": "sarah"
+ },
+ "signs-writing-or-pictures-that-tell-or-show-people-something": {
+  "mood": "instruction",
+  "said_as": "signs: writing or pictures that tell or show people something.",
+  "sig": "411151395d9e",
+  "text": "signs: writing or pictures that tell or show people something.",
   "voice": "sarah"
  },
  "slow": {
@@ -1243,6 +1397,13 @@
   "said_as": "soft.",
   "sig": "f07374f51f70",
   "text": "soft",
+  "voice": "sarah"
+ },
+ "something": {
+  "mood": "word",
+  "said_as": "something.",
+  "sig": "459c10b5da4c",
+  "text": "something",
   "voice": "sarah"
  },
  "staff": {
@@ -1329,6 +1490,13 @@
   "text": "Tap a word, or drag it to its picture.",
   "voice": "sarah"
  },
+ "tap-a-word-to-hear-it": {
+  "mood": "instruction",
+  "said_as": "Tap a word to hear it.",
+  "sig": "cb5210aada55",
+  "text": "Tap a word to hear it.",
+  "voice": "sarah"
+ },
  "tap-here-to-hear-it-again": {
   "mood": "instruction",
   "said_as": "Tap here to hear it again.",
@@ -1341,6 +1509,13 @@
   "said_as": "Tap here to hear the question again.",
   "sig": "2d141f4e86a7",
   "text": "Tap here to hear the question again.",
+  "voice": "sarah"
+ },
+ "tap-the-arrow-to-turn-the-page": {
+  "mood": "instruction",
+  "said_as": "Tap the arrow to turn the page.",
+  "sig": "89ccbc269686",
+  "text": "Tap the arrow to turn the page.",
   "voice": "sarah"
  },
  "tap-the-picture-you-choose": {
@@ -1362,6 +1537,34 @@
   "said_as": "teeth.",
   "sig": "c0bb1bfbd7a7",
   "text": "teeth",
+  "voice": "sarah"
+ },
+ "tell": {
+  "mood": "word",
+  "said_as": "tell.",
+  "sig": "ef4eedd585d4",
+  "text": "tell",
+  "voice": "sarah"
+ },
+ "that": {
+  "mood": "word",
+  "said_as": "that.",
+  "sig": "e0209df47a14",
+  "text": "that",
+  "voice": "sarah"
+ },
+ "the": {
+  "mood": "word",
+  "said_as": "the.",
+  "sig": "dafa0ec0fc2c",
+  "text": "the",
+  "voice": "sarah"
+ },
+ "the-end": {
+  "mood": "instruction",
+  "said_as": "The end!",
+  "sig": "6c6e67c4b4ed",
+  "text": "The end!",
   "voice": "sarah"
  },
  "the-human-body": {
@@ -1390,6 +1593,13 @@
   "said_as": "The Tale of Little Red Riding Hood is a story book!",
   "sig": "aafcbcc83161",
   "text": "The Tale of Little Red Riding Hood is a story book!",
+  "voice": "sarah"
+ },
+ "things": {
+  "mood": "word",
+  "said_as": "things.",
+  "sig": "7b58296b1900",
+  "text": "things",
   "voice": "sarah"
  },
  "think": {
@@ -1567,6 +1777,13 @@
   "text": "This sign says Wash your hands",
   "voice": "sarah"
  },
+ "to": {
+  "mood": "word",
+  "said_as": "to.",
+  "sig": "a527e4e19e67",
+  "text": "to",
+  "voice": "sarah"
+ },
  "tongue": {
   "mood": "word",
   "said_as": "tongue.",
@@ -1602,11 +1819,25 @@
   "text": "Two words start the same. Can you tap them both?",
   "voice": "sarah"
  },
+ "us": {
+  "mood": "word",
+  "said_as": "us.",
+  "sig": "f9979faab1f8",
+  "text": "us",
+  "voice": "sarah"
+ },
  "wash-your-hands": {
   "mood": "instruction",
   "said_as": "Wash your hands",
   "sig": "78e1f2337249",
   "text": "Wash your hands",
+  "voice": "sarah"
+ },
+ "we": {
+  "mood": "word",
+  "said_as": "we.",
+  "sig": "e8078240361f",
+  "text": "we",
   "voice": "sarah"
  },
  "we-hear-with-our": {
@@ -1714,6 +1945,13 @@
   "text": "Well done!",
   "voice": "sarah"
  },
+ "what": {
+  "mood": "word",
+  "said_as": "what.",
+  "sig": "2a284260ac46",
+  "text": "what",
+  "voice": "sarah"
+ },
  "what-do-you-look-through-your-glasses-with": {
   "mood": "instruction",
   "said_as": "What do you look through your glasses with?",
@@ -1740,6 +1978,13 @@
   "said_as": "What is the arrow pointing to?",
   "sig": "14da73f407a7",
   "text": "What is the arrow pointing to?",
+  "voice": "sarah"
+ },
+ "where": {
+  "mood": "word",
+  "said_as": "where.",
+  "sig": "35331cf1f74b",
+  "text": "where",
   "voice": "sarah"
  },
  "where-do-you-wear-a-hat": {
@@ -2267,6 +2512,13 @@
   "text": "Which word starts like tree",
   "voice": "sarah"
  },
+ "word-hunt-find-the-word-on-each-page": {
+  "mood": "instruction",
+  "said_as": "Word hunt! Find the word on each page.",
+  "sig": "9c87f6bbabf7",
+  "text": "Word hunt! Find the word on each page.",
+  "voice": "sarah"
+ },
  "words-that-name-things-are-called-nouns-which-word-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Words that name things are called nouns. Which word is a naming word?",
@@ -2279,6 +2531,20 @@
   "said_as": "Wow!",
   "sig": "45e745e9ef8e",
   "text": "Wow!",
+  "voice": "sarah"
+ },
+ "writing": {
+  "mood": "word",
+  "said_as": "writing.",
+  "sig": "7f2a7f716dec",
+  "text": "writing",
+  "voice": "sarah"
+ },
+ "writing-or-pictures-that-tell-or-show-people-something": {
+  "mood": "instruction",
+  "said_as": "writing or pictures that tell or show people something.",
+  "sig": "67bd10f31a17",
+  "text": "writing or pictures that tell or show people something.",
   "voice": "sarah"
  },
  "yay": {

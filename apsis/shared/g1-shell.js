@@ -15,8 +15,12 @@ var Shell = (function () {
   /* tiny event hub: talk(on), right, wrong, screen(id) — the buddy listens */
   var handlers = {};
   S.on = function (name, fn) { (handlers[name] = handlers[name] || []).push(fn); };
-  S.emit = function (name, arg) {
+  S.off = function (name, fn) {
     var list = handlers[name] || [], i;
+    for (i = list.length - 1; i >= 0; i--) { if (list[i] === fn) { list.splice(i, 1); } }
+  };
+  S.emit = function (name, arg) {
+    var list = (handlers[name] || []).slice(), i;
     for (i = 0; i < list.length; i++) { try { list[i](arg); } catch (e) {} }
   };
 
@@ -192,7 +196,11 @@ var Shell = (function () {
   function speakOne(text, done) {
     if (!text) { done(); return; }
     var clips = window.VOICE_CLIPS || {}, key = S.clipKey(text);
-    if (clips[key]) { playClip(clips[key], done); return; }
+    if (clips[key]) {
+      playClip(clips[key], done);
+      S.emit("speakstart", { text: text, player: clipPlayer });
+      return;
+    }
     var guess = 700 + String(text).split(" ").length * 480;
     if (!window.speechSynthesis) { S.later(done, guess); return; }
     try {
@@ -203,6 +211,7 @@ var Shell = (function () {
       u.volume = 0.95;
       u.onend = done; u.onerror = done;
       window.speechSynthesis.speak(u);
+      S.emit("speakstart", { text: text, player: null, est: guess / 1000 });
       S.later(done, guess + 2500); /* safety net: some engines never fire onend */
     } catch (e) { S.later(done, guess); }
   }
@@ -481,6 +490,16 @@ var Shell = (function () {
     rainbow: clouds() +
       '<svg class="rainbow" viewBox="0 0 200 100"><g fill="none" stroke-width="10"><path d="M10 100a90 90 0 0 1 180 0" stroke="#FF4F6D"/><path d="M20 100a80 80 0 0 1 160 0" stroke="#FF9F1C"/><path d="M30 100a70 70 0 0 1 140 0" stroke="#FFD23F"/><path d="M40 100a60 60 0 0 1 120 0" stroke="#23C16B"/><path d="M50 100a50 50 0 0 1 100 0" stroke="#2EA7FF"/><path d="M60 100a40 40 0 0 1 80 0" stroke="#9B5DE5"/></g></svg>' +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 46C70 24 150 30 220 44S350 30 400 36V100H0z" fill="#7BE3A6"/><path d="M0 68C90 50 170 60 250 70S360 56 400 60V100H0z" fill="#4CCB7A"/></svg>',
+    /* library: warm cream walls, shelves of colourful books */
+    library: clouds() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +
+      '<rect x="0" y="20" width="400" height="80" fill="#B97A4A"/><rect x="0" y="56" width="400" height="6" fill="#8A5530"/><rect x="0" y="94" width="400" height="6" fill="#8A5530"/>' +
+      '<g>' + (function () {
+        var cols = ["#FF4F6D", "#2EA7FF", "#FFD23F", "#23C16B", "#9B5DE5", "#FF9F1C", "#FF7BAC"], out = "", x, h, i = 0;
+        for (x = 4; x < 396; x += 11) { h = 26 + (i * 7) % 10; out += '<rect x="' + x + '" y="' + (56 - h) + '" width="9" height="' + h + '" fill="' + cols[i % 7] + '"/>'; i++; }
+        for (x = 6; x < 396; x += 13) { h = 22 + (i * 5) % 10; out += '<rect x="' + x + '" y="' + (94 - h) + '" width="10" height="' + h + '" fill="' + cols[(i + 3) % 7] + '"/>'; i++; }
+        return out;
+      })() + "</g></svg>",
     /* school street: aqua sky, school with a flag, zebra crossing */
     school: clouds() +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +
