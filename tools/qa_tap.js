@@ -56,7 +56,7 @@ function answersFor(state) {
     page.on('console', m => { if (m.type() === 'error' && !/ERR_FAILED/.test(m.text())) errors.push(m.text()); });
     await page.addInitScript(STUB);
     await page.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
-    await page.goto('file://' + path.resolve(file));
+    await page.goto('file://' + path.resolve(file) + '?qa=1');
     await page.waitForTimeout(300);
     await page.screenshot({ path: `${out}/${vp.name}-home.png` });
     const homeOv = await page.evaluate(() => [document.querySelector('.home-wrap').scrollHeight, document.querySelector('.home-wrap').clientHeight, document.documentElement.scrollWidth]);
@@ -72,17 +72,23 @@ function answersFor(state) {
         await page.waitForFunction(() => document.querySelector('#end.on') ||
           (document.querySelector('#stage[data-ready="1"] .cards .card') && !document.querySelector('.cards .card.got') && !document.querySelector('#banner.on') && !document.querySelector('#hand.on')), null, { timeout: 30000 });
         if (await page.$('#end.on')) break;
-        await page.waitForTimeout(450);
+        await page.waitForTimeout(700);
         const state = await page.evaluate(() => ({
           prompt: document.querySelector('.prompt-text').innerText,
           target: (document.querySelector('.card.target .word') || {}).innerText || '',
-          words: [...document.querySelectorAll('.cards .card .word')].map(e => e.innerText.trim())
+          words: [...document.querySelectorAll('.cards .card')].map(e => e.getAttribute('data-id'))
         }));
-        const ans = answersFor(state);
+        const qa = await page.evaluate(() => window.__qa && window.__qa.answer);
+        const ans = qa || answersFor(state);
         const lay = await page.evaluate(() => {
           const r = [], W = innerWidth, H = innerHeight;
           document.querySelectorAll('.cards .card, .card.target, .prompt, .topbar .icon-btn').forEach(e => { const b = e.getBoundingClientRect(); if (b.left < -1 || b.top < -1 || b.right > W + 1 || b.bottom > H + 1) r.push(e.className + ' off-screen'); if (/card/.test(e.className) && (b.width < 64 || b.height < 64)) r.push('small card'); });
           if (document.documentElement.scrollWidth > W) r.push('page scrolls sideways');
+          const gb = document.querySelector('#game-buddy');
+          if (gb && getComputedStyle(gb).display !== 'none' && !gb.classList.contains('away')) {
+            const g = gb.getBoundingClientRect();
+            document.querySelectorAll('.card, .tile, .chip, .target, .prompt, .lf-word, .lf-pic, .sign').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('Asma overlaps ' + e.className.split(' ')[0]); });
+          }
           document.querySelectorAll('.card .word').forEach(w => { const c = w.parentNode.getBoundingClientRect(), b = w.getBoundingClientRect(); if (b.left < c.left + 2 || b.right > c.right - 2) r.push('word overflows card: ' + w.innerText); });
           document.querySelectorAll('.big-btn').forEach(bt => { if (bt.offsetParent && bt.getBoundingClientRect().height > 90) r.push('button label wraps'); });
           return r;
@@ -92,7 +98,7 @@ function answersFor(state) {
         if (L === 0 && items === 0) {
           const wrong = state.words.find(w => !ans.includes(w));
           for (let k = 0; k < 3; k++) {
-            await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + wrong + '$') }) }).first().click({ position: { x: 22, y: 70 } });
+            await page.locator('.cards .card[data-id="' + wrong + '"]').first().click({ position: { x: 22, y: 70 } });
             await page.waitForTimeout(250);
             await page.waitForFunction(() => document.querySelector('#stage[data-ready="1"]'), null, { timeout: 30000 });
             await page.waitForTimeout(200);
@@ -100,7 +106,7 @@ function answersFor(state) {
           await page.screenshot({ path: `${out}/${vp.name}-hints.png` });
         }
         for (const a of ans) {
-          await page.locator('.cards .card').filter({ has: page.locator('.word', { hasText: new RegExp('^' + a + '$') }) }).first().click({ position: { x: 22, y: 70 } });
+          await page.locator('.cards .card[data-id="' + a + '"]').first().click({ position: { x: 22, y: 70 } });
           await page.waitForTimeout(200);
         }
         items++;

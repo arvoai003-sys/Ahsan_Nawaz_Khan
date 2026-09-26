@@ -52,12 +52,13 @@ captured.levels.forEach(function (L) {
     (L.make ? L.make() : L.rounds).forEach(function (R) {
       add(R.bannerSay);
       R.items.forEach(function (it) {
-        add(it.say); add(it.hint2); add(it.full);
+        add(it.say); add(it.hint2); add(it.full); add(it.done);
+        if (it.target && it.target.say) add(it.target.say);
         var engineObj = vm.runInContext(ENGINE, ctx);
         if (engineObj.instructionFor) add(engineObj.instructionFor(it));
         if (engineObj.linesFor) engineObj.linesFor(it).forEach(add);
-        if (it.target) add(it.target.text);
-        (it.options || []).forEach(function (o) { add(o.say || o.text); });
+        if (it.target && !it.target.hideWord) add(it.target.text);
+        (it.options || []).forEach(function (o) { if (!o.noBadge) add(o.say || o.text); });
       });
     });
   }

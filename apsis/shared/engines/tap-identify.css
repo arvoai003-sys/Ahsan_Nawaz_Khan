@@ -95,3 +95,11 @@
 @media (max-width: 520px) { .card .word.long, .cards.six .card .word.long { font-size: 19px; } }
 @media (max-height: 520px) { .card .word.long, .cards.six .card .word.long { font-size: 20px; } }
 @media (min-width: 900px) and (min-height: 640px) { .card .word.long { font-size: 32px; } .cards.six .card .word.long { font-size: 27px; } }
+
+/* picture cards (signs, book covers): the picture carries the words */
+.card.picture { justify-content: center; }
+.card.picture .art { width: 124px; height: 124px; border-radius: 22px; background: #fff; border: none; padding: 2px; margin: 0; }
+.card.target.picture .art { width: 110px; height: 110px; }
+@media (max-width: 520px) { .card.picture .art { width: 84px; height: 84px; } .card.target.picture .art { width: 84px; height: 84px; } }
+@media (max-height: 520px) { .card.picture .art { width: 76px; height: 76px; } .card.target.picture .art { width: 70px; height: 70px; } }
+@media (min-width: 900px) and (min-height: 640px) { .card.picture .art { width: 156px; height: 156px; } .card.target.picture .art { width: 132px; height: 132px; } }

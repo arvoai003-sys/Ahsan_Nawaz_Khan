@@ -314,6 +314,97 @@ var Art = (function () {
     '<path d="M50 6c2-6 8-6 8 0" fill="none" stroke="#FF3B3B" stroke-width="3"/><circle cx="50" cy="8" r="6" fill="#FF3B3B"' + O.replace("3.5", "2.5") + "/>" +
     '<circle cx="42" cy="26" r="2" fill="#fff"/><circle cx="58" cy="34" r="2" fill="#FFD23F"/><circle cx="48" cy="40" r="2" fill="#2EA7FF"/>' + shine(42, 20, 5, 3);
 
+  /* ---------- signs (A3): drawn from the book's pictures, pp.28-32 ---------- */
+  function board(fill, text, size, color, extra) {
+    return '<rect x="6" y="22" width="88" height="54" rx="8" fill="' + fill + '"' + O + "/>" + (extra || "") +
+      '<text x="50" y="' + (49 + size * 0.35) + '" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="' + size + '" fill="' + (color || INK) + '" text-anchor="middle">' + text + "</text>";
+  }
+  function noSign(inner) {
+    return '<circle cx="50" cy="50" r="42" fill="#fff"' + O + "/>" + inner +
+      '<circle cx="50" cy="50" r="36" fill="none" stroke="#E4252B" stroke-width="9"/><path d="M25 25l50 50" stroke="#E4252B" stroke-width="9" stroke-linecap="round"/>';
+  }
+  lib.entrance = '<rect x="18" y="40" width="64" height="54" fill="#E4453A"' + O + "/>" +
+    '<rect x="26" y="50" width="22" height="44" fill="#FF6B5E"' + O.replace("3.5", "2.5") + '/><rect x="52" y="50" width="22" height="44" fill="#FF6B5E"' + O.replace("3.5", "2.5") + "/>" +
+    '<path d="M46 72v6M54 72v6" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>' +
+    '<rect x="8" y="12" width="84" height="22" rx="4" fill="#fff"' + O + "/>" +
+    '<text x="50" y="29" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="' + INK + '" text-anchor="middle">ENTRANCE</text>';
+  lib.washsign = '<rect x="10" y="14" width="80" height="72" rx="8" fill="#2EA7FF"' + O + "/>" +
+    '<text x="50" y="38" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">Wash your</text>' +
+    '<text x="50" y="56" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">hands</text>' +
+    '<path d="M34 66h14v-4h6v8H40v8" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M58 70q6 6 12 0" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>';
+  lib.bookslabel = '<path d="M30 6v14M70 6v14" stroke="' + INK + '" stroke-width="3"/>' + board("#fff", "BOOKS", 19) +
+    '<path d="M20 84h60" stroke="#B97A4A" stroke-width="5"/><rect x="24" y="80" width="8" height="12" fill="#FF4F6D"/><rect x="34" y="78" width="7" height="14" fill="#2EA7FF"/><rect x="43" y="80" width="8" height="12" fill="#FFD23F"/><rect x="53" y="77" width="7" height="15" fill="#23C16B"/>';
+  lib.toyslabel = '<path d="M30 6v14M70 6v14" stroke="' + INK + '" stroke-width="3"/>' + board("#fff", "TOYS", 22) +
+    '<circle cx="36" cy="86" r="7" fill="#FF4F6D"' + O.replace("3.5", "2") + '/><rect x="52" y="80" width="14" height="14" fill="#FFD23F"' + O.replace("3.5", "2") + "/>";
+  lib.danger = '<rect x="46" y="70" width="8" height="26" fill="#B97A4A"' + O.replace("3.5", "2.5") + "/>" +
+    '<rect x="6" y="18" width="88" height="54" rx="6" fill="#FFD23F"' + O + "/>" +
+    '<text x="50" y="41" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="15" fill="' + INK + '" text-anchor="middle">Danger</text>' +
+    '<text x="50" y="61" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="13" fill="' + INK + '" text-anchor="middle">Deep Water</text>' +
+    '<path d="M4 92q8-6 16 0t16 0 16 0 16 0 16 0 16 0" fill="none" stroke="#2EA7FF" stroke-width="4"/>';
+  lib.slippery = '<path d="M50 4L96 50 50 96 4 50z" fill="#FFD23F"' + O + "/>" +
+    '<path d="M36 44h28l4 10H32z" fill="' + INK + '"/><rect x="38" y="36" width="24" height="10" rx="3" fill="' + INK + '"/>' +
+    '<circle cx="38" cy="56" r="3.5" fill="' + INK + '"/><circle cx="62" cy="56" r="3.5" fill="' + INK + '"/>' +
+    '<path d="M40 62c-6 6 6 10 0 18M58 62c-6 6 6 10 0 18" fill="none" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>';
+  lib.nowaste = noSign('<path d="M30 40h26v10h8v10h-8v-4H30z" fill="#8C9AA5"/><rect x="38" y="30" width="8" height="10" fill="#8C9AA5"/><path d="M60 64c-3 5-4 8-4 10a4 4 0 0 0 8 0c0-2-1-5-4-10z" fill="#2EA7FF"/>');
+  lib.slow = '<rect x="46" y="70" width="8" height="26" fill="#B7C3CF"' + O.replace("3.5", "2.5") + "/>" +
+    '<path d="M50 4L92 46 50 88 8 46z" fill="#FFD23F"' + O + "/>" +
+    '<text x="50" y="54" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="20" fill="' + INK + '" text-anchor="middle">SLOW</text>';
+  lib.nodive = noSign('<path d="M26 66q8-6 16 0t16 0 16 0" fill="none" stroke="#2EA7FF" stroke-width="4"/><circle cx="66" cy="34" r="5" fill="' + INK + '"/><path d="M62 38L40 58M50 48l-12-4M50 48l6 10" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/>');
+  lib.nodrink = noSign('<path d="M30 34h24v8h8v8h-8v-4H30z" fill="#8C9AA5"/><path d="M56 60h14l-2 18H58z" fill="#BDEBFF" stroke="' + INK + '" stroke-width="2.5"/><path d="M63 52v5" stroke="#2EA7FF" stroke-width="3"/>');
+  lib.dosign = '<circle cx="50" cy="50" r="42" fill="#23C16B"' + O + '/><path d="M28 52l14 14 30-32" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>';
+  lib.dontsign = '<circle cx="50" cy="50" r="42" fill="#FF3B3B"' + O + '/><path d="M32 32l36 36M68 32L32 68" stroke="#fff" stroke-width="11" stroke-linecap="round"/>';
+  lib.storybook = '<path d="M12 26c14-6 26-6 38 2 12-8 24-8 38-2v58c-14-6-26-6-38 2-12-8-24-8-38-2z" fill="#fff"' + O + "/>" +
+    '<path d="M50 28v58" stroke="' + INK + '" stroke-width="3"/>' +
+    '<path d="M22 70l8-20 8 20zM26 62h8" fill="#9B5DE5" stroke="' + INK + '" stroke-width="2"/><rect x="28" y="44" width="4" height="8" fill="#FF4F6D"/>' +
+    '<path d="M70 38l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#FFD23F" stroke="' + INK + '" stroke-width="2"/>' +
+    '<path d="M60 70q8-10 16 0" fill="none" stroke="#FF7BAC" stroke-width="4" stroke-linecap="round"/>' +
+    '<path d="M18 16l2 4 4 1-4 2-2 4-2-4-4-2 4-1zM84 12l2 4 4 1-4 2-2 4-2-4-4-2 4-1z" fill="#FFD23F"/>';
+  lib.reallife = '<circle cx="44" cy="44" r="30" fill="#7EC8FF"' + O + "/>" +
+    '<path d="M24 36c8-4 12 2 18-2s8-10 16-6M22 54c10 0 12 8 20 6s10-8 18-2" fill="none" stroke="#23C16B" stroke-width="6" stroke-linecap="round"/>' +
+    '<circle cx="44" cy="44" r="30" fill="none"' + O + '/><path d="M66 66l20 20" stroke="' + INK + '" stroke-width="10" stroke-linecap="round"/>' + shine(34, 30, 8, 4);
+
+  /* book covers (A3): simple covers of our own with the titles the book shows (pp.26-30); never the publishers' art */
+  function cover(bg, title1, title2, art, tc) {
+    return '<rect x="16" y="6" width="68" height="88" rx="5" fill="' + bg + '"' + O + "/>" +
+      '<rect x="16" y="6" width="8" height="88" fill="' + INK + '" opacity=".25"/>' +
+      '<text x="53" y="' + (title2 ? 22 : 26) + '" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="9" fill="' + (tc || "#fff") + '" text-anchor="middle">' + title1 + "</text>" +
+      (title2 ? '<text x="53" y="33" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="9" fill="' + (tc || "#fff") + '" text-anchor="middle">' + title2 + "</text>" : "") +
+      '<g transform="translate(29 38) scale(.48)">' + lib[art] + "</g>";
+  }
+  lib.redhood = '<path d="M50 10c16 0 26 14 26 30v8H24v-8c0-16 10-30 26-30z" fill="#E4252B"' + O + '/><circle cx="50" cy="44" r="16" fill="#FFC99E"' + O + "/>" + face(50, 44, 0.6) +
+    '<path d="M28 56l-8 38h60l-8-38z" fill="#E4252B"' + O + '/><path d="M64 70h18l-4 14H68z" fill="#C98A3A"' + O.replace("3.5", "2.5") + "/>";
+  lib.braids = '<circle cx="50" cy="46" r="22" fill="#FFC99E"' + O + '/><path d="M28 40c0-16 10-24 22-24s22 8 22 24c-6-6-14-8-22-8s-16 2-22 8z" fill="#FF9F1C"' + O + "/>" +
+    '<path d="M28 42L8 30M72 42l20-12" stroke="#FF9F1C" stroke-width="7" stroke-linecap="round"/>' + face(50, 48, 0.7) + '<circle cx="42" cy="56" r="1.5" fill="#C98A3A"/><circle cx="58" cy="56" r="1.5" fill="#C98A3A"/>';
+  lib.monkey = '<circle cx="24" cy="44" r="10" fill="#C98A5A"' + O + '/><circle cx="76" cy="44" r="10" fill="#C98A5A"' + O + '/><circle cx="50" cy="46" r="26" fill="#A0603A"' + O + "/>" +
+    '<ellipse cx="50" cy="54" rx="18" ry="14" fill="#F2D2B0"/>' + face(50, 50, 0.7) + '<path d="M70 70l22-10" stroke="#B97A4A" stroke-width="5" stroke-linecap="round"/>';
+  lib.hero = '<path d="M26 44l-14 44h76L74 44z" fill="#E4252B"' + O + '/><circle cx="50" cy="38" r="20" fill="#FFC99E"' + O + "/>" +
+    '<path d="M32 34h36v8H32z" fill="#2EA7FF"/>' + eye(42, 38, 3.5) + eye(58, 38, 3.5) + '<path d="M44 48q6 4 12 0" fill="none" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>' +
+    '<path d="M40 64l10 10 10-10" fill="#FFD23F"' + O.replace("3.5", "2") + "/>";
+  lib.globe = '<circle cx="50" cy="50" r="38" fill="#7EC8FF"' + O + '/><path d="M26 36c10-6 16 4 24-2s10-12 20-6M20 58c12 0 14 10 24 8s12-10 22-4M52 76c6-4 12-2 16 2" fill="none" stroke="#23C16B" stroke-width="8" stroke-linecap="round"/>' +
+    '<circle cx="50" cy="50" r="38" fill="none"' + O + "/>" + shine(36, 30, 9, 4);
+  lib.ladybird = '<circle cx="50" cy="30" r="12" fill="' + INK + '"/><ellipse cx="50" cy="58" rx="32" ry="30" fill="#E4252B"' + O + '/><path d="M50 30v58" stroke="' + INK + '" stroke-width="3"/>' +
+    '<circle cx="36" cy="50" r="6" fill="' + INK + '"/><circle cx="64" cy="50" r="6" fill="' + INK + '"/><circle cx="38" cy="72" r="5" fill="' + INK + '"/><circle cx="62" cy="72" r="5" fill="' + INK + '"/>' +
+    eye(45, 28, 3) + eye(55, 28, 3);
+  lib.turtle = '<ellipse cx="50" cy="56" rx="30" ry="22" fill="#23C16B"' + O + '/><path d="M36 48l14-8 14 8-2 14H38z" fill="#149E52"/><circle cx="84" cy="52" r="10" fill="#9BD85B"' + O + "/>" + eye(86, 48, 3) +
+    '<path d="M28 72l-8 10M70 74l6 10M28 42l-8-8" stroke="#9BD85B" stroke-width="8" stroke-linecap="round"/>';
+  lib.guitar = '<path d="M60 12l18 18-18 22-6-6z" fill="#B97A4A"' + O + '/><circle cx="38" cy="66" r="20" fill="#FF9F1C"' + O + '/><circle cx="52" cy="52" r="14" fill="#FF9F1C"' + O + "/>" +
+    '<circle cx="42" cy="62" r="6" fill="' + INK + '"/><path d="M30 74l40-40" stroke="#fff" stroke-width="2"/>';
+  lib.bodymap = '<circle cx="50" cy="20" r="12" fill="#FFC99E"' + O + '/><path d="M36 36h28l6 30H62l-2 28H40l-2-28h-8z" fill="#FFC99E"' + O + "/>" +
+    '<path d="M50 40c-6 6-6 14 0 20 6-6 6-14 0-20z" fill="#E4252B"/><path d="M44 48c-6 10-8 20-6 30M56 48c6 10 8 20 6 30" stroke="#2EA7FF" stroke-width="2.5" fill="none"/>';
+  lib.sheep = '<g fill="#fff"' + O.replace("3.5", "3") + '><circle cx="38" cy="48" r="14"/><circle cx="56" cy="44" r="14"/><circle cx="66" cy="58" r="12"/><circle cx="44" cy="62" r="14"/></g>' +
+    '<ellipse cx="24" cy="46" rx="10" ry="12" fill="#fff"' + O + "/>" + '<circle cx="21" cy="44" r="2.5" fill="' + INK + '"/>' +
+    '<path d="M40 74v14M58 72v14" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/><path d="M78 20l-8 8M84 30l-10 4" stroke="#FF9F1C" stroke-width="4" stroke-linecap="round"/>';
+  lib.cov_redhood = cover("#2E7D4F", "Little Red", "Riding Hood", "redhood");
+  lib.cov_pippi = cover("#FFD23F", "Pippi", "Longstocking", "braids", INK);
+  lib.cov_monkey = cover("#8A5530", "Monkey's", "Magic Pipe", "monkey");
+  lib.cov_hero = cover("#2EA7FF", "Hero", "Academy", "hero");
+  lib.cov_atlas = cover("#FF4F6D", "First", "Atlas", "globe");
+  lib.cov_bugs = cover("#23C16B", "BUGS", "", "ladybird");
+  lib.cov_oceans = cover("#0B7FD6", "Our", "Oceans", "turtle");
+  lib.cov_guitar = cover("#fff", "How to", "Play Guitar", "guitar", "#E4252B");
+  lib.cov_body = cover("#9B5DE5", "The Human", "Body", "bodymap");
+  lib.cov_cartoons = cover("#FFB020", "How to draw", "cartoons", "sheep", "#E4252B");
+
   lib.chin = kid(52, 70, 88, 92);
   lib.ear = kid(80, 48, 99, 30);
   lib.neck = kid(54, 74, 92, 70);

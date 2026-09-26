@@ -91,6 +91,7 @@ def main():
 
     parts_js = [("g1-shell.js", read(os.path.join(SHARED, "g1-shell.js"))),
                 ("g1-art.js", read(os.path.join(SHARED, "g1-art.js"))),
+                ("g1-buddy.js", read(os.path.join(SHARED, "g1-buddy.js"))),
                 (engine + ".js", read(os.path.join(SHARED, "engines", engine + ".js"))),
                 (os.path.basename(game_path), game)]
     problems = []

@@ -82,7 +82,7 @@ function plan(state) {
         await page.waitForFunction(() => document.querySelector('#end.on') ||
           (document.querySelector('#stage[data-ready="1"] .chips .chip') && !document.querySelector('.target.done') && !document.querySelector('#banner.on') && !document.querySelector('#hand.on')), null, { timeout: 30000 });
         if (await page.$('#end.on')) break;
-        await page.waitForTimeout(450);
+        await page.waitForTimeout(700);
         const state = await page.evaluate(() => ({
           targets: [...document.querySelectorAll('.target')].map(t => { const c = t.querySelector('.cap').cloneNode(true); const d = c.querySelector('.drop'); if (d) d.textContent = '___'; return c.textContent.replace(/\s+/g, ' ').trim(); }),
           chips: [...document.querySelectorAll('.chips .chip')].map(c => c.textContent.trim())
@@ -95,6 +95,11 @@ function plan(state) {
           document.querySelectorAll('.chip').forEach(e => { const b = e.getBoundingClientRect(); if (b.height < 48) r.push('small chip'); });
           document.querySelectorAll('.target .cap').forEach(e => { if (e.scrollWidth > e.clientWidth + 2) r.push('caption overflows: ' + e.textContent); });
           if (document.documentElement.scrollWidth > W) r.push('page scrolls sideways');
+          const gb = document.querySelector('#game-buddy');
+          if (gb && getComputedStyle(gb).display !== 'none' && !gb.classList.contains('away')) {
+            const g = gb.getBoundingClientRect();
+            document.querySelectorAll('.card, .tile, .chip, .target, .prompt, .lf-word, .lf-pic, .sign').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('Asma overlaps ' + e.className.split(' ')[0]); });
+          }
           return r;
         });
         lay.forEach(x => layoutIssues.add(`L${L + 1} ${x}`));

@@ -15,16 +15,16 @@ other 17 are:
 | # | Asset | Plan type | Engine | File task name | Ready? |
 |---|---|---|---|---|---|
 | A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | Ready |
-| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | Needs D1 |
+| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-01** |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-04** |
-| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-02** |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-05** |
+| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-03** |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
 | A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | Ready |
-| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-01** |
+| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-02** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
 | A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Needs D7 |
@@ -168,3 +168,6 @@ and is delivered as a new version in `builds/`.
 | 2026-09-25 | Shared voice and sound | `apsis/shared/g1-shell.js` | Device voice now prefers English (Pakistan), then English (India), female and natural voices, softer pitch and pace. Recorded clips replace it line by line: recording scripts in `voice/*_voice_script.csv` (76 and 74 lines). Background tune with Music on/off; xylophone, soft boing and fanfare effects. |
 | 2026-09-26 | House voice | `voice/clips/` | Kokoro "Sarah" (American, natural) chosen from the audition. All lines pre-recorded with moods (warm/slow instructions, gentle retries, excited praise). A6 v-04 (117 lines), A7 v-02 (85), A14 v-01 (68); no device-voice fallback in QA. Files are now 0.85–1.4 MB each because the voice is inside. Note: American accent, not Pakistani (no Pakistani neural voice available offline). |
 | 2026-09-26 | A14 Sense and Body Part | `builds/ENG01CH02SENSEMATCH_v-01.html` | Match engine (drag or tap-tap). Levels: 1 Warm Up (2 pairs), 2 Our Senses (book p.34 sentences with a gap, verbatim), 3 Which Sense? (book p.38 2I B4 activities + 2 new), 4 Match Three, 5 Mix It Up (3 activities), 6 Super Senses (all 5 pairs + 3 activities). Each match says the book sentence. "play in the playground" withheld. **New activities need Champ's approval.** |
+| 2026-09-26 | D1 closed (Champ) | — | The p.29 crossed-out tap means "Don't waste water / don't leave the tap open". 2C also covers story books vs real-life books (2A C p.27, 2C C p.30). 2C A1 itself stays withheld; each p.29 sign is asked about by its own meaning. |
+| 2026-09-26 | A3 What Does the Sign Say? | `builds/ENG01CH02SIGNSAY_v-01.html` | Levels: 1 Sign Hunt (printed signs, 2 choices), 2 Read the Signs (book p.28 sentences, verbatim), 3 What Does It Mean? (p.29 trio + 2 of p.32), 4 Do or Don't? (p.32 2E Part 1 + 2 more), 5 Story or Real Life? (the book's 9 titles + "How to draw cartoons"; covers drawn by us), 6 Super Star (mix). 121 lines in Sarah's voice. Sign cards show no label or speaker (would give the answer away). |
+| 2026-09-26 | Home pages, Asma | all four games | Each game has its own theme (A6 meadow, A7 sunset town, A14 flower garden, A3 school street), a large title with a hero icon, and no "Grade 1 · Chapter 2" label. Asma (ARVO character, Grade 1 look from the character bible) and Fluffy are the on-screen buddies: she waves on the home page, her mouth moves while the narrator speaks, she cheers at right answers and tilts her head at wrong ones; Fluffy runs across when a level ends. She steps out of view on any screen where she would cover a game piece. A6 v-05, A7 v-03, A14 v-02. |

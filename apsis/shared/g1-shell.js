@@ -12,6 +12,14 @@ var Shell = (function () {
   function $(id) { return document.getElementById(id); }
   S.$ = $;
 
+  /* tiny event hub: talk(on), right, wrong, screen(id) — the buddy listens */
+  var handlers = {};
+  S.on = function (name, fn) { (handlers[name] = handlers[name] || []).push(fn); };
+  S.emit = function (name, arg) {
+    var list = handlers[name] || [], i;
+    for (i = 0; i < list.length; i++) { try { list[i](arg); } catch (e) {} }
+  };
+
   /* ---------- helpers ---------- */
   S.shuffle = function (arr) {
     var a = arr.slice(), i, j, t;
@@ -214,10 +222,11 @@ var Shell = (function () {
   S.say = function (text, done) {
     var parts = (Object.prototype.toString.call(text) === "[object Array]") ? text : [text];
     var my = ++sayId, i = 0, finished = false;
-    function end() { if (!finished) { finished = true; duck(false); if (done) { done(); } } }
+    function end() { if (!finished) { finished = true; duck(false); S.emit("talk", false); if (done) { done(); } } }
     S.hush(true);
     if (!soundOn) { S.later(end, 300); return; }
     duck(true);
+    S.emit("talk", true);
     function next() {
       if (my !== sayId) { end(); return; }
       if (i >= parts.length) { end(); return; }
@@ -298,12 +307,14 @@ var Shell = (function () {
     return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
   };
   S.right = function (node) {
+    S.emit("right");
     S.sfx.right();
     var c = S.centre(node);
     S.confetti(c.x, c.y, 36);
     return S.praise();
   };
   S.wrong = function (node) {
+    S.emit("wrong");
     wrongTaps++;
     S.sfx.wrong();
     if (node) { S.flash(node, "shake", 500); }
@@ -332,6 +343,7 @@ var Shell = (function () {
 
   /* ---------- progress dots ---------- */
   S.progress = function (total, doneCount) {
+    S.emit("layout");
     var box = $("progress"), i, h = "";
     for (i = 0; i < total; i++) {
       h += '<i class="' + (i < doneCount ? "done" : (i === doneCount ? "now" : "")) + '"></i>';
@@ -354,6 +366,7 @@ var Shell = (function () {
   S.show = function (id) {
     var list = document.querySelectorAll(".screen"), i;
     for (i = 0; i < list.length; i++) { list[i].className = "screen" + (list[i].id === id ? " on" : ""); }
+    S.emit("screen", id);
   };
 
   /* ---------- stars + result contract ---------- */
@@ -442,6 +455,39 @@ var Shell = (function () {
     cfg.start(n);
   }
 
+  /* ---------- themes: scenery behind everything ---------- */
+  var CLOUD = '<path d="M30 60a22 22 0 0 1 4-43 30 30 0 0 1 56-6 24 24 0 0 1 36 20 16 16 0 0 1-2 29z" fill="#fff"/>';
+  function clouds() {
+    return '<svg class="cloud c1" viewBox="0 0 150 70">' + CLOUD + '</svg><svg class="cloud c2" viewBox="0 0 150 70">' + CLOUD +
+      '</svg><svg class="cloud c3" viewBox="0 0 150 70">' + CLOUD + "</svg>";
+  }
+  var THEMES = {
+    /* green hills under a blue sky */
+    meadow: clouds() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 50C60 10 120 20 180 45S300 30 400 40V100H0z" fill="#8EE06B"/><path d="M0 70C80 45 150 55 230 72S340 55 400 62V100H0z" fill="#5CCB52"/></svg>',
+    /* sunset town: orange-pink sky, rooftops, a road with a dashed line */
+    sunset: '<svg class="sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#FFE066"/><circle cx="50" cy="50" r="48" fill="#FFE066" opacity=".35"/></svg>' + clouds() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +
+      '<path d="M0 40h30V20h24v20h16V10h30v30h20V26h26v14h22V16h28v24h18V22h30v18h24V8h30v32h22V24h30v16H400v60H0z" fill="#8F5DB8" opacity=".55"/>' +
+      '<rect x="0" y="62" width="400" height="38" fill="#5B5680"/><path d="M0 81h400" stroke="#FFD23F" stroke-width="3" stroke-dasharray="18 14"/>' +
+      '<rect x="0" y="58" width="400" height="6" fill="#C9C4DA"/></svg>',
+    /* flower garden: lilac sky, grass with flowers, butterflies */
+    garden: clouds() +
+      '<svg class="bfly b1" viewBox="0 0 40 30"><path d="M20 15C10 0 0 6 6 16 0 24 12 30 20 16 28 30 40 24 34 16 40 6 30 0 20 15z" fill="#FF7BAC" stroke="#2E2A4F" stroke-width="2"/></svg>' +
+      '<svg class="bfly b2" viewBox="0 0 40 30"><path d="M20 15C10 0 0 6 6 16 0 24 12 30 20 16 28 30 40 24 34 16 40 6 30 0 20 15z" fill="#FFD23F" stroke="#2E2A4F" stroke-width="2"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 44C80 26 160 30 240 42S360 34 400 38V100H0z" fill="#9FE27A"/><path d="M0 66C90 50 180 58 260 66S360 58 400 60V100H0z" fill="#6CD26A"/>' +
+      '<g><circle cx="30" cy="70" r="5" fill="#FF7BAC"/><circle cx="90" cy="80" r="5" fill="#FFD23F"/><circle cx="150" cy="72" r="5" fill="#9B5DE5"/><circle cx="215" cy="84" r="5" fill="#FF4F6D"/><circle cx="280" cy="74" r="5" fill="#fff"/><circle cx="340" cy="82" r="5" fill="#FF7BAC"/><circle cx="385" cy="70" r="5" fill="#FFD23F"/></g></svg>',
+    /* school street: aqua sky, school with a flag, zebra crossing */
+    school: clouds() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +
+      '<rect x="250" y="10" width="110" height="52" fill="#FFB866" stroke="#2E2A4F" stroke-width="2"/><path d="M244 12l61-10 61 10z" fill="#FF4F6D" stroke="#2E2A4F" stroke-width="2"/>' +
+      '<rect x="296" y="36" width="18" height="26" fill="#2EA7FF"/><g fill="#CDEBFF"><rect x="262" y="22" width="14" height="12"/><rect x="336" y="22" width="14" height="12"/></g>' +
+      '<path d="M305 2V-14" stroke="#2E2A4F" stroke-width="2"/><path d="M305 -14h16v8h-16z" fill="#23C16B"/>' +
+      '<path d="M0 50C60 36 140 40 220 52V62H0z" fill="#8EE06B"/>' +
+      '<rect x="0" y="62" width="400" height="38" fill="#6B7280"/><g fill="#fff"><rect x="120" y="66" width="10" height="30"/><rect x="138" y="66" width="10" height="30"/><rect x="156" y="66" width="10" height="30"/><rect x="174" y="66" width="10" height="30"/></g>' +
+      '<rect x="0" y="58" width="400" height="6" fill="#D5D9E0"/></svg>'
+  };
+
   /* ---------- boot ---------- */
   /* config: { asset, version, title, kicker, levels: [{name, art, ribbon}], start(levelIndex), resume, score, max } */
   S.boot = function (config) {
@@ -449,10 +495,19 @@ var Shell = (function () {
     document.title = config.title;
     cv = $("confetti"); cx2 = cv.getContext("2d");
     $("hand").innerHTML = S.icon.hand;
-    $("home-mascot").innerHTML = Art.get("chick");
-    $("end-mascot").innerHTML = Art.get("chick");
+    /* each game has its own look: sky, scenery, title and tile colours */
+    var theme = THEMES[config.theme] ? config.theme : "meadow";
+    document.body.className += " theme-" + theme;
+    $("scenery").innerHTML = THEMES[theme];
+    if (config.buddy && window.Buddy) {
+      Buddy.mount(config.buddy);
+    } else {
+      $("home-mascot").innerHTML = Art.get("chick");
+      $("end-mascot").innerHTML = Art.get("chick");
+    }
+    if (config.heroArt) { $("home-hero").innerHTML = Art.get(config.heroArt); }
     $("home-title").innerHTML = config.title;
-    $("home-kicker").innerHTML = config.kicker;
+    /* no grade/chapter label on the home page: the title is the star */
     $("home-say").innerHTML = S.icon.speaker;
     $("star-icon").innerHTML = S.icon.star;
     $("pause-btn").innerHTML = S.icon.pause;

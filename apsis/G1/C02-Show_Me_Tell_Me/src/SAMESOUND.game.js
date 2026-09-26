@@ -1,5 +1,5 @@
 // @asset ENG01CH02SAMESOUND
-// @version v-04
+// @version v-05
 // @title Same First Sound
 // @engine tap-identify
 /* A6 · Same First Sound · Phonics and Spelling > Sounds at the Start of Word · O4
@@ -185,10 +185,12 @@
   TapIdentify.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SAMESOUND",
-    version: "v-04",
+    version: "v-05",
     title: "Same First Sound",
-    kicker: "Grade 1 · Chapter 2",
     intro: "Find words that start with the same sound.",
+    theme: "meadow",
+    buddy: "asma",
+    heroArt: "ball",
     levels: CONTENT.levels,
     start: TapIdentify.start,
     resume: TapIdentify.resume,

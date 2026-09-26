@@ -20,6 +20,13 @@
   "text": "banana",
   "voice": "sarah"
  },
+ "be-careful-the-road-is-slippery": {
+  "mood": "instruction",
+  "said_as": "Be careful! The road is slippery.",
+  "sig": "3a0503519cb0",
+  "text": "Be careful! The road is slippery.",
+  "voice": "sarah"
+ },
  "bell": {
   "mood": "word",
   "said_as": "bell.",
@@ -39,6 +46,20 @@
   "said_as": "Books.",
   "sig": "7fc3a9f0d390",
   "text": "Books",
+  "voice": "sarah"
+ },
+ "bugs": {
+  "mood": "word",
+  "said_as": "Bugs.",
+  "sig": "129752c9f368",
+  "text": "Bugs",
+  "voice": "sarah"
+ },
+ "bugs-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "Bugs is about real life!",
+  "sig": "de143fe47e57",
+  "text": "Bugs is about real life!",
   "voice": "sarah"
  },
  "bus": {
@@ -95,6 +116,55 @@
   "said_as": "Danger.",
   "sig": "5324c196f50e",
   "text": "Danger",
+  "voice": "sarah"
+ },
+ "do": {
+  "mood": "word",
+  "said_as": "Do.",
+  "sig": "c738075fb28c",
+  "text": "Do",
+  "voice": "sarah"
+ },
+ "don-t": {
+  "mood": "word",
+  "said_as": "Don't.",
+  "sig": "953ec6ad7d76",
+  "text": "Don't",
+  "voice": "sarah"
+ },
+ "don-t-dive-here": {
+  "mood": "instruction",
+  "said_as": "Don't dive here.",
+  "sig": "eb3c2727f360",
+  "text": "Don't dive here.",
+  "voice": "sarah"
+ },
+ "don-t-drink-this-water": {
+  "mood": "instruction",
+  "said_as": "Don't drink this water!",
+  "sig": "0eeee6b9af2f",
+  "text": "Don't drink this water!",
+  "voice": "sarah"
+ },
+ "don-t-go-near-the-deep-water": {
+  "mood": "instruction",
+  "said_as": "Don't go near the deep water.",
+  "sig": "6f81ab9591d7",
+  "text": "Don't go near the deep water.",
+  "voice": "sarah"
+ },
+ "don-t-waste-water": {
+  "mood": "instruction",
+  "said_as": "Don't waste water.",
+  "sig": "2b52c642805e",
+  "text": "Don't waste water.",
+  "voice": "sarah"
+ },
+ "don-t-waste-water-close-the-tap": {
+  "mood": "instruction",
+  "said_as": "Don't waste water! Close the tap.",
+  "sig": "3de755b482d7",
+  "text": "Don't waste water! Close the tap.",
   "voice": "sarah"
  },
  "door": {
@@ -160,11 +230,32 @@
   "text": "elephant",
   "voice": "sarah"
  },
+ "entrance": {
+  "mood": "word",
+  "said_as": "Entrance.",
+  "sig": "edd045e8ad7d",
+  "text": "Entrance",
+  "voice": "sarah"
+ },
  "exit": {
   "mood": "word",
-  "said_as": "exit.",
-  "sig": "0a5339d49ee9",
-  "text": "exit",
+  "said_as": "Exit.",
+  "sig": "758c3c93b515",
+  "text": "Exit",
+  "voice": "sarah"
+ },
+ "exit-means-go-out-this-way": {
+  "mood": "instruction",
+  "said_as": "Exit means: go out this way.",
+  "sig": "8b883cae8d11",
+  "text": "Exit means: go out this way.",
+  "voice": "sarah"
+ },
+ "exit-this-way-out": {
+  "mood": "instruction",
+  "said_as": "Exit! This way out.",
+  "sig": "cddd352a2519",
+  "text": "Exit! This way out.",
   "voice": "sarah"
  },
  "eyes": {
@@ -214,6 +305,20 @@
   "said_as": "Finish the Sign Word",
   "sig": "65f9b3a6fc34",
   "text": "Finish the Sign Word",
+  "voice": "sarah"
+ },
+ "first-atlas": {
+  "mood": "word",
+  "said_as": "First Atlas.",
+  "sig": "b62b416744c2",
+  "text": "First Atlas",
+  "voice": "sarah"
+ },
+ "first-atlas-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "First Atlas is about real life!",
+  "sig": "03a869e7bce0",
+  "text": "First Atlas is about real life!",
   "voice": "sarah"
  },
  "fish": {
@@ -279,6 +384,20 @@
   "text": "hen",
   "voice": "sarah"
  },
+ "hero-academy": {
+  "mood": "word",
+  "said_as": "Hero Academy.",
+  "sig": "240340c1dddf",
+  "text": "Hero Academy",
+  "voice": "sarah"
+ },
+ "hero-academy-is-a-story-book": {
+  "mood": "instruction",
+  "said_as": "Hero Academy is a story book!",
+  "sig": "6b75e1181881",
+  "text": "Hero Academy is a story book!",
+  "voice": "sarah"
+ },
  "hooray": {
   "mood": "excited",
   "said_as": "Hoo-ray!",
@@ -293,11 +412,74 @@
   "text": "house",
   "voice": "sarah"
  },
+ "how-to-draw-cartoons": {
+  "mood": "instruction",
+  "said_as": "How to Draw Cartoons",
+  "sig": "91f1edafbe17",
+  "text": "How to Draw Cartoons",
+  "voice": "sarah"
+ },
+ "how-to-draw-cartoons-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "How to Draw Cartoons is about real life!",
+  "sig": "701f5899df1d",
+  "text": "How to Draw Cartoons is about real life!",
+  "voice": "sarah"
+ },
+ "how-to-play-guitar": {
+  "mood": "instruction",
+  "said_as": "How to Play Guitar",
+  "sig": "585ddb397277",
+  "text": "How to Play Guitar",
+  "voice": "sarah"
+ },
+ "how-to-play-guitar-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "How to Play Guitar is about real life!",
+  "sig": "dad2846ac5ac",
+  "text": "How to Play Guitar is about real life!",
+  "voice": "sarah"
+ },
  "hug-a-teddy": {
   "mood": "instruction",
   "said_as": "Hug a teddy!",
   "sig": "bab2060711df",
   "text": "Hug a teddy!",
+  "voice": "sarah"
+ },
+ "in-the-classroom-signs-help-us-to-find-things": {
+  "mood": "instruction",
+  "said_as": "In the classroom, signs help us to find things.",
+  "sig": "e78591970de1",
+  "text": "In the classroom, signs help us to find things.",
+  "voice": "sarah"
+ },
+ "is-it-a-story-or-about-real-life": {
+  "mood": "instruction",
+  "said_as": "Is it a story, or about real life?",
+  "sig": "9f708efbf437",
+  "text": "Is it a story, or about real life?",
+  "voice": "sarah"
+ },
+ "is-it-made-up-like-a-fairy-tale": {
+  "mood": "instruction",
+  "said_as": "Is it made up, like a fairy tale?",
+  "sig": "0cbc34a19d3d",
+  "text": "Is it made up, like a fairy tale?",
+  "voice": "sarah"
+ },
+ "is-there-a-red-line-across-it": {
+  "mood": "instruction",
+  "said_as": "Is there a red line across it?",
+  "sig": "8b7deb8be0b4",
+  "text": "Is there a red line across it?",
+  "voice": "sarah"
+ },
+ "is-this-sign-telling-you-to-do-something-or-not-to-do-something": {
+  "mood": "instruction",
+  "said_as": "Is this sign telling you to do something, or not to do something?",
+  "sig": "65b4c65d24cd",
+  "text": "Is this sign telling you to do something, or not to do something?",
   "voice": "sarah"
  },
  "leaf": {
@@ -321,6 +503,13 @@
   "text": "Let's listen to each word.",
   "voice": "sarah"
  },
+ "let-s-read-signs-and-books": {
+  "mood": "instruction",
+  "said_as": "Let's read signs and books!",
+  "sig": "4db8a19690b5",
+  "text": "Let's read signs and books!",
+  "voice": "sarah"
+ },
  "level-five-body-words-from-your-book": {
   "mood": "cheer",
   "said_as": "Level five! Body words from your book!",
@@ -342,6 +531,20 @@
   "text": "Level five! Odd one out!",
   "voice": "sarah"
  },
+ "level-five-story-or-real-life": {
+  "mood": "cheer",
+  "said_as": "Level five! Story, or real life?",
+  "sig": "8f169a74555e",
+  "text": "Level five! Story, or real life?",
+  "voice": "sarah"
+ },
+ "level-four-do-or-don-t": {
+  "mood": "cheer",
+  "said_as": "Level four! Do, or don't?",
+  "sig": "31da82bc0eeb",
+  "text": "Level four! Do, or don't?",
+  "voice": "sarah"
+ },
  "level-four-find-two": {
   "mood": "cheer",
   "said_as": "Level four! Find two!",
@@ -361,6 +564,13 @@
   "said_as": "Level four! Match three!",
   "sig": "e6198ec67cdf",
   "text": "Level four! Match three!",
+  "voice": "sarah"
+ },
+ "level-one-let-s-go-on-a-sign-hunt": {
+  "mood": "cheer",
+  "said_as": "Level one! Let's go on a sign hunt!",
+  "sig": "e1dc9a9b1d85",
+  "text": "Level one! Let's go on a sign hunt!",
   "voice": "sarah"
  },
  "level-one-let-s-warm-up": {
@@ -403,6 +613,13 @@
   "said_as": "Level three! Same start!",
   "sig": "21bc46b84edf",
   "text": "Level three! Same start!",
+  "voice": "sarah"
+ },
+ "level-three-what-does-the-sign-mean": {
+  "mood": "cheer",
+  "said_as": "Level three! What does the sign mean?",
+  "sig": "fcbdbee27325",
+  "text": "Level three! What does the sign mean?",
   "voice": "sarah"
  },
  "level-three-which-sense-do-we-use": {
@@ -475,6 +692,20 @@
   "text": "Look at the moon!",
   "voice": "sarah"
  },
+ "look-at-the-sign": {
+  "mood": "instruction",
+  "said_as": "Look at the sign.",
+  "sig": "e96971b821a6",
+  "text": "Look at the sign.",
+  "voice": "sarah"
+ },
+ "look-carefully": {
+  "mood": "instruction",
+  "said_as": "Look carefully.",
+  "sig": "537ab727d6df",
+  "text": "Look carefully.",
+  "voice": "sarah"
+ },
  "mango": {
   "mood": "word",
   "said_as": "mango.",
@@ -494,6 +725,20 @@
   "said_as": "milk.",
   "sig": "db58b71e04f8",
   "text": "milk",
+  "voice": "sarah"
+ },
+ "monkey-s-magic-pipe": {
+  "mood": "instruction",
+  "said_as": "Monkey's Magic Pipe",
+  "sig": "6db5487a0d1f",
+  "text": "Monkey's Magic Pipe",
+  "voice": "sarah"
+ },
+ "monkey-s-magic-pipe-is-a-story-book": {
+  "mood": "instruction",
+  "said_as": "Monkey's Magic Pipe is a story book!",
+  "sig": "e2f7b789c8f6",
+  "text": "Monkey's Magic Pipe is a story book!",
   "voice": "sarah"
  },
  "moon": {
@@ -529,6 +774,13 @@
   "said_as": "nine.",
   "sig": "af73801d6c99",
   "text": "nine",
+  "voice": "sarah"
+ },
+ "no-diving-here": {
+  "mood": "instruction",
+  "said_as": "No diving here!",
+  "sig": "b6546e19dc3b",
+  "text": "No diving here!",
   "voice": "sarah"
  },
  "no-entry": {
@@ -573,6 +825,41 @@
   "text": "Open",
   "voice": "sarah"
  },
+ "or-does-it-tell-us-true-things": {
+  "mood": "instruction",
+  "said_as": "Or does it tell us true things?",
+  "sig": "2a92a33dbe38",
+  "text": "Or does it tell us true things?",
+  "voice": "sarah"
+ },
+ "our-oceans": {
+  "mood": "word",
+  "said_as": "Our Oceans.",
+  "sig": "5c9f36795440",
+  "text": "Our Oceans",
+  "voice": "sarah"
+ },
+ "our-oceans-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "Our Oceans is about real life!",
+  "sig": "f49cb23a688a",
+  "text": "Our Oceans is about real life!",
+  "voice": "sarah"
+ },
+ "pippi-longstocking": {
+  "mood": "word",
+  "said_as": "Pippi Longstocking.",
+  "sig": "a269deb80c6c",
+  "text": "Pippi Longstocking",
+  "voice": "sarah"
+ },
+ "pippi-longstocking-is-a-story-book": {
+  "mood": "instruction",
+  "said_as": "Pippi Longstocking is a story book!",
+  "sig": "f0e7ea3d5821",
+  "text": "Pippi Longstocking is a story book!",
+  "voice": "sarah"
+ },
  "push": {
   "mood": "word",
   "said_as": "Push.",
@@ -585,6 +872,13 @@
   "said_as": "Read the words. Can you find three words that start the same?",
   "sig": "ca8058c0fc10",
   "text": "Read the words. Can you find three words that start the same?",
+  "voice": "sarah"
+ },
+ "real-life": {
+  "mood": "word",
+  "said_as": "Real life.",
+  "sig": "e0a6e56b2bd2",
+  "text": "Real life",
   "voice": "sarah"
  },
  "same-first-sound": {
@@ -615,11 +909,46 @@
   "text": "sign",
   "voice": "sarah"
  },
+ "signs-show-us-where-to-go-in": {
+  "mood": "instruction",
+  "said_as": "Signs show us where to go in.",
+  "sig": "a17f6b445b6c",
+  "text": "Signs show us where to go in.",
+  "voice": "sarah"
+ },
+ "signs-tell-us-what-to-do": {
+  "mood": "instruction",
+  "said_as": "Signs tell us what to do.",
+  "sig": "aa93b59ebfa0",
+  "text": "Signs tell us what to do.",
+  "voice": "sarah"
+ },
+ "signs-tell-us-where-we-must-not-go": {
+  "mood": "instruction",
+  "said_as": "Signs tell us where we must not go.",
+  "sig": "3e6066be192d",
+  "text": "Signs tell us where we must not go.",
+  "voice": "sarah"
+ },
  "slow": {
   "mood": "word",
   "said_as": "Slow.",
   "sig": "a6b14d4d3820",
   "text": "Slow",
+  "voice": "sarah"
+ },
+ "slow-go-slowly": {
+  "mood": "instruction",
+  "said_as": "Slow! Go slowly.",
+  "sig": "c3bdc5417047",
+  "text": "Slow! Go slowly.",
+  "voice": "sarah"
+ },
+ "slow-means-go-slowly": {
+  "mood": "instruction",
+  "said_as": "Slow means: go slowly.",
+  "sig": "4017b820a51e",
+  "text": "Slow means: go slowly.",
   "voice": "sarah"
  },
  "smell": {
@@ -673,9 +1002,16 @@
  },
  "stop": {
   "mood": "word",
-  "said_as": "stop.",
-  "sig": "0b82c16346de",
-  "text": "stop",
+  "said_as": "Stop.",
+  "sig": "ffd2f0f45901",
+  "text": "Stop",
+  "voice": "sarah"
+ },
+ "story": {
+  "mood": "word",
+  "said_as": "Story.",
+  "sig": "e61a61a95363",
+  "text": "Story",
   "voice": "sarah"
  },
  "stroke-a-pet": {
@@ -741,6 +1077,13 @@
   "text": "Tap here to hear the question again.",
   "voice": "sarah"
  },
+ "tap-the-picture-you-choose": {
+  "mood": "instruction",
+  "said_as": "Tap the picture you choose.",
+  "sig": "024753fed7a4",
+  "text": "Tap the picture you choose.",
+  "voice": "sarah"
+ },
  "taste": {
   "mood": "word",
   "said_as": "taste.",
@@ -753,6 +1096,111 @@
   "said_as": "teeth.",
   "sig": "c0bb1bfbd7a7",
   "text": "teeth",
+  "voice": "sarah"
+ },
+ "the-human-body": {
+  "mood": "instruction",
+  "said_as": "The Human Body",
+  "sig": "6ff6bc63493d",
+  "text": "The Human Body",
+  "voice": "sarah"
+ },
+ "the-human-body-is-about-real-life": {
+  "mood": "instruction",
+  "said_as": "The Human Body is about real life!",
+  "sig": "bac039ea1cc3",
+  "text": "The Human Body is about real life!",
+  "voice": "sarah"
+ },
+ "the-tale-of-little-red-riding-hood": {
+  "mood": "instruction",
+  "said_as": "The Tale of Little Red Riding Hood",
+  "sig": "76517d6dfd54",
+  "text": "The Tale of Little Red Riding Hood",
+  "voice": "sarah"
+ },
+ "the-tale-of-little-red-riding-hood-is-a-story-book": {
+  "mood": "instruction",
+  "said_as": "The Tale of Little Red Riding Hood is a story book!",
+  "sig": "aafcbcc83161",
+  "text": "The Tale of Little Red Riding Hood is a story book!",
+  "voice": "sarah"
+ },
+ "think": {
+  "mood": "instruction",
+  "said_as": "Think.",
+  "sig": "227c4a0a3e4b",
+  "text": "Think.",
+  "voice": "sarah"
+ },
+ "this-book-is": {
+  "mood": "instruction",
+  "said_as": "This book is",
+  "sig": "a7bb532c1887",
+  "text": "This book is",
+  "voice": "sarah"
+ },
+ "this-book-is-bugs": {
+  "mood": "instruction",
+  "said_as": "This book is Bugs",
+  "sig": "a87ed8c649d7",
+  "text": "This book is Bugs",
+  "voice": "sarah"
+ },
+ "this-book-is-first-atlas": {
+  "mood": "instruction",
+  "said_as": "This book is First Atlas",
+  "sig": "30b8624f3806",
+  "text": "This book is First Atlas",
+  "voice": "sarah"
+ },
+ "this-book-is-hero-academy": {
+  "mood": "instruction",
+  "said_as": "This book is Hero Academy",
+  "sig": "2da32959e95e",
+  "text": "This book is Hero Academy",
+  "voice": "sarah"
+ },
+ "this-book-is-how-to-draw-cartoons": {
+  "mood": "instruction",
+  "said_as": "This book is How to Draw Cartoons",
+  "sig": "01a685bc99de",
+  "text": "This book is How to Draw Cartoons",
+  "voice": "sarah"
+ },
+ "this-book-is-how-to-play-guitar": {
+  "mood": "instruction",
+  "said_as": "This book is How to Play Guitar",
+  "sig": "d3443b60e457",
+  "text": "This book is How to Play Guitar",
+  "voice": "sarah"
+ },
+ "this-book-is-monkey-s-magic-pipe": {
+  "mood": "instruction",
+  "said_as": "This book is Monkey's Magic Pipe",
+  "sig": "6c45e1cdff2f",
+  "text": "This book is Monkey's Magic Pipe",
+  "voice": "sarah"
+ },
+ "this-book-is-our-oceans": {
+  "mood": "instruction",
+  "said_as": "This book is Our Oceans",
+  "sig": "654a907b9181",
+  "text": "This book is Our Oceans",
+  "voice": "sarah"
+ },
+ "this-book-is-pippi-longstocking": {
+  "mood": "instruction",
+  "said_as": "This book is Pippi Longstocking",
+  "sig": "35e3fa8a17ff",
+  "text": "This book is Pippi Longstocking",
+  "voice": "sarah"
+ },
+ "this-book-is-the-human-body": {
+  "mood": "instruction",
+  "said_as": "This book is The Human Body",
+  "sig": "a3c4b693b878",
+  "text": "This book is The Human Body",
   "voice": "sarah"
  },
  "this-sign-says": {
@@ -781,6 +1229,13 @@
   "said_as": "This sign says: Danger.",
   "sig": "a76f51adca9c",
   "text": "This sign says Danger",
+  "voice": "sarah"
+ },
+ "this-sign-says-entrance": {
+  "mood": "instruction",
+  "said_as": "This sign says: Entrance.",
+  "sig": "3f9d1c70480c",
+  "text": "This sign says Entrance",
   "voice": "sarah"
  },
  "this-sign-says-exit": {
@@ -862,9 +1317,9 @@
  },
  "toys": {
   "mood": "word",
-  "said_as": "toys.",
-  "sig": "81996559aa90",
-  "text": "toys",
+  "said_as": "Toys.",
+  "sig": "3dabc353bed1",
+  "text": "Toys",
   "voice": "sarah"
  },
  "tree": {
@@ -965,6 +1420,13 @@
   "text": "Well done!",
   "voice": "sarah"
  },
+ "what-does-the-sign-say": {
+  "mood": "instruction",
+  "said_as": "What Does the Sign Say?",
+  "sig": "ab2b1fd3f40e",
+  "text": "What Does the Sign Say?",
+  "voice": "sarah"
+ },
  "which-body-part": {
   "mood": "instruction",
   "said_as": "Which body part?",
@@ -1047,6 +1509,125 @@
   "said_as": "Which sense do we use to stroke a pet?",
   "sig": "0cf94ea56e8a",
   "text": "Which sense do we use to stroke a pet",
+  "voice": "sarah"
+ },
+ "which-sign-is-it": {
+  "mood": "instruction",
+  "said_as": "Which sign is it?",
+  "sig": "2e069860770b",
+  "text": "Which sign is it?",
+  "voice": "sarah"
+ },
+ "which-sign-says": {
+  "mood": "instruction",
+  "said_as": "Which sign says?",
+  "sig": "b5510fb7e640",
+  "text": "Which sign says",
+  "voice": "sarah"
+ },
+ "which-sign-says-books": {
+  "mood": "instruction",
+  "said_as": "Which sign says Books?",
+  "sig": "f4836875af74",
+  "text": "Which sign says Books",
+  "voice": "sarah"
+ },
+ "which-sign-says-danger": {
+  "mood": "instruction",
+  "said_as": "Which sign says Danger?",
+  "sig": "8660a85651a8",
+  "text": "Which sign says Danger",
+  "voice": "sarah"
+ },
+ "which-sign-says-entrance": {
+  "mood": "instruction",
+  "said_as": "Which sign says Entrance?",
+  "sig": "53947cd24dab",
+  "text": "Which sign says Entrance",
+  "voice": "sarah"
+ },
+ "which-sign-says-exit": {
+  "mood": "instruction",
+  "said_as": "Which sign says Exit?",
+  "sig": "39053a17cdda",
+  "text": "Which sign says Exit",
+  "voice": "sarah"
+ },
+ "which-sign-says-slow": {
+  "mood": "instruction",
+  "said_as": "Which sign says Slow?",
+  "sig": "538bbca0a2fd",
+  "text": "Which sign says Slow",
+  "voice": "sarah"
+ },
+ "which-sign-says-stop": {
+  "mood": "instruction",
+  "said_as": "Which sign says Stop?",
+  "sig": "61fbd8a7d3df",
+  "text": "Which sign says Stop",
+  "voice": "sarah"
+ },
+ "which-sign-says-toys": {
+  "mood": "instruction",
+  "said_as": "Which sign says Toys?",
+  "sig": "5603499157c7",
+  "text": "Which sign says Toys",
+  "voice": "sarah"
+ },
+ "which-sign-says-wash-your-hands": {
+  "mood": "instruction",
+  "said_as": "Which sign says Wash your hands?",
+  "sig": "54e4b2838f96",
+  "text": "Which sign says Wash your hands",
+  "voice": "sarah"
+ },
+ "which-sign-shows-you-where-to-go": {
+  "mood": "instruction",
+  "said_as": "Which sign shows you where to go?",
+  "sig": "a06395eb49f9",
+  "text": "Which sign shows you where to go?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-be-careful-the-road-is-slippery": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you: be careful, the road is slippery?",
+  "sig": "8c62c04c0811",
+  "text": "Which sign tells you: be careful, the road is slippery?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-don-t-waste-water": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you: don't waste water?",
+  "sig": "ae6ccea2527d",
+  "text": "Which sign tells you: don't waste water?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-not-to-dive": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you not to dive?",
+  "sig": "19e03934f8f2",
+  "text": "Which sign tells you not to dive?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-not-to-drink-this-water": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you not to drink this water?",
+  "sig": "b57e7ee60dd9",
+  "text": "Which sign tells you not to drink this water?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-to-go-slowly": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you to go slowly?",
+  "sig": "3ffdcd048cbb",
+  "text": "Which sign tells you to go slowly?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-to-wash-your-hands": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you to wash your hands?",
+  "sig": "9d489d459408",
+  "text": "Which sign tells you to wash your hands?",
   "voice": "sarah"
  },
  "which-word-starts-like": {

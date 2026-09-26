@@ -100,6 +100,25 @@ gets wrong is flagged, not silently used.
 - **Signs rule.** Signs appear with a capital first letter and no full
   stop (book Language tip, p.31 in C02). Sentences have both.
 
+- **One look per game.** `Shell.boot({ theme })`: `meadow`, `sunset`,
+  `garden`, `school` (add new ones in `THEMES` in `g1-shell.js` and the
+  `theme-*` rules in `g1-shell.css`). Never reuse a sibling game's theme in the
+  same chapter. The home page shows a big title with `heroArt`, and no
+  grade/chapter label.
+- **ARVO characters.** `buddy: "asma"` puts Asma (Grade 1 look from the ARVO
+  character bible: navy hijab, patterned light-blue shalwar kameez, pink
+  sandals, sparkling brown eyes) and her dog Fluffy on screen (`g1-buddy.js`).
+  She never speaks (the narrator voice is Sarah); she reacts: waves on the home
+  page, mouth moves while the narrator talks, cheers on right answers, tilts
+  her head on wrong ones; Fluffy runs across when a level ends. She steps out
+  of view on any screen where she would cover a game piece. Amir (glasses,
+  curly hair, beige kurta, "Amir Airlines") is the other Grade 1 character
+  available if a game suits him better (e.g. planes, pranks, "I planned it
+  that way!").
+- **Picture cards.** Signs and book covers carry their own words: use
+  `hideWord` and, when hearing the option would give the answer away,
+  `noBadge`. The hint then says "Look carefully." instead of reading cards out.
+
 ## Technical conventions (from ARVO game-build, unchanged)
 
 One HTML file, no external files except Google Fonts (Baloo 2, Manrope)

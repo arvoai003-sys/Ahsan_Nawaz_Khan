@@ -12,19 +12,26 @@ var TapIdentify = (function () {
     return '<span class="first">' + text.charAt(0) + "</span>" + text.slice(1);
   }
 
+  /* opt: { text, art, say, hideWord, noBadge }. hideWord: the picture carries the
+     words (signs, book covers), so no label under it; noBadge: no speaker, when
+     hearing the option would give the answer away. */
   function makeCard(opt, markFirst, isTarget) {
-    var card = Shell.el("div", "card" + (isTarget ? " target" : ""));
+    var card = Shell.el("div", "card" + (isTarget ? " target" : "") + (opt.hideWord ? " picture" : ""));
     card.setAttribute("role", isTarget ? "img" : "button");
-    card.setAttribute("aria-label", opt.text);
+    card.setAttribute("aria-label", opt.label || opt.text);
     if (!isTarget) { card.setAttribute("tabindex", "0"); }
-    card.innerHTML = '<div class="art">' + Art.get(opt.art) + '</div><div class="word' + (opt.text.length >= 7 ? " long" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>";
-    var badge = Shell.speakerBtn("badge", "Listen to " + opt.text);
-    badge.onclick = function (e) {
-      e.stopPropagation();
-      Shell.say(opt.say || opt.text);
-    };
-    card.appendChild(badge);
+    card.innerHTML = '<div class="art">' + Art.get(opt.art) + "</div>" +
+      (opt.hideWord ? "" : '<div class="word' + (opt.text.length >= 7 ? " long" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>");
+    if (!opt.noBadge) {
+      var badge = Shell.speakerBtn("badge", "Listen to " + (opt.label || opt.text));
+      badge.onclick = function (e) {
+        e.stopPropagation();
+        Shell.say(opt.say || opt.text);
+      };
+      card.appendChild(badge);
+    }
     card.optText = opt.text;
+    card.setAttribute("data-id", opt.text);
     return card;
   }
 
@@ -79,15 +86,16 @@ var TapIdentify = (function () {
     st.appendChild(board);
     fitWords(st);
     Shell.progress(flat.length, idx);
+    if (/[?&]qa=1/.test(window.location.search)) { window.__qa = { answer: item.answer }; } /* test hook only */
 
     var go = Shell.guard(function () {
       if (!tutorialDone && T.tutorial !== false) {
         tutorialDone = true;
-        var badge = cards.querySelector(".badge");
+        var badge = cards.querySelector(".badge") || cards.querySelector(".card");
         Shell.say(instruction(), Shell.guard(function () {
           Shell.tutorial([
             { node: sayBtn, say: "Tap here to hear the question again." },
-            { node: badge, say: "Tap a speaker to hear a word. Then tap the word you choose." }
+            { node: badge, say: badge.className.indexOf("badge") > -1 ? "Tap a speaker to hear a word. Then tap the word you choose." : "Tap the picture you choose." }
           ], Shell.guard(function () { lock(false); }));
         }));
       } else {
@@ -132,7 +140,7 @@ var TapIdentify = (function () {
         lock(true);
         if (firstTry) { T.score++; }
         starTotal++; Shell.setStars(starTotal);
-        Shell.say([card.optText, praise], Shell.guard(function () {
+        Shell.say(item.done ? [praise].concat(item.done) : [card.optText, praise], Shell.guard(function () {
           Shell.wait(Shell.guard(next), 500);
         }));
       } else {
@@ -173,7 +181,12 @@ var TapIdentify = (function () {
   /* speak each option in turn while its card pulses */
   function listenAll(cards) {
     var list = [], i;
-    for (i = 0; i < cards.length; i++) { if (cards[i].className.indexOf("got") < 0) { list.push(cards[i]); } }
+    for (i = 0; i < cards.length; i++) { if (cards[i].className.indexOf("got") < 0 && cards[i].querySelector(".badge")) { list.push(cards[i]); } }
+    if (!list.length) {
+      /* picture cards (signs, covers): reading them out would give the answer away */
+      Shell.say(["Look carefully."].concat(instruction()));
+      return;
+    }
     lock(true);
     var j = 0;
     var step = Shell.guard(function () {
@@ -221,7 +234,7 @@ var TapIdentify = (function () {
   T.total = function () { return flat ? flat.length : 0; };
   T.max = function () { return flat ? flat.length : 0; };
 
-  T.LINES = ["Tap here to hear the question again.", "Tap a speaker to hear a word. Then tap the word you choose.", "Find one more!", "Oops! Try again.", "Listen.", "Let's listen to each word."];
+  T.LINES = ["Look carefully.", "Tap the picture you choose.", "Tap here to hear the question again.", "Tap a speaker to hear a word. Then tap the word you choose.", "Find one more!", "Oops! Try again.", "Listen.", "Let's listen to each word."];
   T.init = function (content) {
     C = content;
     window.addEventListener("resize", function () { T.refit(); });

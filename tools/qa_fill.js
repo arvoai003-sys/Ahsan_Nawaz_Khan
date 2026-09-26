@@ -69,7 +69,7 @@ function answerFor(state, spoken) {
         await page.waitForFunction(() => document.querySelector('#end.on') ||
           (document.querySelector('#stage[data-ready="1"] .tray .tile') && !document.querySelector('.slot.filled') && !document.querySelector('#banner.on') && !document.querySelector('#hand.on')), null, { timeout: 30000 });
         if (await page.$('#end.on')) break;
-        await page.waitForTimeout(450);
+        await page.waitForTimeout(700);
         const state = await page.evaluate(() => {
           const box = document.querySelector('.lf-word, .sign .txt').cloneNode(true);
           const sl = box.querySelector('.slot'); sl.textContent = '_';
@@ -86,6 +86,11 @@ function answerFor(state, spoken) {
           const tx = document.querySelector('.sign .txt'), sg = document.querySelector('.sign');
           if (tx && sg) { const a = tx.getBoundingClientRect(), c = sg.getBoundingClientRect(); if (a.left < c.left || a.right > c.right) r.push('sign text spills: ' + tx.textContent); }
           if (document.documentElement.scrollWidth > W) r.push('page scrolls sideways');
+          const gb = document.querySelector('#game-buddy');
+          if (gb && getComputedStyle(gb).display !== 'none' && !gb.classList.contains('away')) {
+            const g = gb.getBoundingClientRect();
+            document.querySelectorAll('.card, .tile, .chip, .target, .prompt, .lf-word, .lf-pic, .sign').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('Asma overlaps ' + e.className.split(' ')[0]); });
+          }
           return r;
         });
         lay.forEach(x => layoutIssues.add(`L${L + 1} ${x}`));
