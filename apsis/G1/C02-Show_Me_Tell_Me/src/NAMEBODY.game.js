@@ -1,5 +1,5 @@
 // @asset ENG01CH02NAMEBODY
-// @version v-01
+// @version v-02
 // @title Name the Body Part
 // @engine tap-identify
 /* A19 · Name the Body Part · Grammar and Vocabulary > Labels · O11
@@ -108,7 +108,7 @@
   TapIdentify.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02NAMEBODY",
-    version: "v-01",
+    version: "v-02",
     title: "Name the Body Part",
     intro: "Let's name the parts of the body!",
     theme: "rainbow",
