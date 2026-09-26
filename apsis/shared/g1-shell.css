@@ -294,6 +294,12 @@ body.theme-meadow { background: linear-gradient(180deg, #6CCBFF 0%, #CFF0FF 70%)
 body.theme-sunset { background: linear-gradient(180deg, #FF8A5B 0%, #FFB36B 40%, #FFE0B2 78%); }
 body.theme-garden { background: linear-gradient(180deg, #C9B6FF 0%, #E6DCFF 45%, #E8FFF0 80%); }
 body.theme-school { background: linear-gradient(180deg, #3FD0C9 0%, #A8F0E8 55%, #E6FFFB 80%); }
+body.theme-rainbow { background: linear-gradient(180deg, #FFE9A8 0%, #FFD6E8 50%, #FFF3F8 80%); --t-title: #2EA7FF; }
+#scenery .rainbow { position: absolute; left: 50%; bottom: 14%; width: 70%; max-width: 760px; transform: translateX(-50%); opacity: .55; }
+body.theme-rainbow .level { border-radius: 36px; }
+body.theme-rainbow .level.c0 { background: #2EA7FF; } body.theme-rainbow .level.c1 { background: #FF4F6D; } body.theme-rainbow .level.c2 { background: #23C16B; }
+body.theme-rainbow .level.c3 { background: #9B5DE5; } body.theme-rainbow .level.c4 { background: #FF9F1C; } body.theme-rainbow .level.c5 { background: #FF7BAC; }
+body.theme-rainbow .banner div { background: #2EA7FF; } body.theme-rainbow .progress i.now { background: #2EA7FF; }
 #scenery .sun { position: absolute; width: 150px; height: 150px; left: 8%; top: 8%; }
 #scenery .bfly { position: absolute; width: 44px; height: 34px; animation: flutter 7s ease-in-out infinite; }
 #scenery .b1 { left: 10%; top: 30%; } #scenery .b2 { right: 12%; top: 22%; animation-delay: -3s; }

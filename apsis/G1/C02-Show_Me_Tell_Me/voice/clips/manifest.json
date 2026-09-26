@@ -1,4 +1,18 @@
 {
+ "arm": {
+  "mood": "instruction",
+  "said_as": "Arm!",
+  "sig": "904226fac7ca",
+  "text": "Arm!",
+  "voice": "sarah"
+ },
+ "arm-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Arm is a naming word!",
+  "sig": "7b47faa1d9a8",
+  "text": "Arm is a naming word!",
+  "voice": "sarah"
+ },
  "bag": {
   "mood": "word",
   "said_as": "bag.",
@@ -32,6 +46,13 @@
   "said_as": "bell.",
   "sig": "1a8bce5816c7",
   "text": "bell",
+  "voice": "sarah"
+ },
+ "big": {
+  "mood": "word",
+  "said_as": "big.",
+  "sig": "a74a14abc3b7",
+  "text": "big",
   "voice": "sarah"
  },
  "book": {
@@ -69,6 +90,83 @@
   "text": "bus",
   "voice": "sarah"
  },
+ "can-you-find-the": {
+  "mood": "instruction",
+  "said_as": "Can you find the?",
+  "sig": "028242423daa",
+  "text": "Can you find the",
+  "voice": "sarah"
+ },
+ "can-you-find-the-arm": {
+  "mood": "instruction",
+  "said_as": "Can you find the arm?",
+  "sig": "940eb1849820",
+  "text": "Can you find the arm",
+  "voice": "sarah"
+ },
+ "can-you-find-the-chest": {
+  "mood": "instruction",
+  "said_as": "Can you find the chest?",
+  "sig": "3feda4581a39",
+  "text": "Can you find the chest",
+  "voice": "sarah"
+ },
+ "can-you-find-the-eyes": {
+  "mood": "instruction",
+  "said_as": "Can you find the eyes?",
+  "sig": "9444e07d62f4",
+  "text": "Can you find the eyes",
+  "voice": "sarah"
+ },
+ "can-you-find-the-face": {
+  "mood": "instruction",
+  "said_as": "Can you find the face?",
+  "sig": "ad6898d129d8",
+  "text": "Can you find the face",
+  "voice": "sarah"
+ },
+ "can-you-find-the-foot": {
+  "mood": "instruction",
+  "said_as": "Can you find the foot?",
+  "sig": "85dfa0156f88",
+  "text": "Can you find the foot",
+  "voice": "sarah"
+ },
+ "can-you-find-the-hand": {
+  "mood": "instruction",
+  "said_as": "Can you find the hand?",
+  "sig": "b09205e07d2e",
+  "text": "Can you find the hand",
+  "voice": "sarah"
+ },
+ "can-you-find-the-head": {
+  "mood": "instruction",
+  "said_as": "Can you find the head?",
+  "sig": "f7223de47b86",
+  "text": "Can you find the head",
+  "voice": "sarah"
+ },
+ "can-you-find-the-leg": {
+  "mood": "instruction",
+  "said_as": "Can you find the leg?",
+  "sig": "8de3f108b767",
+  "text": "Can you find the leg",
+  "voice": "sarah"
+ },
+ "can-you-find-the-mouth": {
+  "mood": "instruction",
+  "said_as": "Can you find the mouth?",
+  "sig": "7951232c97c9",
+  "text": "Can you find the mouth",
+  "voice": "sarah"
+ },
+ "can-you-find-the-nose": {
+  "mood": "instruction",
+  "said_as": "Can you find the nose?",
+  "sig": "da0d30db189f",
+  "text": "Can you find the nose",
+  "voice": "sarah"
+ },
  "can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Can you find three words that start the same?",
@@ -88,6 +186,20 @@
   "said_as": "Can you match each sense to what we do?",
   "sig": "6c4e9fc7052d",
   "text": "Can you match each sense to what we do?",
+  "voice": "sarah"
+ },
+ "chest": {
+  "mood": "instruction",
+  "said_as": "Chest!",
+  "sig": "e8c3ce6a0bfa",
+  "text": "Chest!",
+  "voice": "sarah"
+ },
+ "chest-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Chest is a naming word!",
+  "sig": "0c0957f8b491",
+  "text": "Chest is a naming word!",
   "voice": "sarah"
  },
  "chin": {
@@ -259,17 +371,31 @@
   "voice": "sarah"
  },
  "eyes": {
-  "mood": "word",
-  "said_as": "eyes.",
-  "sig": "971b3293fd72",
-  "text": "eyes",
+  "mood": "instruction",
+  "said_as": "Eyes!",
+  "sig": "ff784361950f",
+  "text": "Eyes!",
+  "voice": "sarah"
+ },
+ "eyes-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Eyes is a naming word!",
+  "sig": "ce42d5d63df7",
+  "text": "Eyes is a naming word!",
   "voice": "sarah"
  },
  "face": {
-  "mood": "word",
-  "said_as": "face.",
-  "sig": "3b7e4f898c12",
-  "text": "face",
+  "mood": "instruction",
+  "said_as": "Face!",
+  "sig": "a1507baf3459",
+  "text": "Face!",
+  "voice": "sarah"
+ },
+ "face-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Face is a naming word!",
+  "sig": "a6116180db69",
+  "text": "Face is a naming word!",
   "voice": "sarah"
  },
  "fan": {
@@ -329,10 +455,24 @@
   "voice": "sarah"
  },
  "foot": {
+  "mood": "instruction",
+  "said_as": "Foot!",
+  "sig": "aaf77f37acc6",
+  "text": "Foot!",
+  "voice": "sarah"
+ },
+ "foot-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Foot is a naming word!",
+  "sig": "d9affac3288a",
+  "text": "Foot is a naming word!",
+  "voice": "sarah"
+ },
+ "funny": {
   "mood": "word",
-  "said_as": "foot.",
-  "sig": "5ffec93e8b7a",
-  "text": "foot",
+  "said_as": "funny.",
+  "sig": "faa2b5a47b03",
+  "text": "funny",
   "voice": "sarah"
  },
  "great-job": {
@@ -350,10 +490,17 @@
   "voice": "sarah"
  },
  "hand": {
-  "mood": "word",
-  "said_as": "hand.",
-  "sig": "e8a010136d0e",
-  "text": "hand",
+  "mood": "instruction",
+  "said_as": "Hand!",
+  "sig": "b141a0b5717c",
+  "text": "Hand!",
+  "voice": "sarah"
+ },
+ "hand-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Hand is a naming word!",
+  "sig": "695f8fa780df",
+  "text": "Hand is a naming word!",
   "voice": "sarah"
  },
  "hands": {
@@ -363,11 +510,32 @@
   "text": "hands",
   "voice": "sarah"
  },
+ "happy": {
+  "mood": "word",
+  "said_as": "happy.",
+  "sig": "dcfc4aa206d6",
+  "text": "happy",
+  "voice": "sarah"
+ },
  "hat": {
   "mood": "word",
   "said_as": "hat.",
   "sig": "83b157bed058",
   "text": "hat",
+  "voice": "sarah"
+ },
+ "head": {
+  "mood": "instruction",
+  "said_as": "Head!",
+  "sig": "0b48e199c4ec",
+  "text": "Head!",
+  "voice": "sarah"
+ },
+ "head-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Head is a naming word!",
+  "sig": "74e50faca443",
+  "text": "Head is a naming word!",
   "voice": "sarah"
  },
  "hear": {
@@ -490,10 +658,17 @@
   "voice": "sarah"
  },
  "leg": {
-  "mood": "word",
-  "said_as": "leg.",
-  "sig": "76b0b31a84da",
-  "text": "leg",
+  "mood": "instruction",
+  "said_as": "Leg!",
+  "sig": "3a3f35443786",
+  "text": "Leg!",
+  "voice": "sarah"
+ },
+ "leg-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Leg is a naming word!",
+  "sig": "3b0453654474",
+  "text": "Leg is a naming word!",
   "voice": "sarah"
  },
  "let-s-listen-to-each-word": {
@@ -501,6 +676,13 @@
   "said_as": "Let's listen to each word.",
   "sig": "cbe176daff35",
   "text": "Let's listen to each word.",
+  "voice": "sarah"
+ },
+ "let-s-name-the-parts-of-the-body": {
+  "mood": "instruction",
+  "said_as": "Let's name the parts of the body!",
+  "sig": "cb9f7d02e45c",
+  "text": "Let's name the parts of the body!",
   "voice": "sarah"
  },
  "let-s-read-signs-and-books": {
@@ -538,6 +720,13 @@
   "text": "Level five! Story, or real life?",
   "voice": "sarah"
  },
+ "level-five-where-does-it-go": {
+  "mood": "cheer",
+  "said_as": "Level five! Where does it go?",
+  "sig": "f077bfe16de4",
+  "text": "Level five! Where does it go?",
+  "voice": "sarah"
+ },
  "level-four-do-or-don-t": {
   "mood": "cheer",
   "said_as": "Level four! Do, or don't?",
@@ -564,6 +753,13 @@
   "said_as": "Level four! Match three!",
   "sig": "e6198ec67cdf",
   "text": "Level four! Match three!",
+  "voice": "sarah"
+ },
+ "level-four-naming-words": {
+  "mood": "cheer",
+  "said_as": "Level four! Naming words!",
+  "sig": "6a886b8314c7",
+  "text": "Level four! Naming words!",
   "voice": "sarah"
  },
  "level-one-let-s-go-on-a-sign-hunt": {
@@ -601,6 +797,13 @@
   "text": "Level six! Super star challenge!",
   "voice": "sarah"
  },
+ "level-three-asma-is-pointing-can-you-name-it": {
+  "mood": "cheer",
+  "said_as": "Level three! Asma is pointing. Can you name it?",
+  "sig": "055f44aee578",
+  "text": "Level three! Asma is pointing. Can you name it?",
+  "voice": "sarah"
+ },
  "level-three-first-letters": {
   "mood": "cheer",
   "said_as": "Level three! First letters!",
@@ -627,6 +830,13 @@
   "said_as": "Level three! Which sense do we use?",
   "sig": "440c546abd09",
   "text": "Level three! Which sense do we use?",
+  "voice": "sarah"
+ },
+ "level-two-body-words-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Body words from your book!",
+  "sig": "842b6ceefbcd",
+  "text": "Level two! Body words from your book!",
   "voice": "sarah"
  },
  "level-two-our-senses-from-your-book": {
@@ -685,11 +895,25 @@
   "text": "lollipop",
   "voice": "sarah"
  },
+ "look-at-asma-what-is-the-arrow-pointing-to": {
+  "mood": "instruction",
+  "said_as": "Look at Asma. What is the arrow pointing to?",
+  "sig": "78cde0ba72d7",
+  "text": "Look at Asma. What is the arrow pointing to?",
+  "voice": "sarah"
+ },
  "look-at-the-moon": {
   "mood": "instruction",
   "said_as": "Look at the moon!",
   "sig": "47a991923a76",
   "text": "Look at the moon!",
+  "voice": "sarah"
+ },
+ "look-at-the-red-arrow": {
+  "mood": "instruction",
+  "said_as": "Look at the red arrow.",
+  "sig": "b254bde33770",
+  "text": "Look at the red arrow.",
   "voice": "sarah"
  },
  "look-at-the-sign": {
@@ -749,10 +973,24 @@
   "voice": "sarah"
  },
  "mouth": {
-  "mood": "word",
-  "said_as": "mouth.",
-  "sig": "aafe78b4fb8f",
-  "text": "mouth",
+  "mood": "instruction",
+  "said_as": "Mouth!",
+  "sig": "0eabad98782c",
+  "text": "Mouth!",
+  "voice": "sarah"
+ },
+ "mouth-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Mouth is a naming word!",
+  "sig": "7bc2c8650a56",
+  "text": "Mouth is a naming word!",
+  "voice": "sarah"
+ },
+ "name-the-body-part": {
+  "mood": "instruction",
+  "said_as": "Name the Body Part",
+  "sig": "657d97644b5d",
+  "text": "Name the Body Part",
   "voice": "sarah"
  },
  "neck": {
@@ -791,10 +1029,17 @@
   "voice": "sarah"
  },
  "nose": {
-  "mood": "word",
-  "said_as": "nose.",
-  "sig": "f296d0a03b91",
-  "text": "nose",
+  "mood": "instruction",
+  "said_as": "Nose!",
+  "sig": "5fa961ff8c00",
+  "text": "Nose!",
+  "voice": "sarah"
+ },
+ "nose-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Nose is a naming word!",
+  "sig": "03f390d0e288",
+  "text": "Nose is a naming word!",
   "voice": "sarah"
  },
  "now-find-two": {
@@ -844,6 +1089,13 @@
   "said_as": "Our Oceans is about real life!",
   "sig": "f49cb23a688a",
   "text": "Our Oceans is about real life!",
+  "voice": "sarah"
+ },
+ "our-teeth-are-in-our-mouth": {
+  "mood": "instruction",
+  "said_as": "Our teeth are in our mouth.",
+  "sig": "427956d08cb0",
+  "text": "Our teeth are in our mouth.",
   "voice": "sarah"
  },
  "pippi-longstocking": {
@@ -951,6 +1203,13 @@
   "text": "Slow means: go slowly.",
   "voice": "sarah"
  },
+ "small": {
+  "mood": "word",
+  "said_as": "small.",
+  "sig": "53263bd406bd",
+  "text": "small",
+  "voice": "sarah"
+ },
  "smell": {
   "mood": "word",
   "said_as": "smell.",
@@ -984,6 +1243,13 @@
   "said_as": "sock.",
   "sig": "3d278d7a0a03",
   "text": "sock",
+  "voice": "sarah"
+ },
+ "soft": {
+  "mood": "word",
+  "said_as": "soft.",
+  "sig": "f07374f51f70",
+  "text": "soft",
   "voice": "sarah"
  },
  "staff": {
@@ -1033,6 +1299,13 @@
   "said_as": "Super!",
   "sig": "198b5d3ccea5",
   "text": "Super!",
+  "voice": "sarah"
+ },
+ "tall": {
+  "mood": "word",
+  "said_as": "tall.",
+  "sig": "61355eae4fa9",
+  "text": "tall",
   "voice": "sarah"
  },
  "tap": {
@@ -1096,6 +1369,62 @@
   "said_as": "teeth.",
   "sig": "c0bb1bfbd7a7",
   "text": "teeth",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-arm": {
+  "mood": "instruction",
+  "said_as": "That is Asma's arm!",
+  "sig": "4294ff18aafd",
+  "text": "That is Asma's arm!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-chest": {
+  "mood": "instruction",
+  "said_as": "That is Asma's chest!",
+  "sig": "382835b6238c",
+  "text": "That is Asma's chest!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-eyes": {
+  "mood": "instruction",
+  "said_as": "That is Asma's eyes!",
+  "sig": "997ab2991373",
+  "text": "That is Asma's eyes!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-foot": {
+  "mood": "instruction",
+  "said_as": "That is Asma's foot!",
+  "sig": "a132ff6b093c",
+  "text": "That is Asma's foot!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-hand": {
+  "mood": "instruction",
+  "said_as": "That is Asma's hand!",
+  "sig": "4cc1b59011eb",
+  "text": "That is Asma's hand!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-head": {
+  "mood": "instruction",
+  "said_as": "That is Asma's head!",
+  "sig": "0e1a982f083a",
+  "text": "That is Asma's head!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-leg": {
+  "mood": "instruction",
+  "said_as": "That is Asma's leg!",
+  "sig": "3fa1186a723d",
+  "text": "That is Asma's leg!",
+  "voice": "sarah"
+ },
+ "that-is-asma-s-mouth": {
+  "mood": "instruction",
+  "said_as": "That is Asma's mouth!",
+  "sig": "4357d2f9bb88",
+  "text": "That is Asma's mouth!",
   "voice": "sarah"
  },
  "the-human-body": {
@@ -1357,6 +1686,13 @@
   "text": "We hear with our ears.",
   "voice": "sarah"
  },
+ "we-look-with-our-eyes": {
+  "mood": "instruction",
+  "said_as": "We look with our eyes.",
+  "sig": "9c487cbf1ce8",
+  "text": "We look with our eyes.",
+  "voice": "sarah"
+ },
  "we-see-things-with-our": {
   "mood": "instruction",
   "said_as": "We see things with our ....",
@@ -1413,6 +1749,27 @@
   "text": "We touch and feel things with our hands.",
   "voice": "sarah"
  },
+ "we-wave-with-our-hand": {
+  "mood": "instruction",
+  "said_as": "We wave with our hand.",
+  "sig": "1be0b8ad72fa",
+  "text": "We wave with our hand.",
+  "voice": "sarah"
+ },
+ "we-wear-a-hat-on-our-head": {
+  "mood": "instruction",
+  "said_as": "We wear a hat on our head.",
+  "sig": "5be923c91319",
+  "text": "We wear a hat on our head.",
+  "voice": "sarah"
+ },
+ "we-wear-socks-on-our-feet": {
+  "mood": "instruction",
+  "said_as": "We wear socks on our feet.",
+  "sig": "ecfadc6560ee",
+  "text": "We wear socks on our feet.",
+  "voice": "sarah"
+ },
  "well-done": {
   "mood": "excited",
   "said_as": "Well done!",
@@ -1420,11 +1777,39 @@
   "text": "Well done!",
   "voice": "sarah"
  },
+ "what-do-you-look-through-your-glasses-with": {
+  "mood": "instruction",
+  "said_as": "What do you look through your glasses with?",
+  "sig": "1578e786e14d",
+  "text": "What do you look through your glasses with?",
+  "voice": "sarah"
+ },
+ "what-do-you-wave-hello-with": {
+  "mood": "instruction",
+  "said_as": "What do you wave hello with?",
+  "sig": "91a54c818b21",
+  "text": "What do you wave hello with?",
+  "voice": "sarah"
+ },
  "what-does-the-sign-say": {
   "mood": "instruction",
   "said_as": "What Does the Sign Say?",
   "sig": "ab2b1fd3f40e",
   "text": "What Does the Sign Say?",
+  "voice": "sarah"
+ },
+ "where-do-you-wear-a-hat": {
+  "mood": "instruction",
+  "said_as": "Where do you wear a hat?",
+  "sig": "7bf416489d70",
+  "text": "Where do you wear a hat?",
+  "voice": "sarah"
+ },
+ "where-do-you-wear-socks": {
+  "mood": "instruction",
+  "said_as": "Where do you wear socks?",
+  "sig": "b78eb42d1eca",
+  "text": "Where do you wear socks?",
   "voice": "sarah"
  },
  "which-body-part": {
@@ -1446,6 +1831,13 @@
   "said_as": "Which letter is missing?",
   "sig": "47bd477c47f5",
   "text": "Which letter is missing?",
+  "voice": "sarah"
+ },
+ "which-part-has-your-teeth": {
+  "mood": "instruction",
+  "said_as": "Which part has your teeth?",
+  "sig": "a2cb133fb43e",
+  "text": "Which part has your teeth?",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to": {
@@ -1628,6 +2020,13 @@
   "said_as": "Which sign tells you to wash your hands?",
   "sig": "9d489d459408",
   "text": "Which sign tells you to wash your hands?",
+  "voice": "sarah"
+ },
+ "which-word-names-a-part-of-your-body": {
+  "mood": "instruction",
+  "said_as": "Which word names a part of your body?",
+  "sig": "3b8a7b7914fa",
+  "text": "Which word names a part of your body?",
   "voice": "sarah"
  },
  "which-word-starts-like": {
@@ -1922,6 +2321,13 @@
   "said_as": "Which word starts like tree?",
   "sig": "aa2cb7111fd6",
   "text": "Which word starts like tree",
+  "voice": "sarah"
+ },
+ "words-that-name-things-are-called-nouns-which-word-is-a-naming-word": {
+  "mood": "instruction",
+  "said_as": "Words that name things are called nouns. Which word is a naming word?",
+  "sig": "0fc28a24aa52",
+  "text": "Words that name things are called nouns. Which word is a naming word?",
   "voice": "sarah"
  },
  "wow": {

@@ -16,7 +16,7 @@ ctx.window = ctx;
 ctx.addEventListener = noop;
 ctx.document = { addEventListener: noop, getElementById: function () { return null; } };
 vm.createContext(ctx);
-['g1-shell.js', 'g1-art.js', 'engines/' + engine + '.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
+['g1-shell.js', 'g1-art.js', 'g1-buddy.js', 'engines/' + engine + '.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
 var bootCfg = null;
 vm.runInContext('Shell.boot = function (c) { this.__cfg = c; };', ctx);
 var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match' }[engine];

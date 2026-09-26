@@ -411,7 +411,14 @@ var Art = (function () {
   lib.hair = kid(40, 18, 10, 4, true);
 
   A.has = function (key) { return lib.hasOwnProperty(key); };
-  A.get = function (key) { return SVG + (lib[key] || "") + "</svg>"; };
+  var boxes = {};
+  A.get = function (key) {
+    var svg = boxes[key] ? '<svg viewBox="' + boxes[key] + '" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' : SVG;
+    return svg + (lib[key] || "") + "</svg>";
+  };
+  /* a picture with its own shape, e.g. a standing figure: Art.addBox(key, "0 0 120 200", body) */
+  A.addBox = function (key, viewBox, body) { lib[key] = body; boxes[key] = viewBox; };
+  A.isTall = function (key) { return !!boxes[key]; };
   A.add = function (key, body) { lib[key] = body; };
   A.keys = function () { var k, out = []; for (k in lib) { if (lib.hasOwnProperty(k)) { out.push(k); } } return out; };
   return A;

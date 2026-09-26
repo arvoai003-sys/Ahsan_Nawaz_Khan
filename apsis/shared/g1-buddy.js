@@ -136,6 +136,11 @@ var Buddy = (function () {
     roomTimer2 = window.setTimeout(checkRoom, 700);
   }
 
+  /* Asma's drawing, for games that use her as a picture (e.g. body parts) */
+  B.asmaInner = function () {
+    return ASMA.replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "").replace(/<ellipse class="b-talk"[^>]*\/>/, "");
+  };
+
   B.mount = function (who) {
     if (who !== "asma") { return; }
     el = Shell.el("div", "buddy idle", ASMA);

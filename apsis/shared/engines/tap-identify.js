@@ -16,11 +16,11 @@ var TapIdentify = (function () {
      words (signs, book covers), so no label under it; noBadge: no speaker, when
      hearing the option would give the answer away. */
   function makeCard(opt, markFirst, isTarget) {
-    var card = Shell.el("div", "card" + (isTarget ? " target" : "") + (opt.hideWord ? " picture" : ""));
+    var card = Shell.el("div", "card" + (isTarget ? " target" : "") + (opt.hideWord ? " picture" : "") + (opt.art ? "" : " wordonly") + (opt.tall ? " tall" : ""));
     card.setAttribute("role", isTarget ? "img" : "button");
     card.setAttribute("aria-label", opt.label || opt.text);
     if (!isTarget) { card.setAttribute("tabindex", "0"); }
-    card.innerHTML = '<div class="art">' + Art.get(opt.art) + "</div>" +
+    card.innerHTML = (opt.art ? '<div class="art">' + Art.get(opt.art) + "</div>" : "") +
       (opt.hideWord ? "" : '<div class="word' + (opt.text.length >= 7 ? " long" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>");
     if (!opt.noBadge) {
       var badge = Shell.speakerBtn("badge", "Listen to " + (opt.label || opt.text));

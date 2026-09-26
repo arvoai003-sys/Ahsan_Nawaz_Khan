@@ -477,6 +477,10 @@ var Shell = (function () {
       '<svg class="bfly b2" viewBox="0 0 40 30"><path d="M20 15C10 0 0 6 6 16 0 24 12 30 20 16 28 30 40 24 34 16 40 6 30 0 20 15z" fill="#FFD23F" stroke="#2E2A4F" stroke-width="2"/></svg>' +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 44C80 26 160 30 240 42S360 34 400 38V100H0z" fill="#9FE27A"/><path d="M0 66C90 50 180 58 260 66S360 58 400 60V100H0z" fill="#6CD26A"/>' +
       '<g><circle cx="30" cy="70" r="5" fill="#FF7BAC"/><circle cx="90" cy="80" r="5" fill="#FFD23F"/><circle cx="150" cy="72" r="5" fill="#9B5DE5"/><circle cx="215" cy="84" r="5" fill="#FF4F6D"/><circle cx="280" cy="74" r="5" fill="#fff"/><circle cx="340" cy="82" r="5" fill="#FF7BAC"/><circle cx="385" cy="70" r="5" fill="#FFD23F"/></g></svg>',
+    /* rainbow: soft yellow-pink sky, a big rainbow over the hills */
+    rainbow: clouds() +
+      '<svg class="rainbow" viewBox="0 0 200 100"><g fill="none" stroke-width="10"><path d="M10 100a90 90 0 0 1 180 0" stroke="#FF4F6D"/><path d="M20 100a80 80 0 0 1 160 0" stroke="#FF9F1C"/><path d="M30 100a70 70 0 0 1 140 0" stroke="#FFD23F"/><path d="M40 100a60 60 0 0 1 120 0" stroke="#23C16B"/><path d="M50 100a50 50 0 0 1 100 0" stroke="#2EA7FF"/><path d="M60 100a40 40 0 0 1 80 0" stroke="#9B5DE5"/></g></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 46C70 24 150 30 220 44S350 30 400 36V100H0z" fill="#7BE3A6"/><path d="M0 68C90 50 170 60 250 70S360 56 400 60V100H0z" fill="#4CCB7A"/></svg>',
     /* school street: aqua sky, school with a flag, zebra crossing */
     school: clouds() +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +

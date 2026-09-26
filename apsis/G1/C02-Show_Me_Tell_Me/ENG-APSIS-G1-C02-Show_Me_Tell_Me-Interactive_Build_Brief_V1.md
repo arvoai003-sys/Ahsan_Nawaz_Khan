@@ -28,7 +28,7 @@ other 17 are:
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
 | A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Needs D7 |
-| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify + Letter-fill round | `BODYPARTS` | Ready (+ D6 round) |
+| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-01** |
 | A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Needs D8 |
 | A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
 
@@ -172,3 +172,4 @@ and is delivered as a new version in `builds/`.
 | 2026-09-26 | A3 What Does the Sign Say? | `builds/ENG01CH02SIGNSAY_v-01.html` | Levels: 1 Sign Hunt (printed signs, 2 choices), 2 Read the Signs (book p.28 sentences, verbatim), 3 What Does It Mean? (p.29 trio + 2 of p.32), 4 Do or Don't? (p.32 2E Part 1 + 2 more), 5 Story or Real Life? (the book's 9 titles + "How to draw cartoons"; covers drawn by us), 6 Super Star (mix). 121 lines in Sarah's voice. Sign cards show no label or speaker (would give the answer away). |
 | 2026-09-26 | Home pages, Asma | all four games | Each game has its own theme (A6 meadow, A7 sunset town, A14 flower garden, A3 school street), a large title with a hero icon, and no "Grade 1 · Chapter 2" label. Asma (ARVO character, Grade 1 look from the character bible) and Fluffy are the on-screen buddies: she waves on the home page, her mouth moves while the narrator speaks, she cheers at right answers and tilts her head at wrong ones; Fluffy runs across when a level ends. She steps out of view on any screen where she would cover a game piece. A6 v-05, A7 v-03, A14 v-02. |
 | 2026-09-26 | Naming (D10 closed) | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |
+| 2026-09-26 | A19 Name the Body Part | `games/ENG-APSIS-G1-C02-Name_the_Body_Part.html` (v-01) | Levels: 1 Warm Up (2 pictures), 2 Body Words (book p.37 word box), 3 Point to Asma (arrow on Asma, name the part; book 2I A2), 4 Naming Words (book p.37 Language tip on nouns; non-nouns authored), 5 Where Does It Go? (authored), 6 Super Star. Pictures that contain each other (face/eyes/nose/mouth, leg/foot) never share a screen. The p.38 missing letters stay in Finish the Sign Word only. Rainbow theme. 90 lines in Sarah's voice. **Authored parts need Champ's approval.** |

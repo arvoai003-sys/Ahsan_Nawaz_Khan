@@ -103,3 +103,16 @@
 @media (max-width: 520px) { .card.picture .art { width: 84px; height: 84px; } .card.target.picture .art { width: 84px; height: 84px; } }
 @media (max-height: 520px) { .card.picture .art { width: 76px; height: 76px; } .card.target.picture .art { width: 70px; height: 70px; } }
 @media (min-width: 900px) and (min-height: 640px) { .card.picture .art { width: 156px; height: 156px; } .card.target.picture .art { width: 132px; height: 132px; } }
+
+/* word-only cards (reading tasks) */
+.card.wordonly { justify-content: center; min-height: 120px; }
+.card.wordonly .word { font-size: 40px; }
+@media (max-width: 520px) { .card.wordonly { min-height: 96px; } .card.wordonly .word { font-size: 30px; } }
+@media (max-height: 520px) { .card.wordonly { min-height: 88px; } .card.wordonly .word { font-size: 30px; } }
+
+/* tall pictures (a standing figure with an arrow) */
+.card.target.picture.tall { width: 150px; }
+.card.target.picture.tall .art { width: 120px; height: 200px; }
+@media (max-width: 520px) { .card.target.picture.tall { width: 120px; } .card.target.picture.tall .art { width: 96px; height: 160px; } }
+@media (max-height: 520px) { .card.target.picture.tall { width: 90px; } .card.target.picture.tall .art { width: 72px; height: 120px; } }
+@media (min-width: 900px) and (min-height: 640px) { .card.target.picture.tall .art { width: 150px; height: 250px; } .card.target.picture.tall { width: 180px; } }

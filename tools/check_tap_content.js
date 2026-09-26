@@ -10,6 +10,7 @@ var ctx = { Math: Math, JSON: JSON, console: console };
 ctx.window = ctx;
 vm.createContext(ctx);
 vm.runInContext(art, ctx);
+vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'apsis/shared/g1-buddy.js'), 'utf8'), ctx);
 ctx.Shell = { shuffle: function (a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }, boot: function () {} };
 ctx.TapIdentify = { init: function (c) { captured = c; }, start: function () {}, resume: function () {}, max: function () {} };
 vm.runInContext(src, ctx);
