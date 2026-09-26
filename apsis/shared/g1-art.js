@@ -275,6 +275,45 @@ var Art = (function () {
       '<path d="M' + fromX + " " + fromY + "L" + bx.toFixed(1) + " " + by.toFixed(1) + '" stroke="#FF3B3B" stroke-width="4.5" stroke-linecap="round"/>' +
       '<path d="M' + tipX + " " + tipY + "L" + (bx + px).toFixed(1) + " " + (by + py).toFixed(1) + "L" + (bx - px).toFixed(1) + " " + (by - py).toFixed(1) + 'z" fill="#FF3B3B" stroke="#FF3B3B" stroke-width="2" stroke-linejoin="round"/>';
   }
+  /* ---------- senses (A14) ---------- */
+  lib.eyes =
+    '<ellipse cx="28" cy="50" rx="21" ry="16" fill="#fff"' + O + "/>" + '<ellipse cx="72" cy="50" rx="21" ry="16" fill="#fff"' + O + "/>" +
+    '<circle cx="30" cy="51" r="10" fill="#6B4A2E"/><circle cx="74" cy="51" r="10" fill="#6B4A2E"/>' +
+    '<circle cx="30" cy="51" r="5" fill="' + INK + '"/><circle cx="74" cy="51" r="5" fill="' + INK + '"/>' +
+    '<circle cx="27" cy="47" r="3" fill="#fff"/><circle cx="71" cy="47" r="3" fill="#fff"/>' +
+    '<path d="M10 32l-4-7M18 27l-2-8M28 25v-8M60 25v-8M70 27l2-8M80 32l4-7" stroke="' + INK + '" stroke-width="3.5" stroke-linecap="round"/>' +
+    '<path d="M8 20q20-10 38 2M54 22q18-12 38-2" fill="none" stroke="#4A2E24" stroke-width="5" stroke-linecap="round"/>';
+  lib.ears =
+    '<path d="M50 8c20 0 32 14 32 32 0 14-8 20-12 28-4 10-6 22-20 22-10 0-16-8-16-14 0-8 8-10 10-18 2-6-6-8-6-16 0-8 6-12 12-12 8 0 12 6 12 12" fill="#FFC99E"' + O + "/>" +
+    '<path d="M50 20c12 0 20 8 20 20 0 8-4 12-8 18" fill="none" stroke="#E0906A" stroke-width="4" stroke-linecap="round"/>' +
+    '<path d="M14 40q-6 10 0 20M6 34q-10 16 0 32" fill="none" stroke="#2EA7FF" stroke-width="4" stroke-linecap="round"/>';
+  lib.tongue =
+    '<circle cx="50" cy="44" r="36" fill="#FFC99E"' + O + "/>" + eye(38, 34, 5) + eye(62, 34, 5) +
+    '<path d="M30 52q20 16 40 0" fill="#7A1F3D"' + O + "/>" +
+    '<path d="M40 58c0 14 4 24 10 24s10-10 10-24c-6 4-14 4-20 0z" fill="#FF7BAC"' + O + "/>" +
+    '<path d="M50 62v12" stroke="#E0457B" stroke-width="3" stroke-linecap="round"/>' +
+    '<circle cx="26" cy="48" r="4" fill="#FF7BAC" opacity=".6"/><circle cx="74" cy="48" r="4" fill="#FF7BAC" opacity=".6"/>';
+  lib.pet =
+    '<path d="M20 90c0-20 10-34 30-34s30 14 30 34z" fill="#FFB866"' + O + "/>" +
+    '<path d="M26 34l-6-22 18 12M74 34l6-22-18 12" fill="#FFB866"' + O + "/>" +
+    '<circle cx="50" cy="42" r="24" fill="#FFB866"' + O + "/>" +
+    '<path d="M38 44q4-4 8 0M54 44q4-4 8 0" fill="none" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>' +
+    '<path d="M47 52h6l-3 3z" fill="#FF7BAC"/><path d="M44 57q6 4 12 0" fill="none" stroke="' + INK + '" stroke-width="2.5" stroke-linecap="round"/>' +
+    '<path d="M24 52l-12-2M24 56l-12 3M76 52l12-2M76 56l12 3" stroke="' + INK + '" stroke-width="2" stroke-linecap="round"/>' +
+    '<path d="M56 10c10-4 22 0 26 8 2 4-2 6-6 4l-14-4c-6-2-10-6-6-8z" fill="#FFC99E"' + O.replace("3.5", "3") + "/>" +
+    '<path d="M86 30c4-2 8 0 8 4" fill="none" stroke="#FF4F6D" stroke-width="3" stroke-linecap="round"/><path d="M88 22c3-3 8-2 8 2" fill="none" stroke="#FF4F6D" stroke-width="3" stroke-linecap="round"/>';
+  lib.flower =
+    '<path d="M50 56v38" stroke="#23C16B" stroke-width="6" stroke-linecap="round"/>' +
+    '<path d="M50 78c-12-10-24-8-26-2 6 6 18 6 26 2zM50 70c10-10 22-10 26-4-6 6-18 8-26 4z" fill="#23C16B"' + O.replace("3.5", "2.5") + "/>" +
+    '<g fill="#FF7BAC"' + O.replace("3.5", "3") + '><circle cx="50" cy="16" r="13"/><circle cx="70" cy="30" r="13"/><circle cx="63" cy="52" r="13"/><circle cx="37" cy="52" r="13"/><circle cx="30" cy="30" r="13"/></g>' +
+    '<circle cx="50" cy="36" r="12" fill="#FFD23F"' + O.replace("3.5", "3") + "/>" + face(50, 34, 0.45);
+  lib.icecream =
+    '<path d="M32 50l18 44 18-44z" fill="#F2B866"' + O + "/>" +
+    '<path d="M38 60l20 14M36 52l26 18M44 78l14-18M40 66l20-14" stroke="#C98A3A" stroke-width="2.5"/>' +
+    '<circle cx="50" cy="30" r="20" fill="#FF8FC8"' + O + "/>" + '<circle cx="36" cy="46" r="12" fill="#FF8FC8"' + O.replace("3.5", "3") + '/><circle cx="64" cy="46" r="12" fill="#FF8FC8"' + O.replace("3.5", "3") + "/>" +
+    '<path d="M50 6c2-6 8-6 8 0" fill="none" stroke="#FF3B3B" stroke-width="3"/><circle cx="50" cy="8" r="6" fill="#FF3B3B"' + O.replace("3.5", "2.5") + "/>" +
+    '<circle cx="42" cy="26" r="2" fill="#fff"/><circle cx="58" cy="34" r="2" fill="#FFD23F"/><circle cx="48" cy="40" r="2" fill="#2EA7FF"/>' + shine(42, 20, 5, 3);
+
   lib.chin = kid(52, 70, 88, 92);
   lib.ear = kid(80, 48, 99, 30);
   lib.neck = kid(54, 74, 92, 70);

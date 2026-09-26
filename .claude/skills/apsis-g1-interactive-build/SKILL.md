@@ -43,7 +43,8 @@ gets wrong is flagged, not silently used.
    speech stub, taps wrong to exercise hints, checks layout, errors, stars,
    Home and Pause > Home, and writes screenshots plus everything spoken.
    Letter-fill games: `node tools/qa_fill.js <build.html> <outdir>` (also
-   drags a tile). Generated content: `node tools/check_tap_content.js <src>`.
+   drags a tile). Match games: `node tools/qa_match.js <build.html> <outdir>`
+   (its own answer key checks the content). Generated content: `node tools/check_tap_content.js <src>`.
    Chromium is pre-installed; never run `playwright install`.
 7. **Commit** the build in `builds/`. A committed version is never
    overwritten; a fix is `v-02`.
@@ -71,16 +72,18 @@ gets wrong is flagged, not silently used.
 - **Feedback.** Right: green ring, tick, a spoken praise word, chime, star.
   Wrong: soft tone, the card wobbles back, the instruction is replayed, then
   a hint (the target glows). Never show or speak the answer.
-- **Voice.** Soft, warm and friendly, never formal: short lines such as
-  "Oops! Try again." and "Can you find it?". Speech is always passed as an
-  array of short parts (["Which word starts like", word]) so each part can be
-  recorded once and reused. The device voice is a stop-gap: English
-  (Pakistan) first, then English (India), female and natural/neural voices
-  preferred, pitch 1.2, rate 0.88. The real target is a recorded Pakistani
-  voice: `node tools/voice_lines.js <src>` writes
-  `voice/<ASSET>_voice_script.csv`; record each line as
-  `voice/clips/<key>.mp3` and rebuild — `tools/build.py` packs the clips in
-  and they replace the device voice line by line.
+- **Voice (house voice: Kokoro "Sarah", American, natural — chosen 2026-09-26).**
+  Every line is pre-recorded and packed into the game; the device voice is
+  only a fallback. Lines are short, warm and loving for instructions, gentle
+  after a wrong answer, and excited for right answers. Pass speech as arrays of
+  short parts (["Which word starts like", word]); the lister records a lead-in
+  plus its word as one natural sentence. After any content change:
+  `node tools/voice_lines.js <src>` → `python3 tools/make_voice.py <chapter>/voice/<ASSET>_voice_script.csv`
+  → `python3 tools/build.py <src>`. make_voice gives each line a mood and pace
+  (instruction 0.80, word 0.78, gentle 0.82, cheer 0.95, excited 1.05) and only
+  records new or changed lines. One-time setup: `npm install --prefix tools/voice`
+  and `pip install librosa soundfile lameenc wordfreq`. QA drivers report any
+  line that fell back to the device voice; it must be none.
 - **Sound.** A quiet, bouncy background tune (dips under the voice; Music
   on/off on the home page and in Pause), xylophone for right answers, a soft
   "boing" for wrong ones, a fanfare at the end. No harsh buzzers.

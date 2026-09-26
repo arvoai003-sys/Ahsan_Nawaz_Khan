@@ -1,0 +1,9 @@
+{
+  "name": "arvo-voice",
+  "private": true,
+  "description": "Kokoro neural voice (Apache-2.0) run offline through sherpa-onnx; the model files come inside n8n-nodes-ttsbro. Install with: npm install --prefix tools/voice",
+  "dependencies": {
+    "n8n-nodes-ttsbro": "0.1.6",
+    "sherpa-onnx-node": "1.13.8"
+  }
+}

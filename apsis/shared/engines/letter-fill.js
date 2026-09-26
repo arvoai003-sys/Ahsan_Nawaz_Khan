@@ -22,11 +22,13 @@ var LetterFill = (function () {
     var st = Shell.$("stage");
     if (st) { st.setAttribute("data-ready", v ? "0" : "1"); }
   }
-  function instruction() {
-    if (item.say) { return item.say; }
-    if (item.kind === "sign") { return ["This sign says", item.full, "Which letter is missing?"]; }
-    return ["Listen.", item.full, "Which letter is missing?"];
+  function instructionFor(it) {
+    if (it.say) { return it.say; }
+    if (it.kind === "sign") { return ["This sign says", it.full, "Which letter is missing?"]; }
+    return ["Listen.", it.full, "Which letter is missing?"];
   }
+  function instruction() { return instructionFor(item); }
+  T.instructionFor = instructionFor; /* tools/voice_lines.js lists these lines */
   /* words stay whole: the word holding the gap never breaks across lines */
   function patternHtml(p) {
     var words = p.split(" "), out = [], i, w, g;

@@ -70,3 +70,14 @@ try { localStorage.setItem("arvo:" + result.asset, JSON.stringify({ stars: resul
 
 Confirm the real LMS protocol with the LMS team before the first gate ships;
 change only this function when it is known.
+
+## Built engines (2026-09-26)
+
+| Engine file | Used by | Notes |
+|---|---|---|
+| `engines/tap-identify.*` | A6 | cards with pictures; one or several answers; target card |
+| `engines/letter-fill.*` | A7 | word or sign with one gap; tap or drag a letter tile |
+| `engines/match.*` | A14 | word chips to picture/sentence targets; tap-tap or drag; `done` line said after each match |
+
+Every engine exposes `T.LINES` (fixed lines) and `T.instructionFor(item)` or
+`T.linesFor(item)` so `tools/voice_lines.js` can list everything it says.

@@ -1,0 +1,100 @@
+/* Match board: word chips dragged (or tapped) onto picture / sentence targets */
+.mt { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; max-width: 900px; }
+.targets { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.target {
+  position: relative; width: 170px; min-height: 196px; background: #fff; border: 4px solid var(--ink); border-radius: 26px;
+  box-shadow: 0 8px 0 var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 12px 10px 10px; cursor: pointer; animation: pop .4s cubic-bezier(.2,1.6,.4,1) both; transition: transform .12s;
+}
+.targets .target:nth-child(2) { animation-delay: .07s; } .targets .target:nth-child(3) { animation-delay: .14s; }
+.targets .target:nth-child(4) { animation-delay: .21s; } .targets .target:nth-child(5) { animation-delay: .28s; }
+.target .art { width: 96px; height: 96px; border-radius: 50%; border: 3px solid var(--ink); padding: 8px; background: #FFF1B8; }
+.target.k1 .art { background: #FFD6DE; } .target.k2 .art { background: #CDEBFF; } .target.k3 .art { background: #CFF5DE; }
+.target.k4 .art { background: #FFE2C2; } .target.k5 .art { background: #E6D6FA; }
+.target .art svg { width: 100%; height: 100%; }
+.target .cap { font-family: var(--font-read); font-weight: 700; font-size: 24px; line-height: 1.15; text-align: center; margin-top: 6px; }
+.target .drop {
+  margin-top: 8px; min-width: 120px; min-height: 58px; border-radius: 30px; border: 4px dashed var(--purple);
+  background: #F3EBFF; display: flex; align-items: center; justify-content: center; animation: breathe 1.6s ease-in-out infinite;
+}
+.target.hot { transform: scale(1.06); }
+.target.hot .drop { background: #FFF1B8; border-color: var(--orange); }
+.target.done .drop { border: 4px solid var(--green); background: #D8F7E4; animation: none; }
+.target.done { border-color: var(--green); box-shadow: 0 8px 0 var(--green-d), 0 0 0 6px #B8F0CE; cursor: default; }
+.target.glow { animation: slotglow .9s ease-in-out 3; }
+@keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@keyframes slotglow { 0%,100% { box-shadow: 0 8px 0 var(--ink); } 50% { box-shadow: 0 8px 0 var(--ink), 0 0 0 8px var(--yellow); } }
+
+/* sentence target (one wide card with a gap) */
+.target.sentence { width: auto; max-width: 640px; min-height: 0; flex-direction: row; gap: 16px; padding: 14px 20px; }
+.target.sentence .cap { font-size: 34px; text-align: left; margin: 0; }
+.target.sentence .drop { display: inline-flex; vertical-align: middle; margin: 0 4px; min-width: 110px; min-height: 54px; }
+.target.sentence .art { flex: 0 0 auto; }
+
+/* chips */
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; min-height: 70px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 62px; min-width: 110px; padding: 6px 22px 6px 8px;
+  border-radius: 34px; border: 4px solid var(--ink); box-shadow: 0 6px 0 var(--ink); cursor: grab; touch-action: none;
+  font-family: var(--font-read); font-weight: 700; font-size: 30px; color: var(--ink);
+  animation: pop .4s cubic-bezier(.2,1.6,.4,1) both; transition: transform .12s, box-shadow .12s;
+}
+.chip .dot { width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); padding: 3px; flex: 0 0 auto; }
+.chip .dot svg { width: 100%; height: 100%; }
+.chip.k0 { background: #FFD23F; } .chip.k1 { background: #FF8FA3; } .chip.k2 { background: #7EC8FF; }
+.chip.k3 { background: #7BE3A6; } .chip.k4 { background: #FFB866; } .chip.k5 { background: #C7A6F5; }
+.chip.picked { transform: translateY(-8px) scale(1.06); box-shadow: 0 12px 0 var(--ink), 0 0 0 6px #fff; }
+.chip.dragging { position: fixed; z-index: 70; cursor: grabbing; transform: scale(1.1) rotate(-3deg); box-shadow: 0 14px 20px rgba(0,0,0,.25); animation: none; transition: none; }
+.chip.ghost { opacity: .25; }
+.chip.placed { box-shadow: none; border-color: var(--green-d); cursor: default; animation: pop .35s cubic-bezier(.2,1.6,.4,1); font-size: 26px; min-height: 50px; padding-right: 16px; }
+.chip.placed .dot { width: 36px; height: 36px; }
+
+@media (max-width: 520px) {
+  .mt { gap: 14px; }
+  .targets { gap: 12px; }
+  .target { width: 100px; min-height: 150px; padding: 8px 5px; border-radius: 22px; }
+  .target .art { width: 62px; height: 62px; padding: 5px; }
+  .target .cap { font-size: 18px; }
+  .target .drop { min-width: 84px; min-height: 48px; }
+  .target.sentence { flex-direction: column; padding: 12px; width: 92vw; }
+  .target.sentence .cap { font-size: 26px; text-align: center; }
+  .chips { gap: 10px; }
+  .chip { min-height: 54px; min-width: 90px; font-size: 24px; padding: 4px 14px 4px 6px; }
+  .chip .dot { width: 36px; height: 36px; }
+  .chip.placed { font-size: 17px; min-height: 40px; min-width: 0; padding: 2px 8px 2px 3px; gap: 3px; }
+  .chip.placed .dot { width: 26px; height: 26px; padding: 2px; }
+  .mt.five .targets { gap: 10px; }
+  .mt.five .target { width: 96px; min-height: 0; padding: 6px 4px 8px; }
+  .mt.five .target .art { width: 48px; height: 48px; }
+  .mt.five .target .drop { min-width: 80px; min-height: 42px; margin-top: 4px; }
+  .mt.five .chip { min-height: 50px; min-width: 80px; padding: 4px 14px; }
+}
+@media (max-height: 520px) {
+  .mt { flex-direction: row; align-items: center; justify-content: center; gap: 22px; }
+  .targets { gap: 10px; flex-wrap: nowrap; }
+  .target { width: 124px; min-height: 0; padding: 6px 6px 8px; }
+  .target .art { width: 54px; height: 54px; padding: 4px; }
+  .target .cap { font-size: 18px; margin-top: 2px; }
+  .target .drop { min-height: 44px; min-width: 96px; margin-top: 4px; }
+  .target.sentence { padding: 8px 14px; max-width: 420px; }
+  .target.sentence .cap { font-size: 24px; }
+  .chips { flex-direction: column; flex-wrap: wrap; max-height: 250px; max-height: calc(100vh - 176px); min-height: 0; gap: 10px; align-content: center; }
+  .chip { min-height: 52px; font-size: 22px; min-width: 96px; }
+  .chip .dot { width: 34px; height: 34px; }
+  .chip.placed { font-size: 17px; min-height: 40px; min-width: 0; padding: 2px 8px 2px 3px; }
+  .chip.placed .dot { width: 26px; height: 26px; }
+  .mt.five { gap: 14px; }
+  .mt.five .targets { gap: 8px; }
+  .mt.five .target { width: 88px; }
+  .mt.five .target .art { width: 46px; height: 46px; }
+  .mt.five .target .drop { min-width: 76px; }
+  .mt.five .chip { min-width: 84px; padding: 4px 14px; font-size: 20px; }
+}
+@media (min-width: 900px) and (min-height: 640px) {
+  .target { width: 190px; min-height: 220px; }
+  .target .art { width: 116px; height: 116px; }
+  .target .cap { font-size: 28px; }
+  .chip { font-size: 34px; min-height: 70px; }
+  .mt.five .target { width: 160px; min-height: 200px; }
+  .mt.five .target .art { width: 92px; height: 92px; }
+}

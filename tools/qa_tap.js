@@ -19,9 +19,17 @@ const STUB = `
     var fake = {
       getVoices: function(){ return [{name:'Test en-GB', lang:'en-GB'}]; },
       cancel: function(){ if(cur){ var c=cur; cur=null; if(c.onend) setTimeout(c.onend,0);} },
-      speak: function(u){ window.__spoken.push(u.text); cur=u; setTimeout(function(){ if(cur===u){ cur=null; if(u.onend) u.onend(); } }, 30); }
+      speak: function(u){ (window.__fallback = window.__fallback || []).push(u.text); window.__spoken.push(u.text); cur=u; setTimeout(function(){ if(cur===u){ cur=null; if(u.onend) u.onend(); } }, 30); }
     };
     Object.defineProperty(window, 'speechSynthesis', { value: fake, configurable: true });
+    // recorded clips: finish at once, and log every line the game says (clip or not)
+    HTMLMediaElement.prototype.play = function () { var a = this; setTimeout(function () { if (a.onended) a.onended(); }, 30); return Promise.resolve(); };
+    HTMLMediaElement.prototype.pause = function () {};
+    window.addEventListener('DOMContentLoaded', function () {
+      if (!window.Shell) return;
+      var orig = Shell.say;
+      Shell.say = function (t, d) { [].concat(t).forEach(function (x) { window.__spoken.push(String(x)); }); return orig.apply(this, arguments); };
+    });
   })();`;
 
 function answersFor(state) {
@@ -124,6 +132,7 @@ function answersFor(state) {
     const stray = await page.evaluate(() => !!document.querySelector('#game.on') || document.querySelector('#hand.on') !== null);
     report.push(`${vp.name}: home button ok=${!!atHome1} pause>home ok=${!!atHome2} stray-after-home=${stray}`);
     report.push(`${vp.name}: layout issues ${JSON.stringify([...layoutIssues])} errors=${JSON.stringify(errors)}`);
+    report.push(`${vp.name}: device-voice fallback lines: ${JSON.stringify([...new Set(await page.evaluate(() => window.__fallback || []))])}`);
     if (vp.name === 'landscape') fs.writeFileSync(`${out}/spoken.txt`, (await page.evaluate(() => window.__spoken)).join('\n'));
     await ctx.close();
   }

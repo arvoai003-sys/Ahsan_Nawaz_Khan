@@ -138,7 +138,7 @@ var Shell = (function () {
      2. Otherwise the device voice: English (Pakistan) first, then English (India),
         preferring female and natural/neural voices; softer pitch, warm pace. */
   var VOICE_SCORE = [
-    [/en[-_]PK/i, 100], [/en[-_]IN/i, 70], [/en[-_]GB/i, 20], [/^en/i, 10]
+    [/en[-_]US/i, 100], [/en[-_]PK/i, 60], [/en[-_]IN/i, 50], [/en[-_]GB/i, 40], [/^en/i, 10]
   ];
   var FEMALE = /female|woman|girl|heera|neerja|swara|kajal|aditi|raveena|uzma|zira|sonia|libby|hazel|susan|samantha|karen|moira|tessa|veena|fiona|jenny|aria|emma|ava|salli|joanna|kimberly|ivy/i;
   var MALE = /\bmale\b|ravi|prabhat|hemant|asad|david|george|daniel|mark|james|alex|fred|ryan|guy|thomas|oliver|arthur|rishi/i;
@@ -180,20 +180,32 @@ var Shell = (function () {
       if (p && p["catch"]) { p["catch"](done); }
     } catch (e) { done(); }
   }
+  var PRAISE_WORDS = /^(yay|super|well done|wow|you got it|hooray|great job|amazing)/i;
   function speakOne(text, done) {
     if (!text) { done(); return; }
     var clips = window.VOICE_CLIPS || {}, key = S.clipKey(text);
     if (clips[key]) { playClip(clips[key], done); return; }
-    var guess = 700 + String(text).split(" ").length * 420;
+    var guess = 700 + String(text).split(" ").length * 480;
     if (!window.speechSynthesis) { S.later(done, guess); return; }
     try {
       var u = new window.SpeechSynthesisUtterance(String(text).replace(/<[^>]+>/g, ""));
-      if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-IN"; }
-      u.rate = 0.88; u.pitch = 1.2; u.volume = 0.9;
+      if (voice) { u.voice = voice; u.lang = voice.lang; } else { u.lang = "en-US"; }
+      /* device-voice fallback: slow and warm for talk, brighter for praise */
+      if (PRAISE_WORDS.test(text)) { u.rate = 1.0; u.pitch = 1.35; } else { u.rate = 0.8; u.pitch = 1.15; }
+      u.volume = 0.95;
       u.onend = done; u.onerror = done;
       window.speechSynthesis.speak(u);
       S.later(done, guess + 2500); /* safety net: some engines never fire onend */
     } catch (e) { S.later(done, guess); }
+  }
+  /* longest run of parts, starting at i, that has one recorded clip */
+  function clipRun(parts, i) {
+    var clips = window.VOICE_CLIPS || {}, j, joined;
+    for (j = parts.length; j > i + 1; j--) {
+      joined = parts.slice(i, j).join(" ");
+      if (clips[S.clipKey(joined)]) { return { text: joined, next: j }; }
+    }
+    return { text: parts[i], next: i + 1 };
   }
   /* say(text or [parts], done): speaks in order; cancels anything already speaking.
      Parts let a line be built from recorded pieces, e.g. ["Which word starts like", "sun"].
@@ -209,8 +221,9 @@ var Shell = (function () {
     function next() {
       if (my !== sayId) { end(); return; }
       if (i >= parts.length) { end(); return; }
-      var once = false;
-      speakOne(parts[i++], function () { if (!once) { once = true; next(); } });
+      var once = false, run = clipRun(parts, i);
+      i = run.next;
+      speakOne(run.text, function () { if (!once) { once = true; next(); } });
     }
     next();
   };

@@ -1,0 +1,1416 @@
+{
+ "bag": {
+  "mood": "word",
+  "said_as": "bag.",
+  "sig": "46054228b0e3",
+  "text": "bag",
+  "voice": "sarah"
+ },
+ "ball": {
+  "mood": "word",
+  "said_as": "ball.",
+  "sig": "da5e1de1009d",
+  "text": "ball",
+  "voice": "sarah"
+ },
+ "banana": {
+  "mood": "word",
+  "said_as": "banana.",
+  "sig": "ebb44326f64c",
+  "text": "banana",
+  "voice": "sarah"
+ },
+ "bell": {
+  "mood": "word",
+  "said_as": "bell.",
+  "sig": "1a8bce5816c7",
+  "text": "bell",
+  "voice": "sarah"
+ },
+ "book": {
+  "mood": "word",
+  "said_as": "book.",
+  "sig": "04c1ad99548a",
+  "text": "book",
+  "voice": "sarah"
+ },
+ "books": {
+  "mood": "word",
+  "said_as": "Books.",
+  "sig": "7fc3a9f0d390",
+  "text": "Books",
+  "voice": "sarah"
+ },
+ "bus": {
+  "mood": "word",
+  "said_as": "bus.",
+  "sig": "062a045f6d18",
+  "text": "bus",
+  "voice": "sarah"
+ },
+ "can-you-find-three-words-that-start-the-same": {
+  "mood": "instruction",
+  "said_as": "Can you find three words that start the same?",
+  "sig": "b8ecf6a06514",
+  "text": "Can you find three words that start the same?",
+  "voice": "sarah"
+ },
+ "can-you-match-each-sense-to-its-body-part": {
+  "mood": "instruction",
+  "said_as": "Can you match each sense to its body part?",
+  "sig": "da1709536855",
+  "text": "Can you match each sense to its body part?",
+  "voice": "sarah"
+ },
+ "can-you-match-each-sense-to-what-we-do": {
+  "mood": "instruction",
+  "said_as": "Can you match each sense to what we do?",
+  "sig": "6c4e9fc7052d",
+  "text": "Can you match each sense to what we do?",
+  "voice": "sarah"
+ },
+ "chin": {
+  "mood": "word",
+  "said_as": "chin.",
+  "sig": "d3d0b0ed6cdc",
+  "text": "chin",
+  "voice": "sarah"
+ },
+ "choose-a-level": {
+  "mood": "instruction",
+  "said_as": "Choose a level!",
+  "sig": "5fc4ba251925",
+  "text": "Choose a level!",
+  "voice": "sarah"
+ },
+ "closed": {
+  "mood": "word",
+  "said_as": "Closed.",
+  "sig": "5d3337b5600d",
+  "text": "Closed",
+  "voice": "sarah"
+ },
+ "danger": {
+  "mood": "word",
+  "said_as": "Danger.",
+  "sig": "5324c196f50e",
+  "text": "Danger",
+  "voice": "sarah"
+ },
+ "door": {
+  "mood": "word",
+  "said_as": "door.",
+  "sig": "c47e1615a239",
+  "text": "door",
+  "voice": "sarah"
+ },
+ "drum": {
+  "mood": "word",
+  "said_as": "drum.",
+  "sig": "501d8115a14f",
+  "text": "drum",
+  "voice": "sarah"
+ },
+ "duck": {
+  "mood": "word",
+  "said_as": "duck.",
+  "sig": "1f3c75aff984",
+  "text": "duck",
+  "voice": "sarah"
+ },
+ "ear": {
+  "mood": "word",
+  "said_as": "ear.",
+  "sig": "43f81da423fe",
+  "text": "ear",
+  "voice": "sarah"
+ },
+ "ears": {
+  "mood": "word",
+  "said_as": "ears.",
+  "sig": "76a6aa697c8a",
+  "text": "ears",
+  "voice": "sarah"
+ },
+ "eat-a-banana": {
+  "mood": "instruction",
+  "said_as": "Eat a banana!",
+  "sig": "d9753870f6c9",
+  "text": "Eat a banana!",
+  "voice": "sarah"
+ },
+ "eat-an-ice-cream": {
+  "mood": "instruction",
+  "said_as": "Eat an ice cream!",
+  "sig": "ebc9e98e99bf",
+  "text": "Eat an ice cream!",
+  "voice": "sarah"
+ },
+ "egg": {
+  "mood": "word",
+  "said_as": "egg.",
+  "sig": "3a29b8e9e04c",
+  "text": "egg",
+  "voice": "sarah"
+ },
+ "elephant": {
+  "mood": "word",
+  "said_as": "elephant.",
+  "sig": "28a44d6bd2bb",
+  "text": "elephant",
+  "voice": "sarah"
+ },
+ "exit": {
+  "mood": "word",
+  "said_as": "exit.",
+  "sig": "0a5339d49ee9",
+  "text": "exit",
+  "voice": "sarah"
+ },
+ "eyes": {
+  "mood": "word",
+  "said_as": "eyes.",
+  "sig": "971b3293fd72",
+  "text": "eyes",
+  "voice": "sarah"
+ },
+ "face": {
+  "mood": "word",
+  "said_as": "face.",
+  "sig": "3b7e4f898c12",
+  "text": "face",
+  "voice": "sarah"
+ },
+ "fan": {
+  "mood": "word",
+  "said_as": "fan.",
+  "sig": "c57672cfeef2",
+  "text": "fan",
+  "voice": "sarah"
+ },
+ "find-one-more": {
+  "mood": "excited",
+  "said_as": "Find one more!",
+  "sig": "3a001a4f393b",
+  "text": "Find one more!",
+  "voice": "sarah"
+ },
+ "find-the-missing-letter": {
+  "mood": "instruction",
+  "said_as": "Find the missing letter.",
+  "sig": "4054f689d6b4",
+  "text": "Find the missing letter.",
+  "voice": "sarah"
+ },
+ "find-words-that-start-with-the-same-sound": {
+  "mood": "instruction",
+  "said_as": "Find words that start with the same sound.",
+  "sig": "01ea3be21eac",
+  "text": "Find words that start with the same sound.",
+  "voice": "sarah"
+ },
+ "finish-the-sign-word": {
+  "mood": "instruction",
+  "said_as": "Finish the Sign Word",
+  "sig": "65f9b3a6fc34",
+  "text": "Finish the Sign Word",
+  "voice": "sarah"
+ },
+ "fish": {
+  "mood": "word",
+  "said_as": "fish.",
+  "sig": "6e83f2164cde",
+  "text": "fish",
+  "voice": "sarah"
+ },
+ "foot": {
+  "mood": "word",
+  "said_as": "foot.",
+  "sig": "5ffec93e8b7a",
+  "text": "foot",
+  "voice": "sarah"
+ },
+ "great-job": {
+  "mood": "excited",
+  "said_as": "Great job!",
+  "sig": "4f02879c8393",
+  "text": "Great job!",
+  "voice": "sarah"
+ },
+ "hair": {
+  "mood": "word",
+  "said_as": "hair.",
+  "sig": "cee1e5b87a4a",
+  "text": "hair",
+  "voice": "sarah"
+ },
+ "hand": {
+  "mood": "word",
+  "said_as": "hand.",
+  "sig": "e8a010136d0e",
+  "text": "hand",
+  "voice": "sarah"
+ },
+ "hands": {
+  "mood": "word",
+  "said_as": "hands.",
+  "sig": "40e068c017eb",
+  "text": "hands",
+  "voice": "sarah"
+ },
+ "hat": {
+  "mood": "word",
+  "said_as": "hat.",
+  "sig": "83b157bed058",
+  "text": "hat",
+  "voice": "sarah"
+ },
+ "hear": {
+  "mood": "word",
+  "said_as": "hear.",
+  "sig": "4c666bb0e50d",
+  "text": "hear",
+  "voice": "sarah"
+ },
+ "hen": {
+  "mood": "word",
+  "said_as": "hen.",
+  "sig": "e423784c7e93",
+  "text": "hen",
+  "voice": "sarah"
+ },
+ "hooray": {
+  "mood": "excited",
+  "said_as": "Hoo-ray!",
+  "sig": "1aa35cd2d8a2",
+  "text": "Hooray!",
+  "voice": "sarah"
+ },
+ "house": {
+  "mood": "word",
+  "said_as": "house.",
+  "sig": "86768aec0fc8",
+  "text": "house",
+  "voice": "sarah"
+ },
+ "hug-a-teddy": {
+  "mood": "instruction",
+  "said_as": "Hug a teddy!",
+  "sig": "bab2060711df",
+  "text": "Hug a teddy!",
+  "voice": "sarah"
+ },
+ "leaf": {
+  "mood": "word",
+  "said_as": "leaf.",
+  "sig": "b9f155c90afd",
+  "text": "leaf",
+  "voice": "sarah"
+ },
+ "leg": {
+  "mood": "word",
+  "said_as": "leg.",
+  "sig": "76b0b31a84da",
+  "text": "leg",
+  "voice": "sarah"
+ },
+ "let-s-listen-to-each-word": {
+  "mood": "gentle",
+  "said_as": "Let's listen to each word.",
+  "sig": "cbe176daff35",
+  "text": "Let's listen to each word.",
+  "voice": "sarah"
+ },
+ "level-five-body-words-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level five! Body words from your book!",
+  "sig": "c609b2b19bea",
+  "text": "Level five! Body words from your book!",
+  "voice": "sarah"
+ },
+ "level-five-mix-it-up": {
+  "mood": "cheer",
+  "said_as": "Level five! Mix it up!",
+  "sig": "d6baa1e54061",
+  "text": "Level five! Mix it up!",
+  "voice": "sarah"
+ },
+ "level-five-odd-one-out": {
+  "mood": "cheer",
+  "said_as": "Level five! Odd one out!",
+  "sig": "42248dd7cf9a",
+  "text": "Level five! Odd one out!",
+  "voice": "sarah"
+ },
+ "level-four-find-two": {
+  "mood": "cheer",
+  "said_as": "Level four! Find two!",
+  "sig": "05f262626e00",
+  "text": "Level four! Find two!",
+  "voice": "sarah"
+ },
+ "level-four-letters-in-the-middle": {
+  "mood": "cheer",
+  "said_as": "Level four! Letters in the middle!",
+  "sig": "a6078f954d2c",
+  "text": "Level four! Letters in the middle!",
+  "voice": "sarah"
+ },
+ "level-four-match-three": {
+  "mood": "cheer",
+  "said_as": "Level four! Match three!",
+  "sig": "e6198ec67cdf",
+  "text": "Level four! Match three!",
+  "voice": "sarah"
+ },
+ "level-one-let-s-warm-up": {
+  "mood": "cheer",
+  "said_as": "Level one! Let's warm up!",
+  "sig": "7ffef33f4ab8",
+  "text": "Level one! Let's warm up!",
+  "voice": "sarah"
+ },
+ "level-six-all-five-senses": {
+  "mood": "cheer",
+  "said_as": "Level six! All five senses!",
+  "sig": "dcc70246d51b",
+  "text": "Level six! All five senses!",
+  "voice": "sarah"
+ },
+ "level-six-super-signs": {
+  "mood": "cheer",
+  "said_as": "Level six! Super signs!",
+  "sig": "4508498270e7",
+  "text": "Level six! Super signs!",
+  "voice": "sarah"
+ },
+ "level-six-super-star-challenge": {
+  "mood": "cheer",
+  "said_as": "Level six! Super star challenge!",
+  "sig": "9ea6d7dab3a0",
+  "text": "Level six! Super star challenge!",
+  "voice": "sarah"
+ },
+ "level-three-first-letters": {
+  "mood": "cheer",
+  "said_as": "Level three! First letters!",
+  "sig": "ba3f97671c91",
+  "text": "Level three! First letters!",
+  "voice": "sarah"
+ },
+ "level-three-same-start": {
+  "mood": "cheer",
+  "said_as": "Level three! Same start!",
+  "sig": "21bc46b84edf",
+  "text": "Level three! Same start!",
+  "voice": "sarah"
+ },
+ "level-three-which-sense-do-we-use": {
+  "mood": "cheer",
+  "said_as": "Level three! Which sense do we use?",
+  "sig": "440c546abd09",
+  "text": "Level three! Which sense do we use?",
+  "voice": "sarah"
+ },
+ "level-two-our-senses-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Our senses, from your book!",
+  "sig": "e05517a74d23",
+  "text": "Level two! Our senses, from your book!",
+  "voice": "sarah"
+ },
+ "level-two-sign-words-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Sign words from your book!",
+  "sig": "fac3ee8f0fa9",
+  "text": "Level two! Sign words from your book!",
+  "voice": "sarah"
+ },
+ "level-two-signs-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Signs from your book!",
+  "sig": "99b59b30c271",
+  "text": "Level two! Signs from your book!",
+  "voice": "sarah"
+ },
+ "lion": {
+  "mood": "word",
+  "said_as": "lion.",
+  "sig": "695485d8b416",
+  "text": "lion",
+  "voice": "sarah"
+ },
+ "listen": {
+  "mood": "instruction",
+  "said_as": "Listen.",
+  "sig": "feb34fd73914",
+  "text": "Listen.",
+  "voice": "sarah"
+ },
+ "listen-carefully": {
+  "mood": "gentle",
+  "said_as": "Listen carefully.",
+  "sig": "fa8b771cd71f",
+  "text": "Listen carefully.",
+  "voice": "sarah"
+ },
+ "listen-to-a-drum": {
+  "mood": "instruction",
+  "said_as": "Listen to a drum!",
+  "sig": "2ebf8e48d2c3",
+  "text": "Listen to a drum!",
+  "voice": "sarah"
+ },
+ "lollipop": {
+  "mood": "word",
+  "said_as": "lollipop.",
+  "sig": "ade9837b1399",
+  "text": "lollipop",
+  "voice": "sarah"
+ },
+ "look-at-the-moon": {
+  "mood": "instruction",
+  "said_as": "Look at the moon!",
+  "sig": "47a991923a76",
+  "text": "Look at the moon!",
+  "voice": "sarah"
+ },
+ "mango": {
+  "mood": "word",
+  "said_as": "mango.",
+  "sig": "e54e9d9972f6",
+  "text": "mango",
+  "voice": "sarah"
+ },
+ "match-each-sense-to-its-body-part": {
+  "mood": "instruction",
+  "said_as": "Match each sense to its body part.",
+  "sig": "d1cd2f402cef",
+  "text": "Match each sense to its body part.",
+  "voice": "sarah"
+ },
+ "milk": {
+  "mood": "word",
+  "said_as": "milk.",
+  "sig": "db58b71e04f8",
+  "text": "milk",
+  "voice": "sarah"
+ },
+ "moon": {
+  "mood": "word",
+  "said_as": "moon.",
+  "sig": "cf42efa3f8f3",
+  "text": "moon",
+  "voice": "sarah"
+ },
+ "mouth": {
+  "mood": "word",
+  "said_as": "mouth.",
+  "sig": "aafe78b4fb8f",
+  "text": "mouth",
+  "voice": "sarah"
+ },
+ "neck": {
+  "mood": "word",
+  "said_as": "neck.",
+  "sig": "44a5c3c70b99",
+  "text": "neck",
+  "voice": "sarah"
+ },
+ "nest": {
+  "mood": "word",
+  "said_as": "nest.",
+  "sig": "c1a46a5e07bf",
+  "text": "nest",
+  "voice": "sarah"
+ },
+ "nine": {
+  "mood": "word",
+  "said_as": "nine.",
+  "sig": "af73801d6c99",
+  "text": "nine",
+  "voice": "sarah"
+ },
+ "no-entry": {
+  "mood": "word",
+  "said_as": "No entry.",
+  "sig": "142739a7e4eb",
+  "text": "No entry",
+  "voice": "sarah"
+ },
+ "nose": {
+  "mood": "word",
+  "said_as": "nose.",
+  "sig": "f296d0a03b91",
+  "text": "nose",
+  "voice": "sarah"
+ },
+ "now-find-two": {
+  "mood": "cheer",
+  "said_as": "Now find two!",
+  "sig": "35f4c278d84e",
+  "text": "Now find two!",
+  "voice": "sarah"
+ },
+ "one-word-starts-with-a-different-sound-can-you-find-it": {
+  "mood": "instruction",
+  "said_as": "One word starts with a different sound. Can you find it?",
+  "sig": "c2427a87bff0",
+  "text": "One word starts with a different sound. Can you find it?",
+  "voice": "sarah"
+ },
+ "oops-try-again": {
+  "mood": "gentle",
+  "said_as": "Oops! Try again.",
+  "sig": "433402065b1f",
+  "text": "Oops! Try again.",
+  "voice": "sarah"
+ },
+ "open": {
+  "mood": "word",
+  "said_as": "Open.",
+  "sig": "602fbc2777d6",
+  "text": "Open",
+  "voice": "sarah"
+ },
+ "push": {
+  "mood": "word",
+  "said_as": "Push.",
+  "sig": "e919df1dbbc0",
+  "text": "Push",
+  "voice": "sarah"
+ },
+ "read-the-words-can-you-find-three-words-that-start-the-same": {
+  "mood": "instruction",
+  "said_as": "Read the words. Can you find three words that start the same?",
+  "sig": "ca8058c0fc10",
+  "text": "Read the words. Can you find three words that start the same?",
+  "voice": "sarah"
+ },
+ "same-first-sound": {
+  "mood": "instruction",
+  "said_as": "Same First Sound",
+  "sig": "46f6bb693b2c",
+  "text": "Same First Sound",
+  "voice": "sarah"
+ },
+ "see": {
+  "mood": "word",
+  "said_as": "see.",
+  "sig": "fed91b13430e",
+  "text": "see",
+  "voice": "sarah"
+ },
+ "sense-and-body-part": {
+  "mood": "instruction",
+  "said_as": "Sense and Body Part",
+  "sig": "2c1cd2d792c4",
+  "text": "Sense and Body Part",
+  "voice": "sarah"
+ },
+ "sign": {
+  "mood": "word",
+  "said_as": "sign.",
+  "sig": "18558879936a",
+  "text": "sign",
+  "voice": "sarah"
+ },
+ "slow": {
+  "mood": "word",
+  "said_as": "Slow.",
+  "sig": "a6b14d4d3820",
+  "text": "Slow",
+  "voice": "sarah"
+ },
+ "smell": {
+  "mood": "word",
+  "said_as": "smell.",
+  "sig": "f14440ba6918",
+  "text": "smell",
+  "voice": "sarah"
+ },
+ "sniff-a-flower": {
+  "mood": "instruction",
+  "said_as": "Sniff a flower!",
+  "sig": "f0ec4942c5d2",
+  "text": "Sniff a flower!",
+  "voice": "sarah"
+ },
+ "sniff-the-soap": {
+  "mood": "instruction",
+  "said_as": "Sniff the soap!",
+  "sig": "e70d14f36db6",
+  "text": "Sniff the soap!",
+  "voice": "sarah"
+ },
+ "soap": {
+  "mood": "word",
+  "said_as": "soap.",
+  "sig": "f7e1eaeee128",
+  "text": "soap",
+  "voice": "sarah"
+ },
+ "sock": {
+  "mood": "word",
+  "said_as": "sock.",
+  "sig": "3d278d7a0a03",
+  "text": "sock",
+  "voice": "sarah"
+ },
+ "staff": {
+  "mood": "word",
+  "said_as": "staff.",
+  "sig": "455e94c67c07",
+  "text": "staff",
+  "voice": "sarah"
+ },
+ "staff-only": {
+  "mood": "word",
+  "said_as": "Staff only.",
+  "sig": "58b5ea814efa",
+  "text": "Staff only",
+  "voice": "sarah"
+ },
+ "stop": {
+  "mood": "word",
+  "said_as": "stop.",
+  "sig": "0b82c16346de",
+  "text": "stop",
+  "voice": "sarah"
+ },
+ "stroke-a-pet": {
+  "mood": "instruction",
+  "said_as": "Stroke a pet!",
+  "sig": "3e8deb741f1d",
+  "text": "Stroke a pet!",
+  "voice": "sarah"
+ },
+ "sun": {
+  "mood": "word",
+  "said_as": "sun.",
+  "sig": "7669123c6c82",
+  "text": "sun",
+  "voice": "sarah"
+ },
+ "super": {
+  "mood": "excited",
+  "said_as": "Super!",
+  "sig": "198b5d3ccea5",
+  "text": "Super!",
+  "voice": "sarah"
+ },
+ "tap": {
+  "mood": "word",
+  "said_as": "tap.",
+  "sig": "eeaea49e2abe",
+  "text": "tap",
+  "voice": "sarah"
+ },
+ "tap-a-letter-or-drag-it-into-the-gap": {
+  "mood": "instruction",
+  "said_as": "Tap a letter, or drag it into the gap.",
+  "sig": "4932db7d591a",
+  "text": "Tap a letter, or drag it into the gap.",
+  "voice": "sarah"
+ },
+ "tap-a-speaker-to-hear-a-word-then-tap-the-word-you-choose": {
+  "mood": "instruction",
+  "said_as": "Tap a speaker to hear a word. Then tap the word you choose.",
+  "sig": "907a12c992ec",
+  "text": "Tap a speaker to hear a word. Then tap the word you choose.",
+  "voice": "sarah"
+ },
+ "tap-a-word-or-drag-it-to-its-picture": {
+  "mood": "instruction",
+  "said_as": "Tap a word, or drag it to its picture.",
+  "sig": "3edf5d732e19",
+  "text": "Tap a word, or drag it to its picture.",
+  "voice": "sarah"
+ },
+ "tap-here-to-hear-it-again": {
+  "mood": "instruction",
+  "said_as": "Tap here to hear it again.",
+  "sig": "9b24eb6c6cb0",
+  "text": "Tap here to hear it again.",
+  "voice": "sarah"
+ },
+ "tap-here-to-hear-the-question-again": {
+  "mood": "instruction",
+  "said_as": "Tap here to hear the question again.",
+  "sig": "2d141f4e86a7",
+  "text": "Tap here to hear the question again.",
+  "voice": "sarah"
+ },
+ "taste": {
+  "mood": "word",
+  "said_as": "taste.",
+  "sig": "93472029b971",
+  "text": "taste",
+  "voice": "sarah"
+ },
+ "teeth": {
+  "mood": "word",
+  "said_as": "teeth.",
+  "sig": "c0bb1bfbd7a7",
+  "text": "teeth",
+  "voice": "sarah"
+ },
+ "this-sign-says": {
+  "mood": "instruction",
+  "said_as": "This sign says",
+  "sig": "c5d181cb3e82",
+  "text": "This sign says",
+  "voice": "sarah"
+ },
+ "this-sign-says-books": {
+  "mood": "instruction",
+  "said_as": "This sign says: Books.",
+  "sig": "43592666f8db",
+  "text": "This sign says Books",
+  "voice": "sarah"
+ },
+ "this-sign-says-closed": {
+  "mood": "instruction",
+  "said_as": "This sign says: Closed.",
+  "sig": "da60e1868650",
+  "text": "This sign says Closed",
+  "voice": "sarah"
+ },
+ "this-sign-says-danger": {
+  "mood": "instruction",
+  "said_as": "This sign says: Danger.",
+  "sig": "a76f51adca9c",
+  "text": "This sign says Danger",
+  "voice": "sarah"
+ },
+ "this-sign-says-exit": {
+  "mood": "instruction",
+  "said_as": "This sign says: Exit.",
+  "sig": "8daaac2c7450",
+  "text": "This sign says Exit",
+  "voice": "sarah"
+ },
+ "this-sign-says-no-entry": {
+  "mood": "instruction",
+  "said_as": "This sign says: No entry.",
+  "sig": "8a1e4e05126f",
+  "text": "This sign says No entry",
+  "voice": "sarah"
+ },
+ "this-sign-says-open": {
+  "mood": "instruction",
+  "said_as": "This sign says: Open.",
+  "sig": "6350db25e190",
+  "text": "This sign says Open",
+  "voice": "sarah"
+ },
+ "this-sign-says-push": {
+  "mood": "instruction",
+  "said_as": "This sign says: Push.",
+  "sig": "e96e62e16f30",
+  "text": "This sign says Push",
+  "voice": "sarah"
+ },
+ "this-sign-says-slow": {
+  "mood": "instruction",
+  "said_as": "This sign says: Slow.",
+  "sig": "996cc420f9d5",
+  "text": "This sign says Slow",
+  "voice": "sarah"
+ },
+ "this-sign-says-staff-only": {
+  "mood": "instruction",
+  "said_as": "This sign says: Staff only.",
+  "sig": "0ec73d0275b8",
+  "text": "This sign says Staff only",
+  "voice": "sarah"
+ },
+ "this-sign-says-stop": {
+  "mood": "instruction",
+  "said_as": "This sign says: Stop.",
+  "sig": "2965fac14384",
+  "text": "This sign says Stop",
+  "voice": "sarah"
+ },
+ "this-sign-says-toys": {
+  "mood": "instruction",
+  "said_as": "This sign says: Toys.",
+  "sig": "b6addeac13af",
+  "text": "This sign says Toys",
+  "voice": "sarah"
+ },
+ "this-sign-says-wash-your-hands": {
+  "mood": "instruction",
+  "said_as": "This sign says: Wash your hands.",
+  "sig": "bea91e6ff840",
+  "text": "This sign says Wash your hands",
+  "voice": "sarah"
+ },
+ "tongue": {
+  "mood": "word",
+  "said_as": "tongue.",
+  "sig": "2cfa17025c52",
+  "text": "tongue",
+  "voice": "sarah"
+ },
+ "touch": {
+  "mood": "word",
+  "said_as": "touch.",
+  "sig": "146defa28d91",
+  "text": "touch",
+  "voice": "sarah"
+ },
+ "toys": {
+  "mood": "word",
+  "said_as": "toys.",
+  "sig": "81996559aa90",
+  "text": "toys",
+  "voice": "sarah"
+ },
+ "tree": {
+  "mood": "word",
+  "said_as": "tree.",
+  "sig": "66bc13a92540",
+  "text": "tree",
+  "voice": "sarah"
+ },
+ "two-words-start-the-same-can-you-tap-them-both": {
+  "mood": "instruction",
+  "said_as": "Two words start the same. Can you tap them both?",
+  "sig": "48488c0c51e3",
+  "text": "Two words start the same. Can you tap them both?",
+  "voice": "sarah"
+ },
+ "wash-your-hands": {
+  "mood": "instruction",
+  "said_as": "Wash your hands",
+  "sig": "78e1f2337249",
+  "text": "Wash your hands",
+  "voice": "sarah"
+ },
+ "we-hear-with-our": {
+  "mood": "instruction",
+  "said_as": "We hear with our ....",
+  "sig": "f4b670d6da82",
+  "text": "We hear with our ....",
+  "voice": "sarah"
+ },
+ "we-hear-with-our-ears": {
+  "mood": "instruction",
+  "said_as": "We hear with our ears.",
+  "sig": "6cf0f801b943",
+  "text": "We hear with our ears.",
+  "voice": "sarah"
+ },
+ "we-see-things-with-our": {
+  "mood": "instruction",
+  "said_as": "We see things with our ....",
+  "sig": "b03ff505b264",
+  "text": "We see things with our ....",
+  "voice": "sarah"
+ },
+ "we-see-things-with-our-eyes": {
+  "mood": "instruction",
+  "said_as": "We see things with our eyes.",
+  "sig": "35d20441d629",
+  "text": "We see things with our eyes.",
+  "voice": "sarah"
+ },
+ "we-smell-with-our": {
+  "mood": "instruction",
+  "said_as": "We smell with our ....",
+  "sig": "faf18a88755a",
+  "text": "We smell with our ....",
+  "voice": "sarah"
+ },
+ "we-smell-with-our-nose": {
+  "mood": "instruction",
+  "said_as": "We smell with our nose.",
+  "sig": "199879795c81",
+  "text": "We smell with our nose.",
+  "voice": "sarah"
+ },
+ "we-taste-with-our": {
+  "mood": "instruction",
+  "said_as": "We taste with our ....",
+  "sig": "1e46939d5173",
+  "text": "We taste with our ....",
+  "voice": "sarah"
+ },
+ "we-taste-with-our-tongue": {
+  "mood": "instruction",
+  "said_as": "We taste with our tongue.",
+  "sig": "17f942ab425c",
+  "text": "We taste with our tongue.",
+  "voice": "sarah"
+ },
+ "we-touch-and-feel-things-with-our": {
+  "mood": "instruction",
+  "said_as": "We touch and feel things with our ....",
+  "sig": "2aefef42c5f3",
+  "text": "We touch and feel things with our ....",
+  "voice": "sarah"
+ },
+ "we-touch-and-feel-things-with-our-hands": {
+  "mood": "instruction",
+  "said_as": "We touch and feel things with our hands.",
+  "sig": "d4650fe1d5f9",
+  "text": "We touch and feel things with our hands.",
+  "voice": "sarah"
+ },
+ "well-done": {
+  "mood": "excited",
+  "said_as": "Well done!",
+  "sig": "d0ca7ea743e5",
+  "text": "Well done!",
+  "voice": "sarah"
+ },
+ "which-body-part": {
+  "mood": "instruction",
+  "said_as": "Which body part?",
+  "sig": "147b55084f4b",
+  "text": "Which body part?",
+  "voice": "sarah"
+ },
+ "which-letter-goes-in-the-gap": {
+  "mood": "instruction",
+  "said_as": "Which letter goes in the gap?",
+  "sig": "3d5d12c0ca05",
+  "text": "Which letter goes in the gap?",
+  "voice": "sarah"
+ },
+ "which-letter-is-missing": {
+  "mood": "instruction",
+  "said_as": "Which letter is missing?",
+  "sig": "47bd477c47f5",
+  "text": "Which letter is missing?",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to?",
+  "sig": "5f35b9561010",
+  "text": "Which sense do we use to",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-eat-a-banana": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to eat a banana?",
+  "sig": "08e9a66366e5",
+  "text": "Which sense do we use to eat a banana",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-eat-an-ice-cream": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to eat an ice cream?",
+  "sig": "cf37170e7d90",
+  "text": "Which sense do we use to eat an ice cream",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-hug-a-teddy": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to hug a teddy?",
+  "sig": "f293c50b66f8",
+  "text": "Which sense do we use to hug a teddy",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-listen-to-a-drum": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to listen to a drum?",
+  "sig": "c14bbb72953a",
+  "text": "Which sense do we use to listen to a drum",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-look-at-the-moon": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to look at the moon?",
+  "sig": "fd0783f60c61",
+  "text": "Which sense do we use to look at the moon",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-sniff-a-flower": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to sniff a flower?",
+  "sig": "8c55b5cd4d10",
+  "text": "Which sense do we use to sniff a flower",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-sniff-the-soap": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to sniff the soap?",
+  "sig": "4f034cb185e0",
+  "text": "Which sense do we use to sniff the soap",
+  "voice": "sarah"
+ },
+ "which-sense-do-we-use-to-stroke-a-pet": {
+  "mood": "instruction",
+  "said_as": "Which sense do we use to stroke a pet?",
+  "sig": "0cf94ea56e8a",
+  "text": "Which sense do we use to stroke a pet",
+  "voice": "sarah"
+ },
+ "which-word-starts-like": {
+  "mood": "instruction",
+  "said_as": "Which word starts like?",
+  "sig": "18798697118d",
+  "text": "Which word starts like",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-bag": {
+  "mood": "instruction",
+  "said_as": "Which word starts like bag?",
+  "sig": "1db7916cf140",
+  "text": "Which word starts like bag",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-ball": {
+  "mood": "instruction",
+  "said_as": "Which word starts like ball?",
+  "sig": "daa34000f64f",
+  "text": "Which word starts like ball",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-banana": {
+  "mood": "instruction",
+  "said_as": "Which word starts like banana?",
+  "sig": "b50a0d8f5410",
+  "text": "Which word starts like banana",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-bell": {
+  "mood": "instruction",
+  "said_as": "Which word starts like bell?",
+  "sig": "d26a5ce09da8",
+  "text": "Which word starts like bell",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-book": {
+  "mood": "instruction",
+  "said_as": "Which word starts like book?",
+  "sig": "67a6e9564b1d",
+  "text": "Which word starts like book",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-bus": {
+  "mood": "instruction",
+  "said_as": "Which word starts like bus?",
+  "sig": "7fa98ab20634",
+  "text": "Which word starts like bus",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-door": {
+  "mood": "instruction",
+  "said_as": "Which word starts like door?",
+  "sig": "40c9f8be4a53",
+  "text": "Which word starts like door",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-drum": {
+  "mood": "instruction",
+  "said_as": "Which word starts like drum?",
+  "sig": "baa649ce8fbf",
+  "text": "Which word starts like drum",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-duck": {
+  "mood": "instruction",
+  "said_as": "Which word starts like duck?",
+  "sig": "96db2c97d0c8",
+  "text": "Which word starts like duck",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-egg": {
+  "mood": "instruction",
+  "said_as": "Which word starts like egg?",
+  "sig": "1ab2fb99c71e",
+  "text": "Which word starts like egg",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-elephant": {
+  "mood": "instruction",
+  "said_as": "Which word starts like elephant?",
+  "sig": "488ab4feb3f9",
+  "text": "Which word starts like elephant",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-exit": {
+  "mood": "instruction",
+  "said_as": "Which word starts like exit?",
+  "sig": "9c53f07ba9c7",
+  "text": "Which word starts like exit",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-face": {
+  "mood": "instruction",
+  "said_as": "Which word starts like face?",
+  "sig": "6c4b479c0032",
+  "text": "Which word starts like face",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-fan": {
+  "mood": "instruction",
+  "said_as": "Which word starts like fan?",
+  "sig": "328703deb72a",
+  "text": "Which word starts like fan",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-fish": {
+  "mood": "instruction",
+  "said_as": "Which word starts like fish?",
+  "sig": "c9b4aa9d9da4",
+  "text": "Which word starts like fish",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-foot": {
+  "mood": "instruction",
+  "said_as": "Which word starts like foot?",
+  "sig": "1faf3e48e87f",
+  "text": "Which word starts like foot",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-hand": {
+  "mood": "instruction",
+  "said_as": "Which word starts like hand?",
+  "sig": "92e6f76b1ae0",
+  "text": "Which word starts like hand",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-hat": {
+  "mood": "instruction",
+  "said_as": "Which word starts like hat?",
+  "sig": "c021090a8f96",
+  "text": "Which word starts like hat",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-hen": {
+  "mood": "instruction",
+  "said_as": "Which word starts like hen?",
+  "sig": "2a90c7c9c7ab",
+  "text": "Which word starts like hen",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-house": {
+  "mood": "instruction",
+  "said_as": "Which word starts like house?",
+  "sig": "ee3685ca33fe",
+  "text": "Which word starts like house",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-leaf": {
+  "mood": "instruction",
+  "said_as": "Which word starts like leaf?",
+  "sig": "4d5889785004",
+  "text": "Which word starts like leaf",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-leg": {
+  "mood": "instruction",
+  "said_as": "Which word starts like leg?",
+  "sig": "f2aaf65360d6",
+  "text": "Which word starts like leg",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-lion": {
+  "mood": "instruction",
+  "said_as": "Which word starts like lion?",
+  "sig": "340b2a24211e",
+  "text": "Which word starts like lion",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-lollipop": {
+  "mood": "instruction",
+  "said_as": "Which word starts like lollipop?",
+  "sig": "b98ba408ef7e",
+  "text": "Which word starts like lollipop",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-mango": {
+  "mood": "instruction",
+  "said_as": "Which word starts like mango?",
+  "sig": "f0eac38d0ec0",
+  "text": "Which word starts like mango",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-milk": {
+  "mood": "instruction",
+  "said_as": "Which word starts like milk?",
+  "sig": "8b4ad3c4ad52",
+  "text": "Which word starts like milk",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-moon": {
+  "mood": "instruction",
+  "said_as": "Which word starts like moon?",
+  "sig": "ae3981c2eaab",
+  "text": "Which word starts like moon",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-mouth": {
+  "mood": "instruction",
+  "said_as": "Which word starts like mouth?",
+  "sig": "709cef29d6c6",
+  "text": "Which word starts like mouth",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-nest": {
+  "mood": "instruction",
+  "said_as": "Which word starts like nest?",
+  "sig": "aab82edb25bb",
+  "text": "Which word starts like nest",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-nine": {
+  "mood": "instruction",
+  "said_as": "Which word starts like nine?",
+  "sig": "8e7c8eeb952e",
+  "text": "Which word starts like nine",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-nose": {
+  "mood": "instruction",
+  "said_as": "Which word starts like nose?",
+  "sig": "829063601e3d",
+  "text": "Which word starts like nose",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-sign": {
+  "mood": "instruction",
+  "said_as": "Which word starts like sign?",
+  "sig": "cac544f71a69",
+  "text": "Which word starts like sign",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-soap": {
+  "mood": "instruction",
+  "said_as": "Which word starts like soap?",
+  "sig": "c8c23d37d959",
+  "text": "Which word starts like soap",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-sock": {
+  "mood": "instruction",
+  "said_as": "Which word starts like sock?",
+  "sig": "5fb10b9e363e",
+  "text": "Which word starts like sock",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-staff": {
+  "mood": "instruction",
+  "said_as": "Which word starts like staff?",
+  "sig": "95505e4308fa",
+  "text": "Which word starts like staff",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-stop": {
+  "mood": "instruction",
+  "said_as": "Which word starts like stop?",
+  "sig": "afdbdf231f7c",
+  "text": "Which word starts like stop",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-sun": {
+  "mood": "instruction",
+  "said_as": "Which word starts like sun?",
+  "sig": "2c1d49273fcd",
+  "text": "Which word starts like sun",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-tap": {
+  "mood": "instruction",
+  "said_as": "Which word starts like tap?",
+  "sig": "0536300ab4cf",
+  "text": "Which word starts like tap",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-teeth": {
+  "mood": "instruction",
+  "said_as": "Which word starts like teeth?",
+  "sig": "7a009dfd95fe",
+  "text": "Which word starts like teeth",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-toys": {
+  "mood": "instruction",
+  "said_as": "Which word starts like toys?",
+  "sig": "5cb378e982e6",
+  "text": "Which word starts like toys",
+  "voice": "sarah"
+ },
+ "which-word-starts-like-tree": {
+  "mood": "instruction",
+  "said_as": "Which word starts like tree?",
+  "sig": "aa2cb7111fd6",
+  "text": "Which word starts like tree",
+  "voice": "sarah"
+ },
+ "wow": {
+  "mood": "excited",
+  "said_as": "Wow!",
+  "sig": "45e745e9ef8e",
+  "text": "Wow!",
+  "voice": "sarah"
+ },
+ "yay": {
+  "mood": "excited",
+  "said_as": "Yaaay!",
+  "sig": "8ad10c13f865",
+  "text": "Yay!",
+  "voice": "sarah"
+ },
+ "yay-three-stars-you-are-a-star": {
+  "mood": "excited",
+  "said_as": "Yay! Three stars! You are a star!",
+  "sig": "5e8da9d036b6",
+  "text": "Yay! Three stars! You are a star!",
+  "voice": "sarah"
+ },
+ "you-finished-level-1": {
+  "mood": "instruction",
+  "said_as": "You finished level 1!",
+  "sig": "be95bd2033b9",
+  "text": "You finished level 1!",
+  "voice": "sarah"
+ },
+ "you-finished-level-2": {
+  "mood": "instruction",
+  "said_as": "You finished level 2!",
+  "sig": "23afe168aaf4",
+  "text": "You finished level 2!",
+  "voice": "sarah"
+ },
+ "you-finished-level-3": {
+  "mood": "instruction",
+  "said_as": "You finished level 3!",
+  "sig": "03a5da2f5185",
+  "text": "You finished level 3!",
+  "voice": "sarah"
+ },
+ "you-finished-level-4": {
+  "mood": "instruction",
+  "said_as": "You finished level 4!",
+  "sig": "19b4b8d72d28",
+  "text": "You finished level 4!",
+  "voice": "sarah"
+ },
+ "you-finished-level-5": {
+  "mood": "instruction",
+  "said_as": "You finished level 5!",
+  "sig": "ce97f09af0e6",
+  "text": "You finished level 5!",
+  "voice": "sarah"
+ },
+ "you-finished-level-6": {
+  "mood": "instruction",
+  "said_as": "You finished level 6!",
+  "sig": "96718ae85c7b",
+  "text": "You finished level 6!",
+  "voice": "sarah"
+ },
+ "you-got-it": {
+  "mood": "excited",
+  "said_as": "Yes! You got it!",
+  "sig": "44617d2e7fe6",
+  "text": "You got it!",
+  "voice": "sarah"
+ }
+}

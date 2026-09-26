@@ -19,36 +19,54 @@ vm.createContext(ctx);
 ['g1-shell.js', 'g1-art.js', 'engines/' + engine + '.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
 var bootCfg = null;
 vm.runInContext('Shell.boot = function (c) { this.__cfg = c; };', ctx);
-var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill' }[engine];
+var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match' }[engine];
 var captured;
 vm.runInContext('var __init = ' + ENGINE + '.init; ' + ENGINE + '.init = function (c) { this.__content = c; __init(c); };', ctx);
 vm.runInContext(src, ctx);
 bootCfg = vm.runInContext('Shell.__cfg', ctx);
 captured = vm.runInContext(ENGINE + '.__content', ctx);
 var lines = {};
+var pairs = {};
 function add(x) {
   if (x === undefined || x === null || x === '') return;
-  if (Object.prototype.toString.call(x) === '[object Array]') { x.forEach(add); return; }
+  if (Object.prototype.toString.call(x) === '[object Array]') {
+    x.forEach(add);
+    // a part without end punctuation runs on into the next one ("Which word starts like" + "sun"):
+    // record the pair as one natural sentence as well
+    for (var i = 0; i + 1 < x.length; i++) {
+      var a = String(x[i]).trim(), b = String(x[i + 1]).trim();
+      if (a && b && !/[.!?]$/.test(a) && a.split(' ').length >= 2 && b.split(' ').length <= 4 && !/[.!?]$/.test(b)) pairs[a + ' ' + b] = 1;
+    }
+    return;
+  }
   x = String(x).replace(/<[^>]+>/g, '').trim();
   if (x) lines[x] = 1;
 }
-add(vm.runInContext('Shell.LINES', ctx));
-add(vm.runInContext(ENGINE + '.LINES', ctx));
-add([bootCfg.title, bootCfg.intro]);
+// plain lists of separate lines (not sentences): add one by one
+function addEach(list) { (list || []).forEach(function (x) { add(x); }); }
+addEach(vm.runInContext('Shell.LINES', ctx));
+addEach(vm.runInContext(ENGINE + '.LINES', ctx));
+addEach([bootCfg.title, bootCfg.intro]);
 captured.levels.forEach(function (L) {
   for (var r = 0; r < (L.make ? runs : 1); r++) {
     (L.make ? L.make() : L.rounds).forEach(function (R) {
       add(R.bannerSay);
       R.items.forEach(function (it) {
         add(it.say); add(it.hint2); add(it.full);
+        var engineObj = vm.runInContext(ENGINE, ctx);
+        if (engineObj.instructionFor) add(engineObj.instructionFor(it));
+        if (engineObj.linesFor) engineObj.linesFor(it).forEach(add);
         if (it.target) add(it.target.text);
         (it.options || []).forEach(function (o) { add(o.say || o.text); });
       });
     });
   }
 });
+Object.keys(pairs).forEach(function (r) { lines[r] = 1; });
 var keyOf = vm.runInContext('Shell.clipKey', ctx);
-var rows = Object.keys(lines).sort().map(function (t) { return [keyOf(t), t]; });
+var seenKey = {};
+var rows = Object.keys(lines).sort().map(function (t) { return [keyOf(t), t]; })
+  .filter(function (r) { if (seenKey[r[0]]) return false; seenKey[r[0]] = 1; return true; });
 var outDir = path.join(path.dirname(path.dirname(gamePath)), 'voice');
 fs.mkdirSync(path.join(outDir, 'clips'), { recursive: true });
 var csv = 'key,text\n' + rows.map(function (r) { return r[0] + ',"' + r[1].replace(/"/g, '""') + '"'; }).join('\n') + '\n';

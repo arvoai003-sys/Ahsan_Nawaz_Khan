@@ -18,13 +18,13 @@ other 17 are:
 | A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | Needs D1 |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-03** |
-| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-01** |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-04** |
+| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-02** |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
 | A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | Ready |
-| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | Ready (+ D6 round) |
+| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-01** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
 | A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Needs D7 |
@@ -166,3 +166,5 @@ and is delivered as a new version in `builds/`.
 | 2026-09-25 | A6 Same First Sound | `builds/ENG01CH02SAMESOUND_v-03.html` | New voice and sound (below); friendlier spoken lines. Content unchanged from v-02. |
 | 2026-09-25 | A7 Finish the Sign Word | `builds/ENG01CH02FINISHSIGN_v-01.html` | Letter-fill (tap or drag). Levels: 1 Warm Up (first letter, 2 choices), 2 Sign Words (book 2D B, p.31, verbatim with e h o), 3 First Letter (3 choices), 4 Middle Letter, 5 Body Words (book 2I B2, p.38: ch_n e_r n_ck ha_r; letter choices ours), 6 Super Signs (Stop, Slow, Exit, Books, Toys, Danger from the chapter + Push, Open, Closed). Every wrong letter checked not to make a real word (650 items). **Beyond-book words/signs need Champ's approval.** |
 | 2026-09-25 | Shared voice and sound | `apsis/shared/g1-shell.js` | Device voice now prefers English (Pakistan), then English (India), female and natural voices, softer pitch and pace. Recorded clips replace it line by line: recording scripts in `voice/*_voice_script.csv` (76 and 74 lines). Background tune with Music on/off; xylophone, soft boing and fanfare effects. |
+| 2026-09-26 | House voice | `voice/clips/` | Kokoro "Sarah" (American, natural) chosen from the audition. All lines pre-recorded with moods (warm/slow instructions, gentle retries, excited praise). A6 v-04 (117 lines), A7 v-02 (85), A14 v-01 (68); no device-voice fallback in QA. Files are now 0.85–1.4 MB each because the voice is inside. Note: American accent, not Pakistani (no Pakistani neural voice available offline). |
+| 2026-09-26 | A14 Sense and Body Part | `builds/ENG01CH02SENSEMATCH_v-01.html` | Match engine (drag or tap-tap). Levels: 1 Warm Up (2 pairs), 2 Our Senses (book p.34 sentences with a gap, verbatim), 3 Which Sense? (book p.38 2I B4 activities + 2 new), 4 Match Three, 5 Mix It Up (3 activities), 6 Super Senses (all 5 pairs + 3 activities). Each match says the book sentence. "play in the playground" withheld. **New activities need Champ's approval.** |
