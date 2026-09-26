@@ -20,6 +20,12 @@
 .ra-text .w.tap { animation: wordpop .4s; }
 .ra-text .w.found { background: var(--green); color: #fff; }
 @keyframes wordpop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+.ra-words { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.ra-heading {
+  font-family: var(--font-title); font-weight: 800; font-size: 34px; color: #fff; background: var(--pink);
+  border: 4px solid var(--ink); border-radius: 20px; padding: 0 22px; box-shadow: 0 5px 0 var(--ink); cursor: pointer;
+  -webkit-text-stroke: 1px var(--ink); margin-bottom: -4px;
+}
 .ra-gloss {
   font-family: var(--font-read); font-size: 22px; background: #F3EBFF; border: 3px dashed var(--purple); border-radius: 16px;
   padding: 8px 14px; cursor: pointer; max-width: 560px; text-align: center;
@@ -31,22 +37,34 @@
 .ra-nav .icon-btn.pulse { animation: bob 1s ease-in-out infinite; box-shadow: 0 5px 0 var(--ink), 0 0 0 8px #FFF1B8; }
 
 @media (max-width: 520px) {
+  .ra-heading { font-size: 26px; }
   .ra-book { padding: 12px; gap: 10px; }
   .ra-pic { min-height: 110px; gap: 4px; }
   .ra-art { width: 96px; height: 96px; }
   .ra-text { font-size: 32px; }
   .ra-text.cover { font-size: 54px; }
-  .ra-gloss { font-size: 18px; }
+  .ra-heading {
+  font-family: var(--font-title); font-weight: 800; font-size: 34px; color: #fff; background: var(--pink);
+  border: 4px solid var(--ink); border-radius: 20px; padding: 0 22px; box-shadow: 0 5px 0 var(--ink); cursor: pointer;
+  -webkit-text-stroke: 1px var(--ink); margin-bottom: -4px;
+}
+.ra-gloss { font-size: 18px; }
   .ra-nav .icon-btn { width: 62px; height: 62px; }
 }
 @media (max-height: 520px) {
   .stage { flex-direction: row; flex-wrap: wrap; }
+  .ra-heading { font-size: 22px; padding: 0 12px; }
   .ra-book { flex-direction: row; max-width: 640px; padding: 10px 14px; gap: 12px; }
   .ra-pic { width: 42%; min-height: 0; flex: 0 0 auto; }
   .ra-art { width: 78px; height: 78px; }
   .ra-text { font-size: 28px; }
   .ra-text.cover { font-size: 44px; }
-  .ra-gloss { font-size: 16px; }
+  .ra-heading {
+  font-family: var(--font-title); font-weight: 800; font-size: 34px; color: #fff; background: var(--pink);
+  border: 4px solid var(--ink); border-radius: 20px; padding: 0 22px; box-shadow: 0 5px 0 var(--ink); cursor: pointer;
+  -webkit-text-stroke: 1px var(--ink); margin-bottom: -4px;
+}
+.ra-gloss { font-size: 16px; }
   .ra-nav { flex-direction: column; gap: 12px; }
   .ra-nav .icon-btn { width: 56px; height: 56px; }
 }

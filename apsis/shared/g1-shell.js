@@ -500,6 +500,17 @@ var Shell = (function () {
         for (x = 6; x < 396; x += 13) { h = 22 + (i * 5) % 10; out += '<rect x="' + x + '" y="' + (94 - h) + '" width="10" height="' + h + '" fill="' + cols[(i + 3) % 7] + '"/>'; i++; }
         return out;
       })() + "</g></svg>",
+    /* balloons: a bright sky with balloons floating up */
+    balloons: clouds() + (function () {
+      var cols = ["#FF4F6D", "#FFD23F", "#2EA7FF", "#23C16B", "#9B5DE5", "#FF9F1C"], out = "", i;
+      for (i = 0; i < 6; i++) {
+        out += '<svg class="balloon bl' + i + '" viewBox="0 0 40 70"><path d="M20 44q-4 12 2 24" fill="none" stroke="#5B5680" stroke-width="1.5"/>' +
+          '<ellipse cx="20" cy="22" rx="16" ry="20" fill="' + cols[i] + '" stroke="#2E2A4F" stroke-width="2"/><path d="M17 42h6l-3 4z" fill="' + cols[i] + '"/>' +
+          '<ellipse cx="14" cy="14" rx="4" ry="6" fill="#fff" opacity=".5"/></svg>';
+      }
+      return out;
+    })() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 56C90 40 170 44 250 56S360 46 400 50V100H0z" fill="#8EE06B"/><path d="M0 74C80 62 170 66 260 76S360 66 400 68V100H0z" fill="#5CCB52"/></svg>',
     /* classroom: sunny wall, a green chalkboard, a wooden floor */
     classroom:
       '<svg class="board" viewBox="0 0 300 120"><rect x="4" y="4" width="292" height="112" rx="8" fill="#2F6B4F" stroke="#B97A4A" stroke-width="8"/>' +

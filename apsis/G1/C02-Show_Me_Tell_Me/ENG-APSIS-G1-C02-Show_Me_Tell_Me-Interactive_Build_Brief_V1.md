@@ -23,7 +23,7 @@ other 17 are:
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
-| A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | Ready |
+| A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | **Built v-01** |
 | A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-03** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
@@ -176,3 +176,4 @@ and is delivered as a new version in `builds/`.
 | 2026-09-26 | ARVO characters removed (Champ) | all five games | Asma and Fluffy replaced by an unnamed, happy, lively, fair-skinned child (buddy and body-part model). No names are spoken; Name the Body Part asks "What is the arrow pointing to?" and confirms with the part ("Head!"); its Level 3 is now "Follow the Arrow". Reissued: A3 v-02, A6 v-06, A7 v-04, A14 v-03, A19 v-03. |
 | 2026-09-26 | A2 Read-along: Signs | `games/ENG-APSIS-G1-C02-Read_along_Signs.html` (v-01) | New read-along engine. Book p.28 2B text verbatim (4 sentences, book bold words) + the page's glossary entry for "signs"; cover page "Signs". Modes: Read to Me (Sarah reads, words light up), Read by Myself (tap any word to hear it), Word Hunt (find go / do / find / not). No score. Library theme. 60 lines in Sarah's voice. |
 | 2026-09-26 | D2 closed (Champ) + A4 Label It | `games/ENG-APSIS-G1-C02-Label_It.html` (v-01) | Book labels BOOKS, TOYS, ENTRANCE (p.28) and 2C B "Which sign tells you where you can read a book?" (p.29) in Level 2; labels beyond the book allowed: BAGS, SHOES, PENCILS, BIN, CANTEEN, PLAYGROUND, WASHROOM, WATER, OFFICE. Drag or tap-tap labels onto word-free pictures. Levels: Warm Up, Classroom Signs (Book), Our Classroom, Our School, Which Label?, Super Labels. Classroom theme. 55 lines in Sarah's voice. |
+| 2026-09-26 | A13 Read-along: Our Senses | `games/ENG-APSIS-G1-C02-Read_along_Our_Senses.html` (v-01) | Book 2F text verbatim: p.33 title and labels (see hear smell taste touch), p.34 "We have five senses." and the five boxes with their headings (Sight, Hearing, Smell, Taste, Touch). Read to Me / Read by Myself / Word Hunt. Balloons theme. 64 lines in Sarah's voice. |

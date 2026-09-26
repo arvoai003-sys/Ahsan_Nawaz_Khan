@@ -1,4 +1,11 @@
 {
+ "and": {
+  "mood": "word",
+  "said_as": "and.",
+  "sig": "15c183e98c98",
+  "text": "and",
+  "voice": "sarah"
+ },
  "arm": {
   "mood": "instruction",
   "said_as": "Arm!",
@@ -202,11 +209,32 @@
   "text": "Can you find the word do",
   "voice": "sarah"
  },
+ "can-you-find-the-word-ears": {
+  "mood": "instruction",
+  "said_as": "Can you find the word ears?",
+  "sig": "8173342c13d0",
+  "text": "Can you find the word ears",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-eyes": {
+  "mood": "instruction",
+  "said_as": "Can you find the word eyes?",
+  "sig": "c1661ef66a2b",
+  "text": "Can you find the word eyes",
+  "voice": "sarah"
+ },
  "can-you-find-the-word-find": {
   "mood": "instruction",
   "said_as": "Can you find the word find?",
   "sig": "5d81488c1e24",
   "text": "Can you find the word find",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-five": {
+  "mood": "instruction",
+  "said_as": "Can you find the word five?",
+  "sig": "ebc0681ef996",
+  "text": "Can you find the word five",
   "voice": "sarah"
  },
  "can-you-find-the-word-go": {
@@ -216,11 +244,39 @@
   "text": "Can you find the word go",
   "voice": "sarah"
  },
+ "can-you-find-the-word-hands": {
+  "mood": "instruction",
+  "said_as": "Can you find the word hands?",
+  "sig": "359e38268db4",
+  "text": "Can you find the word hands",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-nose": {
+  "mood": "instruction",
+  "said_as": "Can you find the word nose?",
+  "sig": "eeaa3ea2fba3",
+  "text": "Can you find the word nose",
+  "voice": "sarah"
+ },
  "can-you-find-the-word-not": {
   "mood": "instruction",
   "said_as": "Can you find the word not?",
   "sig": "4503ea22aa4c",
   "text": "Can you find the word not",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-tongue": {
+  "mood": "instruction",
+  "said_as": "Can you find the word tongue?",
+  "sig": "096817a8ac8e",
+  "text": "Can you find the word tongue",
+  "voice": "sarah"
+ },
+ "can-you-find-the-word-touch": {
+  "mood": "instruction",
+  "said_as": "Can you find the word touch?",
+  "sig": "431893532bd9",
+  "text": "Can you find the word touch",
   "voice": "sarah"
  },
  "can-you-find-three-words-that-start-the-same": {
@@ -298,6 +354,13 @@
   "said_as": "Closed.",
   "sig": "5d3337b5600d",
   "text": "Closed",
+  "voice": "sarah"
+ },
+ "colour": {
+  "mood": "word",
+  "said_as": "colour.",
+  "sig": "31797a6f0728",
+  "text": "colour",
   "voice": "sarah"
  },
  "danger": {
@@ -448,10 +511,10 @@
   "voice": "sarah"
  },
  "eyes": {
-  "mood": "instruction",
-  "said_as": "Eyes!",
-  "sig": "ff784361950f",
-  "text": "Eyes!",
+  "mood": "word",
+  "said_as": "eyes.",
+  "sig": "971b3293fd72",
+  "text": "eyes",
   "voice": "sarah"
  },
  "eyes-is-a-naming-word": {
@@ -480,6 +543,13 @@
   "said_as": "fan.",
   "sig": "c57672cfeef2",
   "text": "fan",
+  "voice": "sarah"
+ },
+ "feel": {
+  "mood": "word",
+  "said_as": "feel.",
+  "sig": "67e476473797",
+  "text": "feel",
   "voice": "sarah"
  },
  "find": {
@@ -536,6 +606,13 @@
   "said_as": "fish.",
   "sig": "6e83f2164cde",
   "text": "fish",
+  "voice": "sarah"
+ },
+ "five": {
+  "mood": "word",
+  "said_as": "five.",
+  "sig": "7d97b4416a8b",
+  "text": "five",
   "voice": "sarah"
  },
  "foot": {
@@ -615,6 +692,13 @@
   "text": "hat",
   "voice": "sarah"
  },
+ "have": {
+  "mood": "word",
+  "said_as": "have.",
+  "sig": "227519bf999a",
+  "text": "have",
+  "voice": "sarah"
+ },
  "head": {
   "mood": "instruction",
   "said_as": "Head!",
@@ -634,6 +718,13 @@
   "said_as": "hear.",
   "sig": "4c666bb0e50d",
   "text": "hear",
+  "voice": "sarah"
+ },
+ "hearing": {
+  "mood": "word",
+  "said_as": "Hearing.",
+  "sig": "41a9fb6b4d6e",
+  "text": "Hearing",
   "voice": "sarah"
  },
  "help": {
@@ -795,6 +886,13 @@
   "said_as": "Let's name the parts of the body!",
   "sig": "cb9f7d02e45c",
   "text": "Let's name the parts of the body!",
+  "voice": "sarah"
+ },
+ "let-s-read-about-our-senses": {
+  "mood": "instruction",
+  "said_as": "Let's read about our senses!",
+  "sig": "78e32f984c64",
+  "text": "Let's read about our senses!",
   "voice": "sarah"
  },
  "let-s-read-about-signs": {
@@ -1007,6 +1105,13 @@
   "text": "Level two! Signs from your book!",
   "voice": "sarah"
  },
+ "light": {
+  "mood": "word",
+  "said_as": "light.",
+  "sig": "1ec5360b0fbe",
+  "text": "light",
+  "voice": "sarah"
+ },
  "lion": {
   "mood": "word",
   "said_as": "lion.",
@@ -1176,10 +1281,10 @@
   "voice": "sarah"
  },
  "nose": {
-  "mood": "instruction",
-  "said_as": "Nose!",
-  "sig": "5fa961ff8c00",
-  "text": "Nose!",
+  "mood": "word",
+  "said_as": "nose.",
+  "sig": "f296d0a03b91",
+  "text": "nose",
   "voice": "sarah"
  },
  "nose-is-a-naming-word": {
@@ -1245,6 +1350,13 @@
   "text": "Or does it tell us true things?",
   "voice": "sarah"
  },
+ "our": {
+  "mood": "word",
+  "said_as": "our.",
+  "sig": "a32fb1f94ae0",
+  "text": "our",
+  "voice": "sarah"
+ },
  "our-oceans": {
   "mood": "word",
   "said_as": "Our Oceans.",
@@ -1257,6 +1369,13 @@
   "said_as": "Our Oceans is about real life!",
   "sig": "f49cb23a688a",
   "text": "Our Oceans is about real life!",
+  "voice": "sarah"
+ },
+ "our-senses": {
+  "mood": "word",
+  "said_as": "Our senses.",
+  "sig": "f1322c871086",
+  "text": "Our senses",
   "voice": "sarah"
  },
  "our-teeth-are-in-our-mouth": {
@@ -1322,6 +1441,13 @@
   "text": "Put each label in the right place.",
   "voice": "sarah"
  },
+ "read-along-our-senses": {
+  "mood": "instruction",
+  "said_as": "Read-along: Our Senses",
+  "sig": "fdb3eda821c3",
+  "text": "Read-along: Our Senses",
+  "voice": "sarah"
+ },
  "read-along-signs": {
   "mood": "word",
   "said_as": "Read-along: Signs.",
@@ -1371,11 +1497,25 @@
   "text": "see",
   "voice": "sarah"
  },
+ "see-hear-smell-taste-touch": {
+  "mood": "instruction",
+  "said_as": "see hear smell taste touch",
+  "sig": "37a44ac29a07",
+  "text": "see hear smell taste touch",
+  "voice": "sarah"
+ },
  "sense-and-body-part": {
   "mood": "instruction",
   "said_as": "Sense and Body Part",
   "sig": "2c1cd2d792c4",
   "text": "Sense and Body Part",
+  "voice": "sarah"
+ },
+ "senses": {
+  "mood": "word",
+  "said_as": "senses.",
+  "sig": "380b0fc0184e",
+  "text": "senses",
   "voice": "sarah"
  },
  "shoes": {
@@ -1390,6 +1530,13 @@
   "said_as": "show.",
   "sig": "86495b6ef28c",
   "text": "show",
+  "voice": "sarah"
+ },
+ "sight": {
+  "mood": "word",
+  "said_as": "Sight.",
+  "sig": "ed882abc8db9",
+  "text": "Sight",
   "voice": "sarah"
  },
  "sign": {
@@ -1464,9 +1611,9 @@
  },
  "smell": {
   "mood": "word",
-  "said_as": "smell.",
-  "sig": "f14440ba6918",
-  "text": "smell",
+  "said_as": "Smell.",
+  "sig": "62907983ec26",
+  "text": "Smell",
   "voice": "sarah"
  },
  "sniff-a-flower": {
@@ -1632,9 +1779,9 @@
  },
  "taste": {
   "mood": "word",
-  "said_as": "taste.",
-  "sig": "93472029b971",
-  "text": "taste",
+  "said_as": "Taste.",
+  "sig": "9b6a80ceb4e4",
+  "text": "Taste",
   "voice": "sarah"
  },
  "teeth": {
@@ -1982,9 +2129,9 @@
  },
  "touch": {
   "mood": "word",
-  "said_as": "touch.",
-  "sig": "146defa28d91",
-  "text": "touch",
+  "said_as": "Touch.",
+  "sig": "4b732d7142d5",
+  "text": "Touch",
   "voice": "sarah"
  },
  "toys": {
@@ -2043,6 +2190,13 @@
   "text": "we",
   "voice": "sarah"
  },
+ "we-have-five-senses": {
+  "mood": "instruction",
+  "said_as": "We have five senses.",
+  "sig": "f437053e8171",
+  "text": "We have five senses.",
+  "voice": "sarah"
+ },
  "we-hear-with-our": {
   "mood": "instruction",
   "said_as": "We hear with our ....",
@@ -2076,6 +2230,13 @@
   "said_as": "We see things with our eyes.",
   "sig": "35d20441d629",
   "text": "We see things with our eyes.",
+  "voice": "sarah"
+ },
+ "we-see-things-with-our-eyes-we-see-light-and-colour": {
+  "mood": "instruction",
+  "said_as": "We see things with our eyes. We see light and colour.",
+  "sig": "a662fd6ae406",
+  "text": "We see things with our eyes. We see light and colour.",
   "voice": "sarah"
  },
  "we-smell-with-our": {
@@ -2727,6 +2888,13 @@
   "said_as": "Which word starts like tree?",
   "sig": "aa2cb7111fd6",
   "text": "Which word starts like tree",
+  "voice": "sarah"
+ },
+ "with": {
+  "mood": "word",
+  "said_as": "with.",
+  "sig": "b665a7c51da8",
+  "text": "with",
   "voice": "sarah"
  },
  "word-hunt-find-the-word-on-each-page": {

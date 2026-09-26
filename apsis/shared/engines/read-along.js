@@ -62,7 +62,7 @@ var ReadAlong = (function () {
       light(spans, info.player, info.est || spans.length * 0.5);
     };
     Shell.on("speakstart", off);
-    Shell.say(p.text, Shell.guard(function () {
+    Shell.say(p.heading ? [p.heading, p.text] : p.text, Shell.guard(function () {
       once = false;
       Shell.off("speakstart", off);
       stopLight();
@@ -85,6 +85,12 @@ var ReadAlong = (function () {
     pic.onclick = function () { if (!busy()) { readPage(); } };
     book.appendChild(pic);
 
+    var col = Shell.el("div", "ra-words");
+    if (p.heading) {
+      var hd = Shell.el("div", "ra-heading", p.heading);
+      hd.onclick = function () { Shell.say(p.heading); };
+      col.appendChild(hd);
+    }
     var line = Shell.el("div", "ra-text" + (p.cover ? " cover" : ""));
     for (i = 0; i < ws.length; i++) {
       (function (w) {
@@ -97,7 +103,8 @@ var ReadAlong = (function () {
         line.appendChild(document.createTextNode(" "));
       })(ws[i]);
     }
-    book.appendChild(line);
+    col.appendChild(line);
+    book.appendChild(col);
     if (p.glossary) {
       var g = Shell.el("div", "ra-gloss", '<b>' + C.glossary.word + "</b> " + C.glossary.meaning);
       g.onclick = function () { Shell.say([C.glossary.word, C.glossary.meaning]); };
@@ -182,11 +189,12 @@ var ReadAlong = (function () {
     var out = [], i, ws, j;
     for (i = 0; i < C.pages.length; i++) {
       out.push(C.pages[i].text);
+      if (C.pages[i].heading) { out.push(C.pages[i].heading); }
       ws = words(C.pages[i].text);
       for (j = 0; j < ws.length; j++) { out.push(bare(ws[j])); }
       if (C.pages[i].hunt) { out.push(["Can you find the word", C.pages[i].hunt]); }
     }
-    out.push(C.glossary.word, C.glossary.meaning);
+    if (C.glossary) { out.push(C.glossary.word, C.glossary.meaning); }
     for (i = 0; i < C.levels.length; i++) { out.push(C.levels[i].bannerSay); }
     return out;
   };
