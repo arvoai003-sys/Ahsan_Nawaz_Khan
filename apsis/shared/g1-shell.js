@@ -500,6 +500,13 @@ var Shell = (function () {
         for (x = 6; x < 396; x += 13) { h = 22 + (i * 5) % 10; out += '<rect x="' + x + '" y="' + (94 - h) + '" width="10" height="' + h + '" fill="' + cols[(i + 3) % 7] + '"/>'; i++; }
         return out;
       })() + "</g></svg>",
+    /* classroom: sunny wall, a green chalkboard, a wooden floor */
+    classroom:
+      '<svg class="board" viewBox="0 0 300 120"><rect x="4" y="4" width="292" height="112" rx="8" fill="#2F6B4F" stroke="#B97A4A" stroke-width="8"/>' +
+      '<text x="30" y="50" font-family="Comic Sans MS, Arial" font-size="26" fill="#fff" opacity=".85">A b c</text><text x="170" y="84" font-family="Comic Sans MS, Arial" font-size="26" fill="#fff" opacity=".85">1 2 3</text>' +
+      '<path d="M40 90q20-14 40 0" stroke="#FFD23F" stroke-width="3" fill="none" opacity=".8"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><rect x="0" y="40" width="400" height="60" fill="#D99B5F"/>' +
+      '<path d="M0 40h400M0 60h400M0 80h400" stroke="#B97A4A" stroke-width="2"/><rect x="0" y="34" width="400" height="8" fill="#FF9F1C"/></svg>',
     /* school street: aqua sky, school with a flag, zebra crossing */
     school: clouds() +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +

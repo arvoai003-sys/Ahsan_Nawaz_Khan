@@ -98,3 +98,20 @@
   .mt.five .target { width: 160px; min-height: 200px; }
   .mt.five .target .art { width: 92px; height: 92px; }
 }
+
+/* label chips: look like the signs on a classroom wall */
+.chip.label { background: #fff; border-radius: 8px; font-family: Arial, sans-serif; font-weight: 900; letter-spacing: .04em; padding: 6px 18px; }
+.chip.label::before { content: ""; position: absolute; }
+.chip.label.placed { font-size: 20px; }
+@media (max-width: 520px) { .chip.label { font-size: 20px; padding: 4px 10px; } .chip.label.placed { font-size: 13px; } }
+@media (max-height: 520px) { .chip.label { font-size: 19px; } .chip.label.placed { font-size: 13px; } }
+
+/* four targets on a short screen (e.g. a phone held sideways) */
+@media (max-height: 520px) {
+  .mt.n4 { gap: 14px; }
+  .mt.n4 .targets { gap: 8px; }
+  .mt.n4 .target { width: 104px; }
+  .mt.n4 .target .art { width: 48px; height: 48px; }
+  .mt.n4 .target .drop { min-width: 92px; }
+  .mt.n4 .chip.label { font-size: 16px; padding: 4px 10px; min-width: 0; }
+}

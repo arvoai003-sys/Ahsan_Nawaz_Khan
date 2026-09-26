@@ -66,7 +66,7 @@ function plan(state) {
     page.on('console', m => { if (m.type() === 'error' && !/ERR_FAILED/.test(m.text())) errors.push(m.text()); });
     await page.addInitScript(STUB);
     await page.route(/fonts\.(googleapis|gstatic)\.com/, r => r.abort());
-    await page.goto('file://' + path.resolve(file));
+    await page.goto('file://' + path.resolve(file) + '?qa=1');
     await page.waitForTimeout(300);
     await page.screenshot({ path: `${out}/${vp.name}-home.png` });
     const homeOv = await page.evaluate(() => [document.querySelector('.home-wrap').scrollHeight, document.querySelector('.home-wrap').clientHeight, document.documentElement.scrollWidth]);
@@ -84,10 +84,11 @@ function plan(state) {
         if (await page.$('#end.on')) break;
         await page.waitForTimeout(700);
         const state = await page.evaluate(() => ({
-          targets: [...document.querySelectorAll('.target')].map(t => { const c = t.querySelector('.cap').cloneNode(true); const d = c.querySelector('.drop'); if (d) d.textContent = '___'; return c.textContent.replace(/\s+/g, ' ').trim(); }),
+          targets: [...document.querySelectorAll('.target')].map(t => { if (!t.querySelector('.cap')) return t.getAttribute('aria-label') || ''; const c = t.querySelector('.cap').cloneNode(true); const d = c.querySelector('.drop'); if (d) d.textContent = '___'; return c.textContent.replace(/\s+/g, ' ').trim(); }),
           chips: [...document.querySelectorAll('.chips .chip')].map(c => c.textContent.trim())
         }));
-        const moves = plan(state);
+        const hook = await page.evaluate(() => window.__qa && window.__qa.moves);
+        const moves = hook || plan(state);
         if (moves.some(m => !m[0])) { report.push(`${vp.name} L${L + 1}: no key for ${JSON.stringify(state)}`); break; }
         const lay = await page.evaluate(() => {
           const r = [], W = innerWidth, H = innerHeight;

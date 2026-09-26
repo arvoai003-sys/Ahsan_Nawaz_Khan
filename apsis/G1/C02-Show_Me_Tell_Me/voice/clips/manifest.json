@@ -20,6 +20,13 @@
   "text": "bag",
   "voice": "sarah"
  },
+ "bags": {
+  "mood": "word",
+  "said_as": "Bags.",
+  "sig": "8673885d2086",
+  "text": "Bags",
+  "voice": "sarah"
+ },
  "ball": {
   "mood": "word",
   "said_as": "ball.",
@@ -55,6 +62,13 @@
   "text": "big",
   "voice": "sarah"
  },
+ "bin": {
+  "mood": "word",
+  "said_as": "Bin.",
+  "sig": "1816ced56433",
+  "text": "Bin",
+  "voice": "sarah"
+ },
  "book": {
   "mood": "word",
   "said_as": "book.",
@@ -67,6 +81,13 @@
   "said_as": "Books.",
   "sig": "7fc3a9f0d390",
   "text": "Books",
+  "voice": "sarah"
+ },
+ "books-you-can-read-a-book-here": {
+  "mood": "instruction",
+  "said_as": "Books! You can read a book here.",
+  "sig": "7271d8d459b0",
+  "text": "Books! You can read a book here.",
   "voice": "sarah"
  },
  "bugs": {
@@ -221,6 +242,20 @@
   "said_as": "Can you match each sense to what we do?",
   "sig": "6c4e9fc7052d",
   "text": "Can you match each sense to what we do?",
+  "voice": "sarah"
+ },
+ "can-you-put-each-label-in-the-right-place": {
+  "mood": "instruction",
+  "said_as": "Can you put each label in the right place?",
+  "sig": "3ca8e818d2ca",
+  "text": "Can you put each label in the right place?",
+  "voice": "sarah"
+ },
+ "canteen": {
+  "mood": "word",
+  "said_as": "Canteen.",
+  "sig": "f7f7a48acb31",
+  "text": "Canteen",
   "voice": "sarah"
  },
  "chest": {
@@ -720,6 +755,13 @@
   "text": "Is this sign telling you to do something, or not to do something?",
   "voice": "sarah"
  },
+ "label-it": {
+  "mood": "word",
+  "said_as": "Label It.",
+  "sig": "5ccc41b0f789",
+  "text": "Label It",
+  "voice": "sarah"
+ },
  "leaf": {
   "mood": "word",
   "said_as": "leaf.",
@@ -804,6 +846,13 @@
   "text": "Level five! Where does it go?",
   "voice": "sarah"
  },
+ "level-five-which-label-goes-here": {
+  "mood": "cheer",
+  "said_as": "Level five! Which label goes here?",
+  "sig": "9ba25a5bdd66",
+  "text": "Level five! Which label goes here?",
+  "voice": "sarah"
+ },
  "level-four-do-or-don-t": {
   "mood": "cheer",
   "said_as": "Level four! Do, or don't?",
@@ -816,6 +865,13 @@
   "said_as": "Level four! Find two!",
   "sig": "05f262626e00",
   "text": "Level four! Find two!",
+  "voice": "sarah"
+ },
+ "level-four-label-our-school": {
+  "mood": "cheer",
+  "said_as": "Level four! Label our school!",
+  "sig": "ec0a52b7ef0f",
+  "text": "Level four! Label our school!",
   "voice": "sarah"
  },
  "level-four-letters-in-the-middle": {
@@ -860,6 +916,13 @@
   "text": "Level six! All five senses!",
   "voice": "sarah"
  },
+ "level-six-super-labels": {
+  "mood": "cheer",
+  "said_as": "Level six! Super labels!",
+  "sig": "f79201c0bef1",
+  "text": "Level six! Super labels!",
+  "voice": "sarah"
+ },
  "level-six-super-signs": {
   "mood": "cheer",
   "said_as": "Level six! Super signs!",
@@ -886,6 +949,13 @@
   "said_as": "Level three! Follow the arrow!",
   "sig": "dfe85986e45c",
   "text": "Level three! Follow the arrow!",
+  "voice": "sarah"
+ },
+ "level-three-label-our-classroom": {
+  "mood": "cheer",
+  "said_as": "Level three! Label our classroom!",
+  "sig": "c826c3e7af92",
+  "text": "Level three! Label our classroom!",
   "voice": "sarah"
  },
  "level-three-same-start": {
@@ -1133,6 +1203,13 @@
   "text": "Now find two!",
   "voice": "sarah"
  },
+ "office": {
+  "mood": "word",
+  "said_as": "Office.",
+  "sig": "e5a51d3aac9e",
+  "text": "Office",
+  "voice": "sarah"
+ },
  "one-word-starts-with-a-different-sound-can-you-find-it": {
   "mood": "instruction",
   "said_as": "One word starts with a different sound. Can you find it?",
@@ -1189,6 +1266,13 @@
   "text": "Our teeth are in our mouth.",
   "voice": "sarah"
  },
+ "pencils": {
+  "mood": "word",
+  "said_as": "Pencils.",
+  "sig": "50fc6bc62dbb",
+  "text": "Pencils",
+  "voice": "sarah"
+ },
  "people": {
   "mood": "word",
   "said_as": "people.",
@@ -1217,11 +1301,25 @@
   "text": "Pippi Longstocking is a story book!",
   "voice": "sarah"
  },
+ "playground": {
+  "mood": "word",
+  "said_as": "Playground.",
+  "sig": "fd05d66dd16f",
+  "text": "Playground",
+  "voice": "sarah"
+ },
  "push": {
   "mood": "word",
   "said_as": "Push.",
   "sig": "e919df1dbbc0",
   "text": "Push",
+  "voice": "sarah"
+ },
+ "put-each-label-in-the-right-place": {
+  "mood": "instruction",
+  "said_as": "Put each label in the right place.",
+  "sig": "8219b2f2564a",
+  "text": "Put each label in the right place.",
   "voice": "sarah"
  },
  "read-along-signs": {
@@ -1278,6 +1376,13 @@
   "said_as": "Sense and Body Part",
   "sig": "2c1cd2d792c4",
   "text": "Sense and Body Part",
+  "voice": "sarah"
+ },
+ "shoes": {
+  "mood": "word",
+  "said_as": "Shoes.",
+  "sig": "9cc4484f0b73",
+  "text": "Shoes",
   "voice": "sarah"
  },
  "show": {
@@ -1679,6 +1784,90 @@
   "text": "This book is The Human Body",
   "voice": "sarah"
  },
+ "this-label-says-bags": {
+  "mood": "instruction",
+  "said_as": "This label says Bags.",
+  "sig": "d2185f655fc0",
+  "text": "This label says Bags.",
+  "voice": "sarah"
+ },
+ "this-label-says-bin": {
+  "mood": "instruction",
+  "said_as": "This label says Bin.",
+  "sig": "ac55f71eccea",
+  "text": "This label says Bin.",
+  "voice": "sarah"
+ },
+ "this-label-says-books": {
+  "mood": "instruction",
+  "said_as": "This label says Books.",
+  "sig": "e60c01a5a155",
+  "text": "This label says Books.",
+  "voice": "sarah"
+ },
+ "this-label-says-canteen": {
+  "mood": "instruction",
+  "said_as": "This label says Canteen.",
+  "sig": "0994b7a33f7b",
+  "text": "This label says Canteen.",
+  "voice": "sarah"
+ },
+ "this-label-says-entrance": {
+  "mood": "instruction",
+  "said_as": "This label says Entrance.",
+  "sig": "79db90303b15",
+  "text": "This label says Entrance.",
+  "voice": "sarah"
+ },
+ "this-label-says-office": {
+  "mood": "instruction",
+  "said_as": "This label says Office.",
+  "sig": "43adfca4abb2",
+  "text": "This label says Office.",
+  "voice": "sarah"
+ },
+ "this-label-says-pencils": {
+  "mood": "instruction",
+  "said_as": "This label says Pencils.",
+  "sig": "f65b8a885eba",
+  "text": "This label says Pencils.",
+  "voice": "sarah"
+ },
+ "this-label-says-playground": {
+  "mood": "instruction",
+  "said_as": "This label says Playground.",
+  "sig": "c11ba7bdd6a4",
+  "text": "This label says Playground.",
+  "voice": "sarah"
+ },
+ "this-label-says-shoes": {
+  "mood": "instruction",
+  "said_as": "This label says Shoes.",
+  "sig": "b819beeae4f8",
+  "text": "This label says Shoes.",
+  "voice": "sarah"
+ },
+ "this-label-says-toys": {
+  "mood": "instruction",
+  "said_as": "This label says Toys.",
+  "sig": "fc6b75f44a87",
+  "text": "This label says Toys.",
+  "voice": "sarah"
+ },
+ "this-label-says-washroom": {
+  "mood": "instruction",
+  "said_as": "This label says Washroom.",
+  "sig": "e8d043bd97f4",
+  "text": "This label says Washroom.",
+  "voice": "sarah"
+ },
+ "this-label-says-water": {
+  "mood": "instruction",
+  "said_as": "This label says Water.",
+  "sig": "b7e741da5a3c",
+  "text": "This label says Water.",
+  "voice": "sarah"
+ },
  "this-sign-says": {
   "mood": "instruction",
   "said_as": "This sign says",
@@ -1831,6 +2020,20 @@
   "said_as": "Wash your hands",
   "sig": "78e1f2337249",
   "text": "Wash your hands",
+  "voice": "sarah"
+ },
+ "washroom": {
+  "mood": "word",
+  "said_as": "Washroom.",
+  "sig": "1bbe0e7d4184",
+  "text": "Washroom",
+  "voice": "sarah"
+ },
+ "water": {
+  "mood": "word",
+  "said_as": "Water.",
+  "sig": "3816c3588857",
+  "text": "Water",
   "voice": "sarah"
  },
  "we": {
@@ -2006,6 +2209,13 @@
   "said_as": "Which body part?",
   "sig": "147b55084f4b",
   "text": "Which body part?",
+  "voice": "sarah"
+ },
+ "which-label-goes-here": {
+  "mood": "instruction",
+  "said_as": "Which label goes here?",
+  "sig": "4f6eb655de1f",
+  "text": "Which label goes here?",
   "voice": "sarah"
  },
  "which-letter-goes-in-the-gap": {
@@ -2209,6 +2419,13 @@
   "said_as": "Which sign tells you to wash your hands?",
   "sig": "9d489d459408",
   "text": "Which sign tells you to wash your hands?",
+  "voice": "sarah"
+ },
+ "which-sign-tells-you-where-you-can-read-a-book": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you where you can read a book?",
+  "sig": "4752f7d64a1e",
+  "text": "Which sign tells you where you can read a book?",
   "voice": "sarah"
  },
  "which-word-names-a-part-of-your-body": {

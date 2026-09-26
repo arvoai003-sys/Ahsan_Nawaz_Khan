@@ -405,6 +405,51 @@ var Art = (function () {
   lib.cov_body = cover("#9B5DE5", "The Human", "Body", "bodymap");
   lib.cov_cartoons = cover("#FFB020", "How to draw", "cartoons", "sheep", "#E4252B");
 
+  /* ---------- places to label (A4): no words in these pictures ---------- */
+  lib.shelf = '<rect x="14" y="10" width="72" height="84" rx="4" fill="#C98A5A"' + O + "/>" +
+    '<path d="M18 38h64M18 66h64" stroke="' + INK + '" stroke-width="3.5"/>' +
+    '<g stroke="' + INK + '" stroke-width="2"><rect x="22" y="16" width="8" height="21" fill="#FF4F6D"/><rect x="31" y="19" width="7" height="18" fill="#2EA7FF"/><rect x="39" y="15" width="8" height="22" fill="#FFD23F"/><rect x="48" y="20" width="7" height="17" fill="#23C16B"/><rect x="60" y="17" width="9" height="20" fill="#9B5DE5"/>' +
+    '<rect x="22" y="44" width="9" height="21" fill="#FF9F1C"/><rect x="32" y="47" width="7" height="18" fill="#FF7BAC"/><rect x="44" y="43" width="8" height="22" fill="#2EA7FF"/><rect x="53" y="46" width="8" height="19" fill="#FF4F6D"/><rect x="66" y="44" width="9" height="21" fill="#23C16B"/></g>' +
+    '<path d="M22 92l6-20h8l-4 20M64 92l4-20h8l4 20" fill="#FFD23F" stroke="' + INK + '" stroke-width="2"/>';
+  lib.toybox = '<circle cx="36" cy="30" r="12" fill="#FF4F6D"' + O + '/><rect x="52" y="18" width="20" height="20" fill="#FFD23F"' + O + "/>" +
+    '<circle cx="64" cy="10" r="6" fill="#C98A5A"' + O.replace("3.5", "2.5") + '/><path d="M24 40l6-10M76 40l-4-12" stroke="' + INK + '" stroke-width="3"/>' +
+    '<rect x="12" y="40" width="76" height="50" rx="6" fill="#2EA7FF"' + O + '/><rect x="12" y="40" width="76" height="12" fill="#0B7FD6"' + O + "/>" +
+    '<circle cx="30" cy="70" r="6" fill="#FFD23F"/><circle cx="50" cy="72" r="6" fill="#FF7BAC"/><circle cx="70" cy="70" r="6" fill="#23C16B"/>';
+  lib.door = '<rect x="18" y="20" width="64" height="74" fill="#FF4F6D"' + O + "/>" +
+    '<rect x="24" y="28" width="24" height="66" fill="#FF8FA3"' + O.replace("3.5", "2.5") + '/><rect x="52" y="28" width="24" height="66" fill="#FF8FA3"' + O.replace("3.5", "2.5") + "/>" +
+    '<rect x="28" y="34" width="16" height="20" fill="#CDEBFF"/><rect x="56" y="34" width="16" height="20" fill="#CDEBFF"/>' +
+    '<path d="M45 66v8M55 66v8" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/><path d="M8 94h84" stroke="' + INK + '" stroke-width="4"/>' +
+    '<rect x="26" y="6" width="48" height="10" rx="3" fill="#fff"' + O.replace("3.5", "2.5") + "/>";
+  lib.baghooks = '<rect x="8" y="12" width="84" height="10" rx="3" fill="#B97A4A"' + O + "/>" +
+    '<path d="M24 22v8M50 22v8M76 22v8" stroke="' + INK + '" stroke-width="4" stroke-linecap="round"/>' +
+    '<rect x="12" y="30" width="24" height="34" rx="7" fill="#FF4F6D"' + O + '/><rect x="38" y="30" width="24" height="40" rx="7" fill="#2EA7FF"' + O + '/><rect x="64" y="30" width="24" height="36" rx="7" fill="#23C16B"' + O + "/>" +
+    '<rect x="16" y="46" width="16" height="10" rx="3" fill="#FFD23F"/><rect x="42" y="48" width="16" height="12" rx="3" fill="#FFD23F"/><rect x="68" y="46" width="16" height="10" rx="3" fill="#FFD23F"/>';
+  lib.shoerack = '<rect x="10" y="30" width="80" height="62" rx="4" fill="#C98A5A"' + O + '/><path d="M12 60h76" stroke="' + INK + '" stroke-width="3.5"/>' +
+    '<g fill="#FF3B3B" stroke="' + INK + '" stroke-width="2.5"><path d="M16 56v-10h10l8 6v4zM40 56v-10h10l8 6v4z"/></g>' +
+    '<g fill="#2EA7FF" stroke="' + INK + '" stroke-width="2.5"><path d="M60 56v-10h10l8 6v4z"/><path d="M16 88v-10h10l8 6v4zM40 88v-10h10l8 6v4z"/></g>' +
+    '<g fill="#FFD23F" stroke="' + INK + '" stroke-width="2.5"><path d="M60 88v-10h10l8 6v4z"/></g>';
+  lib.pencilpot = '<g stroke="' + INK + '" stroke-width="2.5" stroke-linejoin="round">' +
+    '<path d="M30 50V14l5-8 5 8v36z" fill="#FFD23F"/><path d="M46 50V10l5-8 5 8v40z" fill="#FF4F6D"/><path d="M62 50V16l5-8 5 8v34z" fill="#2EA7FF"/></g>' +
+    '<path d="M22 44h56l-6 48H28z" fill="#9B5DE5"' + O + '/><path d="M26 56h48" stroke="#fff" stroke-width="3"/>';
+  lib.bin = '<path d="M22 30h56l-6 62H28z" fill="#23C16B"' + O + '/><rect x="16" y="20" width="68" height="12" rx="4" fill="#149E52"' + O + "/>" +
+    '<path d="M40 14h20" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/><path d="M38 44v38M50 44v38M62 44v38" stroke="#149E52" stroke-width="4" stroke-linecap="round"/>';
+  lib.canteen = '<rect x="8" y="46" width="84" height="44" rx="4" fill="#FF9F1C"' + O + "/>" +
+    '<path d="M4 30h92l-6 16H10z" fill="#FF4F6D"' + O + '/><path d="M20 30v16M36 30v16M52 30v16M68 30v16M84 30v16" stroke="#fff" stroke-width="5"/>' +
+    '<rect x="16" y="56" width="68" height="24" rx="3" fill="#FFF3D6"' + O.replace("3.5", "2.5") + "/>" +
+    '<circle cx="30" cy="68" r="7" fill="#FFB020"' + O.replace("3.5", "2") + '/><path d="M44 62h14l-2 12H46z" fill="#fff"' + O.replace("3.5", "2") + '/><path d="M64 74l6-12 6 12z" fill="#F2B866"' + O.replace("3.5", "2") + "/>";
+  lib.swing = '<path d="M14 94L30 10h40l16 84" fill="none" stroke="#FF4F6D" stroke-width="7" stroke-linejoin="round"/><path d="M26 12h48" stroke="' + INK + '" stroke-width="4"/>' +
+    '<path d="M42 12v54M58 12v54" stroke="' + INK + '" stroke-width="2.5"/><rect x="38" y="64" width="24" height="7" rx="3" fill="#FFD23F"' + O.replace("3.5", "2.5") + "/>" +
+    '<path d="M6 94h88" stroke="#23C16B" stroke-width="6" stroke-linecap="round"/>';
+  lib.washroom = '<rect x="30" y="8" width="40" height="32" rx="6" fill="#CDEBFF"' + O + '/>' + shine(40, 16, 5, 3) +
+    '<path d="M16 56h68l-6 18H22z" fill="#fff"' + O + '/><rect x="44" y="74" width="12" height="20" fill="#DDE3EA"' + O.replace("3.5", "2.5") + "/>" +
+    '<path d="M50 56v-10h10" fill="none" stroke="#8C9AA5" stroke-width="5" stroke-linecap="round"/><circle cx="36" cy="48" r="4" fill="#FF8FC8"' + O.replace("3.5", "2") + "/>";
+  lib.cooler = '<rect x="30" y="4" width="40" height="30" rx="10" fill="#7EC8FF"' + O + '/><rect x="24" y="34" width="52" height="60" rx="6" fill="#DDE3EA"' + O + "/>" +
+    '<rect x="34" y="46" width="12" height="8" rx="2" fill="#2EA7FF"' + O.replace("3.5", "2") + '/><rect x="54" y="46" width="12" height="8" rx="2" fill="#FF4F6D"' + O.replace("3.5", "2") + "/>" +
+    '<path d="M40 58c-2 4-3 6-3 7a3 3 0 0 0 6 0c0-1-1-3-3-7z" fill="#2EA7FF"/>' + shine(40, 12, 5, 3);
+  lib.office = '<rect x="8" y="56" width="84" height="10" rx="3" fill="#C98A5A"' + O + '/><path d="M14 66v26M86 66v26" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/>' +
+    '<rect x="30" y="18" width="40" height="30" rx="4" fill="#5B5680"' + O + '/><rect x="34" y="22" width="32" height="22" fill="#7EC8FF"/><path d="M50 48v8M40 56h20" stroke="' + INK + '" stroke-width="4"/>' +
+    '<rect x="72" y="40" width="14" height="16" rx="2" fill="#FFD23F"' + O.replace("3.5", "2") + '/><circle cx="22" cy="48" r="7" fill="#23C16B"' + O.replace("3.5", "2") + "/>";
+
   lib.chin = kid(52, 70, 88, 92);
   lib.ear = kid(80, 48, 99, 30);
   lib.neck = kid(54, 74, 92, 70);

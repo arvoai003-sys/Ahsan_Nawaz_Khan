@@ -48,7 +48,7 @@ var Match = (function () {
     prompt.appendChild(Shell.el("div", "prompt-text", item.text));
     st.appendChild(prompt);
 
-    var board = Shell.el("div", "mt" + (item.targets.length >= 5 ? " five" : ""));
+    var board = Shell.el("div", "mt n" + item.targets.length + (item.targets.length >= 5 ? " five" : ""));
     var tbox = Shell.el("div", "targets");
     var targets = Shell.shuffle(item.targets);
     for (i = 0; i < targets.length; i++) {
@@ -57,11 +57,11 @@ var Match = (function () {
         var el = Shell.el("div", "target k" + ((tint + k) % 6) + (sentence ? " sentence" : ""));
         el.innerHTML = (t.art ? '<div class="art">' + Art.get(t.art) + "</div>" : "") + capHtml(t) + (sentence ? "" : '<div class="drop"></div>');
         el.setAttribute("role", "button");
-        el.setAttribute("aria-label", (t.say || t.cap || t.id).replace("___", "blank"));
+        el.setAttribute("aria-label", (t.label || t.say || t.cap || t.id).replace("___", "blank"));
         el.data = t;
         el.onclick = function () {
           if (picked && !locked) { tryDrop(picked, el); return; }
-          if (el.className.indexOf("done") < 0) { Shell.say(t.say || t.cap.replace("___", "...")); }
+          if (el.className.indexOf("done") < 0 && (t.say || t.cap)) { Shell.say(t.say || t.cap.replace("___", "...")); }
         };
         tbox.appendChild(el);
         left++;
@@ -73,7 +73,7 @@ var Match = (function () {
     var chips = Shell.shuffle(item.chips);
     for (i = 0; i < chips.length; i++) {
       (function (c, k) {
-        var el = Shell.el("div", "chip k" + ((tint + k + 2) % 6), (c.art ? '<span class="dot">' + Art.get(c.art) + "</span>" : "") + "<span>" + c.text + "</span>");
+        var el = Shell.el("div", "chip k" + ((tint + k + 2) % 6) + (c.label ? " label" : ""), (c.art ? '<span class="dot">' + Art.get(c.art) + "</span>" : "") + "<span>" + c.text + "</span>");
         el.setAttribute("role", "button");
         el.setAttribute("tabindex", "0");
         el.setAttribute("aria-label", c.text);
@@ -86,6 +86,14 @@ var Match = (function () {
     board.appendChild(cbox);
     st.appendChild(board);
     Shell.progress(flat.length, idx);
+    if (/[?&]qa=1/.test(window.location.search)) { /* test hook only: [chip text, target position] */
+      var mv = [], tl = tbox.children, j, q;
+      for (j = 0; j < item.chips.length; j++) {
+        if (!item.chips[j].goes) { continue; }
+        for (q = 0; q < tl.length; q++) { if (tl[q].data.id === item.chips[j].goes) { mv.push([item.chips[j].text, q]); } }
+      }
+      window.__qa = { moves: mv };
+    }
 
     var go = Shell.guard(function () {
       if (!tutorialDone) {
@@ -200,7 +208,7 @@ var Match = (function () {
       attempts++;
       Shell.wrong(chip);
       if (attempts === 1) {
-        Shell.say(["Oops! Try again.", t.say || (t.cap || "").replace("___", "...")]);
+        Shell.say(["Oops! Try again."].concat(t.say || t.cap ? [t.say || t.cap.replace("___", "...")] : []));
       } else {
         /* show where it belongs? never. Glow the open targets and read them out */
         var ts = targetEls(), i;
