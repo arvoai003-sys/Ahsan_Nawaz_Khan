@@ -15,20 +15,20 @@ other 17 are:
 | # | Asset | Plan type | Engine | File task name | Ready? |
 |---|---|---|---|---|---|
 | A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | Ready |
-| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-01** |
+| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-02** |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | Needs D2 |
 | A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-05** |
-| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-03** |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-06** |
+| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-04** |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
 | A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | Ready |
-| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-02** |
+| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-03** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
 | A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Needs D7 |
-| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-01** |
+| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-03** |
 | A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Needs D8 |
 | A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
 
@@ -173,3 +173,4 @@ and is delivered as a new version in `builds/`.
 | 2026-09-26 | Home pages, Asma | all four games | Each game has its own theme (A6 meadow, A7 sunset town, A14 flower garden, A3 school street), a large title with a hero icon, and no "Grade 1 · Chapter 2" label. Asma (ARVO character, Grade 1 look from the character bible) and Fluffy are the on-screen buddies: she waves on the home page, her mouth moves while the narrator speaks, she cheers at right answers and tilts her head at wrong ones; Fluffy runs across when a level ends. She steps out of view on any screen where she would cover a game piece. A6 v-05, A7 v-03, A14 v-02. |
 | 2026-09-26 | Naming (D10 closed) | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |
 | 2026-09-26 | A19 Name the Body Part | `games/ENG-APSIS-G1-C02-Name_the_Body_Part.html` (v-01) | Levels: 1 Warm Up (2 pictures), 2 Body Words (book p.37 word box), 3 Point to Asma (arrow on Asma, name the part; book 2I A2), 4 Naming Words (book p.37 Language tip on nouns; non-nouns authored), 5 Where Does It Go? (authored), 6 Super Star. Pictures that contain each other (face/eyes/nose/mouth, leg/foot) never share a screen. The p.38 missing letters stay in Finish the Sign Word only. Rainbow theme. 90 lines in Sarah's voice. **Authored parts need Champ's approval.** |
+| 2026-09-26 | ARVO characters removed (Champ) | all five games | Asma and Fluffy replaced by an unnamed, happy, lively, fair-skinned child (buddy and body-part model). No names are spoken; Name the Body Part asks "What is the arrow pointing to?" and confirms with the part ("Head!"); its Level 3 is now "Follow the Arrow". Reissued: A3 v-02, A6 v-06, A7 v-04, A14 v-03, A19 v-03. |

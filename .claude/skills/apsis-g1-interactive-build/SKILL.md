@@ -105,16 +105,15 @@ gets wrong is flagged, not silently used.
   `theme-*` rules in `g1-shell.css`). Never reuse a sibling game's theme in the
   same chapter. The home page shows a big title with `heroArt`, and no
   grade/chapter label.
-- **ARVO characters.** `buddy: "asma"` puts Asma (Grade 1 look from the ARVO
-  character bible: navy hijab, patterned light-blue shalwar kameez, pink
-  sandals, sparkling brown eyes) and her dog Fluffy on screen (`g1-buddy.js`).
-  She never speaks (the narrator voice is Sarah); she reacts: waves on the home
-  page, mouth moves while the narrator talks, cheers on right answers, tilts
-  her head on wrong ones; Fluffy runs across when a level ends. She steps out
-  of view on any screen where she would cover a game piece. Amir (glasses,
-  curly hair, beige kurta, "Amir Airlines") is the other Grade 1 character
-  available if a game suits him better (e.g. planes, pranks, "I planned it
-  that way!").
+- **Buddy: an unnamed child, never a named character.** `buddy: "kid"` puts a
+  happy, lively, fair-skinned child (fluffy brown hair, yellow T-shirt, blue
+  shorts, red trainers; `g1-buddy.js`) on screen. It never speaks and is never
+  named (the narrator is Sarah); it waves on the home page, its mouth moves
+  while the narrator talks, it cheers on right answers and tilts its head on
+  wrong ones, and it steps out of view on any screen where it would cover a
+  game piece. The same child (`Buddy.kidInner()`) is the model for body-part
+  pictures; refer to a pointed part only as "What is the arrow pointing to?".
+  ARVO characters (Asma, Amir, ...) are not used (Champ, 2026-09-26).
 - **Picture cards.** Signs and book covers carry their own words: use
   `hideWord` and, when hearing the option would give the answer away,
   `noBadge`. The hint then says "Look carefully." instead of reading cards out.

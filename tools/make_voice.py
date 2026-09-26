@@ -43,9 +43,9 @@ CHEER = re.compile(r"^(level \w+!|now find|book challenge)", re.I)
 SPEED = {"instruction": 0.80, "word": 0.78, "gentle": 0.82, "cheer": 0.95, "excited": 1.05}
 # how some lines are said (the on-screen text stays as it is)
 SAY_AS = {"yay!": "Yaaay!", "hooray!": "Hoo-ray!", "you got it!": "Yes! You got it!"}
-# how the ARVO characters' names are said (chosen by ear from auditions); the
-# on-screen spelling never changes
-NAMES = {"Asma": "Usmuh"}   # chosen 2026-09-26 (option AS3); Amir: pending
+# how names are said, if a game ever uses one ({"Name": "how to say it"});
+# the on-screen spelling never changes. No named characters are used (2026-09-26).
+NAMES = {}
 
 
 def mood(text):

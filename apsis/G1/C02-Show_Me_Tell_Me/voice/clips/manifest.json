@@ -797,18 +797,18 @@
   "text": "Level six! Super star challenge!",
   "voice": "sarah"
  },
- "level-three-asma-is-pointing-can-you-name-it": {
-  "mood": "cheer",
-  "said_as": "Level three! Usmuh is pointing. Can you name it?",
-  "sig": "35863a47f836",
-  "text": "Level three! Asma is pointing. Can you name it?",
-  "voice": "sarah"
- },
  "level-three-first-letters": {
   "mood": "cheer",
   "said_as": "Level three! First letters!",
   "sig": "ba3f97671c91",
   "text": "Level three! First letters!",
+  "voice": "sarah"
+ },
+ "level-three-follow-the-arrow": {
+  "mood": "cheer",
+  "said_as": "Level three! Follow the arrow!",
+  "sig": "dfe85986e45c",
+  "text": "Level three! Follow the arrow!",
   "voice": "sarah"
  },
  "level-three-same-start": {
@@ -893,13 +893,6 @@
   "said_as": "lollipop.",
   "sig": "ade9837b1399",
   "text": "lollipop",
-  "voice": "sarah"
- },
- "look-at-asma-what-is-the-arrow-pointing-to": {
-  "mood": "instruction",
-  "said_as": "Look at Usmuh. What is the arrow pointing to?",
-  "sig": "f58fa6dce2fc",
-  "text": "Look at Asma. What is the arrow pointing to?",
   "voice": "sarah"
  },
  "look-at-the-moon": {
@@ -1371,62 +1364,6 @@
   "text": "teeth",
   "voice": "sarah"
  },
- "that-is-asma-s-arm": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's arm!",
-  "sig": "df6bbf5aa47a",
-  "text": "That is Asma's arm!",
-  "voice": "sarah"
- },
- "that-is-asma-s-chest": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's chest!",
-  "sig": "ad41771c2b78",
-  "text": "That is Asma's chest!",
-  "voice": "sarah"
- },
- "that-is-asma-s-eyes": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's eyes!",
-  "sig": "1150a9248762",
-  "text": "That is Asma's eyes!",
-  "voice": "sarah"
- },
- "that-is-asma-s-foot": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's foot!",
-  "sig": "8057066685c7",
-  "text": "That is Asma's foot!",
-  "voice": "sarah"
- },
- "that-is-asma-s-hand": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's hand!",
-  "sig": "11f608d7e9f2",
-  "text": "That is Asma's hand!",
-  "voice": "sarah"
- },
- "that-is-asma-s-head": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's head!",
-  "sig": "573cd263ccbc",
-  "text": "That is Asma's head!",
-  "voice": "sarah"
- },
- "that-is-asma-s-leg": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's leg!",
-  "sig": "49534be49a95",
-  "text": "That is Asma's leg!",
-  "voice": "sarah"
- },
- "that-is-asma-s-mouth": {
-  "mood": "instruction",
-  "said_as": "That is Usmuh's mouth!",
-  "sig": "64a8ca483d09",
-  "text": "That is Asma's mouth!",
-  "voice": "sarah"
- },
  "the-human-body": {
   "mood": "instruction",
   "said_as": "The Human Body",
@@ -1796,6 +1733,13 @@
   "said_as": "What Does the Sign Say?",
   "sig": "ab2b1fd3f40e",
   "text": "What Does the Sign Say?",
+  "voice": "sarah"
+ },
+ "what-is-the-arrow-pointing-to": {
+  "mood": "instruction",
+  "said_as": "What is the arrow pointing to?",
+  "sig": "14da73f407a7",
+  "text": "What is the arrow pointing to?",
   "voice": "sarah"
  },
  "where-do-you-wear-a-hat": {

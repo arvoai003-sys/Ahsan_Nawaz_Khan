@@ -1,5 +1,5 @@
 // @asset ENG01CH02SENSEMATCH
-// @version v-02
+// @version v-03
 // @title Sense and Body Part
 // @engine match
 /* A14 · Sense and Body Part · Reading and Comprehension > Our Senses(Reading and Comprehension) · O8
@@ -129,11 +129,11 @@
   Match.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SENSEMATCH",
-    version: "v-02",
+    version: "v-03",
     title: "Sense and Body Part",
     intro: "Match each sense to its body part.",
     theme: "garden",
-    buddy: "asma",
+    buddy: "kid",
     heroArt: "flower",
     levels: CONTENT.levels,
     start: Match.start,

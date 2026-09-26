@@ -1,5 +1,5 @@
 // @asset ENG01CH02FINISHSIGN
-// @version v-03
+// @version v-04
 // @title Finish the Sign Word
 // @engine letter-fill
 /* A7 · Finish the Sign Word · Phonics and Spelling > Sounds at the Start of Word · O5
@@ -116,11 +116,11 @@
   LetterFill.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02FINISHSIGN",
-    version: "v-03",
+    version: "v-04",
     title: "Finish the Sign Word",
     intro: "Find the missing letter.",
     theme: "sunset",
-    buddy: "asma",
+    buddy: "kid",
     heroArt: "sign",
     levels: CONTENT.levels,
     start: LetterFill.start,

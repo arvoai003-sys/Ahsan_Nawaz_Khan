@@ -1,5 +1,5 @@
 // @asset ENG01CH02SIGNSAY
-// @version v-01
+// @version v-02
 // @title What Does the Sign Say?
 // @engine tap-identify
 /* A3 · What Does the Sign Say? · Grammar and Vocabulary > Signs · O2
@@ -160,11 +160,11 @@
   TapIdentify.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SIGNSAY",
-    version: "v-01",
+    version: "v-02",
     title: "What Does the Sign Say?",
     intro: "Let's read signs and books!",
     theme: "school",
-    buddy: "asma",
+    buddy: "kid",
     heroArt: "slow",
     levels: CONTENT.levels,
     start: TapIdentify.start,

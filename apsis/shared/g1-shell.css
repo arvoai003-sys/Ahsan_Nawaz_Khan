@@ -338,7 +338,7 @@ body.theme-school .level.c5 .name { color: #fff; }
 body.theme-sunset .banner div { background: #FF4F6D; } body.theme-garden .banner div { background: #9B5DE5; } body.theme-school .banner div { background: #FF9F1C; }
 body.theme-sunset .progress i.now { background: #FF4F6D; } body.theme-garden .progress i.now { background: #FF7BAC; } body.theme-school .progress i.now { background: #FF9F1C; }
 
-/* ================= Asma and Fluffy ================= */
+/* ================= buddy (an unnamed child) ================= */
 .buddy { width: 100%; height: 100%; }
 .buddy svg { width: 100%; height: 100%; overflow: visible; }
 .buddy .b-all { transform-box: fill-box; transform-origin: 50% 100%; animation: breathe-b 3s ease-in-out infinite; }
@@ -360,21 +360,10 @@ body.theme-sunset .progress i.now { background: #FF4F6D; } body.theme-garden .pr
 @keyframes wave { from { transform: rotate(-150deg); } to { transform: rotate(-110deg); } }
 @keyframes hop { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14%); } }
 
-.game-buddy { position: fixed; left: 6px; bottom: 4px; width: 150px; height: 118px; pointer-events: none; z-index: 2; display: none; }
+.game-buddy { position: fixed; left: 6px; bottom: 4px; width: 76px; height: 118px; pointer-events: none; z-index: 2; display: none; }
 body.has-buddy .game-buddy { display: block; transition: opacity .25s, transform .25s; }
 body.has-buddy .game-buddy.away { opacity: 0; transform: translateX(-110%); }
 .game-buddy .buddy { position: absolute; left: 0; bottom: 0; width: 70px; height: 118px; }
-.game-buddy .buddy-dog { position: absolute; left: 62px; bottom: 0; width: 70px; height: 56px; }
-.buddy-dog svg, .fluffy-run svg { width: 100%; height: 100%; overflow: visible; }
-.buddy-dog .f-tail, .fluffy-run .f-tail { transform-box: fill-box; transform-origin: 0% 100%; animation: wag .35s ease-in-out infinite alternate; }
-.buddy-dog .f-all { transform-box: fill-box; transform-origin: 50% 100%; animation: breathe-b 2.4s ease-in-out infinite; }
-@keyframes wag { from { transform: rotate(-12deg); } to { transform: rotate(18deg); } }
-.fluffy-run { position: fixed; bottom: 8px; left: -120px; width: 100px; height: 80px; z-index: 44; pointer-events: none; display: none; }
-.fluffy-run.go { display: block; animation: run 2.6s linear 1 forwards; }
-.fluffy-run.go .f-all { transform-box: fill-box; transform-origin: 50% 100%; animation: bounce-run .25s ease-in-out infinite alternate; }
-@keyframes run { from { left: -120px; } to { left: 110vw; } }
-@keyframes bounce-run { from { transform: translateY(0) scaleX(-1); } to { transform: translateY(-10px) scaleX(-1); } }
-.fluffy-run svg { transform: scaleX(-1); }
 
 body.has-buddy .panel .mascot { width: 92px; height: 150px; margin: -118px auto 0; animation: none; }
 
@@ -383,17 +372,15 @@ body.has-buddy .panel .mascot { width: 92px; height: 150px; margin: -118px auto 
   .home-title .hero-art { width: 58px; height: 58px; padding: 5px; border-width: 4px; }
   .home-title h1 { -webkit-text-stroke: 2px var(--ink); text-shadow: 0 4px 0 var(--ink); }
   body.has-buddy .home-head .mascot { display: none; }
-  .game-buddy { width: 104px; height: 80px; left: 2px; }
+  .game-buddy { width: 50px; height: 80px; left: 2px; }
   .game-buddy .buddy { width: 48px; height: 80px; }
-  .game-buddy .buddy-dog { left: 44px; width: 50px; height: 40px; }
-}
+  }
 @media (max-height: 520px) {
   .home-title h1 { font-size: 34px; max-width: calc(100vw - 260px); }
   .home-head { align-self: flex-start; margin-left: 6px; }
   .home-title .hero-art { width: 50px; height: 50px; padding: 4px; }
   body.has-buddy .home-head .mascot { width: 64px; height: 108px; }
-  .game-buddy { width: 96px; height: 76px; }
+  .game-buddy { width: 48px; height: 76px; }
   .game-buddy .buddy { width: 46px; height: 76px; }
-  .game-buddy .buddy-dog { left: 42px; width: 48px; height: 38px; }
-  body.has-buddy .panel .mascot { display: none; }
+    body.has-buddy .panel .mascot { display: none; }
 }

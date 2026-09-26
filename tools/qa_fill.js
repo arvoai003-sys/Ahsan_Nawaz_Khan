@@ -89,7 +89,7 @@ function answerFor(state, spoken) {
           const gb = document.querySelector('#game-buddy');
           if (gb && getComputedStyle(gb).display !== 'none' && !gb.classList.contains('away')) {
             const g = gb.getBoundingClientRect();
-            document.querySelectorAll('.card, .tile, .chip, .target, .prompt, .lf-word, .lf-pic, .sign').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('Asma overlaps ' + e.className.split(' ')[0]); });
+            document.querySelectorAll('.card, .tile, .chip, .target, .prompt, .lf-word, .lf-pic, .sign').forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('buddy overlaps ' + e.className.split(' ')[0]); });
           }
           return r;
         });
