@@ -71,10 +71,66 @@ function answersFor(state) {
       for (let guard = 0; guard < 40; guard++) {
         await page.waitForFunction(() => document.querySelector('#end.on') ||
           ((document.querySelector('#stage[data-ready="1"] .cards .card') && !document.querySelector('.cards .card.got')) ||
-           (document.querySelector('#stage[data-ready="1"] .mt .chip') && !document.querySelector('.mt .target.done'))) &&
+           (document.querySelector('#stage[data-ready="1"] .mt .chip') && !document.querySelector('.mt .target.done')) ||
+           (document.querySelector('#stage[data-ready="1"] .tray .tile') && !document.querySelector('.slot.filled')) ||
+           (document.querySelector('#stage[data-ready="1"] .sb-tile') && !document.querySelector('.sb-slot.filled') && !document.querySelector('.sb-sign.built'))) &&
           !document.querySelector('#banner.on') && !document.querySelector('#hand.on'), null, { timeout: 30000 });
         if (await page.$('#end.on')) break;
         await page.waitForTimeout(700);
+        const offScreen = sel => page.evaluate(sel => {
+          const r = [], W = innerWidth, H = innerHeight;
+          document.querySelectorAll(sel).forEach(e => { const b = e.getBoundingClientRect(); if (b.width && (b.left < -1 || b.top < -1 || b.right > W + 1 || b.bottom > H + 1)) r.push(e.className.split(' ').slice(0, 2).join(' ') + ' off-screen'); });
+          if (document.documentElement.scrollWidth > W) r.push('page scrolls sideways');
+          const gb = document.querySelector('#game-buddy');
+          if (gb && getComputedStyle(gb).display !== 'none' && !gb.classList.contains('away')) {
+            const g = gb.getBoundingClientRect();
+            document.querySelectorAll(sel).forEach(e => { const b = e.getBoundingClientRect(); if (b.width && b.left < g.right - 8 && b.right > g.left + 8 && b.top < g.bottom - 8 && b.bottom > g.top + 8) r.push('buddy overlaps ' + e.className.split(' ')[0]); });
+          }
+          return r;
+        }, sel);
+        if (await page.$('#stage .sb')) {
+          // sign-build: tap the tiles in the order they fill the sign (first screen: a wrong tile first, second: drag one)
+          (await offScreen('.sb-sign, .sb-tile, .prompt, .topbar .icon-btn')).forEach(x => layoutIssues.add(`L${L + 1} ${x}`));
+          if (shot < 2) await page.screenshot({ path: `${out}/${vp.name}-L${L + 1}-${shot++}.png` });
+          const order = await page.evaluate(() => window.__qa.order);
+          if (L === 0 && items === 0) {
+            const wrongId = await page.evaluate(o => { const t = [...document.querySelectorAll('.sb-tile')].find(e => !o.includes(e.getAttribute('data-id'))); return t && t.getAttribute('data-id'); }, order);
+            if (wrongId) {
+              await page.locator('.sb-tile[data-id="' + wrongId + '"]').click();
+              await page.waitForTimeout(300);
+              await page.waitForFunction(() => document.querySelector('#stage[data-ready="1"]'), null, { timeout: 30000 });
+              await page.screenshot({ path: `${out}/${vp.name}-hints.png` });
+            }
+          }
+          for (let m = 0; m < order.length; m++) {
+            const tile = page.locator('.sb-tile[data-id="' + order[m] + '"]');
+            if (L === 0 && items === 1 && m === 0) {
+              const tb = await tile.boundingBox(), sb = await page.locator('.sb-slot:not(.given):not(.filled)').first().boundingBox();
+              await page.mouse.move(tb.x + tb.width / 2, tb.y + tb.height / 2); await page.mouse.down();
+              await page.mouse.move(tb.x + 30, tb.y - 20, { steps: 4 });
+              await page.mouse.move(sb.x + sb.width / 2, sb.y + sb.height / 2, { steps: 8 });
+              if (vp.name === 'landscape') await page.screenshot({ path: `${out}/${vp.name}-dragging.png` });
+              await page.mouse.up();
+            } else {
+              await tile.click();
+            }
+            await page.waitForTimeout(250);
+          }
+          const built = await page.$('.sb-sign.built');
+          if (!built) report.push(`${vp.name} L${L + 1}: sign not built after ${JSON.stringify(order)}`);
+          items++;
+          continue;
+        }
+        if (await page.$('#stage .lf')) {
+          // letter-fill inside a mixed game (a check): tap the right letter
+          (await offScreen('.tile, .sign, .lf-word, .prompt, .topbar .icon-btn')).forEach(x => layoutIssues.add(`L${L + 1} ${x}`));
+          if (shot < 3) await page.screenshot({ path: `${out}/${vp.name}-L${L + 1}-${shot++}.png` });
+          const letter = await page.evaluate(() => window.__qa.letter);
+          await page.locator('.tray .tile', { hasText: new RegExp('^' + letter.replace(/[.?*+^$()[\]{}|\\]/g, '\\$&') + '$') }).first().click();
+          await page.waitForTimeout(250);
+          items++;
+          continue;
+        }
         if (await page.$('#stage .mt')) {
           // a match screen inside a mixed game: tap each chip, then its target
           const moves = await page.evaluate(() => window.__qa && window.__qa.moves);
@@ -156,11 +212,11 @@ function answersFor(state) {
 
     // Home button mid-level, then Pause > Home
     await page.locator('.level').nth(Math.min(2, nLevels - 1)).click();
-    await page.waitForFunction(() => document.querySelector('.cards .card, .mt .chip') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
+    await page.waitForFunction(() => document.querySelector('.cards .card, .mt .chip, .sb-tile, .tray .tile') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
     await page.click('#home-btn');
     const atHome1 = await page.$('#home.on');
     await page.locator('.level').nth(Math.min(3, nLevels - 1)).click();
-    await page.waitForFunction(() => document.querySelector('.cards .card, .mt .chip') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
+    await page.waitForFunction(() => document.querySelector('.cards .card, .mt .chip, .sb-tile, .tray .tile') && !document.querySelector('#banner.on'), null, { timeout: 30000 });
     await page.click('#pause-btn');
     if (vp.name === 'landscape') await page.screenshot({ path: `${out}/${vp.name}-pause.png` });
     await page.click('#menu-home-btn');

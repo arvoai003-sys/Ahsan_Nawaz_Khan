@@ -422,6 +422,26 @@ var Shell = (function () {
     return h;
   }
 
+  /* one check made of parts run by different engines (e.g. tap questions, then
+     letter-fill signs): parts: [{ engine, level, count }] (level = index in the
+     engine's content, count = its number of questions). One progress bar and
+     one score for the whole check. Returns { start, resume, score, max }. */
+  S.chain = function (parts) {
+    var k = 0, offset = 0, got = 0, total = 0, i, progress = S.progress, finish = S.finish;
+    for (i = 0; i < parts.length; i++) { total += parts[i].count; }
+    S.progress = function (n, at) { progress(total, Math.min(total, offset + at)); };
+    S.finish = function (score) {
+      got += score;
+      if (k < parts.length - 1) { offset += parts[k].count; k++; parts[k].engine.start(parts[k].level); return; }
+      finish(got, total);
+    };
+    return {
+      start: function () { k = 0; offset = 0; got = 0; parts[0].engine.start(parts[0].level); },
+      resume: function () { parts[k].engine.resume(); },
+      score: function () { return got + (parts[k].engine.score || 0); },
+      max: function () { return total; }
+    };
+  };
   /* a check (gate): the end screen tells the score, and the result says whether it passed */
   S.gateLine = function (score, max) { return "You got " + score + " out of " + max + "!"; };
   S.finish = function (score, max) {
@@ -550,6 +570,13 @@ var Shell = (function () {
       '<path d="M40 90q20-14 40 0" stroke="#FFD23F" stroke-width="3" fill="none" opacity=".8"/></svg>' +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><rect x="0" y="40" width="400" height="60" fill="#D99B5F"/>' +
       '<path d="M0 40h400M0 60h400M0 80h400" stroke="#B97A4A" stroke-width="2"/><rect x="0" y="34" width="400" height="8" fill="#FF9F1C"/></svg>',
+    /* builder: a sunny building site with a crane and traffic cones (Build a Sign) */
+    builder: clouds() +
+      '<svg class="crane" viewBox="0 0 120 120"><path d="M30 118V14M22 118h16" stroke="#FF9F1C" stroke-width="7"/><path d="M26 20h90M30 14l20 6M30 14L14 20" stroke="#FF9F1C" stroke-width="5"/>' +
+      '<path d="M30 30l-8 8M30 50l-8 8M30 70l-8 8M30 90l-8 8" stroke="#E07F00" stroke-width="3"/><path d="M100 20v40" stroke="#2E2A4F" stroke-width="2"/><rect x="90" y="60" width="20" height="14" rx="2" fill="#2EA7FF" stroke="#2E2A4F" stroke-width="2"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 46C80 34 160 38 240 48S360 38 400 42V100H0z" fill="#E8C48A"/><path d="M0 72C90 60 170 66 260 74S360 62 400 66V100H0z" fill="#D9A866"/>' +
+      '<g stroke="#2E2A4F" stroke-width="1.5"><path d="M60 78l6-22 6 22z" fill="#FF7A1A"/><path d="M62 70h8" stroke="#fff" stroke-width="3"/><path d="M300 82l6-22 6 22z" fill="#FF7A1A"/><path d="M302 74h8" stroke="#fff" stroke-width="3"/>' +
+      '<path d="M340 80l5-18 5 18z" fill="#FF7A1A"/></g></svg>',
     /* starry: a bright purple sky full of twinkling stars (the checks) */
     starry: (function () {
       var out = "", pos = [[6, 10], [18, 30], [30, 8], [44, 22], [58, 6], [70, 28], [84, 12], [94, 34], [12, 52], [88, 56]], i;
@@ -606,6 +633,9 @@ var Shell = (function () {
       '<rect x="0" y="62" width="400" height="38" fill="#6B7280"/><g fill="#fff"><rect x="120" y="66" width="10" height="30"/><rect x="138" y="66" width="10" height="30"/><rect x="156" y="66" width="10" height="30"/><rect x="174" y="66" width="10" height="30"/></g>' +
       '<rect x="0" y="58" width="400" height="6" fill="#D5D9E0"/></svg>'
   };
+
+  /* the other checks: the same star sky in their own colours */
+  THEMES.comet = THEMES.starry; THEMES.sunrise = THEMES.starry; THEMES.aurora = THEMES.starry;
 
   /* ---------- boot ---------- */
   /* config: { asset, version, title, kicker, levels: [{name, art, ribbon}], start(levelIndex), resume, score, max } */

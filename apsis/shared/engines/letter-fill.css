@@ -108,3 +108,11 @@
 @media (max-width: 520px) { .sign.rect.line { font-size: 26px; } }
 @media (max-height: 520px) { .sign.rect.line { font-size: 26px; } }
 .tile.mark { font-size: 80px; line-height: 70px; }
+
+/* a check (gate): the right letter shown after a wrong tile */
+.slot.reveal { background: #D8F7E4; border-color: var(--green); color: var(--green-d); }
+/* long one-word signs (LIBRARY, CLASSROOM) stay on a small phone */
+@media (max-width: 520px) {
+  .sign.rect { max-width: 94vw; }
+  .sign.rect.long { font-size: 36px; padding: 12px 14px; }
+}

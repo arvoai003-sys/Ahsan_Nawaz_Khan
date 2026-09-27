@@ -449,3 +449,24 @@ body.theme-starry { background: linear-gradient(180deg, #6A4CFF 0%, #A58CFF 50%,
 body.theme-starry .level { border-radius: 30px; }
 body.theme-starry .level.c0 { background: #FF4F6D; }
 body.theme-starry .banner div { background: #FF4F6D; } body.theme-starry .progress i.now { background: #FFD23F; }
+
+/* builder (Build a Sign) */
+body.theme-builder { background: linear-gradient(180deg, #FFC857 0%, #FFE3A3 50%, #FFF6DD 80%); --t-title: #2EA7FF; }
+#scenery .crane { width: 16vmin; min-width: 90px; right: 4%; bottom: calc(max(22vh, 90px) * .6); }
+body.theme-builder .level { border-radius: 14px; border-style: solid; }
+body.theme-builder .level.c0 { background: #FF7A1A; } body.theme-builder .level.c1 { background: #2EA7FF; } body.theme-builder .level.c2 { background: #23C16B; }
+body.theme-builder .level.c3 { background: #FF4F6D; } body.theme-builder .level.c4 { background: #9B5DE5; } body.theme-builder .level.c5 { background: #5B5680; }
+body.theme-builder .banner div { background: #FF7A1A; } body.theme-builder .progress i.now { background: #2EA7FF; }
+/* the other checks: comet (blue), sunrise (orange-pink), aurora (green) */
+body.theme-comet { background: linear-gradient(180deg, #1E6FD9 0%, #5FB0FF 50%, #D6ECFF 80%); --t-title: #FFD23F; }
+body.theme-comet .level.c0 { background: #FF9F1C; } body.theme-comet .level { border-radius: 30px; }
+body.theme-comet .banner div { background: #FF9F1C; } body.theme-comet .progress i.now { background: #FFD23F; }
+body.theme-sunrise { background: linear-gradient(180deg, #FF6F91 0%, #FFA36C 50%, #FFE2C2 80%); --t-title: #FFFFFF; }
+body.theme-sunrise .level.c0 { background: #9B5DE5; } body.theme-sunrise .level { border-radius: 30px; }
+body.theme-sunrise .banner div { background: #9B5DE5; } body.theme-sunrise .progress i.now { background: #9B5DE5; }
+body.theme-aurora { background: linear-gradient(180deg, #12A38A 0%, #5EDBB5 50%, #DDFBF1 80%); --t-title: #FFD23F; }
+body.theme-aurora .level.c0 { background: #2EA7FF; } body.theme-aurora .level { border-radius: 30px; }
+body.theme-aurora .banner div { background: #FF4F6D; } body.theme-aurora .progress i.now { background: #FFD23F; }
+body.theme-comet #scenery .ground path:first-child { fill: #8FC7FF; } body.theme-comet #scenery .ground path:last-child { fill: #5FA8F0; }
+body.theme-sunrise #scenery .ground path:first-child { fill: #FFB38A; } body.theme-sunrise #scenery .ground path:last-child { fill: #FF8C6B; }
+body.theme-aurora #scenery .ground path:first-child { fill: #8EE6C4; } body.theme-aurora #scenery .ground path:last-child { fill: #4CCB9A; }

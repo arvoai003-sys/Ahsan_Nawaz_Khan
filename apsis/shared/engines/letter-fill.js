@@ -60,7 +60,7 @@ var LetterFill = (function () {
       return '<div class="sign-wrap"><div class="sign ' + it.shape + '">' + SHAPES[it.shape] + '<div class="txt">' + txt + "</div></div>" +
         (it.post ? '<div class="sign-post"></div>' : "") + "</div>";
     }
-    return '<div class="sign-wrap"><div class="sign rect ' + (it.tone || "white") + '"><div class="txt">' + txt + "</div></div>" +
+    return '<div class="sign-wrap"><div class="sign rect ' + (it.tone || "white") + (it.shown.length > 7 ? " long" : "") + '"><div class="txt">' + txt + "</div></div>" +
       (it.post ? '<div class="sign-post"></div>' : "") + "</div>";
   }
 
@@ -104,6 +104,7 @@ var LetterFill = (function () {
     board.appendChild(tray);
     st.appendChild(board);
     Shell.progress(flat.length, idx);
+    if (/[?&]qa=1/.test(window.location.search)) { window.__qa = { letter: item.key, gate: !!C.gate }; } /* test hook only */
 
     var go = Shell.guard(function () {
       if (!tutorialDone) {
@@ -188,6 +189,14 @@ var LetterFill = (function () {
       starTotal++; Shell.setStars(starTotal);
       var praise = Shell.right(slot);
       Shell.say(item.done ? [praise].concat(item.done) : [item.full, praise], Shell.guard(function () { Shell.wait(Shell.guard(next), 450); }));
+    } else if (C.gate) {
+      /* a check (gate): one try; show the right letter, then move on */
+      firstTry = false;
+      lock(true);
+      Shell.wrong(t);
+      slot.innerHTML = item.key;
+      slot.className = "slot filled reveal";
+      Shell.say(["Oops!", "Here is the right one.", item.full], Shell.guard(function () { Shell.wait(Shell.guard(next), 700); }));
     } else {
       firstTry = false;
       attempts++;

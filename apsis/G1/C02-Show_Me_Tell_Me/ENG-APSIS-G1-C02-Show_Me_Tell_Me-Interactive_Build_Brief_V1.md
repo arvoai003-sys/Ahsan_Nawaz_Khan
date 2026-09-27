@@ -21,16 +21,16 @@ other 17 are:
 | A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-07** |
 | A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-06** |
 | A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | **Built v-02** |
-| A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Next |
-| A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
+| A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | **Built v-01** |
+| A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | **Built v-01** |
 | A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | **Built v-02** |
 | A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-04** |
-| A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
+| A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | **Built v-01** |
 | A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | **Built v-01** |
 | A18 | Rhyme Time | Matching | Tap-to-identify + match | `RHYME` | **Built v-01** |
 | A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-04** |
 | A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOING` | **Built v-01** |
-| A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
+| A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | **Built v-01** |
 
 File names: `games/ENG-APSIS-G1-C02-<Asset_Name>.html` (current release). Earlier versions are in `builds/archive/`.
 
@@ -144,9 +144,7 @@ longer used.)
    shell and its tap-to-identify, letter-fill, drag-to-target and read-along
    engines.
 2. **Wave 2 (done).** A3, A4, A8, A17, A18, A20, and Gate 1 (A5).
-3. **Wave 3.** A10 Build a Sign (drag-assemble). Then the four gates, once
-   the practice games have fixed which questions they use, so the gates can
-   use different ones.
+3. **Wave 3 (done).** A10 Build a Sign (sign-build engine) and Gates 2-4.
 4. **After the interactives.** The A22 Mastery Test item bank and the five
    video scripts. Neither is part of this build track.
 
@@ -180,3 +178,7 @@ and is delivered in `games/`, with every version kept in `builds/archive/`.
 | 2026-09-27 | A20 Doing Words | `games/ENG-APSIS-G1-C02-Doing_Words.html` (v-01) | p.40 word box verbatim (run, jump, sing, dance, skip, play football) and the tip "Doing words are called verbs."; more doing words (clap, wave, read, sleep, eat, drink). The buddy child is posed for each action. "What is the child doing?" keeps the child unnamed. Park theme. |
 | 2026-09-27 | A17 ch Sound Hunt | `games/ENG-APSIS-G1-C02-ch_Sound_Hunt.html` (v-01) | Book ch words chin, chest (start) and lunch, touch (end); p.36 2H A verbatim (touch ends like lunch). Grade 1 list: chick, cheese, chair, cherries, chips; peach, beach, bench, watch, catch. The voice never says "ch" alone ("Which one starts like chin?"). Farm theme. |
 | 2026-09-27 | A5 Gate 1: Signs check | `games/ENG-APSIS-G1-C02-Gate_1_Signs_Check.html` (v-01) | 2C A2 and A1 verbatim (A1 answer: the crossed-out tap, "Don't waste water"), plus a new sign-meaning item (STOP), a new label item (HATS) and reading Danger Deep Water. One try per question; a wrong answer shows the right one. Ends with "You got N out of 5!"; the LMS result includes passed (4 of 5). Starry theme. |
+| 2026-09-27 | A10 Build a Sign | `games/ENG-APSIS-G1-C02-Build_a_Sign.html` (v-01) | New sign-build engine: drag or tap a picture and the words onto an empty sign. Plan signs STOP, SLOW, Wash Your Hands, NO DRINKS, plus BOOKS, TOYS, EXIT, BOOK CORNER. Levels: pick the picture, pick the words, build it (banner points to drawing a real sign for a school door, 2E Part 2), sign rules (p.31: capital letter; no full stop, with "slow" and "STOP." traps), word order, super signs (full-stop trap tile). Building-site theme. |
+| 2026-09-27 | A11 Gate 2: Sign words check | `games/ENG-APSIS-G1-C02-Gate_2_Sign_Words_Check.html` (v-01) | 2 same-first-sound questions (staff: sock; hand: hat), 2 missing letters (L_BRARY, SCH_OL), 1 capital (_LASSROOM). One check across two engines (Shell.chain). Pass 4 of 5. |
+| 2026-09-27 | A15 Gate 3: Senses check | `games/ENG-APSIS-G1-C02-Gate_3_Senses_Check.html` (v-01) | 2G A1 and A2 verbatim, a new "which sense for music?" question, and a new sense-to-body-part match (see/eyes, smell/nose, taste/tongue). Pass 3 of 4. |
+| 2026-09-27 | A21 Gate 4: Words check | `games/ENG-APSIS-G1-C02-Gate_4_Words_Check.html` (v-01) | One of each: ch (chocolate starts like chin; new picture), naming word (tree), doing word tapped in "The cat can jump.", rhyme match (ball/wall, bug/rug, pig/wig). Pass 3 of 4. |

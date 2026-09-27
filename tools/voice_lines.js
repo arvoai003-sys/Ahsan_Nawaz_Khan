@@ -19,7 +19,7 @@ vm.createContext(ctx);
 ['g1-shell.js', 'g1-art.js', 'g1-buddy.js'].concat(engines.map(function (e) { return 'engines/' + e + '.js'; })).forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
 var bootCfg = null;
 vm.runInContext('Shell.boot = function (c) { this.__cfg = c; };', ctx);
-var NAMES = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match', 'read-along': 'ReadAlong' };
+var NAMES = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match', 'read-along': 'ReadAlong', 'sign-build': 'SignBuild' };
 var ENGINE = NAMES[engine];
 var captured;
 vm.runInContext('var __init = ' + ENGINE + '.init; ' + ENGINE + '.init = function (c) { this.__content = c; __init(c); };', ctx);

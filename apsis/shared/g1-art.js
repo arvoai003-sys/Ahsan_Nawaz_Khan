@@ -523,6 +523,10 @@ var Art = (function () {
   lib.chips = '<g stroke="' + INK + '" stroke-width="2.5" stroke-linejoin="round">' +
     '<path d="M30 46l-4-32 8-1 3 33zM40 46l-2-36 8-1 1 37zM52 46l1-38 8 1-2 37zM62 46l4-30 8 2-5 28zM46 46l0-28 7 0 0 28z" fill="#FFD23F"/></g>' +
     '<path d="M22 42h56l-8 50H30z" fill="#FF3B3B"' + O + '/><path d="M30 42q20 16 40 0" fill="#fff"' + O3 + '/><path d="M50 58l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#FFD23F"/>';
+  lib.chocolate = '<g transform="rotate(-12 50 50)"><rect x="22" y="10" width="56" height="80" rx="6" fill="#7A4A2A"' + O + "/>" +
+    '<path d="M22 36h56M22 58h56M50 10v48" stroke="#5A3218" stroke-width="3"/>' +
+    '<path d="M22 56h56v28a6 6 0 0 1-6 6H28a6 6 0 0 1-6-6z" fill="#FF4F6D"' + O + '/><path d="M22 60l8 6 8-6 8 6 8-6 8 6 8-6 8 6" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>' +
+    '<path d="M50 70l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#FFD23F"/>' + shine(34, 22, 5, 3) + "</g>";
   lib.chin = kid(52, 70, 88, 92);
   lib.ear = kid(80, 48, 99, 30);
   lib.neck = kid(54, 74, 92, 70);
