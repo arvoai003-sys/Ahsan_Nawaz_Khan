@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# zipped hand-offs of games/ (rebuilt on request; the games themselves are committed)
+deliver/
