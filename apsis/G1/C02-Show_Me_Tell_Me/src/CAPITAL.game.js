@@ -1,5 +1,5 @@
 // @asset ENG01CH02CAPITAL
-// @version v-01
+// @version v-02
 // @title Capital at the Start
 // @engine letter-fill
 /* A8 · Capital at the Start · Writing > Sign Writing · O6
@@ -15,6 +15,9 @@
    Beyond the book (authored): more sign words from the chapter and everyday
    signs (Exit, Entrance, Slow, Toys, Books, Push, Open, Closed, Wash your hands,
    Staff only). "No entry" is left out: almost any capital there makes a word.
+   Signs are shown the house way (one or two words in capitals, longer signs
+   with a capital on every word: BOOK CORNER, Wash Your Hands); the child still
+   chooses between the capital, its small letter and another capital.
    Every wrong capital offered on a sign was checked with tools/letter_options.py:
    it never makes another real word. Sentences all start with "We", and every
    other capital makes a word there (He, Me, Be), so they offer W or w only. */
@@ -48,7 +51,7 @@
   function copy(o) { var k, r = {}; for (k in o) { if (o.hasOwnProperty(k)) { r[k] = o[k]; } } return r; }
   function signItem(name, choices) {
     var s = SIGNS[name], cap = name.charAt(0), it = copy(s[2]);
-    it.kind = "sign"; it.full = name; it.pattern = s[0]; it.answer = cap;
+    it.kind = "sign"; it.full = name; it.pattern = s[0]; it.answer = cap; it.fixedChoices = true;
     it.choices = choices === 2 ? [cap, cap.toLowerCase()] : [cap, cap.toLowerCase(), pickOne(s[1])];
     it.prompt = "Which letter starts the sign?";
     it.say = ["This sign says", name, "Which letter starts the sign?"];
@@ -107,7 +110,7 @@
   LetterFill.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02CAPITAL",
-    version: "v-01",
+    version: "v-02",
     title: "Capital at the Start",
     intro: "Signs start with a capital letter.",
     theme: "seaside",

@@ -179,6 +179,22 @@ var Shell = (function () {
     "You finished level 4!", "You finished level 5!", "You finished level 6!"];
   S.voiceName = function () { return voice ? voice.name + " (" + voice.lang + ")" : "none"; };
 
+  /* how a sign is written: one or two words in capitals ("STOP", "BOOK CORNER"),
+     longer signs with a capital at the start of every word ("Wash Your Hands").
+     A "_" gap keeps its place. Speech always uses the plain words. */
+  S.signCase = function (text) {
+    var w = String(text).split(" "), i;
+    if (w.length <= 2) { return String(text).toUpperCase(); }
+    for (i = 0; i < w.length; i++) { w[i] = w[i].charAt(0).toUpperCase() + w[i].slice(1).toLowerCase(); }
+    return w.join(" ");
+  };
+  /* is the letter at a sign's "_" gap a capital? */
+  S.signGapIsCapital = function (pattern) {
+    var w = String(pattern).split(" "), i;
+    if (w.length <= 2) { return true; }
+    for (i = 0; i < w.length; i++) { if (w[i].indexOf("_") > -1) { return w[i].indexOf("_") === 0; } }
+    return false;
+  };
   S.clipKey = function (text) {
     return String(text).toLowerCase().replace(/<[^>]+>/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   };
@@ -406,8 +422,24 @@ var Shell = (function () {
     return h;
   }
 
+  /* a check (gate): the end screen tells the score, and the result says whether it passed */
+  S.gateLine = function (score, max) { return "You got " + score + " out of " + max + "!"; };
   S.finish = function (score, max) {
     var stars = S.starsFor(wrongTaps), i, h = "";
+    if (cfg.gate) {
+      stars = score === max ? 3 : (score >= max - 1 ? 2 : 1);
+      S.sendResult({ completed: true, score: score, max: max, stars: stars, passed: score >= Math.ceil(max * cfg.gate.pass) });
+      for (i = 0; i < 3; i++) { h += i < stars ? S.icon.star.replace("<svg", '<svg class="lit"') : S.icon.starOff; }
+      $("end-stars").innerHTML = h;
+      $("end-title").innerHTML = stars === 3 ? "Amazing!" : "Well done!";
+      $("end-sub").innerHTML = S.gateLine(score, max);
+      $("next-btn").style.display = "none";
+      S.show("end");
+      S.sfx.fanfare();
+      S.confetti(window.innerWidth / 2, window.innerHeight / 3, 140);
+      S.say([stars === 3 ? "Amazing!" : "Well done!", S.gateLine(score, max)]);
+      return;
+    }
     S.sendResult({ completed: true, score: score, max: max, stars: stars });
     for (i = 0; i < 3; i++) { h += i < stars ? S.icon.star.replace("<svg", '<svg class="lit"') : S.icon.starOff; }
     $("end-stars").innerHTML = h;
@@ -518,6 +550,45 @@ var Shell = (function () {
       '<path d="M40 90q20-14 40 0" stroke="#FFD23F" stroke-width="3" fill="none" opacity=".8"/></svg>' +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><rect x="0" y="40" width="400" height="60" fill="#D99B5F"/>' +
       '<path d="M0 40h400M0 60h400M0 80h400" stroke="#B97A4A" stroke-width="2"/><rect x="0" y="34" width="400" height="8" fill="#FF9F1C"/></svg>',
+    /* starry: a bright purple sky full of twinkling stars (the checks) */
+    starry: (function () {
+      var out = "", pos = [[6, 10], [18, 30], [30, 8], [44, 22], [58, 6], [70, 28], [84, 12], [94, 34], [12, 52], [88, 56]], i;
+      for (i = 0; i < pos.length; i++) {
+        out += '<svg class="twinkle tw' + (i % 3) + '" style="left:' + pos[i][0] + "%;top:" + pos[i][1] + '%" viewBox="0 0 40 40"><path d="M20 2l5 12 13 2-10 9 3 13-11-7-11 7 3-13L2 16l13-2z" fill="' + ["#FFD23F", "#FFFFFF", "#FF9ECF"][i % 3] + '" stroke="#2E2A4F" stroke-width="2" stroke-linejoin="round"/></svg>';
+      }
+      return out;
+    })() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 52C80 36 160 40 240 52S360 40 400 44V100H0z" fill="#B9A6FF"/><path d="M0 74C90 60 170 66 260 76S360 62 400 66V100H0z" fill="#9B82FF"/></svg>',
+    /* farm: a red barn, a white fence and golden hay under a blue sky */
+    farm: clouds() +
+      '<svg class="barn" viewBox="0 0 120 100"><path d="M10 44L60 8l50 36v54H10z" fill="#FF4F6D" stroke="#2E2A4F" stroke-width="3" stroke-linejoin="round"/>' +
+      '<path d="M4 46L60 4l56 42" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<rect x="42" y="56" width="36" height="42" fill="#fff" stroke="#2E2A4F" stroke-width="3"/><path d="M42 56l36 42M78 56L42 98" stroke="#FF4F6D" stroke-width="4"/>' +
+      '<circle cx="60" cy="34" r="8" fill="#FFD23F" stroke="#2E2A4F" stroke-width="2.5"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 44C90 32 170 36 250 46S360 36 400 40V100H0z" fill="#9BE36B"/><path d="M0 72C90 60 170 66 260 74S360 62 400 66V100H0z" fill="#6CD24F"/>' +
+      '<g fill="#fff" stroke="#C9C4DA" stroke-width="1"><rect x="0" y="36" width="400" height="4"/><rect x="0" y="48" width="400" height="4"/>' +
+      '<rect x="10" y="30" width="6" height="30"/><rect x="60" y="30" width="6" height="30"/><rect x="110" y="30" width="6" height="30"/><rect x="160" y="30" width="6" height="30"/><rect x="210" y="30" width="6" height="30"/><rect x="260" y="30" width="6" height="30"/><rect x="310" y="30" width="6" height="30"/><rect x="360" y="30" width="6" height="30"/></g>' +
+      '<g fill="#FFD23F" stroke="#E0A800" stroke-width="1.5"><rect x="40" y="70" width="26" height="16" rx="3"/><rect x="330" y="74" width="26" height="16" rx="3"/></g></svg>',
+    /* park: sunny sky, a slide and round trees on the grass */
+    park: '<svg class="sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#FFE066"/><circle cx="50" cy="50" r="48" fill="#FFE066" opacity=".35"/></svg>' + clouds() +
+      '<svg class="slide" viewBox="0 0 120 100"><path d="M20 98V20M40 98V20" stroke="#FF4F6D" stroke-width="5"/><path d="M20 36h20M20 52h20M20 68h20M20 84h20" stroke="#FF4F6D" stroke-width="3"/>' +
+      '<path d="M40 20c20 0 30 20 44 50s20 28 32 28" fill="none" stroke="#2E2A4F" stroke-width="12" stroke-linecap="round"/><path d="M40 20c20 0 30 20 44 50s20 28 32 28" fill="none" stroke="#FFD23F" stroke-width="7" stroke-linecap="round"/><rect x="16" y="14" width="28" height="8" rx="3" fill="#2EA7FF" stroke="#2E2A4F" stroke-width="2"/></svg>' +
+      '<svg class="ptree t1" viewBox="0 0 60 100"><rect x="26" y="50" width="8" height="48" fill="#B97A4A"/><circle cx="30" cy="34" r="26" fill="#23C16B" stroke="#1C9E57" stroke-width="3"/><circle cx="20" cy="28" r="4" fill="#FF4F6D"/><circle cx="38" cy="40" r="4" fill="#FF4F6D"/></svg>' +
+      '<svg class="ptree t2" viewBox="0 0 60 100"><rect x="26" y="50" width="8" height="48" fill="#B97A4A"/><circle cx="30" cy="34" r="26" fill="#6CD26A" stroke="#1C9E57" stroke-width="3"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 42C80 30 160 34 240 44S360 34 400 38V100H0z" fill="#8EE06B"/><path d="M0 70C90 58 170 64 260 72S360 60 400 64V100H0z" fill="#4CCB5A"/>' +
+      '<path d="M40 64q20-14 40 0M300 70q20-14 40 0" fill="none" stroke="#E3B27A" stroke-width="5" opacity=".7"/></svg>',
+    /* candy land: pink sky, lollipops and candy canes on pink hills */
+    candy: clouds() + (function () {
+      var out = "", cols = ["#FF4F6D", "#2EA7FF", "#23C16B", "#FF9F1C", "#9B5DE5"], i;
+      for (i = 0; i < 5; i++) {
+        out += '<svg class="lolly l' + i + '" viewBox="0 0 40 100"><rect x="18" y="36" width="4" height="62" rx="2" fill="#fff" stroke="#2E2A4F" stroke-width="1.5"/>' +
+          '<circle cx="20" cy="20" r="17" fill="' + cols[i] + '" stroke="#2E2A4F" stroke-width="2"/>' +
+          '<path d="M20 20m-11 0a11 11 0 1 1 11 11a7 7 0 1 1 -7-7a3.5 3.5 0 1 1 3.5 3.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>';
+      }
+      return out;
+    })() +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><path d="M0 50C70 30 150 34 220 48S350 34 400 40V100H0z" fill="#FFB3D1"/><path d="M0 72C90 56 170 62 250 72S360 60 400 64V100H0z" fill="#FF8FC0"/>' +
+      '<g fill="#fff" opacity=".8"><circle cx="40" cy="80" r="3"/><circle cx="120" cy="88" r="3"/><circle cx="210" cy="82" r="3"/><circle cx="300" cy="90" r="3"/><circle cx="370" cy="80" r="3"/></g></svg>',
     /* seaside: bright sky, a sailing boat on blue waves, a sandy beach */
     seaside: clouds() +
       '<svg class="boat" viewBox="0 0 80 70"><path d="M40 4v44" stroke="#2E2A4F" stroke-width="3"/><path d="M42 6l28 36H42z" fill="#fff" stroke="#2E2A4F" stroke-width="2.5" stroke-linejoin="round"/>' +

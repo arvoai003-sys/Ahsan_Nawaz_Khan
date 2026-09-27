@@ -106,13 +106,13 @@ def main():
     game_path = os.path.abspath(sys.argv[1])
     game = read(game_path)
     meta = header(game)
-    engine = meta["engine"]
+    engines = meta["engine"].split()   # one engine, or several ("tap-identify match"): each level names its own
 
     parts_js = [("g1-shell.js", read(os.path.join(SHARED, "g1-shell.js"))),
                 ("g1-art.js", read(os.path.join(SHARED, "g1-art.js"))),
-                ("g1-buddy.js", read(os.path.join(SHARED, "g1-buddy.js"))),
-                (engine + ".js", read(os.path.join(SHARED, "engines", engine + ".js"))),
-                (os.path.basename(game_path), game)]
+                ("g1-buddy.js", read(os.path.join(SHARED, "g1-buddy.js")))] + \
+               [(e + ".js", read(os.path.join(SHARED, "engines", e + ".js"))) for e in engines] + \
+               [(os.path.basename(game_path), game)]
     problems = []
     for name, js in parts_js:
         problems += check_es5(name, js)
@@ -120,7 +120,7 @@ def main():
         sys.exit("ES5 check failed:\n  " + "\n  ".join(problems))
 
     css = read(os.path.join(SHARED, "g1-shell.css")) + "\n" + \
-        read(os.path.join(SHARED, "engines", engine + ".css"))
+        "\n".join(read(os.path.join(SHARED, "engines", e + ".css")) for e in engines)
     js = "\n".join("/* ---- %s ---- */\n%s" % (n, s) for n, s in parts_js)
 
     chapter = os.path.dirname(os.path.dirname(game_path))
@@ -140,7 +140,7 @@ def main():
     with open(out, "w", encoding="utf-8") as f:
         f.write(html)
     # the release copy, named after the asset: games/ENG-APSIS-G1-C02-<Title>.html
-    release = release_name(chapter, meta["title"])
+    release = release_name(chapter, meta.get("name", meta["title"]))  # @name: the Asset Plan name, when the on-screen title is shorter
     os.makedirs(os.path.dirname(release), exist_ok=True)
     with open(release, "w", encoding="utf-8") as f:
         f.write(html)

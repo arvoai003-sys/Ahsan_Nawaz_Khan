@@ -1,5 +1,5 @@
 // @asset ENG01CH02SIGNSAY
-// @version v-03
+// @version v-04
 // @title What Does the Sign Say?
 // @engine tap-identify
 /* A3 · What Does the Sign Say? · Grammar and Vocabulary > Signs · O2
@@ -37,14 +37,14 @@
   /* Level 1: signs with printed words */
   var PRINTED = [
     ["stop", "Stop"], ["slow", "Slow"], ["exit", "Exit"], ["entrance", "Entrance"],
-    ["books", "Books"], ["toys", "Toys"], ["danger", "Danger"], ["wash", "Wash your hands"]
+    ["books", "Books"], ["toys", "Toys"], ["danger", "Danger Deep Water"], ["wash", "Wash your hands"]
   ];
   function saysItems(n) {
     var list = Shell.shuffle(PRINTED), out = [], k, other;
     for (k = 0; k < n; k++) {
       other = list[(k + 1 + Math.floor(Math.random() * (list.length - 2))) % list.length];
       if (other[0] === list[k][0]) { other = list[(k + 1) % list.length]; }
-      out.push({ text: "Which sign says <b>" + list[k][1] + "</b>?", say: ["Which sign says", list[k][1]],
+      out.push({ text: "Which sign says <b>" + Shell.signCase(list[k][1]) + "</b>?", say: ["Which sign says", list[k][1]],
         options: [SIGN[list[k][0]], SIGN[other[0]]], answer: [id(list[k][0])],
         done: ["This sign says", list[k][1]] });
     }
@@ -160,7 +160,7 @@
   TapIdentify.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SIGNSAY",
-    version: "v-03",
+    version: "v-04",
     title: "What Does the Sign Say?",
     intro: "Let's read signs and books!",
     theme: "school",

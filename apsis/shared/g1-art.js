@@ -329,8 +329,8 @@ var Art = (function () {
     '<rect x="8" y="12" width="84" height="22" rx="4" fill="#fff"' + O + "/>" +
     '<text x="50" y="29" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="' + INK + '" text-anchor="middle">ENTRANCE</text>';
   lib.washsign = '<rect x="10" y="14" width="80" height="72" rx="8" fill="#2EA7FF"' + O + "/>" +
-    '<text x="50" y="38" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">Wash your</text>' +
-    '<text x="50" y="56" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">hands</text>' +
+    '<text x="50" y="38" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">Wash Your</text>' +
+    '<text x="50" y="56" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#fff" text-anchor="middle">Hands</text>' +
     '<path d="M34 66h14v-4h6v8H40v8" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M58 70q6 6 12 0" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>';
   lib.bookslabel = '<path d="M30 6v14M70 6v14" stroke="' + INK + '" stroke-width="3"/>' + board("#fff", "BOOKS", 19) +
     '<path d="M20 84h60" stroke="#B97A4A" stroke-width="5"/><rect x="24" y="80" width="8" height="12" fill="#FF4F6D"/><rect x="34" y="78" width="7" height="14" fill="#2EA7FF"/><rect x="43" y="80" width="8" height="12" fill="#FFD23F"/><rect x="53" y="77" width="7" height="15" fill="#23C16B"/>';
@@ -450,6 +450,79 @@ var Art = (function () {
     '<rect x="30" y="18" width="40" height="30" rx="4" fill="#5B5680"' + O + '/><rect x="34" y="22" width="32" height="22" fill="#7EC8FF"/><path d="M50 48v8M40 56h20" stroke="' + INK + '" stroke-width="4"/>' +
     '<rect x="72" y="40" width="14" height="16" rx="2" fill="#FFD23F"' + O.replace("3.5", "2") + '/><circle cx="22" cy="48" r="7" fill="#23C16B"' + O.replace("3.5", "2") + "/>";
 
+  /* ---------- rhyme pairs (Rhyme Time) and ch words (ch Sound Hunt) ---------- */
+  var O3 = O.replace("3.5", "3"), O2 = O.replace("3.5", "2.2");
+  lib.cat = ground() +
+    '<path d="M70 86c16 0 22-12 18-26" fill="none" stroke="' + INK + '" stroke-width="10" stroke-linecap="round"/><path d="M70 86c16 0 22-12 18-26" fill="none" stroke="#FF9F1C" stroke-width="5" stroke-linecap="round"/>' +
+    '<ellipse cx="50" cy="72" rx="24" ry="20" fill="#FF9F1C"' + O + "/>" +
+    '<path d="M31 30L28 6l18 14zM69 30l3-24-18 14z" fill="#FF9F1C"' + O + '/><path d="M33 24l-1-10 8 7zM67 24l1-10-8 7z" fill="#FF8FA3"/>' +
+    '<circle cx="50" cy="40" r="24" fill="#FF9F1C"' + O + "/>" + eye(41, 37, 5) + eye(59, 37, 5) +
+    '<path d="M47 46h6l-3 3z" fill="#FF7BAC"' + O2 + '/><path d="M44 52q6 5 12 0" fill="none" stroke="' + INK + '" stroke-width="2.5" stroke-linecap="round"/>' +
+    '<path d="M22 44h14M22 50l14-2M78 44H64M78 50l-14-2" stroke="' + INK + '" stroke-width="2" stroke-linecap="round"/>' + shine(40, 24, 6, 3);
+  lib.bee = '<ellipse cx="40" cy="30" rx="13" ry="18" fill="#DFF4FF" opacity=".9" transform="rotate(-25 40 30)"' + O3 + '/><ellipse cx="60" cy="28" rx="13" ry="18" fill="#DFF4FF" opacity=".9" transform="rotate(25 60 28)"' + O3 + "/>" +
+    '<path d="M80 58l12 2-12 4" fill="' + INK + '"/>' +
+    '<ellipse cx="52" cy="60" rx="30" ry="22" fill="#FFD23F"' + O + "/>" +
+    '<path d="M54 40v40M68 43v34" stroke="' + INK + '" stroke-width="7"/>' +
+    '<circle cx="28" cy="56" r="16" fill="#FFD23F"' + O + "/>" + eye(24, 53, 4.2) + eye(35, 53, 4.2) +
+    '<path d="M24 62q5 4 10 0" fill="none" stroke="' + INK + '" stroke-width="2.5" stroke-linecap="round"/>' +
+    '<path d="M22 42q-4-10-10-10M32 41q2-10 8-12" fill="none" stroke="' + INK + '" stroke-width="2.5" stroke-linecap="round"/><circle cx="12" cy="32" r="3" fill="' + INK + '"/><circle cx="40" cy="29" r="3" fill="' + INK + '"/>';
+  lib.van = ground(92) +
+    '<path d="M8 76V36c0-6 4-10 10-10h46c6 0 10 3 13 8l12 18c2 3 3 6 3 10v14z" fill="#2EA7FF"' + O + "/>" +
+    '<path d="M16 34h20v18H16zM42 34h20v18H42z" fill="#CDEBFF"' + O3 + '/><path d="M68 34h4l10 18H68z" fill="#CDEBFF"' + O3 + "/>" +
+    '<path d="M8 62h84" stroke="#FFD23F" stroke-width="5"/>' +
+    '<circle cx="28" cy="78" r="10" fill="#5B5680"' + O + '/><circle cx="28" cy="78" r="4" fill="#DDE3EA"/><circle cx="72" cy="78" r="10" fill="#5B5680"' + O + '/><circle cx="72" cy="78" r="4" fill="#DDE3EA"/>' + shine(26, 30, 6, 2, 0);
+  lib.spoon = '<g transform="rotate(35 50 50)"><rect x="44" y="44" width="12" height="52" rx="6" fill="#C9D3DD"' + O + "/>" +
+    '<ellipse cx="50" cy="26" rx="18" ry="24" fill="#C9D3DD"' + O + '/><ellipse cx="50" cy="28" rx="11" ry="16" fill="#AEBBC7"/>' + shine(44, 18, 4, 8, 0) + "</g>";
+  lib.dish = '<ellipse cx="50" cy="60" rx="44" ry="22" fill="#fff"' + O + '/><ellipse cx="50" cy="56" rx="30" ry="13" fill="#E6F4FF"' + O3 + "/>" +
+    '<circle cx="42" cy="54" r="7" fill="#23C16B"' + O2 + '/><circle cx="56" cy="52" r="7" fill="#FF4F6D"' + O2 + '/><circle cx="52" cy="60" r="6" fill="#FFD23F"' + O2 + "/>" +
+    '<path d="M12 64q38 20 76 0" fill="none" stroke="#2EA7FF" stroke-width="3"/>' + shine(24, 52, 6, 2, 10);
+  lib.clock = '<path d="M20 30L10 18M80 30l10-12" stroke="' + INK + '" stroke-width="4" stroke-linecap="round"/><circle cx="16" cy="20" r="10" fill="#FFD23F"' + O + '/><circle cx="84" cy="20" r="10" fill="#FFD23F"' + O + "/>" +
+    '<path d="M28 86l-8 10M72 86l8 10" stroke="' + INK + '" stroke-width="5" stroke-linecap="round"/>' +
+    '<circle cx="50" cy="56" r="36" fill="#FF4F6D"' + O + '/><circle cx="50" cy="56" r="28" fill="#fff"' + O3 + "/>" +
+    '<path d="M50 32v5M50 75v5M26 56h5M69 56h5" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>' +
+    '<path d="M50 56V40M50 56l11 7" stroke="' + INK + '" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="56" r="3" fill="' + INK + '"/>' + shine(36, 36, 6, 3);
+  lib.flag = ground() + '<rect x="16" y="8" width="7" height="86" rx="3" fill="#B97A4A"' + O3 + '/><circle cx="19.5" cy="8" r="5" fill="#FFD23F"' + O2 + "/>" +
+    '<path d="M23 14c14-6 24 6 38 0s20-4 28 0v34c-8-4-14-6-28 0s-24-6-38 0z" fill="#23C16B"' + O + "/>" +
+    '<path d="M50 22l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#fff"/>';
+  lib.pen = '<g transform="rotate(40 50 50)"><rect x="40" y="6" width="20" height="66" rx="6" fill="#2EA7FF"' + O + "/>" +
+    '<path d="M40 72h20l-10 22z" fill="#FFE0B2"' + O + '/><path d="M47 86h6l-3 8z" fill="' + INK + '"/>' +
+    '<rect x="37" y="18" width="26" height="10" rx="3" fill="#1E6FD9"' + O3 + '/><rect x="58" y="10" width="6" height="30" rx="3" fill="#C9D3DD"' + O2 + "/></g>";
+  lib.star = '<path d="M50 6l12 26 28 4-20 20 5 28-25-13-25 13 5-28-20-20 28-4z" fill="#FFD23F"' + O + "/>" + face(50, 50, 0.8) + shine(40, 26, 5, 3);
+  lib.car = ground(92) +
+    '<path d="M6 72V58c0-5 3-8 8-9l12-2 10-16c2-3 5-5 9-5h22c4 0 7 2 9 5l10 16 6 1c4 1 6 4 6 8v16z" fill="#FF4F6D"' + O + "/>" +
+    '<path d="M38 46l8-13h10v13zM62 46V33h6l8 13z" fill="#CDEBFF"' + O3 + "/>" +
+    '<circle cx="26" cy="74" r="11" fill="#5B5680"' + O + '/><circle cx="26" cy="74" r="4" fill="#DDE3EA"/><circle cx="74" cy="74" r="11" fill="#5B5680"' + O + '/><circle cx="74" cy="74" r="4" fill="#DDE3EA"/>' +
+    '<circle cx="90" cy="60" r="3" fill="#FFD23F"/>' + shine(20, 54, 5, 2, 0);
+  lib.cake = '<rect x="18" y="52" width="64" height="38" rx="6" fill="#FFB3C7"' + O + '/><rect x="24" y="30" width="52" height="24" rx="6" fill="#FFF3D6"' + O + "/>" +
+    '<path d="M24 40q6 6 13 0t13 0 13 0 13 0" fill="none" stroke="#FF7BAC" stroke-width="4"/><path d="M18 66q8 8 16 0t16 0 16 0 16 0" fill="none" stroke="#fff" stroke-width="4"/>' +
+    '<rect x="46" y="12" width="8" height="18" rx="2" fill="#2EA7FF"' + O2 + '/><path d="M50 2c4 4 4 8 0 9-4-1-4-5 0-9z" fill="#FF9F1C"' + O2 + "/>" +
+    '<circle cx="36" cy="30" r="4" fill="#FF4F6D"/><circle cx="64" cy="30" r="4" fill="#FF4F6D"/>';
+  lib.snake = '<path d="M16 86h52c14 0 18-16 6-20L30 50c-12-4-8-20 6-20h30" fill="none" stroke="' + INK + '" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<path d="M16 86h52c14 0 18-16 6-20L30 50c-12-4-8-20 6-20h30" fill="none" stroke="#23C16B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<path d="M22 86h8M44 86h8M40 60l6 3M56 70l6 2" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>' +
+    '<ellipse cx="74" cy="28" rx="16" ry="13" fill="#23C16B"' + O + "/>" + eye(70, 24, 4) + eye(81, 24, 4) +
+    '<path d="M90 30h6M96 30l3-3M96 30l3 3" stroke="#FF4F6D" stroke-width="2.5" stroke-linecap="round"/>';
+  lib.frog = ground() + '<ellipse cx="50" cy="66" rx="38" ry="26" fill="#6CD26A"' + O + "/>" +
+    '<circle cx="30" cy="36" r="14" fill="#6CD26A"' + O + '/><circle cx="70" cy="36" r="14" fill="#6CD26A"' + O + "/>" + eye(30, 35, 8) + eye(70, 35, 8) +
+    '<path d="M30 66q20 16 40 0" fill="none" stroke="' + INK + '" stroke-width="3.5" stroke-linecap="round"/>' +
+    '<circle cx="24" cy="62" r="5" fill="#FF7BAC" opacity=".6"/><circle cx="76" cy="62" r="5" fill="#FF7BAC" opacity=".6"/>' +
+    '<path d="M20 88q-8 0-10 4M80 88q8 0 10 4" fill="none" stroke="' + INK + '" stroke-width="3" stroke-linecap="round"/>';
+  lib.log = ground(90) + '<path d="M22 40h56v40H22z" fill="#B97A4A"' + O + "/>" +
+    '<ellipse cx="22" cy="60" rx="12" ry="20" fill="#E3B27A"' + O + '/><ellipse cx="22" cy="60" rx="6" ry="11" fill="none" stroke="#B97A4A" stroke-width="2.5"/><circle cx="22" cy="60" r="2" fill="#B97A4A"/>' +
+    '<path d="M34 50h24M40 62h30M36 72h22" stroke="#8A5530" stroke-width="3" stroke-linecap="round"/>' +
+    '<path d="M62 40c0-10 8-16 16-14-2 8-8 12-16 14z" fill="#23C16B"' + O2 + "/>";
+  lib.cheese = '<path d="M8 70L70 30l22 22v30H8z" fill="#FFD23F"' + O + '/><path d="M8 70h84" stroke="' + INK + '" stroke-width="3"/>' +
+    '<ellipse cx="30" cy="80" rx="6" ry="4" fill="#F5B800"/><ellipse cx="58" cy="76" rx="5" ry="3.5" fill="#F5B800"/><ellipse cx="78" cy="84" rx="6" ry="4" fill="#F5B800"/>' +
+    '<ellipse cx="56" cy="50" rx="6" ry="4" fill="#F5B800"/><ellipse cx="76" cy="58" rx="5" ry="3.5" fill="#F5B800"/>' + shine(40, 56, 8, 3, -32);
+  lib.chair = '<path d="M28 8h44v44H28z" fill="#C98A5A"' + O + '/><path d="M36 16h28v28H36z" fill="#E3B27A"' + O3 + "/>" +
+    '<path d="M22 52h56v12H22z" fill="#C98A5A"' + O + "/>" +
+    '<rect x="24" y="64" width="9" height="30" rx="3" fill="#A8683A"' + O3 + '/><rect x="67" y="64" width="9" height="30" rx="3" fill="#A8683A"' + O3 + "/>";
+  lib.cherries = '<path d="M34 64C38 40 46 24 56 12M70 60C66 40 62 26 56 12" fill="none" stroke="#6B4A2A" stroke-width="4" stroke-linecap="round"/>' +
+    '<path d="M56 12c10-8 26-6 30 2-10 6-22 6-30-2z" fill="#23C16B"' + O3 + "/>" +
+    '<circle cx="32" cy="72" r="18" fill="#FF3B3B"' + O + '/><circle cx="70" cy="68" r="18" fill="#FF3B3B"' + O + "/>" + shine(26, 64, 5, 3) + shine(64, 60, 5, 3);
+  lib.chips = '<g stroke="' + INK + '" stroke-width="2.5" stroke-linejoin="round">' +
+    '<path d="M30 46l-4-32 8-1 3 33zM40 46l-2-36 8-1 1 37zM52 46l1-38 8 1-2 37zM62 46l4-30 8 2-5 28zM46 46l0-28 7 0 0 28z" fill="#FFD23F"/></g>' +
+    '<path d="M22 42h56l-8 50H30z" fill="#FF3B3B"' + O + '/><path d="M30 42q20 16 40 0" fill="#fff"' + O3 + '/><path d="M50 58l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#FFD23F"/>';
   lib.chin = kid(52, 70, 88, 92);
   lib.ear = kid(80, 48, 99, 30);
   lib.neck = kid(54, 74, 92, 70);

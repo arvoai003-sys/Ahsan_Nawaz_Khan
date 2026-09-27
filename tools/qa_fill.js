@@ -34,6 +34,10 @@ const STUB = `
 
 function answerFor(state, spoken) {
   for (const L of state.letters) { const w = state.pattern.replace('_', L); if (spoken.includes(w)) return L; }
+  // signs are shown in capitals (BOOK CORNER) but spoken plainly: match without case, capital first
+  const low = spoken.map(x => String(x).toLowerCase());
+  const hits = state.letters.filter(L => low.includes(state.pattern.replace('_', L).toLowerCase()));
+  if (hits.length) return hits.find(L => L === L.toUpperCase()) || hits[0];
   return null;
 }
 

@@ -116,3 +116,29 @@
 @media (max-width: 520px) { .card.target.picture.tall { width: 120px; } .card.target.picture.tall .art { width: 96px; height: 160px; } }
 @media (max-height: 520px) { .card.target.picture.tall { width: 90px; } .card.target.picture.tall .art { width: 72px; height: 120px; } }
 @media (min-width: 900px) and (min-height: 640px) { .card.target.picture.tall .art { width: 150px; height: 250px; } .card.target.picture.tall { width: 180px; } }
+
+/* the words of a sentence, in order, like a line of reading (keepOrder) */
+.cards.sentence { max-width: 96vw; gap: 10px; flex-wrap: wrap; width: auto; }
+.cards.sentence .card { width: auto; min-width: 84px; min-height: 0; height: 104px; padding: 8px 18px; }
+.cards.sentence .card .word { font-size: 34px; }
+@media (max-width: 520px) {
+  .cards.sentence { gap: 8px; max-width: 340px; }
+  .cards.sentence .card { min-width: 66px; height: 78px; padding: 6px 10px; }
+  .cards.sentence .card .word { font-size: 24px; }
+}
+@media (max-height: 520px) {
+  .cards.sentence { flex-wrap: wrap; gap: 8px; }
+  .cards.sentence .card { min-width: 66px; height: 72px; padding: 6px 10px; }
+  .cards.sentence .card .word { font-size: 24px; }
+}
+
+/* a check (gate): the right card after a wrong tap */
+.card.reveal { border-color: var(--green); box-shadow: 0 8px 0 var(--green-d), 0 0 0 7px #B8F0CE; animation: pop .4s ease-out; }
+
+/* two-word choices ("play football") may take two lines */
+.card .word.two { white-space: normal; text-align: center; line-height: 1.05; }
+/* sentence words: a small speaker above each word, so short words (I, a) stay clear */
+.cards.sentence { margin-top: 14px; row-gap: 26px; }
+.cards.sentence .card .badge, .cards.sentence .card .badge { top: -20px; right: auto; left: 50%; margin-left: -18px; width: 36px; height: 36px; box-shadow: 0 3px 0 var(--ink); }
+.cards.sentence .card .badge svg { width: 18px; height: 18px; }
+.cards.sentence .card .word { margin-top: 8px; }

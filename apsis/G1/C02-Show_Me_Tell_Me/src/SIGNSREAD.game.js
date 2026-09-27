@@ -1,5 +1,5 @@
 // @asset ENG01CH02SIGNSREAD
-// @version v-02
+// @version v-03
 // @title Read-along Signs
 // @engine read-along
 /* A2 · Read-along: Signs · Reading and Comprehension > Signs(Reading and Comprehension) · O1, O2
@@ -31,7 +31,7 @@
   ReadAlong.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SIGNSREAD",
-    version: "v-02",
+    version: "v-03",
     title: "Read-along: Signs",
     intro: "Let's read about signs!",
     theme: "library",

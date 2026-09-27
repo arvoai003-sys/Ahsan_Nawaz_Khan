@@ -56,7 +56,9 @@ EXCITED = re.compile(r"^(yay|super|well done|wow|you got it|hooray|great job|ama
 GENTLE = re.compile(r"^(oops|try again|listen carefully|let's listen|let us listen|look carefully)", re.I)
 CHEER = re.compile(r"^(level \w+!|now find|book challenge)", re.I)
 SPEED = {"instruction": 0.80, "word": 0.80, "gentle": 0.82, "cheer": 0.95, "excited": 1.05, "read": 0.70}
-SAY_AS = {"yay!": "Yaaay!", "hooray!": "Hoo-ray!", "you got it!": "Yes! You got it!"}
+SAY_AS = {"yay!": "Yaaay!", "hooray!": "Hoo-ray!", "you got it!": "Yes! You got it!",
+          # "ch" on its own would be read as the letters "see aitch": say whole words
+          "ch sound hunt": "Sound hunt! Chin, chick, cheese!"}
 # how names are said, if a game ever uses one ({"Name": "how to say it"});
 # the on-screen spelling never changes. No named characters are used (2026-09-26).
 NAMES = {}

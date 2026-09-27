@@ -1,7 +1,8 @@
 /* Tap-to-identify engine. The child hears a prompt and taps one or more
    cards. Content shape:
    { rounds: [ { banner, bannerSay, markFirst, items: [
-       { say, text, target: {text, art}, options: [{text, art}], answer: ["..."], hint2 } ] } ] }
+       { say, text, target: {text, art}, options: [{text, art}], answer: ["..."], hint2,
+         keepOrder (options stay in order, e.g. the words of a sentence) } ] } ] }
    ES5 only. Needs Shell and Art. */
 var TapIdentify = (function () {
   var T = {};
@@ -21,7 +22,7 @@ var TapIdentify = (function () {
     card.setAttribute("aria-label", opt.label || opt.text);
     if (!isTarget) { card.setAttribute("tabindex", "0"); }
     card.innerHTML = (opt.art ? '<div class="art">' + Art.get(opt.art) + "</div>" : "") +
-      (opt.hideWord ? "" : '<div class="word' + (opt.text.length >= 7 ? " long" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>");
+      (opt.hideWord ? "" : '<div class="word' + (opt.text.length >= 7 ? " long" : "") + (opt.text.indexOf(" ") > -1 && !opt.art ? " two" : "") + '">' + wordHtml(opt.text, markFirst) + "</div>");
     if (!opt.noBadge) {
       var badge = Shell.speakerBtn("badge", "Listen to " + (opt.label || opt.text));
       badge.onclick = function (e) {
@@ -71,8 +72,8 @@ var TapIdentify = (function () {
       tr.appendChild(makeCard(item.target, round.markFirst, true));
       board.appendChild(tr);
     }
-    var opts = Shell.shuffle(item.options);
-    var cards = Shell.el("div", "cards" + (opts.length > 3 ? " six" : ""));
+    var opts = item.keepOrder ? item.options.slice() : Shell.shuffle(item.options); /* keepOrder: the words of a sentence */
+    var cards = Shell.el("div", "cards" + (item.keepOrder ? " sentence" : (opts.length > 3 ? " six" : "")));
     var tint = Math.floor(Math.random() * 6);
     for (i = 0; i < opts.length; i++) {
       (function (card) {
@@ -86,7 +87,7 @@ var TapIdentify = (function () {
     st.appendChild(board);
     fitWords(st);
     Shell.progress(flat.length, idx);
-    if (/[?&]qa=1/.test(window.location.search)) { window.__qa = { answer: item.answer }; } /* test hook only */
+    if (/[?&]qa=1/.test(window.location.search)) { window.__qa = { answer: item.answer, gate: !!C.gate }; } /* test hook only */
 
     var go = Shell.guard(function () {
       if (!tutorialDone && T.tutorial !== false) {
@@ -146,6 +147,14 @@ var TapIdentify = (function () {
       } else {
         Shell.say([card.optText, praise, "Find one more!"]);
       }
+    } else if (C.gate) {
+      /* a check (gate): one try; show the right card, then move on */
+      firstTry = false;
+      lock(true);
+      Shell.wrong(card);
+      var cs = allCards(), j;
+      for (j = 0; j < cs.length; j++) { if (item.answer.indexOf(cs[j].optText) > -1) { cs[j].className += " reveal"; } }
+      Shell.say(["Oops!", "Here is the right one."].concat(item.done || []), Shell.guard(function () { Shell.wait(Shell.guard(next), 700); }));
     } else {
       firstTry = false;
       attempts++;
@@ -234,7 +243,7 @@ var TapIdentify = (function () {
   T.total = function () { return flat ? flat.length : 0; };
   T.max = function () { return flat ? flat.length : 0; };
 
-  T.LINES = ["Look carefully.", "Tap the picture you choose.", "Tap here to hear the question again.", "Tap a speaker to hear a word. Then tap the word you choose.", "Find one more!", "Oops! Try again.", "Listen.", "Let's listen to each word."];
+  T.LINES = ["Oops!", "Here is the right one.", "Look carefully.", "Tap the picture you choose.", "Tap here to hear the question again.", "Tap a speaker to hear a word. Then tap the word you choose.", "Find one more!", "Oops! Try again.", "Listen.", "Let's listen to each word."];
   T.init = function (content) {
     C = content;
     window.addEventListener("resize", function () { T.refit(); });

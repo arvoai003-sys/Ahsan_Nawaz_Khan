@@ -8,7 +8,7 @@ var fs = require('fs'), vm = require('vm'), path = require('path');
 var gamePath = path.resolve(process.argv[2]), runs = +(process.argv[3] || 300);
 var root = path.join(__dirname, '..'), shared = path.join(root, 'apsis/shared');
 var src = fs.readFileSync(gamePath, 'utf8');
-var engine = (src.match(/^\/\/\s*@engine\s+(\S+)/m) || [])[1];
+var engines = ((src.match(/^\/\/\s*@engine\s+(.+?)\s*$/m) || [])[1] || '').split(/\s+/), engine = engines[0];
 var asset = (src.match(/^\/\/\s*@asset\s+(\S+)/m) || [])[1];
 var noop = function () {};
 var ctx = { Math: Math, JSON: JSON, console: console, setTimeout: noop, clearTimeout: noop };
@@ -16,10 +16,11 @@ ctx.window = ctx;
 ctx.addEventListener = noop;
 ctx.document = { addEventListener: noop, getElementById: function () { return null; } };
 vm.createContext(ctx);
-['g1-shell.js', 'g1-art.js', 'g1-buddy.js', 'engines/' + engine + '.js'].forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
+['g1-shell.js', 'g1-art.js', 'g1-buddy.js'].concat(engines.map(function (e) { return 'engines/' + e + '.js'; })).forEach(function (f) { vm.runInContext(fs.readFileSync(path.join(shared, f), 'utf8'), ctx); });
 var bootCfg = null;
 vm.runInContext('Shell.boot = function (c) { this.__cfg = c; };', ctx);
-var ENGINE = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match', 'read-along': 'ReadAlong' }[engine];
+var NAMES = { 'tap-identify': 'TapIdentify', 'letter-fill': 'LetterFill', 'match': 'Match', 'read-along': 'ReadAlong' };
+var ENGINE = NAMES[engine];
 var captured;
 vm.runInContext('var __init = ' + ENGINE + '.init; ' + ENGINE + '.init = function (c) { this.__content = c; __init(c); };', ctx);
 vm.runInContext(src, ctx);
@@ -46,8 +47,9 @@ function add(x) {
 // plain lists of separate lines (not sentences): add one by one
 function addEach(list) { (list || []).forEach(function (x) { add(x); }); }
 addEach(vm.runInContext('Shell.LINES', ctx));
-addEach(vm.runInContext(ENGINE + '.LINES', ctx));
+engines.forEach(function (e) { addEach(vm.runInContext(NAMES[e] + '.LINES', ctx)); });
 addEach([bootCfg.title, bootCfg.intro]);
+addEach(bootCfg.lines); // extra lines a game says (e.g. a check's "You got 3 out of 4!")
 var engineAll = vm.runInContext(ENGINE, ctx);
 if (engineAll.allLines) engineAll.allLines().forEach(add);
 if (!engineAll.allLines) captured.levels.forEach(function (L) {
@@ -57,7 +59,8 @@ if (!engineAll.allLines) captured.levels.forEach(function (L) {
       R.items.forEach(function (it) {
         add(it.say); add(it.hint2); add(it.full); add(it.done);
         if (it.target && it.target.say) add(it.target.say);
-        var engineObj = vm.runInContext(ENGINE, ctx);
+        // a game with several engines names one on each level (level.engine)
+        var engineObj = vm.runInContext(NAMES[L.engine || engine], ctx);
         if (engineObj.instructionFor) add(engineObj.instructionFor(it));
         if (engineObj.linesFor) engineObj.linesFor(it).forEach(add);
         if (it.target && !it.target.hideWord) add(it.target.text);

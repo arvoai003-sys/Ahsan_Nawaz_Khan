@@ -14,22 +14,22 @@ other 17 are:
 
 | # | Asset | Plan type | Engine | File task name | Ready? |
 |---|---|---|---|---|---|
-| A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | **Built v-01** |
-| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-02** |
-| A4 | Label It | Matching | Drag-to-target | `LABELIT` | **Built v-01** |
-| A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After the practice games |
-| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-06** |
-| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-04** |
-| A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | **Built v-01** |
+| A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | **Built v-03** |
+| A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-04** |
+| A4 | Label It | Matching | Drag-to-target | `LABELIT` | **Built v-02** |
+| A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | **Built v-01** |
+| A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-07** |
+| A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-06** |
+| A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | **Built v-02** |
 | A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Next |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
-| A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | **Built v-01** |
-| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-03** |
+| A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | **Built v-02** |
+| A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-04** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
-| A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Next |
-| A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Next |
-| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-03** |
-| A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Next |
+| A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | **Built v-01** |
+| A18 | Rhyme Time | Matching | Tap-to-identify + match | `RHYME` | **Built v-01** |
+| A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-04** |
+| A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOING` | **Built v-01** |
 | A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
 
 File names: `games/ENG-APSIS-G1-C02-<Asset_Name>.html` (current release). Earlier versions are in `builds/archive/`.
@@ -143,7 +143,7 @@ longer used.)
 1. **Wave 1 (done).** A6, A7, A14, A19, A2 and A13 on the shared Grade 1
    shell and its tap-to-identify, letter-fill, drag-to-target and read-along
    engines.
-2. **Wave 2.** A3, A4 and A8 are done. Next A17, A18 and A20.
+2. **Wave 2 (done).** A3, A4, A8, A17, A18, A20, and Gate 1 (A5).
 3. **Wave 3.** A10 Build a Sign (drag-assemble). Then the four gates, once
    the practice games have fixed which questions they use, so the gates can
    use different ones.
@@ -175,3 +175,8 @@ and is delivered in `games/`, with every version kept in `builds/archive/`.
 | 2026-09-26 | A13 Read-along: Our Senses | `games/ENG-APSIS-G1-C02-Read_along_Our_Senses.html` (v-01) | Book 2F text verbatim: p.33 title and labels (see hear smell taste touch), p.34 "We have five senses." and the five boxes with their headings (Sight, Hearing, Smell, Taste, Touch). Read to Me / Read by Myself / Word Hunt. Balloons theme. 64 lines in Sarah's voice. |
 | 2026-09-27 | Slower, clearer reading + all games re-voiced | all `games/` (A2 v-02, A13 v-02, A3 v-03, A4 v-02, A6 v-07, A7 v-05, A14 v-04, A19 v-04) | Read-along sentences are now read phrase by phrase ("We touch and feel things / with our hands."), each phrase slowed inside the voice model (not by slowing playback), with pauses between phrases: about 100 words a minute instead of about 160. Word highlighting follows the recording exactly. Tapped words stay separate, clear clips. All clips re-recorded at the voice's own 24 kHz, 64 kbps, one loudness; short lines pronunciation-checked with espeak. |
 | 2026-09-27 | A8 Capital at the Start | `games/ENG-APSIS-G1-C02-Capital_at_the_Start.html` (v-01) | p.31 2D C (_ook corner, _anger, _top) verbatim in Level 2; the p.31 tip "Signs don't have a full stop" said in Levels 1 and 6; p.39 2I C2 sentences (capital W, then the full stop) in Levels 4 and 5, with the other p.34 sentences. More chapter and everyday signs in Levels 1, 3 and 6. Each sign offers the capital, its small letter and one capital that never makes a word; sentences offer W or w. A wrong tile hears the rule ("Signs start with a capital letter."). Seaside theme. |
+| 2026-09-27 | House rule for signs | A2 v-03, A3 v-04, A7 v-06, A8 v-02 | Signs of one or two words are written in capitals (STOP, NO ENTRY, BOOK CORNER); longer signs have a capital at the start of every word (Wash Your Hands, Danger Deep Water). Letter tiles take the case of the gap (A7: E H O); A8 still offers the capital and its small letter on purpose. Speech keeps the plain words. |
+| 2026-09-27 | A18 Rhyme Time | `games/ENG-APSIS-G1-C02-Rhyme_Time.html` (v-01) | p.36 tip "Words that rhyme sound the same, like fun and run." (Level 1); p.36 2H D sentences verbatim in Level 2: the words stay in order and the child taps the two that rhyme (I hear with my ears. first). Picture rhyme pairs, rhyme matching (the plan's matching game), finish-the-rhyme sentences and odd one out. Uses two engines (tap-identify and match). Candy theme. 14 new pictures. |
+| 2026-09-27 | A20 Doing Words | `games/ENG-APSIS-G1-C02-Doing_Words.html` (v-01) | p.40 word box verbatim (run, jump, sing, dance, skip, play football) and the tip "Doing words are called verbs."; more doing words (clap, wave, read, sleep, eat, drink). The buddy child is posed for each action. "What is the child doing?" keeps the child unnamed. Park theme. |
+| 2026-09-27 | A17 ch Sound Hunt | `games/ENG-APSIS-G1-C02-ch_Sound_Hunt.html` (v-01) | Book ch words chin, chest (start) and lunch, touch (end); p.36 2H A verbatim (touch ends like lunch). Grade 1 list: chick, cheese, chair, cherries, chips; peach, beach, bench, watch, catch. The voice never says "ch" alone ("Which one starts like chin?"). Farm theme. |
+| 2026-09-27 | A5 Gate 1: Signs check | `games/ENG-APSIS-G1-C02-Gate_1_Signs_Check.html` (v-01) | 2C A2 and A1 verbatim (A1 answer: the crossed-out tap, "Don't waste water"), plus a new sign-meaning item (STOP), a new label item (HATS) and reading Danger Deep Water. One try per question; a wrong answer shows the right one. Ends with "You got N out of 5!"; the LMS result includes passed (4 of 5). Starry theme. |

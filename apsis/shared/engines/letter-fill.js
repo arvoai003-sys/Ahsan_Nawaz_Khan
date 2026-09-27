@@ -42,8 +42,20 @@ var LetterFill = (function () {
     }
     return out.join(" ");
   }
+  /* signs are written the house way (Shell.signCase); the letter tiles take the
+     case of the gap, unless the item's choices are the point (fixedChoices:
+     "Capital at the Start" offers B and b on purpose) */
+  function prep(it) {
+    if (it.kind !== "sign") { it.shown = it.pattern; it.key = it.answer; it.tiles = it.choices; return; }
+    var cap = Shell.signGapIsCapital(it.pattern), i;
+    function fix(ch) { return it.fixedChoices || !/[a-z]/i.test(ch) ? ch : (cap ? ch.toUpperCase() : ch.toLowerCase()); }
+    it.shown = Shell.signCase(it.pattern);
+    it.key = fix(it.answer);
+    it.tiles = [];
+    for (i = 0; i < it.choices.length; i++) { it.tiles.push(fix(it.choices[i])); }
+  }
   function signHtml(it) {
-    var txt = patternHtml(it.pattern);
+    var txt = patternHtml(it.shown);
     if (it.shape === "diamond" || it.shape === "octagon") {
       return '<div class="sign-wrap"><div class="sign ' + it.shape + '">' + SHAPES[it.shape] + '<div class="txt">' + txt + "</div></div>" +
         (it.post ? '<div class="sign-post"></div>' : "") + "</div>";
@@ -56,6 +68,7 @@ var LetterFill = (function () {
     var st = Shell.$("stage"), i;
     st.innerHTML = "";
     attempts = 0; firstTry = true; lock(true);
+    prep(item);
 
     var prompt = Shell.el("div", "prompt");
     var sayBtn = Shell.speakerBtn("say", "Hear it again");
@@ -69,13 +82,13 @@ var LetterFill = (function () {
     if (item.kind === "sign") {
       show.innerHTML = signHtml(item);
     } else {
-      show.innerHTML = '<div class="lf-pic">' + Art.get(item.art) + '</div><div class="lf-word">' + patternHtml(item.pattern) + "</div>";
+      show.innerHTML = '<div class="lf-pic">' + Art.get(item.art) + '</div><div class="lf-word">' + patternHtml(item.shown) + "</div>";
     }
     show.onclick = function () { Shell.say(item.full); };
     board.appendChild(show);
 
     var tray = Shell.el("div", "tray");
-    var letters = Shell.shuffle(item.choices), tint = Math.floor(Math.random() * 6);
+    var letters = Shell.shuffle(item.tiles), tint = Math.floor(Math.random() * 6);
     for (i = 0; i < letters.length; i++) {
       (function (ch, k) {
         var t = Shell.el("div", "tile k" + ((tint + k) % 6) + (MARKS[ch] ? " mark" : ""), ch);
@@ -166,7 +179,7 @@ var LetterFill = (function () {
   function place(t) {
     if (locked || t.className.indexOf("used") > -1) { return; }
     var slot = Shell.$("slot");
-    if (t.letter === item.answer) {
+    if (t.letter === item.key) {
       lock(true);
       slot.innerHTML = t.letter;
       slot.className = "slot filled";

@@ -1,4 +1,25 @@
 {
+ "a": {
+  "mood": "word",
+  "said_as": "a.",
+  "sig": "acbf50222549",
+  "text": "a",
+  "voice": "sarah"
+ },
+ "a-bee-is-in-the": {
+  "mood": "instruction",
+  "said_as": "A bee is in the...",
+  "sig": "e384e02cc0fd",
+  "text": "A bee is in the...",
+  "voice": "sarah"
+ },
+ "a-bee-is-in-the-tree": {
+  "mood": "instruction",
+  "said_as": "A bee is in the tree.",
+  "sig": "9f30253619c0",
+  "text": "A bee is in the tree.",
+  "voice": "sarah"
+ },
  "a-sentence-ends-with-a-full-stop": {
   "mood": "instruction",
   "said_as": "A sentence ends with a full stop.",
@@ -41,6 +62,13 @@
   "text": "bag",
   "voice": "sarah"
  },
+ "bag-and-flag-rhyme": {
+  "mood": "instruction",
+  "said_as": "Bag and flag rhyme!",
+  "sig": "d8a61769cce7",
+  "text": "Bag and flag rhyme!",
+  "voice": "sarah"
+ },
  "bags": {
   "mood": "word",
   "said_as": "Bags.",
@@ -53,6 +81,13 @@
   "said_as": "ball.",
   "sig": "c9df41c9b9b8",
   "text": "ball",
+  "voice": "sarah"
+ },
+ "ball-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Ball is the odd one out!",
+  "sig": "739408c98113",
+  "text": "Ball is the odd one out!",
   "voice": "sarah"
  },
  "banana": {
@@ -69,11 +104,74 @@
   "text": "Be careful! The road is slippery.",
   "voice": "sarah"
  },
+ "beach": {
+  "mood": "word",
+  "said_as": "beach.",
+  "sig": "1a1f3107be9a",
+  "text": "beach",
+  "voice": "sarah"
+ },
+ "beach-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Beach ends like lunch!",
+  "sig": "f55e2fe3f42a",
+  "text": "Beach ends like lunch!",
+  "voice": "sarah"
+ },
+ "bed": {
+  "mood": "word",
+  "said_as": "bed.",
+  "sig": "1923338ac337",
+  "text": "bed",
+  "voice": "sarah"
+ },
+ "bee": {
+  "mood": "word",
+  "said_as": "bee.",
+  "sig": "eb73cb3d869b",
+  "text": "bee",
+  "voice": "sarah"
+ },
+ "bee-and-tree-rhyme": {
+  "mood": "instruction",
+  "said_as": "Bee and tree rhyme!",
+  "sig": "a112cfa0d5a2",
+  "text": "Bee and tree rhyme!",
+  "voice": "sarah"
+ },
  "bell": {
   "mood": "word",
   "said_as": "bell.",
   "sig": "38e9e10cb8db",
   "text": "bell",
+  "voice": "sarah"
+ },
+ "bell-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Bell is the odd one out!",
+  "sig": "9aa8a77eaa98",
+  "text": "Bell is the odd one out!",
+  "voice": "sarah"
+ },
+ "bench": {
+  "mood": "word",
+  "said_as": "bench.",
+  "sig": "9f993b662f8f",
+  "text": "bench",
+  "voice": "sarah"
+ },
+ "bench-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Bench ends like lunch!",
+  "sig": "91d131b56e87",
+  "text": "Bench ends like lunch!",
+  "voice": "sarah"
+ },
+ "bench-the-sound-is-at-the-end": {
+  "mood": "instruction",
+  "said_as": "Bench! The sound is at the end.",
+  "sig": "278a2b931dca",
+  "text": "Bench! The sound is at the end.",
   "voice": "sarah"
  },
  "big": {
@@ -104,6 +202,13 @@
   "text": "Book corner",
   "voice": "sarah"
  },
+ "book-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Book is the odd one out!",
+  "sig": "113cbcd8ab98",
+  "text": "Book is the odd one out!",
+  "voice": "sarah"
+ },
  "books": {
   "mood": "word",
   "said_as": "Books.",
@@ -116,6 +221,27 @@
   "said_as": "Books! You can read a book here.",
   "sig": "c37f1a3275cb",
   "text": "Books! You can read a book here.",
+  "voice": "sarah"
+ },
+ "box": {
+  "mood": "word",
+  "said_as": "box.",
+  "sig": "93ee23443225",
+  "text": "box",
+  "voice": "sarah"
+ },
+ "bright": {
+  "mood": "word",
+  "said_as": "bright.",
+  "sig": "e7dbc5d6f938",
+  "text": "bright",
+  "voice": "sarah"
+ },
+ "bright-and-light-rhyme": {
+  "mood": "instruction",
+  "said_as": "Bright and light rhyme!",
+  "sig": "21f304c18998",
+  "text": "Bright and light rhyme!",
   "voice": "sarah"
  },
  "bugs": {
@@ -137,6 +263,118 @@
   "said_as": "bus.",
   "sig": "39c463933e05",
   "text": "bus",
+  "voice": "sarah"
+ },
+ "bus-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Bus is the odd one out!",
+  "sig": "ef8b31285545",
+  "text": "Bus is the odd one out!",
+  "voice": "sarah"
+ },
+ "cake": {
+  "mood": "word",
+  "said_as": "cake.",
+  "sig": "1022c6e90f51",
+  "text": "cake",
+  "voice": "sarah"
+ },
+ "cake-and-snake-rhyme": {
+  "mood": "instruction",
+  "said_as": "Cake and snake rhyme!",
+  "sig": "554aff91541d",
+  "text": "Cake and snake rhyme!",
+  "voice": "sarah"
+ },
+ "can": {
+  "mood": "word",
+  "said_as": "can.",
+  "sig": "c370df121f3f",
+  "text": "can",
+  "voice": "sarah"
+ },
+ "can-you-find": {
+  "mood": "instruction",
+  "said_as": "Can you find?",
+  "sig": "967939fe0492",
+  "text": "Can you find",
+  "voice": "sarah"
+ },
+ "can-you-find-clap": {
+  "mood": "instruction",
+  "said_as": "Can you find clap?",
+  "sig": "a303876d2fd0",
+  "text": "Can you find clap",
+  "voice": "sarah"
+ },
+ "can-you-find-dance": {
+  "mood": "instruction",
+  "said_as": "Can you find dance?",
+  "sig": "c11191c12c6d",
+  "text": "Can you find dance",
+  "voice": "sarah"
+ },
+ "can-you-find-drink": {
+  "mood": "instruction",
+  "said_as": "Can you find drink?",
+  "sig": "1be989f8c6b0",
+  "text": "Can you find drink",
+  "voice": "sarah"
+ },
+ "can-you-find-eat": {
+  "mood": "instruction",
+  "said_as": "Can you find eat?",
+  "sig": "99166845f500",
+  "text": "Can you find eat",
+  "voice": "sarah"
+ },
+ "can-you-find-jump": {
+  "mood": "instruction",
+  "said_as": "Can you find jump?",
+  "sig": "e8330efb180e",
+  "text": "Can you find jump",
+  "voice": "sarah"
+ },
+ "can-you-find-play-football": {
+  "mood": "instruction",
+  "said_as": "Can you find play football?",
+  "sig": "2d1acad6d3a8",
+  "text": "Can you find play football",
+  "voice": "sarah"
+ },
+ "can-you-find-read": {
+  "mood": "instruction",
+  "said_as": "Can you find read?",
+  "sig": "0793c7899fdf",
+  "text": "Can you find read",
+  "voice": "sarah"
+ },
+ "can-you-find-run": {
+  "mood": "instruction",
+  "said_as": "Can you find run?",
+  "sig": "1b8b63287eff",
+  "text": "Can you find run",
+  "voice": "sarah"
+ },
+ "can-you-find-sing": {
+  "mood": "instruction",
+  "said_as": "Can you find sing?",
+  "sig": "407cd2898600",
+  "text": "Can you find sing",
+  "voice": "sarah"
+ },
+ "can-you-find-skip": {
+  "mood": "instruction",
+  "said_as": "Can you find skip?",
+  "sig": "6660e415c0cd",
+  "text": "Can you find skip",
+  "voice": "sarah"
+ },
+ "can-you-find-sleep": {
+  "mood": "instruction",
+  "said_as": "Can you find sleep?",
+  "sig": "413275feb7b2",
+  "text": "Can you find sleep",
   "voice": "sarah"
  },
  "can-you-find-the": {
@@ -307,6 +545,13 @@
   "text": "Can you find three words that start the same?",
   "voice": "sarah"
  },
+ "can-you-find-wave": {
+  "mood": "instruction",
+  "said_as": "Can you find wave?",
+  "sig": "3d469c5301ab",
+  "text": "Can you find wave",
+  "voice": "sarah"
+ },
  "can-you-match-each-sense-to-its-body-part": {
   "mood": "instruction",
   "said_as": "Can you match each sense to its body part?",
@@ -319,6 +564,13 @@
   "said_as": "Can you match each sense to what we do?",
   "sig": "92a5dd57b888",
   "text": "Can you match each sense to what we do?",
+  "voice": "sarah"
+ },
+ "can-you-match-the-words-that-rhyme": {
+  "mood": "instruction",
+  "said_as": "Can you match the words that rhyme?",
+  "sig": "bd5f3e0bacb3",
+  "text": "Can you match the words that rhyme?",
   "voice": "sarah"
  },
  "can-you-put-each-label-in-the-right-place": {
@@ -342,11 +594,228 @@
   "text": "Capital at the Start",
   "voice": "sarah"
  },
- "chest": {
+ "car": {
+  "mood": "word",
+  "said_as": "car.",
+  "sig": "650d82c8bd0f",
+  "text": "car",
+  "voice": "sarah"
+ },
+ "car-and-star-rhyme": {
   "mood": "instruction",
-  "said_as": "Chest!",
-  "sig": "8294b2adc02e",
-  "text": "Chest!",
+  "said_as": "Car and star rhyme!",
+  "sig": "8a0f21f086ea",
+  "text": "Car and star rhyme!",
+  "voice": "sarah"
+ },
+ "cat": {
+  "mood": "word",
+  "said_as": "cat.",
+  "sig": "dd9563d2db31",
+  "text": "cat",
+  "voice": "sarah"
+ },
+ "cat-and-hat-rhyme": {
+  "mood": "instruction",
+  "said_as": "Cat and hat rhyme!",
+  "sig": "25f5684ffc55",
+  "text": "Cat and hat rhyme!",
+  "voice": "sarah"
+ },
+ "cat-and-mat-rhyme": {
+  "mood": "instruction",
+  "said_as": "Cat and mat rhyme!",
+  "sig": "a97926d0caa1",
+  "text": "Cat and mat rhyme!",
+  "voice": "sarah"
+ },
+ "catch": {
+  "mood": "word",
+  "said_as": "catch.",
+  "sig": "10e5e8e5a2a6",
+  "text": "catch",
+  "voice": "sarah"
+ },
+ "catch-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Catch ends like lunch!",
+  "sig": "18befff77f73",
+  "text": "Catch ends like lunch!",
+  "voice": "sarah"
+ },
+ "ch-sound-hunt": {
+  "mood": "instruction",
+  "said_as": "Sound hunt! Chin, chick, cheese!",
+  "sig": "89c1ad1de8e7",
+  "text": "ch Sound Hunt",
+  "voice": "sarah"
+ },
+ "chair": {
+  "mood": "word",
+  "said_as": "chair.",
+  "sig": "8bb5f3abe559",
+  "text": "chair",
+  "voice": "sarah"
+ },
+ "chair-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Chair starts like cheese!",
+  "sig": "59207c5be206",
+  "text": "Chair starts like cheese!",
+  "voice": "sarah"
+ },
+ "chair-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Chair starts like cherries!",
+  "sig": "6f00acf5e230",
+  "text": "Chair starts like cherries!",
+  "voice": "sarah"
+ },
+ "chair-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Chair starts like chest!",
+  "sig": "f23d3baef8cf",
+  "text": "Chair starts like chest!",
+  "voice": "sarah"
+ },
+ "chair-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Chair starts like chick!",
+  "sig": "4f6fe6e2075b",
+  "text": "Chair starts like chick!",
+  "voice": "sarah"
+ },
+ "chair-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Chair starts like chin!",
+  "sig": "0d0e96535f32",
+  "text": "Chair starts like chin!",
+  "voice": "sarah"
+ },
+ "chair-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Chair starts like chips!",
+  "sig": "b20304cf50f0",
+  "text": "Chair starts like chips!",
+  "voice": "sarah"
+ },
+ "chair-the-sound-is-at-the-start": {
+  "mood": "instruction",
+  "said_as": "Chair! The sound is at the start.",
+  "sig": "db7bd575604f",
+  "text": "Chair! The sound is at the start.",
+  "voice": "sarah"
+ },
+ "cheese": {
+  "mood": "word",
+  "said_as": "cheese.",
+  "sig": "5a5c837223b3",
+  "text": "cheese",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like chair!",
+  "sig": "7384216cac06",
+  "text": "Cheese starts like chair!",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like cherries!",
+  "sig": "50d83954455a",
+  "text": "Cheese starts like cherries!",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like chest!",
+  "sig": "1ed050080745",
+  "text": "Cheese starts like chest!",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like chick!",
+  "sig": "8ed28727741f",
+  "text": "Cheese starts like chick!",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like chin!",
+  "sig": "d3c69f18d012",
+  "text": "Cheese starts like chin!",
+  "voice": "sarah"
+ },
+ "cheese-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Cheese starts like chips!",
+  "sig": "8679831fedd9",
+  "text": "Cheese starts like chips!",
+  "voice": "sarah"
+ },
+ "cheese-the-sound-is-at-the-start": {
+  "mood": "instruction",
+  "said_as": "Cheese! The sound is at the start.",
+  "sig": "555adaa148d6",
+  "text": "Cheese! The sound is at the start.",
+  "voice": "sarah"
+ },
+ "cherries": {
+  "mood": "word",
+  "said_as": "cherries.",
+  "sig": "83f374d1a93e",
+  "text": "cherries",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like chair!",
+  "sig": "46c4fa759dff",
+  "text": "Cherries starts like chair!",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like cheese!",
+  "sig": "1a6ad81b68b3",
+  "text": "Cherries starts like cheese!",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like chest!",
+  "sig": "e360075738bc",
+  "text": "Cherries starts like chest!",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like chick!",
+  "sig": "e1d8d2b70f56",
+  "text": "Cherries starts like chick!",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like chin!",
+  "sig": "7d08c1af1c02",
+  "text": "Cherries starts like chin!",
+  "voice": "sarah"
+ },
+ "cherries-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Cherries starts like chips!",
+  "sig": "c3f2eb137f02",
+  "text": "Cherries starts like chips!",
+  "voice": "sarah"
+ },
+ "chest": {
+  "mood": "word",
+  "said_as": "chest.",
+  "sig": "1e11e2ec7e22",
+  "text": "chest",
   "voice": "sarah"
  },
  "chest-is-a-naming-word": {
@@ -356,11 +825,214 @@
   "text": "Chest is a naming word!",
   "voice": "sarah"
  },
+ "chest-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Chest starts like chair!",
+  "sig": "5a979e99f2b3",
+  "text": "Chest starts like chair!",
+  "voice": "sarah"
+ },
+ "chest-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Chest starts like cheese!",
+  "sig": "de16816e8e1f",
+  "text": "Chest starts like cheese!",
+  "voice": "sarah"
+ },
+ "chest-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Chest starts like cherries!",
+  "sig": "7b37aa6bb129",
+  "text": "Chest starts like cherries!",
+  "voice": "sarah"
+ },
+ "chest-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Chest starts like chick!",
+  "sig": "6f2c04145a1b",
+  "text": "Chest starts like chick!",
+  "voice": "sarah"
+ },
+ "chest-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Chest starts like chin!",
+  "sig": "6287c93051b4",
+  "text": "Chest starts like chin!",
+  "voice": "sarah"
+ },
+ "chest-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Chest starts like chips!",
+  "sig": "ca6fe7903f9c",
+  "text": "Chest starts like chips!",
+  "voice": "sarah"
+ },
+ "chick": {
+  "mood": "word",
+  "said_as": "chick.",
+  "sig": "674498733b0d",
+  "text": "chick",
+  "voice": "sarah"
+ },
+ "chick-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Chick starts like chair!",
+  "sig": "d7ad87c881e4",
+  "text": "Chick starts like chair!",
+  "voice": "sarah"
+ },
+ "chick-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Chick starts like cheese!",
+  "sig": "d0d1662bc970",
+  "text": "Chick starts like cheese!",
+  "voice": "sarah"
+ },
+ "chick-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Chick starts like cherries!",
+  "sig": "4c5a901cec31",
+  "text": "Chick starts like cherries!",
+  "voice": "sarah"
+ },
+ "chick-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Chick starts like chest!",
+  "sig": "81a6951c61a5",
+  "text": "Chick starts like chest!",
+  "voice": "sarah"
+ },
+ "chick-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Chick starts like chin!",
+  "sig": "45303f54ebe0",
+  "text": "Chick starts like chin!",
+  "voice": "sarah"
+ },
+ "chick-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Chick starts like chips!",
+  "sig": "ab17cc08b885",
+  "text": "Chick starts like chips!",
+  "voice": "sarah"
+ },
+ "chick-the-sound-is-at-the-start": {
+  "mood": "instruction",
+  "said_as": "Chick! The sound is at the start.",
+  "sig": "5556943a241b",
+  "text": "Chick! The sound is at the start.",
+  "voice": "sarah"
+ },
  "chin": {
   "mood": "word",
   "said_as": "chin.",
   "sig": "36a89712dc28",
   "text": "chin",
+  "voice": "sarah"
+ },
+ "chin-and-chest-start-the-same-way": {
+  "mood": "instruction",
+  "said_as": "Chin and chest start the same way!",
+  "sig": "7b1cb1cc0263",
+  "text": "Chin and chest start the same way!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Chin starts like chair!",
+  "sig": "2e3ad783893a",
+  "text": "Chin starts like chair!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Chin starts like cheese!",
+  "sig": "9e09be367053",
+  "text": "Chin starts like cheese!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Chin starts like cherries!",
+  "sig": "37cf6459634b",
+  "text": "Chin starts like cherries!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Chin starts like chest!",
+  "sig": "e0d84b7f8c01",
+  "text": "Chin starts like chest!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Chin starts like chick!",
+  "sig": "56abfe9a3da3",
+  "text": "Chin starts like chick!",
+  "voice": "sarah"
+ },
+ "chin-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Chin starts like chips!",
+  "sig": "32043f53ae55",
+  "text": "Chin starts like chips!",
+  "voice": "sarah"
+ },
+ "chin-the-sound-is-at-the-start": {
+  "mood": "instruction",
+  "said_as": "Chin! The sound is at the start.",
+  "sig": "fa938733727e",
+  "text": "Chin! The sound is at the start.",
+  "voice": "sarah"
+ },
+ "chips": {
+  "mood": "word",
+  "said_as": "chips.",
+  "sig": "978a82edd815",
+  "text": "chips",
+  "voice": "sarah"
+ },
+ "chips-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Chips starts like chair!",
+  "sig": "618f2baebf36",
+  "text": "Chips starts like chair!",
+  "voice": "sarah"
+ },
+ "chips-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Chips starts like cheese!",
+  "sig": "56289765de8d",
+  "text": "Chips starts like cheese!",
+  "voice": "sarah"
+ },
+ "chips-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Chips starts like cherries!",
+  "sig": "92d75e3306ac",
+  "text": "Chips starts like cherries!",
+  "voice": "sarah"
+ },
+ "chips-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Chips starts like chest!",
+  "sig": "e4240b8cb81e",
+  "text": "Chips starts like chest!",
+  "voice": "sarah"
+ },
+ "chips-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Chips starts like chick!",
+  "sig": "539545cd5502",
+  "text": "Chips starts like chick!",
+  "voice": "sarah"
+ },
+ "chips-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Chips starts like chin!",
+  "sig": "be15aa18d5b5",
+  "text": "Chips starts like chin!",
   "voice": "sarah"
  },
  "choose-a-level": {
@@ -370,11 +1042,39 @@
   "text": "Choose a level!",
   "voice": "sarah"
  },
+ "clap": {
+  "mood": "instruction",
+  "said_as": "Clap!",
+  "sig": "ca1b8594a9f7",
+  "text": "Clap!",
+  "voice": "sarah"
+ },
+ "clap-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Clap is a doing word!",
+  "sig": "8b530a334af8",
+  "text": "Clap is a doing word!",
+  "voice": "sarah"
+ },
  "classroom": {
   "mood": "word",
   "said_as": "classroom.",
   "sig": "ce5d23470f94",
   "text": "classroom",
+  "voice": "sarah"
+ },
+ "clock": {
+  "mood": "word",
+  "said_as": "clock.",
+  "sig": "b8c2dc3cc09c",
+  "text": "clock",
+  "voice": "sarah"
+ },
+ "clock-and-sock-rhyme": {
+  "mood": "instruction",
+  "said_as": "Clock and sock rhyme!",
+  "sig": "0fff4f43d820",
+  "text": "Clock and sock rhyme!",
   "voice": "sarah"
  },
  "closed": {
@@ -391,6 +1091,27 @@
   "text": "colour",
   "voice": "sarah"
  },
+ "cup": {
+  "mood": "word",
+  "said_as": "cup.",
+  "sig": "e2de8bd28d36",
+  "text": "cup",
+  "voice": "sarah"
+ },
+ "dance": {
+  "mood": "instruction",
+  "said_as": "Dance!",
+  "sig": "184f5076a135",
+  "text": "Dance!",
+  "voice": "sarah"
+ },
+ "dance-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Dance is a doing word!",
+  "sig": "1731d6bf270d",
+  "text": "Dance is a doing word!",
+  "voice": "sarah"
+ },
  "danger": {
   "mood": "word",
   "said_as": "Danger.",
@@ -398,11 +1119,46 @@
   "text": "Danger",
   "voice": "sarah"
  },
+ "danger-deep-water": {
+  "mood": "instruction",
+  "said_as": "Danger Deep Water",
+  "sig": "fdb2fb426109",
+  "text": "Danger Deep Water",
+  "voice": "sarah"
+ },
+ "dish": {
+  "mood": "word",
+  "said_as": "dish.",
+  "sig": "600a60c8454e",
+  "text": "dish",
+  "voice": "sarah"
+ },
+ "dish-and-fish-rhyme": {
+  "mood": "instruction",
+  "said_as": "Dish and fish rhyme!",
+  "sig": "9e11899cc92e",
+  "text": "Dish and fish rhyme!",
+  "voice": "sarah"
+ },
  "do": {
   "mood": "word",
-  "said_as": "do.",
-  "sig": "5b27db5e58e5",
-  "text": "do",
+  "said_as": "Do.",
+  "sig": "f82737e30127",
+  "text": "Do",
+  "voice": "sarah"
+ },
+ "doing-words": {
+  "mood": "word",
+  "said_as": "Doing Words.",
+  "sig": "88c867ca31c1",
+  "text": "Doing Words",
+  "voice": "sarah"
+ },
+ "doing-words-are-called-verbs": {
+  "mood": "instruction",
+  "said_as": "Doing words are called verbs.",
+  "sig": "60f6fc70b360",
+  "text": "Doing words are called verbs.",
   "voice": "sarah"
  },
  "don-t": {
@@ -454,6 +1210,20 @@
   "text": "door",
   "voice": "sarah"
  },
+ "drink": {
+  "mood": "instruction",
+  "said_as": "Drink!",
+  "sig": "7b2c947097d2",
+  "text": "Drink!",
+  "voice": "sarah"
+ },
+ "drink-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Drink is a doing word!",
+  "sig": "1dc18e56d855",
+  "text": "Drink is a doing word!",
+  "voice": "sarah"
+ },
  "drum": {
   "mood": "word",
   "said_as": "drum.",
@@ -461,11 +1231,25 @@
   "text": "drum",
   "voice": "sarah"
  },
+ "drum-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Drum is the odd one out!",
+  "sig": "c82bad8176b1",
+  "text": "Drum is the odd one out!",
+  "voice": "sarah"
+ },
  "duck": {
   "mood": "word",
   "said_as": "duck.",
   "sig": "8ef1795ef220",
   "text": "duck",
+  "voice": "sarah"
+ },
+ "duck-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Duck is the odd one out!",
+  "sig": "2c155d53db4a",
+  "text": "Duck is the odd one out!",
   "voice": "sarah"
  },
  "ear": {
@@ -482,6 +1266,13 @@
   "text": "ears",
   "voice": "sarah"
  },
+ "eat": {
+  "mood": "instruction",
+  "said_as": "Eat!",
+  "sig": "3a677c82a269",
+  "text": "Eat!",
+  "voice": "sarah"
+ },
  "eat-a-banana": {
   "mood": "instruction",
   "said_as": "Eat a banana!",
@@ -496,6 +1287,13 @@
   "text": "Eat an ice cream!",
   "voice": "sarah"
  },
+ "eat-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Eat is a doing word!",
+  "sig": "182710819994",
+  "text": "Eat is a doing word!",
+  "voice": "sarah"
+ },
  "egg": {
   "mood": "word",
   "said_as": "egg.",
@@ -503,11 +1301,25 @@
   "text": "egg",
   "voice": "sarah"
  },
+ "egg-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Egg is the odd one out!",
+  "sig": "c380b857bb6b",
+  "text": "Egg is the odd one out!",
+  "voice": "sarah"
+ },
  "elephant": {
   "mood": "word",
   "said_as": "elephant.",
   "sig": "5abf2d9879a4",
   "text": "elephant",
+  "voice": "sarah"
+ },
+ "end": {
+  "mood": "word",
+  "said_as": "end.",
+  "sig": "39568396e686",
+  "text": "end",
   "voice": "sarah"
  },
  "entrance": {
@@ -519,9 +1331,9 @@
  },
  "exit": {
   "mood": "word",
-  "said_as": "exit.",
-  "sig": "89b17f6ad460",
-  "text": "exit",
+  "said_as": "Exit.",
+  "sig": "dce7c7bca3ac",
+  "text": "Exit",
   "voice": "sarah"
  },
  "exit-means-go-out-this-way": {
@@ -573,6 +1385,13 @@
   "text": "fan",
   "voice": "sarah"
  },
+ "fan-and-van-rhyme": {
+  "mood": "instruction",
+  "said_as": "Fan and van rhyme!",
+  "sig": "b828d2eb55f9",
+  "text": "Fan and van rhyme!",
+  "voice": "sarah"
+ },
  "feel": {
   "mood": "word",
   "said_as": "feel.",
@@ -599,6 +1418,20 @@
   "said_as": "Find the missing letter.",
   "sig": "9f93672d0d99",
   "text": "Find the missing letter.",
+  "voice": "sarah"
+ },
+ "find-the-three-words-that-start-with-the-same-sound": {
+  "mood": "instruction",
+  "said_as": "Find the three words that start with the same sound.",
+  "sig": "7de8882f6e34",
+  "text": "Find the three words that start with the same sound.",
+  "voice": "sarah"
+ },
+ "find-the-two-words-that-rhyme": {
+  "mood": "instruction",
+  "said_as": "Find the two words that rhyme.",
+  "sig": "c6160041560d",
+  "text": "Find the two words that rhyme.",
   "voice": "sarah"
  },
  "find-words-that-start-with-the-same-sound": {
@@ -636,11 +1469,32 @@
   "text": "fish",
   "voice": "sarah"
  },
+ "fish-and-dish-rhyme": {
+  "mood": "instruction",
+  "said_as": "Fish and dish rhyme!",
+  "sig": "a752939337bd",
+  "text": "Fish and dish rhyme!",
+  "voice": "sarah"
+ },
  "five": {
   "mood": "word",
   "said_as": "five.",
   "sig": "4623a084f6e3",
   "text": "five",
+  "voice": "sarah"
+ },
+ "flag": {
+  "mood": "word",
+  "said_as": "flag.",
+  "sig": "8baee7743bc1",
+  "text": "flag",
+  "voice": "sarah"
+ },
+ "flag-and-bag-rhyme": {
+  "mood": "instruction",
+  "said_as": "Flag and bag rhyme!",
+  "sig": "182d8c0e8be1",
+  "text": "Flag and bag rhyme!",
   "voice": "sarah"
  },
  "foot": {
@@ -655,6 +1509,34 @@
   "said_as": "Foot is a naming word!",
   "sig": "f6a7c842d5f1",
   "text": "Foot is a naming word!",
+  "voice": "sarah"
+ },
+ "frog": {
+  "mood": "word",
+  "said_as": "frog.",
+  "sig": "a35c6d3bf7a5",
+  "text": "frog",
+  "voice": "sarah"
+ },
+ "frog-and-log-rhyme": {
+  "mood": "instruction",
+  "said_as": "Frog and log rhyme!",
+  "sig": "90a7768ac638",
+  "text": "Frog and log rhyme!",
+  "voice": "sarah"
+ },
+ "fun": {
+  "mood": "word",
+  "said_as": "fun.",
+  "sig": "501e2ea1090d",
+  "text": "fun",
+  "voice": "sarah"
+ },
+ "fun-and-sun-rhyme": {
+  "mood": "instruction",
+  "said_as": "Fun and sun rhyme!",
+  "sig": "864a8ef2c6a7",
+  "text": "Fun and sun rhyme!",
   "voice": "sarah"
  },
  "funny": {
@@ -699,6 +1581,13 @@
   "text": "Hand is a naming word!",
   "voice": "sarah"
  },
+ "hand-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Hand is the odd one out!",
+  "sig": "7e60c51355c8",
+  "text": "Hand is the odd one out!",
+  "voice": "sarah"
+ },
  "hands": {
   "mood": "word",
   "said_as": "hands.",
@@ -720,6 +1609,20 @@
   "text": "hat",
   "voice": "sarah"
  },
+ "hat-and-cat-rhyme": {
+  "mood": "instruction",
+  "said_as": "Hat and cat rhyme!",
+  "sig": "69df371eae48",
+  "text": "Hat and cat rhyme!",
+  "voice": "sarah"
+ },
+ "hats": {
+  "mood": "word",
+  "said_as": "Hats.",
+  "sig": "7d7e7c88e90e",
+  "text": "Hats",
+  "voice": "sarah"
+ },
  "have": {
   "mood": "word",
   "said_as": "have.",
@@ -728,10 +1631,10 @@
   "voice": "sarah"
  },
  "head": {
-  "mood": "instruction",
-  "said_as": "Head!",
-  "sig": "7b5a464e41e4",
-  "text": "Head!",
+  "mood": "word",
+  "said_as": "head.",
+  "sig": "886f51903761",
+  "text": "head",
   "voice": "sarah"
  },
  "head-is-a-naming-word": {
@@ -746,6 +1649,13 @@
   "said_as": "hear.",
   "sig": "53b07851156e",
   "text": "hear",
+  "voice": "sarah"
+ },
+ "hear-and-ears-rhyme": {
+  "mood": "instruction",
+  "said_as": "Hear and ears rhyme!",
+  "sig": "bb06a9603344",
+  "text": "Hear and ears rhyme!",
   "voice": "sarah"
  },
  "hearing": {
@@ -769,6 +1679,20 @@
   "text": "hen",
   "voice": "sarah"
  },
+ "hen-and-pen-rhyme": {
+  "mood": "instruction",
+  "said_as": "Hen and pen rhyme!",
+  "sig": "e26720095349",
+  "text": "Hen and pen rhyme!",
+  "voice": "sarah"
+ },
+ "here-is-the-right-one": {
+  "mood": "instruction",
+  "said_as": "Here is the right one.",
+  "sig": "e6b14f0a250d",
+  "text": "Here is the right one.",
+  "voice": "sarah"
+ },
  "hero-academy": {
   "mood": "word",
   "said_as": "Hero Academy.",
@@ -783,6 +1707,20 @@
   "text": "Hero Academy is a story book!",
   "voice": "sarah"
  },
+ "honey": {
+  "mood": "word",
+  "said_as": "Honey.",
+  "sig": "790a24b3ab87",
+  "text": "Honey",
+  "voice": "sarah"
+ },
+ "honey-is-a-treat-it-tastes-sweet": {
+  "mood": "instruction",
+  "said_as": "Honey is a treat; it tastes sweet.",
+  "sig": "f0895ee53601",
+  "text": "Honey is a treat; it tastes sweet.",
+  "voice": "sarah"
+ },
  "hooray": {
   "mood": "excited",
   "said_as": "Hoo-ray!",
@@ -795,6 +1733,13 @@
   "said_as": "house.",
   "sig": "79d2e8e0af5b",
   "text": "house",
+  "voice": "sarah"
+ },
+ "house-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "House is the odd one out!",
+  "sig": "520068d83774",
+  "text": "House is the odd one out!",
   "voice": "sarah"
  },
  "how-to-draw-cartoons": {
@@ -832,6 +1777,62 @@
   "text": "Hug a teddy!",
   "voice": "sarah"
  },
+ "i": {
+  "mood": "word",
+  "said_as": "I.",
+  "sig": "18bc08ec990b",
+  "text": "I",
+  "voice": "sarah"
+ },
+ "i-can-see-a-tree": {
+  "mood": "instruction",
+  "said_as": "I can see a tree.",
+  "sig": "fb27ee1fe47f",
+  "text": "I can see a tree.",
+  "voice": "sarah"
+ },
+ "i-have-fun-in-the": {
+  "mood": "instruction",
+  "said_as": "I have fun in the...",
+  "sig": "52fd2e99af70",
+  "text": "I have fun in the...",
+  "voice": "sarah"
+ },
+ "i-have-fun-in-the-sun": {
+  "mood": "instruction",
+  "said_as": "I have fun in the sun.",
+  "sig": "cd59ad72d23c",
+  "text": "I have fun in the sun.",
+  "voice": "sarah"
+ },
+ "i-hear-with-my-ears": {
+  "mood": "instruction",
+  "said_as": "I hear with my ears.",
+  "sig": "36917336ca60",
+  "text": "I hear with my ears.",
+  "voice": "sarah"
+ },
+ "i-see-a-star-from-the": {
+  "mood": "instruction",
+  "said_as": "I see a star from the...",
+  "sig": "9480d0aea263",
+  "text": "I see a star from the...",
+  "voice": "sarah"
+ },
+ "i-see-a-star-from-the-car": {
+  "mood": "instruction",
+  "said_as": "I see a star from the car.",
+  "sig": "dbe38943c6d0",
+  "text": "I see a star from the car.",
+  "voice": "sarah"
+ },
+ "i-spot-a-bright-light": {
+  "mood": "instruction",
+  "said_as": "I spot a bright light.",
+  "sig": "bc20dfa391a7",
+  "text": "I spot a bright light.",
+  "voice": "sarah"
+ },
  "in": {
   "mood": "word",
   "said_as": "in.",
@@ -840,26 +1841,17 @@
   "voice": "sarah"
  },
  "in-the-classroom-signs-help-us-to-find-things": {
-  "mood": "read",
-  "phrases": [
-   "In the classroom,",
-   "signs help us",
-   "to find things."
-  ],
+  "mood": "instruction",
   "said_as": "In the classroom, signs help us to find things.",
-  "sig": "7f27e562b0a2",
+  "sig": "952408e05e36",
   "text": "In the classroom, signs help us to find things.",
-  "times": [
-   0.03,
-   0.345,
-   0.659,
-   2.089,
-   2.537,
-   2.985,
-   4.133,
-   4.588,
-   5.043
-  ],
+  "voice": "sarah"
+ },
+ "is": {
+  "mood": "word",
+  "said_as": "is.",
+  "sig": "964ec5a23f02",
+  "text": "is",
   "voice": "sarah"
  },
  "is-it-a-story-or-about-real-life": {
@@ -876,6 +1868,13 @@
   "text": "Is it made up, like a fairy tale?",
   "voice": "sarah"
  },
+ "is-the-sound-at-the-start-or-at-the-end": {
+  "mood": "instruction",
+  "said_as": "Is the sound at the start, or at the end?",
+  "sig": "4f6da79bb894",
+  "text": "Is the sound at the start, or at the end?",
+  "voice": "sarah"
+ },
  "is-there-a-red-line-across-it": {
   "mood": "instruction",
   "said_as": "Is there a red line across it?",
@@ -888,6 +1887,27 @@
   "said_as": "Is this sign telling you to do something, or not to do something?",
   "sig": "df2985c5e054",
   "text": "Is this sign telling you to do something, or not to do something?",
+  "voice": "sarah"
+ },
+ "it": {
+  "mood": "word",
+  "said_as": "it.",
+  "sig": "e02638ff0e01",
+  "text": "it",
+  "voice": "sarah"
+ },
+ "jump": {
+  "mood": "instruction",
+  "said_as": "Jump!",
+  "sig": "58285e744ee6",
+  "text": "Jump!",
+  "voice": "sarah"
+ },
+ "jump-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Jump is a doing word!",
+  "sig": "c43774058a9f",
+  "text": "Jump is a doing word!",
   "voice": "sarah"
  },
  "label-it": {
@@ -904,6 +1924,13 @@
   "text": "leaf",
   "voice": "sarah"
  },
+ "leaf-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Leaf is the odd one out!",
+  "sig": "e2a4b32a90a9",
+  "text": "Leaf is the odd one out!",
+  "voice": "sarah"
+ },
  "leg": {
   "mood": "word",
   "said_as": "leg.",
@@ -916,6 +1943,20 @@
   "said_as": "Leg is a naming word!",
   "sig": "dff41fbddebb",
   "text": "Leg is a naming word!",
+  "voice": "sarah"
+ },
+ "let-s-check-what-you-know-about-signs": {
+  "mood": "instruction",
+  "said_as": "Let's check what you know about signs!",
+  "sig": "9b40465c3db5",
+  "text": "Let's check what you know about signs!",
+  "voice": "sarah"
+ },
+ "let-s-hunt-for-words-like-chin-and-chick": {
+  "mood": "instruction",
+  "said_as": "Let's hunt for words like chin and chick!",
+  "sig": "268482750add",
+  "text": "Let's hunt for words like chin and chick!",
   "voice": "sarah"
  },
  "let-s-listen-to-each-word": {
@@ -974,11 +2015,25 @@
   "text": "Level five! Mix it up!",
   "voice": "sarah"
  },
+ "level-five-more-doing-words": {
+  "mood": "cheer",
+  "said_as": "Level five! More doing words!",
+  "sig": "968f6e5a2f94",
+  "text": "Level five! More doing words!",
+  "voice": "sarah"
+ },
  "level-five-odd-one-out": {
   "mood": "cheer",
   "said_as": "Level five! Odd one out!",
   "sig": "04d2f7975530",
   "text": "Level five! Odd one out!",
+  "voice": "sarah"
+ },
+ "level-five-start-or-end": {
+  "mood": "cheer",
+  "said_as": "Level five! Start, or end?",
+  "sig": "2e80528e460a",
+  "text": "Level five! Start, or end?",
   "voice": "sarah"
  },
  "level-five-story-or-real-life": {
@@ -1002,6 +2057,13 @@
   "text": "Level five! Which label goes here?",
   "voice": "sarah"
  },
+ "level-five-which-one-does-not-rhyme": {
+  "mood": "cheer",
+  "said_as": "Level five! Which one does not rhyme?",
+  "sig": "d024a091024a",
+  "text": "Level five! Which one does not rhyme?",
+  "voice": "sarah"
+ },
  "level-four-a-sentence-starts-with-a-capital-letter": {
   "mood": "cheer",
   "said_as": "Level four! A sentence starts with a capital letter.",
@@ -1016,11 +2078,25 @@
   "text": "Level four! Do, or don't?",
   "voice": "sarah"
  },
+ "level-four-doing-words-are-called-verbs": {
+  "mood": "cheer",
+  "said_as": "Level four! Doing words are called verbs.",
+  "sig": "777c2c509814",
+  "text": "Level four! Doing words are called verbs.",
+  "voice": "sarah"
+ },
  "level-four-find-two": {
   "mood": "cheer",
   "said_as": "Level four! Find two!",
   "sig": "c12688f7a1d9",
   "text": "Level four! Find two!",
+  "voice": "sarah"
+ },
+ "level-four-finish-the-rhyme": {
+  "mood": "cheer",
+  "said_as": "Level four! Finish the rhyme!",
+  "sig": "c9a728d5c7b9",
+  "text": "Level four! Finish the rhyme!",
   "voice": "sarah"
  },
  "level-four-label-our-school": {
@@ -1051,11 +2127,25 @@
   "text": "Level four! Naming words!",
   "voice": "sarah"
  },
+ "level-four-which-word-ends-like-lunch": {
+  "mood": "cheer",
+  "said_as": "Level four! Which word ends like lunch?",
+  "sig": "a45d8c68c49e",
+  "text": "Level four! Which word ends like lunch?",
+  "voice": "sarah"
+ },
  "level-one-let-s-go-on-a-sign-hunt": {
   "mood": "cheer",
   "said_as": "Level one! Let's go on a sign hunt!",
   "sig": "57a97ac7623a",
   "text": "Level one! Let's go on a sign hunt!",
+  "voice": "sarah"
+ },
+ "level-one-let-s-go-on-a-sound-hunt": {
+  "mood": "cheer",
+  "said_as": "Level one! Let's go on a sound hunt!",
+  "sig": "3f136da21c76",
+  "text": "Level one! Let's go on a sound hunt!",
   "voice": "sarah"
  },
  "level-one-let-s-warm-up": {
@@ -1065,11 +2155,25 @@
   "text": "Level one! Let's warm up!",
   "voice": "sarah"
  },
+ "level-one-let-s-warm-up-doing-words-are-called-verbs": {
+  "mood": "cheer",
+  "said_as": "Level one! Let's warm up! Doing words are called verbs.",
+  "sig": "2a5e53053146",
+  "text": "Level one! Let's warm up! Doing words are called verbs.",
+  "voice": "sarah"
+ },
  "level-one-signs-start-with-a-capital-letter-signs-don-t-have-a-full-stop-at-the-end": {
   "mood": "cheer",
   "said_as": "Level one! Signs start with a capital letter. Signs don't have a full stop at the end.",
   "sig": "540660562467",
   "text": "Level one! Signs start with a capital letter. Signs don't have a full stop at the end.",
+  "voice": "sarah"
+ },
+ "level-one-words-that-rhyme-sound-the-same-like-fun-and-run": {
+  "mood": "cheer",
+  "said_as": "Level one! Words that rhyme sound the same, like fun and run.",
+  "sig": "de87b667aba0",
+  "text": "Level one! Words that rhyme sound the same, like fun and run.",
   "voice": "sarah"
  },
  "level-six-all-five-senses": {
@@ -1107,6 +2211,13 @@
   "text": "Level six! Super star challenge!",
   "voice": "sarah"
  },
+ "level-three-find-the-three-words-that-start-the-same-way": {
+  "mood": "cheer",
+  "said_as": "Level three! Find the three words that start the same way!",
+  "sig": "2b221e0452d8",
+  "text": "Level three! Find the three words that start the same way!",
+  "voice": "sarah"
+ },
  "level-three-first-letters": {
   "mood": "cheer",
   "said_as": "Level three! First letters!",
@@ -1126,6 +2237,13 @@
   "said_as": "Level three! Label our classroom!",
   "sig": "ffda43e985b0",
   "text": "Level three! Label our classroom!",
+  "voice": "sarah"
+ },
+ "level-three-match-the-words-that-rhyme": {
+  "mood": "cheer",
+  "said_as": "Level three! Match the words that rhyme!",
+  "sig": "9e951244b0c4",
+  "text": "Level three! Match the words that rhyme!",
   "voice": "sarah"
  },
  "level-three-more-signs": {
@@ -1149,6 +2267,13 @@
   "text": "Level three! What does the sign mean?",
   "voice": "sarah"
  },
+ "level-three-what-is-the-child-doing": {
+  "mood": "cheer",
+  "said_as": "Level three! What is the child doing?",
+  "sig": "531e59708947",
+  "text": "Level three! What is the child doing?",
+  "voice": "sarah"
+ },
  "level-three-which-sense-do-we-use": {
   "mood": "cheer",
   "said_as": "Level three! Which sense do we use?",
@@ -1163,11 +2288,32 @@
   "text": "Level two! Body words from your book!",
   "voice": "sarah"
  },
+ "level-two-chin-and-chest-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Chin and chest, from your book!",
+  "sig": "7069fa8be565",
+  "text": "Level two! Chin and chest, from your book!",
+  "voice": "sarah"
+ },
+ "level-two-doing-words-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Doing words from your book!",
+  "sig": "2ae14c0b3f16",
+  "text": "Level two! Doing words from your book!",
+  "voice": "sarah"
+ },
  "level-two-our-senses-from-your-book": {
   "mood": "cheer",
   "said_as": "Level two! Our senses, from your book!",
   "sig": "1142e054c2e3",
   "text": "Level two! Our senses, from your book!",
+  "voice": "sarah"
+ },
+ "level-two-rhymes-from-your-book": {
+  "mood": "cheer",
+  "said_as": "Level two! Rhymes from your book!",
+  "sig": "e72b6b2cfd42",
+  "text": "Level two! Rhymes from your book!",
   "voice": "sarah"
  },
  "level-two-sign-words-from-your-book": {
@@ -1198,6 +2344,13 @@
   "text": "lion",
   "voice": "sarah"
  },
+ "lion-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Lion is the odd one out!",
+  "sig": "899bd90ae45a",
+  "text": "Lion is the odd one out!",
+  "voice": "sarah"
+ },
  "listen": {
   "mood": "instruction",
   "said_as": "Listen.",
@@ -1217,6 +2370,27 @@
   "said_as": "Listen to a drum!",
   "sig": "fd3a38963204",
   "text": "Listen to a drum!",
+  "voice": "sarah"
+ },
+ "listen-to-each-word": {
+  "mood": "instruction",
+  "said_as": "Listen to each word.",
+  "sig": "5fd53d14e622",
+  "text": "Listen to each word.",
+  "voice": "sarah"
+ },
+ "log": {
+  "mood": "word",
+  "said_as": "log.",
+  "sig": "dfff14b072cc",
+  "text": "log",
+  "voice": "sarah"
+ },
+ "log-and-frog-rhyme": {
+  "mood": "instruction",
+  "said_as": "Log and frog rhyme!",
+  "sig": "f1f6c00971dc",
+  "text": "Log and frog rhyme!",
   "voice": "sarah"
  },
  "lollipop": {
@@ -1254,11 +2428,32 @@
   "text": "Look carefully.",
   "voice": "sarah"
  },
+ "lunch": {
+  "mood": "word",
+  "said_as": "lunch.",
+  "sig": "1fe7076a4556",
+  "text": "lunch",
+  "voice": "sarah"
+ },
+ "lunch-the-sound-is-at-the-end": {
+  "mood": "instruction",
+  "said_as": "Lunch! The sound is at the end.",
+  "sig": "5819cca50eab",
+  "text": "Lunch! The sound is at the end.",
+  "voice": "sarah"
+ },
  "mango": {
   "mood": "word",
   "said_as": "mango.",
   "sig": "f3ee992e768a",
   "text": "mango",
+  "voice": "sarah"
+ },
+ "mat": {
+  "mood": "word",
+  "said_as": "mat.",
+  "sig": "fb38149f4b39",
+  "text": "mat",
   "voice": "sarah"
  },
  "match-each-sense-to-its-body-part": {
@@ -1273,6 +2468,13 @@
   "said_as": "milk.",
   "sig": "e5b9326188c9",
   "text": "milk",
+  "voice": "sarah"
+ },
+ "milk-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Milk is the odd one out!",
+  "sig": "4be354de65d5",
+  "text": "Milk is the odd one out!",
   "voice": "sarah"
  },
  "monkey-s-magic-pipe": {
@@ -1296,6 +2498,13 @@
   "text": "moon",
   "voice": "sarah"
  },
+ "moon-and-spoon-rhyme": {
+  "mood": "instruction",
+  "said_as": "Moon and spoon rhyme!",
+  "sig": "3ec2a3f6e9d5",
+  "text": "Moon and spoon rhyme!",
+  "voice": "sarah"
+ },
  "mouth": {
   "mood": "word",
   "said_as": "mouth.",
@@ -1317,6 +2526,27 @@
   "text": "must",
   "voice": "sarah"
  },
+ "my": {
+  "mood": "word",
+  "said_as": "my.",
+  "sig": "ab98fa15f3bf",
+  "text": "my",
+  "voice": "sarah"
+ },
+ "my-sock-is-on-the": {
+  "mood": "instruction",
+  "said_as": "My sock is on the...",
+  "sig": "f4a7b45aeff2",
+  "text": "My sock is on the...",
+  "voice": "sarah"
+ },
+ "my-sock-is-on-the-clock": {
+  "mood": "instruction",
+  "said_as": "My sock is on the clock.",
+  "sig": "c3aa184bb3fc",
+  "text": "My sock is on the clock.",
+  "voice": "sarah"
+ },
  "name-the-body-part": {
   "mood": "instruction",
   "said_as": "Name the Body Part",
@@ -1336,6 +2566,13 @@
   "said_as": "nest.",
   "sig": "4c17eae3e699",
   "text": "nest",
+  "voice": "sarah"
+ },
+ "nest-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Nest is the odd one out!",
+  "sig": "14c6a291ba22",
+  "text": "Nest is the odd one out!",
   "voice": "sarah"
  },
  "nine": {
@@ -1401,6 +2638,13 @@
   "text": "One word starts with a different sound. Can you find it?",
   "voice": "sarah"
  },
+ "oops": {
+  "mood": "gentle",
+  "said_as": "Oops!",
+  "sig": "a3d905a21828",
+  "text": "Oops!",
+  "voice": "sarah"
+ },
  "oops-try-again": {
   "mood": "gentle",
   "said_as": "Oops! Try again.",
@@ -1464,6 +2708,41 @@
   "text": "Our teeth are in our mouth.",
   "voice": "sarah"
  },
+ "peach": {
+  "mood": "word",
+  "said_as": "peach.",
+  "sig": "866ea260ab1d",
+  "text": "peach",
+  "voice": "sarah"
+ },
+ "peach-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Peach ends like lunch!",
+  "sig": "c4a5f4828f21",
+  "text": "Peach ends like lunch!",
+  "voice": "sarah"
+ },
+ "peach-the-sound-is-at-the-end": {
+  "mood": "instruction",
+  "said_as": "Peach! The sound is at the end.",
+  "sig": "d8635e257f5b",
+  "text": "Peach! The sound is at the end.",
+  "voice": "sarah"
+ },
+ "pen": {
+  "mood": "word",
+  "said_as": "pen.",
+  "sig": "9777b4a0fac4",
+  "text": "pen",
+  "voice": "sarah"
+ },
+ "pen-and-hen-rhyme": {
+  "mood": "instruction",
+  "said_as": "Pen and hen rhyme!",
+  "sig": "639f712584c6",
+  "text": "Pen and hen rhyme!",
+  "voice": "sarah"
+ },
  "pencils": {
   "mood": "word",
   "said_as": "Pencils.",
@@ -1499,6 +2778,20 @@
   "text": "Pippi Longstocking is a story book!",
   "voice": "sarah"
  },
+ "play-football": {
+  "mood": "instruction",
+  "said_as": "Play football!",
+  "sig": "da5bf4a60566",
+  "text": "Play football!",
+  "voice": "sarah"
+ },
+ "play-football-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Play football is a doing word!",
+  "sig": "e893ab5fdb89",
+  "text": "Play football is a doing word!",
+  "voice": "sarah"
+ },
  "playground": {
   "mood": "word",
   "said_as": "Playground.",
@@ -1518,6 +2811,20 @@
   "said_as": "Put each label in the right place.",
   "sig": "72e67b679a5c",
   "text": "Put each label in the right place.",
+  "voice": "sarah"
+ },
+ "rain": {
+  "mood": "word",
+  "said_as": "rain.",
+  "sig": "80e59a51dda0",
+  "text": "rain",
+  "voice": "sarah"
+ },
+ "read": {
+  "mood": "instruction",
+  "said_as": "Read!",
+  "sig": "f39e4a6028ed",
+  "text": "Read!",
   "voice": "sarah"
  },
  "read-along-our-senses": {
@@ -1541,6 +2848,13 @@
   "text": "Read by myself! Tap a word to hear it.",
   "voice": "sarah"
  },
+ "read-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Read is a doing word!",
+  "sig": "8ae5fa247eae",
+  "text": "Read is a doing word!",
+  "voice": "sarah"
+ },
  "read-the-words-can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Read the words. Can you find three words that start the same?",
@@ -1562,6 +2876,34 @@
   "text": "Real life",
   "voice": "sarah"
  },
+ "rhyme-time": {
+  "mood": "word",
+  "said_as": "Rhyme Time.",
+  "sig": "8037df0a4e0e",
+  "text": "Rhyme Time",
+  "voice": "sarah"
+ },
+ "rock": {
+  "mood": "word",
+  "said_as": "rock.",
+  "sig": "b84d7e2eff3b",
+  "text": "rock",
+  "voice": "sarah"
+ },
+ "run": {
+  "mood": "instruction",
+  "said_as": "Run!",
+  "sig": "0988576c694e",
+  "text": "Run!",
+  "voice": "sarah"
+ },
+ "run-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Run is a doing word!",
+  "sig": "277ea5ccd17a",
+  "text": "Run is a doing word!",
+  "voice": "sarah"
+ },
  "same-first-sound": {
   "mood": "instruction",
   "said_as": "Same First Sound",
@@ -1574,6 +2916,13 @@
   "said_as": "see.",
   "sig": "3019181c7537",
   "text": "see",
+  "voice": "sarah"
+ },
+ "see-and-tree-rhyme": {
+  "mood": "instruction",
+  "said_as": "See and tree rhyme!",
+  "sig": "e38506584595",
+  "text": "See and tree rhyme!",
   "voice": "sarah"
  },
  "see-hear-smell-taste-touch": {
@@ -1646,24 +2995,18 @@
   "text": "Signs",
   "voice": "sarah"
  },
+ "signs-check": {
+  "mood": "word",
+  "said_as": "Signs Check.",
+  "sig": "7d86f4171a08",
+  "text": "Signs Check",
+  "voice": "sarah"
+ },
  "signs-show-us-where-to-go-in": {
-  "mood": "read",
-  "phrases": [
-   "Signs show us",
-   "where to go in."
-  ],
+  "mood": "instruction",
   "said_as": "Signs show us where to go in.",
-  "sig": "b620a35cc7df",
+  "sig": "2a32863033b3",
   "text": "Signs show us where to go in.",
-  "times": [
-   0.03,
-   0.464,
-   0.898,
-   2.031,
-   2.492,
-   2.723,
-   2.953
-  ],
   "voice": "sarah"
  },
  "signs-start-with-a-capital-letter": {
@@ -1674,43 +3017,17 @@
   "voice": "sarah"
  },
  "signs-tell-us-what-to-do": {
-  "mood": "read",
-  "phrases": [
-   "Signs tell us",
-   "what to do."
-  ],
+  "mood": "instruction",
   "said_as": "Signs tell us what to do.",
-  "sig": "0abb270439fc",
+  "sig": "e59adf8b6c1b",
   "text": "Signs tell us what to do.",
-  "times": [
-   0.03,
-   0.471,
-   0.912,
-   2.053,
-   2.366,
-   2.678
-  ],
   "voice": "sarah"
  },
  "signs-tell-us-where-we-must-not-go": {
-  "mood": "read",
-  "phrases": [
-   "Signs tell us",
-   "where we must not go."
-  ],
+  "mood": "instruction",
   "said_as": "Signs tell us where we must not go.",
-  "sig": "d823d568f90d",
+  "sig": "ec4dff89ab37",
   "text": "Signs tell us where we must not go.",
-  "times": [
-   0.03,
-   0.471,
-   0.912,
-   2.053,
-   2.607,
-   2.885,
-   3.162,
-   3.439
-  ],
   "voice": "sarah"
  },
  "signs-writing-or-pictures-that-tell-or-show-people-something": {
@@ -1736,6 +3053,48 @@
    6.291,
    6.803
   ],
+  "voice": "sarah"
+ },
+ "sing": {
+  "mood": "instruction",
+  "said_as": "Sing!",
+  "sig": "f35381276726",
+  "text": "Sing!",
+  "voice": "sarah"
+ },
+ "sing-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Sing is a doing word!",
+  "sig": "c127564db626",
+  "text": "Sing is a doing word!",
+  "voice": "sarah"
+ },
+ "skip": {
+  "mood": "instruction",
+  "said_as": "Skip!",
+  "sig": "3ffc353f0530",
+  "text": "Skip!",
+  "voice": "sarah"
+ },
+ "skip-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Skip is a doing word!",
+  "sig": "5eab5e64a0b9",
+  "text": "Skip is a doing word!",
+  "voice": "sarah"
+ },
+ "sleep": {
+  "mood": "instruction",
+  "said_as": "Sleep!",
+  "sig": "945c9a6c9852",
+  "text": "Sleep!",
+  "voice": "sarah"
+ },
+ "sleep-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Sleep is a doing word!",
+  "sig": "938a52cfb58f",
+  "text": "Sleep is a doing word!",
   "voice": "sarah"
  },
  "slow": {
@@ -1768,9 +3127,23 @@
  },
  "smell": {
   "mood": "word",
-  "said_as": "Smell.",
-  "sig": "68f3cb1d7974",
-  "text": "Smell",
+  "said_as": "smell.",
+  "sig": "7f423ebd24a5",
+  "text": "smell",
+  "voice": "sarah"
+ },
+ "snake": {
+  "mood": "word",
+  "said_as": "snake.",
+  "sig": "bed389fa60c6",
+  "text": "snake",
+  "voice": "sarah"
+ },
+ "snake-and-cake-rhyme": {
+  "mood": "instruction",
+  "said_as": "Snake and cake rhyme!",
+  "sig": "5a31a68f1370",
+  "text": "Snake and cake rhyme!",
   "voice": "sarah"
  },
  "sniff-a-flower": {
@@ -1801,6 +3174,13 @@
   "text": "sock",
   "voice": "sarah"
  },
+ "sock-and-clock-rhyme": {
+  "mood": "instruction",
+  "said_as": "Sock and clock rhyme!",
+  "sig": "03de8f03069b",
+  "text": "Sock and clock rhyme!",
+  "voice": "sarah"
+ },
  "soft": {
   "mood": "word",
   "said_as": "soft.",
@@ -1813,6 +3193,27 @@
   "said_as": "something.",
   "sig": "4e18b60735cf",
   "text": "something",
+  "voice": "sarah"
+ },
+ "spoon": {
+  "mood": "word",
+  "said_as": "spoon.",
+  "sig": "185be452c37f",
+  "text": "spoon",
+  "voice": "sarah"
+ },
+ "spoon-and-moon-rhyme": {
+  "mood": "instruction",
+  "said_as": "Spoon and moon rhyme!",
+  "sig": "73958d4ac1a6",
+  "text": "Spoon and moon rhyme!",
+  "voice": "sarah"
+ },
+ "spot": {
+  "mood": "word",
+  "said_as": "spot.",
+  "sig": "688eca2638d2",
+  "text": "spot",
   "voice": "sarah"
  },
  "staff": {
@@ -1829,11 +3230,32 @@
   "text": "Staff only",
   "voice": "sarah"
  },
- "stop": {
+ "star": {
   "mood": "word",
-  "said_as": "stop.",
-  "sig": "f17be059152f",
-  "text": "stop",
+  "said_as": "star.",
+  "sig": "df9421d66c74",
+  "text": "star",
+  "voice": "sarah"
+ },
+ "star-and-car-rhyme": {
+  "mood": "instruction",
+  "said_as": "Star and car rhyme!",
+  "sig": "46fa47d33066",
+  "text": "Star and car rhyme!",
+  "voice": "sarah"
+ },
+ "start": {
+  "mood": "word",
+  "said_as": "start.",
+  "sig": "a4e9d0eab9a0",
+  "text": "start",
+  "voice": "sarah"
+ },
+ "stop": {
+  "mood": "instruction",
+  "said_as": "Stop!",
+  "sig": "269178532699",
+  "text": "Stop!",
   "voice": "sarah"
  },
  "story": {
@@ -1857,11 +3279,25 @@
   "text": "sun",
   "voice": "sarah"
  },
+ "sun-is-the-odd-one-out": {
+  "mood": "instruction",
+  "said_as": "Sun is the odd one out!",
+  "sig": "4e07370deb42",
+  "text": "Sun is the odd one out!",
+  "voice": "sarah"
+ },
  "super": {
   "mood": "excited",
   "said_as": "Super!",
   "sig": "7fb4a17de6ad",
   "text": "Super!",
+  "voice": "sarah"
+ },
+ "sweet": {
+  "mood": "word",
+  "said_as": "sweet.",
+  "sig": "5c3225f53842",
+  "text": "sweet",
   "voice": "sarah"
  },
  "tall": {
@@ -1934,11 +3370,25 @@
   "text": "Tap the picture you choose.",
   "voice": "sarah"
  },
+ "tap-the-two-words-that-start-with-the-same-sound": {
+  "mood": "instruction",
+  "said_as": "Tap the two words that start with the same sound.",
+  "sig": "86c15a059289",
+  "text": "Tap the two words that start with the same sound.",
+  "voice": "sarah"
+ },
  "taste": {
   "mood": "word",
-  "said_as": "Taste.",
-  "sig": "60194f7e8111",
-  "text": "Taste",
+  "said_as": "taste.",
+  "sig": "49b44b1a0242",
+  "text": "taste",
+  "voice": "sarah"
+ },
+ "tastes": {
+  "mood": "word",
+  "said_as": "tastes.",
+  "sig": "9fcd7cb7449d",
+  "text": "tastes",
   "voice": "sarah"
  },
  "teeth": {
@@ -1969,11 +3419,137 @@
   "text": "the",
   "voice": "sarah"
  },
+ "the-cat-sat-on-a": {
+  "mood": "instruction",
+  "said_as": "The cat sat on a...",
+  "sig": "10e3fd16abc2",
+  "text": "The cat sat on a...",
+  "voice": "sarah"
+ },
+ "the-cat-sat-on-a-mat": {
+  "mood": "instruction",
+  "said_as": "The cat sat on a mat.",
+  "sig": "648b2ad41a91",
+  "text": "The cat sat on a mat.",
+  "voice": "sarah"
+ },
+ "the-child-is-clapping": {
+  "mood": "instruction",
+  "said_as": "The child is clapping!",
+  "sig": "b3a205033f4a",
+  "text": "The child is clapping!",
+  "voice": "sarah"
+ },
+ "the-child-is-dancing": {
+  "mood": "instruction",
+  "said_as": "The child is dancing!",
+  "sig": "3de43d52c3c5",
+  "text": "The child is dancing!",
+  "voice": "sarah"
+ },
+ "the-child-is-drinking": {
+  "mood": "instruction",
+  "said_as": "The child is drinking!",
+  "sig": "ff96114fb336",
+  "text": "The child is drinking!",
+  "voice": "sarah"
+ },
+ "the-child-is-eating": {
+  "mood": "instruction",
+  "said_as": "The child is eating!",
+  "sig": "e3498c31c6ee",
+  "text": "The child is eating!",
+  "voice": "sarah"
+ },
+ "the-child-is-jumping": {
+  "mood": "instruction",
+  "said_as": "The child is jumping!",
+  "sig": "d51a264d30d5",
+  "text": "The child is jumping!",
+  "voice": "sarah"
+ },
+ "the-child-is-playing-football": {
+  "mood": "instruction",
+  "said_as": "The child is playing football!",
+  "sig": "78e6dfbd3a8a",
+  "text": "The child is playing football!",
+  "voice": "sarah"
+ },
+ "the-child-is-reading": {
+  "mood": "instruction",
+  "said_as": "The child is reading!",
+  "sig": "804d52bb05f8",
+  "text": "The child is reading!",
+  "voice": "sarah"
+ },
+ "the-child-is-running": {
+  "mood": "instruction",
+  "said_as": "The child is running!",
+  "sig": "c6269caa5353",
+  "text": "The child is running!",
+  "voice": "sarah"
+ },
+ "the-child-is-singing": {
+  "mood": "instruction",
+  "said_as": "The child is singing!",
+  "sig": "adfade1b964e",
+  "text": "The child is singing!",
+  "voice": "sarah"
+ },
+ "the-child-is-skipping": {
+  "mood": "instruction",
+  "said_as": "The child is skipping!",
+  "sig": "74aacabfde7c",
+  "text": "The child is skipping!",
+  "voice": "sarah"
+ },
+ "the-child-is-sleeping": {
+  "mood": "instruction",
+  "said_as": "The child is sleeping!",
+  "sig": "91c34ee1f702",
+  "text": "The child is sleeping!",
+  "voice": "sarah"
+ },
+ "the-child-is-waving": {
+  "mood": "instruction",
+  "said_as": "The child is waving!",
+  "sig": "ea9a351c9822",
+  "text": "The child is waving!",
+  "voice": "sarah"
+ },
  "the-end": {
   "mood": "instruction",
   "said_as": "The end!",
   "sig": "e3184c2426b5",
   "text": "The end!",
+  "voice": "sarah"
+ },
+ "the-frog-sat-on-a": {
+  "mood": "instruction",
+  "said_as": "The frog sat on a...",
+  "sig": "ceef194a17cf",
+  "text": "The frog sat on a...",
+  "voice": "sarah"
+ },
+ "the-frog-sat-on-a-log": {
+  "mood": "instruction",
+  "said_as": "The frog sat on a log.",
+  "sig": "61c1ed54ef91",
+  "text": "The frog sat on a log.",
+  "voice": "sarah"
+ },
+ "the-hen-has-a": {
+  "mood": "instruction",
+  "said_as": "The hen has a...",
+  "sig": "5abced128479",
+  "text": "The hen has a...",
+  "voice": "sarah"
+ },
+ "the-hen-has-a-pen": {
+  "mood": "instruction",
+  "said_as": "The hen has a pen.",
+  "sig": "a9ca93551c2d",
+  "text": "The hen has a pen.",
   "voice": "sarah"
  },
  "the-human-body": {
@@ -1988,6 +3564,20 @@
   "said_as": "The Human Body is about real life!",
   "sig": "ad36c1b13783",
   "text": "The Human Body is about real life!",
+  "voice": "sarah"
+ },
+ "the-snake-ate-the": {
+  "mood": "instruction",
+  "said_as": "The snake ate the...",
+  "sig": "0e2cdc79d771",
+  "text": "The snake ate the...",
+  "voice": "sarah"
+ },
+ "the-snake-ate-the-cake": {
+  "mood": "instruction",
+  "said_as": "The snake ate the cake.",
+  "sig": "b41929102ef5",
+  "text": "The snake ate the cake.",
   "voice": "sarah"
  },
  "the-tale-of-little-red-riding-hood": {
@@ -2207,6 +3797,13 @@
   "text": "This sign says Danger",
   "voice": "sarah"
  },
+ "this-sign-says-danger-deep-water": {
+  "mood": "instruction",
+  "said_as": "This sign says: Danger Deep Water.",
+  "sig": "3fe8180e099d",
+  "text": "This sign says Danger Deep Water",
+  "voice": "sarah"
+ },
  "this-sign-says-entrance": {
   "mood": "instruction",
   "said_as": "This sign says: Entrance.",
@@ -2293,16 +3890,44 @@
  },
  "touch": {
   "mood": "word",
-  "said_as": "Touch.",
-  "sig": "e3c48bb02357",
-  "text": "Touch",
+  "said_as": "touch.",
+  "sig": "132621070c7d",
+  "text": "touch",
+  "voice": "sarah"
+ },
+ "touch-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Touch ends like lunch!",
+  "sig": "817b03493496",
+  "text": "Touch ends like lunch!",
+  "voice": "sarah"
+ },
+ "touch-the-sound-is-at-the-end": {
+  "mood": "instruction",
+  "said_as": "Touch! The sound is at the end.",
+  "sig": "12937f50d4d7",
+  "text": "Touch! The sound is at the end.",
   "voice": "sarah"
  },
  "toys": {
   "mood": "word",
-  "said_as": "toys.",
-  "sig": "a906ad5c3941",
-  "text": "toys",
+  "said_as": "Toys.",
+  "sig": "1d3e78628cc3",
+  "text": "Toys",
+  "voice": "sarah"
+ },
+ "treat": {
+  "mood": "word",
+  "said_as": "treat.",
+  "sig": "1aba0035d57b",
+  "text": "treat",
+  "voice": "sarah"
+ },
+ "treat-and-sweet-rhyme": {
+  "mood": "instruction",
+  "said_as": "Treat and sweet rhyme!",
+  "sig": "b6798347d4fc",
+  "text": "Treat and sweet rhyme!",
   "voice": "sarah"
  },
  "tree": {
@@ -2310,6 +3935,13 @@
   "said_as": "tree.",
   "sig": "e1a80e8253fc",
   "text": "tree",
+  "voice": "sarah"
+ },
+ "tree-and-bee-rhyme": {
+  "mood": "instruction",
+  "said_as": "Tree and bee rhyme!",
+  "sig": "ccf1d24769d4",
+  "text": "Tree and bee rhyme!",
   "voice": "sarah"
  },
  "two-words-start-the-same-can-you-tap-them-both": {
@@ -2326,6 +3958,20 @@
   "text": "us",
   "voice": "sarah"
  },
+ "van": {
+  "mood": "word",
+  "said_as": "van.",
+  "sig": "a576af0ebce4",
+  "text": "van",
+  "voice": "sarah"
+ },
+ "van-and-fan-rhyme": {
+  "mood": "instruction",
+  "said_as": "Van and fan rhyme!",
+  "sig": "cd76791c2695",
+  "text": "Van and fan rhyme!",
+  "voice": "sarah"
+ },
  "wash-your-hands": {
   "mood": "instruction",
   "said_as": "Wash your hands",
@@ -2340,11 +3986,39 @@
   "text": "Washroom",
   "voice": "sarah"
  },
+ "watch": {
+  "mood": "word",
+  "said_as": "watch.",
+  "sig": "31a549fd227c",
+  "text": "watch",
+  "voice": "sarah"
+ },
+ "watch-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Watch ends like lunch!",
+  "sig": "8bd98acaea40",
+  "text": "Watch ends like lunch!",
+  "voice": "sarah"
+ },
  "water": {
   "mood": "word",
   "said_as": "Water.",
   "sig": "ca95653e5dfb",
   "text": "Water",
+  "voice": "sarah"
+ },
+ "wave": {
+  "mood": "instruction",
+  "said_as": "Wave!",
+  "sig": "39a937b901ea",
+  "text": "Wave!",
+  "voice": "sarah"
+ },
+ "wave-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Wave is a doing word!",
+  "sig": "76fed5950afc",
+  "text": "Wave is a doing word!",
   "voice": "sarah"
  },
  "we": {
@@ -2355,19 +4029,10 @@
   "voice": "sarah"
  },
  "we-have-five-senses": {
-  "mood": "read",
-  "phrases": [
-   "We have five senses."
-  ],
+  "mood": "instruction",
   "said_as": "We have five senses.",
-  "sig": "43dae4bfc317",
+  "sig": "0e84458e2c33",
   "text": "We have five senses.",
-  "times": [
-   0.03,
-   0.289,
-   0.807,
-   1.325
-  ],
   "voice": "sarah"
  },
  "we-hear-with-our": {
@@ -2378,21 +4043,10 @@
   "voice": "sarah"
  },
  "we-hear-with-our-ears": {
-  "mood": "read",
-  "phrases": [
-   "We hear",
-   "with our ears."
-  ],
+  "mood": "instruction",
   "said_as": "We hear with our ears.",
-  "sig": "adc1d5a9ad35",
+  "sig": "847a35c97a3e",
   "text": "We hear with our ears.",
-  "times": [
-   0.03,
-   0.403,
-   1.477,
-   1.846,
-   2.216
-  ],
   "voice": "sarah"
  },
  "we-look-with-our-eyes": {
@@ -2456,21 +4110,10 @@
   "voice": "sarah"
  },
  "we-smell-with-our-nose": {
-  "mood": "read",
-  "phrases": [
-   "We smell",
-   "with our nose."
-  ],
+  "mood": "instruction",
   "said_as": "We smell with our nose.",
-  "sig": "e4a5f3db4d18",
+  "sig": "81730f183935",
   "text": "We smell with our nose.",
-  "times": [
-   0.03,
-   0.489,
-   1.647,
-   1.925,
-   2.202
-  ],
   "voice": "sarah"
  },
  "we-taste-with-our": {
@@ -2481,21 +4124,10 @@
   "voice": "sarah"
  },
  "we-taste-with-our-tongue": {
-  "mood": "read",
-  "phrases": [
-   "We taste",
-   "with our tongue."
-  ],
+  "mood": "instruction",
   "said_as": "We taste with our tongue.",
-  "sig": "e363c276a535",
+  "sig": "395dc25b32bc",
   "text": "We taste with our tongue.",
-  "times": [
-   0.03,
-   0.329,
-   1.626,
-   1.898,
-   2.17
-  ],
   "voice": "sarah"
  },
  "we-touch-and-feel-things-with-our": {
@@ -2506,24 +4138,10 @@
   "voice": "sarah"
  },
  "we-touch-and-feel-things-with-our-hands": {
-  "mood": "read",
-  "phrases": [
-   "We touch and feel things",
-   "with our hands."
-  ],
+  "mood": "instruction",
   "said_as": "We touch and feel things with our hands.",
-  "sig": "88dc176ad7de",
+  "sig": "541c2180706a",
   "text": "We touch and feel things with our hands.",
-  "times": [
-   0.03,
-   0.418,
-   0.807,
-   1.195,
-   1.583,
-   2.671,
-   3.055,
-   3.439
-  ],
   "voice": "sarah"
  },
  "we-wave-with-our-hand": {
@@ -2582,6 +4200,13 @@
   "text": "What Does the Sign Say?",
   "voice": "sarah"
  },
+ "what-does-this-sign-tell-you-to-do": {
+  "mood": "instruction",
+  "said_as": "What does this sign tell you to do?",
+  "sig": "6d53e92587f2",
+  "text": "What does this sign tell you to do?",
+  "voice": "sarah"
+ },
  "what-goes-at-the-end-of-the-sentence": {
   "mood": "instruction",
   "said_as": "What goes at the end of the sentence?",
@@ -2594,6 +4219,13 @@
   "said_as": "What is the arrow pointing to?",
   "sig": "8c04f6549b1c",
   "text": "What is the arrow pointing to?",
+  "voice": "sarah"
+ },
+ "what-is-the-child-doing": {
+  "mood": "instruction",
+  "said_as": "What is the child doing?",
+  "sig": "c3d4e2ad47aa",
+  "text": "What is the child doing?",
   "voice": "sarah"
  },
  "where": {
@@ -2631,6 +4263,13 @@
   "text": "Which label goes here?",
   "voice": "sarah"
  },
+ "which-label-goes-on-the-hat-box": {
+  "mood": "instruction",
+  "said_as": "Which label goes on the hat box?",
+  "sig": "be1ef6059f7e",
+  "text": "Which label goes on the hat box?",
+  "voice": "sarah"
+ },
  "which-letter-goes-in-the-gap": {
   "mood": "instruction",
   "said_as": "Which letter goes in the gap?",
@@ -2657,6 +4296,230 @@
   "said_as": "Which letter starts the sign?",
   "sig": "630e313ad01e",
   "text": "Which letter starts the sign?",
+  "voice": "sarah"
+ },
+ "which-one-does-not-rhyme": {
+  "mood": "instruction",
+  "said_as": "Which one does not rhyme?",
+  "sig": "b0afc6abc64d",
+  "text": "Which one does not rhyme?",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with?",
+  "sig": "6dbac92f4c3d",
+  "text": "Which one rhymes with",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-bag": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with bag?",
+  "sig": "054aec6a4ca4",
+  "text": "Which one rhymes with bag",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-bee": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with bee?",
+  "sig": "f61a97eb2199",
+  "text": "Which one rhymes with bee",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-cake": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with cake?",
+  "sig": "04ef8fb28dff",
+  "text": "Which one rhymes with cake",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-car": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with car?",
+  "sig": "86eb08c7c137",
+  "text": "Which one rhymes with car",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-cat": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with cat?",
+  "sig": "fcce065d8209",
+  "text": "Which one rhymes with cat",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-clock": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with clock?",
+  "sig": "632598f2a395",
+  "text": "Which one rhymes with clock",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-dish": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with dish?",
+  "sig": "d3866c7a4f6b",
+  "text": "Which one rhymes with dish",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-fan": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with fan?",
+  "sig": "05b81cd25410",
+  "text": "Which one rhymes with fan",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-fish": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with fish?",
+  "sig": "594125bdcda6",
+  "text": "Which one rhymes with fish",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-flag": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with flag?",
+  "sig": "9152b12cb124",
+  "text": "Which one rhymes with flag",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-frog": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with frog?",
+  "sig": "18e5bc9664f5",
+  "text": "Which one rhymes with frog",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-hat": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with hat?",
+  "sig": "4afaf3936536",
+  "text": "Which one rhymes with hat",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-hen": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with hen?",
+  "sig": "cae8d51a0bd1",
+  "text": "Which one rhymes with hen",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-log": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with log?",
+  "sig": "45b945cdaa82",
+  "text": "Which one rhymes with log",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-moon": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with moon?",
+  "sig": "3c41f6abc7c1",
+  "text": "Which one rhymes with moon",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-pen": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with pen?",
+  "sig": "bf439857d941",
+  "text": "Which one rhymes with pen",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-snake": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with snake?",
+  "sig": "c1c9d41b40cb",
+  "text": "Which one rhymes with snake",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-sock": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with sock?",
+  "sig": "66e1d8aa5ecc",
+  "text": "Which one rhymes with sock",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-spoon": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with spoon?",
+  "sig": "cbf245c31f79",
+  "text": "Which one rhymes with spoon",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-star": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with star?",
+  "sig": "d2bcd8278fca",
+  "text": "Which one rhymes with star",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-tree": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with tree?",
+  "sig": "a5016be914c8",
+  "text": "Which one rhymes with tree",
+  "voice": "sarah"
+ },
+ "which-one-rhymes-with-van": {
+  "mood": "instruction",
+  "said_as": "Which one rhymes with van?",
+  "sig": "c6dc468c0c82",
+  "text": "Which one rhymes with van",
+  "voice": "sarah"
+ },
+ "which-one-starts-like": {
+  "mood": "instruction",
+  "said_as": "Which one starts like?",
+  "sig": "9d73a622d0ca",
+  "text": "Which one starts like",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-chair": {
+  "mood": "instruction",
+  "said_as": "Which one starts like chair?",
+  "sig": "ecc5a0bde11e",
+  "text": "Which one starts like chair",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-cheese": {
+  "mood": "instruction",
+  "said_as": "Which one starts like cheese?",
+  "sig": "4b06c065509b",
+  "text": "Which one starts like cheese",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-cherries": {
+  "mood": "instruction",
+  "said_as": "Which one starts like cherries?",
+  "sig": "43dcf3edb57d",
+  "text": "Which one starts like cherries",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-chest": {
+  "mood": "instruction",
+  "said_as": "Which one starts like chest?",
+  "sig": "e7fd04a549d0",
+  "text": "Which one starts like chest",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-chick": {
+  "mood": "instruction",
+  "said_as": "Which one starts like chick?",
+  "sig": "cc19b6113a7f",
+  "text": "Which one starts like chick",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-chin": {
+  "mood": "instruction",
+  "said_as": "Which one starts like chin?",
+  "sig": "a29386bcab86",
+  "text": "Which one starts like chin",
+  "voice": "sarah"
+ },
+ "which-one-starts-like-chips": {
+  "mood": "instruction",
+  "said_as": "Which one starts like chips?",
+  "sig": "922f376a8ae8",
+  "text": "Which one starts like chips",
   "voice": "sarah"
  },
  "which-part-has-your-teeth": {
@@ -2757,6 +4620,13 @@
   "text": "Which sign says Danger",
   "voice": "sarah"
  },
+ "which-sign-says-danger-deep-water": {
+  "mood": "instruction",
+  "said_as": "Which sign says Danger Deep Water?",
+  "sig": "503e4dc43471",
+  "text": "Which sign says Danger Deep Water",
+  "voice": "sarah"
+ },
  "which-sign-says-entrance": {
   "mood": "instruction",
   "said_as": "Which sign says Entrance?",
@@ -2834,6 +4704,13 @@
   "text": "Which sign tells you not to drink this water?",
   "voice": "sarah"
  },
+ "which-sign-tells-you-to-do-something": {
+  "mood": "instruction",
+  "said_as": "Which sign tells you to do something?",
+  "sig": "ddd324fa6d81",
+  "text": "Which sign tells you to do something?",
+  "voice": "sarah"
+ },
  "which-sign-tells-you-to-go-slowly": {
   "mood": "instruction",
   "said_as": "Which sign tells you to go slowly?",
@@ -2855,11 +4732,88 @@
   "text": "Which sign tells you where you can read a book?",
   "voice": "sarah"
  },
+ "which-word-ends-like": {
+  "mood": "instruction",
+  "said_as": "Which word ends like?",
+  "sig": "7d565f851895",
+  "text": "Which word ends like",
+  "voice": "sarah"
+ },
+ "which-word-ends-like-lunch": {
+  "mood": "instruction",
+  "said_as": "Which word ends like lunch?",
+  "sig": "4500bb1e1125",
+  "text": "Which word ends like lunch",
+  "voice": "sarah"
+ },
+ "which-word-is-a-doing-word": {
+  "mood": "instruction",
+  "said_as": "Which word is a doing word?",
+  "sig": "004723e33f68",
+  "text": "Which word is a doing word?",
+  "voice": "sarah"
+ },
  "which-word-names-a-part-of-your-body": {
   "mood": "instruction",
   "said_as": "Which word names a part of your body?",
   "sig": "2c65f080df3c",
   "text": "Which word names a part of your body?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-bee": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with bee?",
+  "sig": "50d6ee4f25d1",
+  "text": "Which word rhymes with bee?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-cat": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with cat?",
+  "sig": "b16e6fab84b8",
+  "text": "Which word rhymes with cat?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-frog": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with frog?",
+  "sig": "f611783f65b9",
+  "text": "Which word rhymes with frog?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-fun": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with fun?",
+  "sig": "bca2a32c733b",
+  "text": "Which word rhymes with fun?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-hen": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with hen?",
+  "sig": "ded6323b3fbc",
+  "text": "Which word rhymes with hen?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-snake": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with snake?",
+  "sig": "f00b2875e03b",
+  "text": "Which word rhymes with snake?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-sock": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with sock?",
+  "sig": "be8cfb3b29e9",
+  "text": "Which word rhymes with sock?",
+  "voice": "sarah"
+ },
+ "which-word-rhymes-with-star": {
+  "mood": "instruction",
+  "said_as": "Which word rhymes with star?",
+  "sig": "5b1352acc931",
+  "text": "Which word rhymes with star?",
   "voice": "sarah"
  },
  "which-word-starts-like": {
@@ -3156,6 +5110,13 @@
   "text": "Which word starts like tree",
   "voice": "sarah"
  },
+ "which-word-tells-us-what-someone-does": {
+  "mood": "instruction",
+  "said_as": "Which word tells us what someone does?",
+  "sig": "ef132368f50e",
+  "text": "Which word tells us what someone does?",
+  "voice": "sarah"
+ },
  "with": {
   "mood": "word",
   "said_as": "with.",
@@ -3175,6 +5136,13 @@
   "said_as": "Words that name things are called nouns. Which word is a naming word?",
   "sig": "33939717acb8",
   "text": "Words that name things are called nouns. Which word is a naming word?",
+  "voice": "sarah"
+ },
+ "words-that-rhyme-sound-the-same-like-fun-and-run": {
+  "mood": "instruction",
+  "said_as": "Words that rhyme sound the same, like fun and run.",
+  "sig": "799242e28e8d",
+  "text": "Words that rhyme sound the same, like fun and run.",
   "voice": "sarah"
  },
  "wow": {
@@ -3268,6 +5236,55 @@
   "said_as": "You finished level 6!",
   "sig": "6a671c06cf2d",
   "text": "You finished level 6!",
+  "voice": "sarah"
+ },
+ "you-found-all-three": {
+  "mood": "instruction",
+  "said_as": "You found all three!",
+  "sig": "3435ed04fb99",
+  "text": "You found all three!",
+  "voice": "sarah"
+ },
+ "you-got-0-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 0 out of 5!",
+  "sig": "1947acc7e2ac",
+  "text": "You got 0 out of 5!",
+  "voice": "sarah"
+ },
+ "you-got-1-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 1 out of 5!",
+  "sig": "8b64c35223ce",
+  "text": "You got 1 out of 5!",
+  "voice": "sarah"
+ },
+ "you-got-2-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 2 out of 5!",
+  "sig": "b7d15a0ee603",
+  "text": "You got 2 out of 5!",
+  "voice": "sarah"
+ },
+ "you-got-3-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 3 out of 5!",
+  "sig": "4d15639313ca",
+  "text": "You got 3 out of 5!",
+  "voice": "sarah"
+ },
+ "you-got-4-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 4 out of 5!",
+  "sig": "708c980eb2b2",
+  "text": "You got 4 out of 5!",
+  "voice": "sarah"
+ },
+ "you-got-5-out-of-5": {
+  "mood": "instruction",
+  "said_as": "You got 5 out of 5!",
+  "sig": "a85260969c53",
+  "text": "You got 5 out of 5!",
   "voice": "sarah"
  },
  "you-got-it": {
