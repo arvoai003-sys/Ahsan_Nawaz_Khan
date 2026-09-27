@@ -1,5 +1,5 @@
 // @asset ENG01CH02SENSESREAD
-// @version v-01
+// @version v-02
 // @title Read-along Our Senses
 // @engine read-along
 /* A13 · Read-along: Our Senses · Reading and Comprehension > Our Senses(Reading and Comprehension) · O8
@@ -33,7 +33,7 @@
   ReadAlong.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02SENSESREAD",
-    version: "v-01",
+    version: "v-02",
     title: "Read-along: Our Senses",
     intro: "Let's read about our senses!",
     theme: "balloons",

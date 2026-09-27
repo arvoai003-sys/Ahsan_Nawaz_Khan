@@ -17,26 +17,26 @@ other 17 are:
 | A2 | Read-along: Signs | Interactive read-along | Read-along | `SIGNSREAD` | **Built v-01** |
 | A3 | What Does the Sign Say? | Tap-to-identify | Tap-to-identify | `SIGNSAY` | **Built v-02** |
 | A4 | Label It | Matching | Drag-to-target | `LABELIT` | **Built v-01** |
-| A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After practice games (D9) |
+| A5 | Gate 1: Signs check | Formative check | Gate runner | `GATE1` | After the practice games |
 | A6 | Same First Sound | Tap-to-identify | Tap-to-identify | `SAMESOUND` | **Built v-06** |
 | A7 | Finish the Sign Word | Drag-to-complete (cloze) | Letter-fill | `FINISHSIGN` | **Built v-04** |
-| A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | Needs D3 |
-| A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Needs D4 |
+| A8 | Capital at the Start | Tap-to-identify | Letter-fill (capital mode) | `CAPITAL` | **Built v-01** |
+| A10 | Build a Sign | Drag-assemble | Drag-assemble | `BUILDSIGN` | Next |
 | A11 | Gate 2: Sign words check | Formative check | Gate runner | `GATE2` | After practice games |
 | A13 | Read-along: Our Senses | Interactive read-along | Read-along | `SENSESREAD` | **Built v-01** |
 | A14 | Sense and Body Part | Matching | Drag-to-target | `SENSEMATCH` | **Built v-03** |
 | A15 | Gate 3: Senses check | Formative check | Gate runner | `GATE3` | After practice games |
-| A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Needs D5 |
-| A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Needs D7 |
+| A17 | ch Sound Hunt | Tap-to-identify | Tap-to-identify | `CHHUNT` | Next |
+| A18 | Rhyme Time | Matching | Tap-to-identify (sentence mode) | `RHYME` | Next |
 | A19 | Name the Body Part | Tap-to-identify | Tap-to-identify | `NAMEBODY` | **Built v-03** |
-| A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Needs D8 |
+| A20 | Doing Words | Tap-to-identify | Tap-to-identify | `DOINGWORDS` | Next |
 | A21 | Gate 4: Words check | Formative check | Gate runner | `GATE4` | After practice games |
 
-File names: `games/ENG-APSIS-G1-C02-<Asset_Name>.html` (current release; D10 closed 2026-09-26). Earlier versions are in `builds/archive/`.
+File names: `games/ENG-APSIS-G1-C02-<Asset_Name>.html` (current release). Earlier versions are in `builds/archive/`.
 
 Seven engines cover all 17: tap-to-identify (6 assets), drag-to-target (2),
 letter-fill (2 plus a round in A19), read-along (2), drag-assemble (1),
-word-builder (only if D6 adds Mixed-up Senses), gate runner (4).
+word-builder (only if Mixed-up Senses is added), gate runner (4).
 
 ## 2. What checking the plan against the book found
 
@@ -117,45 +117,41 @@ All of these can be auto-graded and are printed in the book:
   Abu Dhabi sign with Arabic text) and published book covers are not
   reproduced. Signs are redrawn as simple vectors.
 
-## 3. Decisions needed (for Champ / the user)
+## 3. How the open questions are settled
 
-| # | Decision | Recommendation |
-|---|---|---|
-| D1 | A3 content, given F1–F2 | Round 1: the four 2B statements ("Signs show us where to go in." → ENTRANCE, and so on) verbatim. Round 2: the 2E Part 1 do/don't signs. Drop 2C A1. |
-| D2 | A4 targets | ENTRANCE, BOOKS, TOYS from the p.28 pictures, as planned. Keep 2C B (BOOKS) for Gate 1, not A4. |
-| D3 | A8 format | Letter-fill: drag B, D or S (lower-case b, d, s as distractors) onto `_ook corner`, `_anger`, `_top`, with a picture cue for each. Add the 2I C2 round. |
-| D4 | Full-stop rule for A9/A10 | Signs: capital letter, no full stop (p.31). Sentences: capital letter and full stop (p.32, p.39). Teach the contrast in A8 and A10. |
-| D5 | A16/A17 ch words | Use the book's own: lunch, touch, chin, chest. Approve any extras (the plan's "cheese") separately. Reword O9 to "I can find words with the ch sound." |
-| D6 | Add the closed exercises the plan left out | Yes: A14 round 2 (2I B4), A19 round 2 (2I B2), A8 round 3 (2I C2), and a new "Mixed-up Senses" word-builder (2H B–C). This means an Asset Plan V2. |
-| D7 | A18 format | Tap-in-sentence. hear/ears is the tutorial; three scored items. |
-| D8 | A20 "→ ML-05" | Confirm whether a Doing Words animation is wanted. If not, remove the tag. |
-| D9 | Gate sizes and items | Four or five items per gate, none reusing a practice-game proposition (e.g. Gate 3 takes 2G A1 "five" plus new items; 2G A2 moves out if A14 keeps touch/hands). |
-| D10 | Game file names | `ENG01CH02<TASK>_v-01.html`. Confirm that this can't collide with an ARVO G1 C02 file, or add `APSIS` to the name. |
-| D11 | How gates run | As the HTML gate runner, or as items in the LMS's own quiz tool? Also: what completion/score protocol does the LMS expect (postMessage, SCORM, xAPI)? |
-| D12 | Engine source | Upload `ENG04CH10WORDSORT_v-01.html` (Pack It Right!) to reuse its shell. Otherwise the shared Grade 1 shell is built fresh. |
+Everything needed is in the book, so no outside rules are needed. Each open
+question is settled from the chapter itself, as below. (Earlier drafts gave
+these short internal labels; they are not part of the Asset Plan and are no
+longer used.)
+
+| Question | Settled from the book |
+|---|---|
+| What A3 asks | The four p.28 2B statements ("Signs show us where to go in." → ENTRANCE, and so on) word for word, then the p.29 do/don't signs, each asked about by its own meaning. The crossed-out tap means "Don't waste water". Story books vs real-life books from p.27 and p.30. |
+| A4 labels | BOOKS, TOYS and ENTRANCE from the p.28 pictures, plus other classroom and school labels. |
+| A8 format | Letter-fill: B, D or S (with b, d, s as the wrong choices) for `_ook corner`, `_anger`, `_top` (p.31 2D C), plus the p.39 2I C2 sentences. |
+| Full stops | Signs: capital letter, no full stop (p.31 tip). Sentences: capital letter and full stop (p.32, p.39). Taught side by side in A8, and again in A10. |
+| ch words (A17) | The book's own: lunch, touch, chin, chest, then other everyday ch words. |
+| Exercises the plan left out | Added as extra levels: 2I B4 in A14, 2I B2 in A7, 2I C2 in A8. |
+| A18 format | Tap the rhyming word in the sentence; hear/ears is the first example. |
+| A20 | A game only; no animation is assumed. |
+| Gates | Four or five items each, none repeating a practice-game question. |
+| File names | `ENG-APSIS-G1-C02-<Asset_Name>.html`. |
+| Results | Each game posts its score to the page that holds it (`postMessage`); it can be wrapped for the LMS later. |
 
 ## 4. Way forward
 
-1. **Close the decisions.** D12 unblocks all building. D1–D8 each unblock one
-   asset. If D6 is accepted, issue Asset Plan V2 through the ARVO builder and
-   log what changed.
-2. **Build the shared Grade 1 shell** (`apsis/shared/g1-shell.html`): start
-   panel, tutorial hand, audio and TTS, feedback, pause menu, result contract.
-3. **Wave 1: ready now, all verbatim.** A6 Same First Sound, A7 Finish the
-   Sign Word, A14 Sense and Body Part, A19 Name the Body Part, then the
-   read-alongs A2 and A13. This proves the tap-to-identify, letter-fill,
-   drag-to-target and read-along engines.
-4. **Wave 2: after the decisions.** A3, A4, A8, A17, A18 and A20, plus
-   Mixed-up Senses if it's approved.
-5. **Wave 3.** A10 Build a Sign (drag-assemble). Then the four gates, once
-   the practice games have fixed which propositions they use, so the gates
-   can use different ones.
-6. **After the interactives.** The A22 Mastery Test item bank (ARVO skill,
-   item-bank path) and the five ML scripts. Neither is part of this build
-   track.
+1. **Wave 1 (done).** A6, A7, A14, A19, A2 and A13 on the shared Grade 1
+   shell and its tap-to-identify, letter-fill, drag-to-target and read-along
+   engines.
+2. **Wave 2.** A3, A4 and A8 are done. Next A17, A18 and A20.
+3. **Wave 3.** A10 Build a Sign (drag-assemble). Then the four gates, once
+   the practice games have fixed which questions they use, so the gates can
+   use different ones.
+4. **After the interactives.** The A22 Mastery Test item bank and the five
+   video scripts. Neither is part of this build track.
 
 Each build goes through `.claude/skills/apsis-g1-interactive-build/references/qa-checklist.md`
-and is delivered as a new version in `builds/`.
+and is delivered in `games/`, with every version kept in `builds/archive/`.
 
 ## 5. Build log
 
@@ -168,12 +164,14 @@ and is delivered as a new version in `builds/`.
 | 2026-09-25 | Shared voice and sound | `apsis/shared/g1-shell.js` | Device voice now prefers English (Pakistan), then English (India), female and natural voices, softer pitch and pace. Recorded clips replace it line by line: recording scripts in `voice/*_voice_script.csv` (76 and 74 lines). Background tune with Music on/off; xylophone, soft boing and fanfare effects. |
 | 2026-09-26 | House voice | `voice/clips/` | Kokoro "Sarah" (American, natural) chosen from the audition. All lines pre-recorded with moods (warm/slow instructions, gentle retries, excited praise). A6 v-04 (117 lines), A7 v-02 (85), A14 v-01 (68); no device-voice fallback in QA. Files are now 0.85–1.4 MB each because the voice is inside. Note: American accent, not Pakistani (no Pakistani neural voice available offline). |
 | 2026-09-26 | A14 Sense and Body Part | `builds/ENG01CH02SENSEMATCH_v-01.html` | Match engine (drag or tap-tap). Levels: 1 Warm Up (2 pairs), 2 Our Senses (book p.34 sentences with a gap, verbatim), 3 Which Sense? (book p.38 2I B4 activities + 2 new), 4 Match Three, 5 Mix It Up (3 activities), 6 Super Senses (all 5 pairs + 3 activities). Each match says the book sentence. "play in the playground" withheld. **New activities need Champ's approval.** |
-| 2026-09-26 | D1 closed (Champ) | — | The p.29 crossed-out tap means "Don't waste water / don't leave the tap open". 2C also covers story books vs real-life books (2A C p.27, 2C C p.30). 2C A1 itself stays withheld; each p.29 sign is asked about by its own meaning. |
+| 2026-09-26 | A3 content settled (Champ) | — | The p.29 crossed-out tap means "Don't waste water / don't leave the tap open". 2C also covers story books vs real-life books (2A C p.27, 2C C p.30). 2C A1 itself stays withheld; each p.29 sign is asked about by its own meaning. |
 | 2026-09-26 | A3 What Does the Sign Say? | `builds/ENG01CH02SIGNSAY_v-01.html` | Levels: 1 Sign Hunt (printed signs, 2 choices), 2 Read the Signs (book p.28 sentences, verbatim), 3 What Does It Mean? (p.29 trio + 2 of p.32), 4 Do or Don't? (p.32 2E Part 1 + 2 more), 5 Story or Real Life? (the book's 9 titles + "How to draw cartoons"; covers drawn by us), 6 Super Star (mix). 121 lines in Sarah's voice. Sign cards show no label or speaker (would give the answer away). |
 | 2026-09-26 | Home pages, Asma | all four games | Each game has its own theme (A6 meadow, A7 sunset town, A14 flower garden, A3 school street), a large title with a hero icon, and no "Grade 1 · Chapter 2" label. Asma (ARVO character, Grade 1 look from the character bible) and Fluffy are the on-screen buddies: she waves on the home page, her mouth moves while the narrator speaks, she cheers at right answers and tilts her head at wrong ones; Fluffy runs across when a level ends. She steps out of view on any screen where she would cover a game piece. A6 v-05, A7 v-03, A14 v-02. |
-| 2026-09-26 | Naming (D10 closed) | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |
+| 2026-09-26 | Naming | `games/` | Games are delivered as `ENG-APSIS-G1-C02-<Asset_Name>.html`, one file per asset: What_Does_the_Sign_Say (A3 v-01), Same_First_Sound (A6 v-05), Finish_the_Sign_Word (A7 v-03), Sense_and_Body_Part (A14 v-02). All earlier versions moved to `builds/archive/`. |
 | 2026-09-26 | A19 Name the Body Part | `games/ENG-APSIS-G1-C02-Name_the_Body_Part.html` (v-01) | Levels: 1 Warm Up (2 pictures), 2 Body Words (book p.37 word box), 3 Point to Asma (arrow on Asma, name the part; book 2I A2), 4 Naming Words (book p.37 Language tip on nouns; non-nouns authored), 5 Where Does It Go? (authored), 6 Super Star. Pictures that contain each other (face/eyes/nose/mouth, leg/foot) never share a screen. The p.38 missing letters stay in Finish the Sign Word only. Rainbow theme. 90 lines in Sarah's voice. **Authored parts need Champ's approval.** |
 | 2026-09-26 | ARVO characters removed (Champ) | all five games | Asma and Fluffy replaced by an unnamed, happy, lively, fair-skinned child (buddy and body-part model). No names are spoken; Name the Body Part asks "What is the arrow pointing to?" and confirms with the part ("Head!"); its Level 3 is now "Follow the Arrow". Reissued: A3 v-02, A6 v-06, A7 v-04, A14 v-03, A19 v-03. |
 | 2026-09-26 | A2 Read-along: Signs | `games/ENG-APSIS-G1-C02-Read_along_Signs.html` (v-01) | New read-along engine. Book p.28 2B text verbatim (4 sentences, book bold words) + the page's glossary entry for "signs"; cover page "Signs". Modes: Read to Me (Sarah reads, words light up), Read by Myself (tap any word to hear it), Word Hunt (find go / do / find / not). No score. Library theme. 60 lines in Sarah's voice. |
-| 2026-09-26 | D2 closed (Champ) + A4 Label It | `games/ENG-APSIS-G1-C02-Label_It.html` (v-01) | Book labels BOOKS, TOYS, ENTRANCE (p.28) and 2C B "Which sign tells you where you can read a book?" (p.29) in Level 2; labels beyond the book allowed: BAGS, SHOES, PENCILS, BIN, CANTEEN, PLAYGROUND, WASHROOM, WATER, OFFICE. Drag or tap-tap labels onto word-free pictures. Levels: Warm Up, Classroom Signs (Book), Our Classroom, Our School, Which Label?, Super Labels. Classroom theme. 55 lines in Sarah's voice. |
+| 2026-09-26 | A4 Label It | `games/ENG-APSIS-G1-C02-Label_It.html` (v-01) | Book labels BOOKS, TOYS, ENTRANCE (p.28) and 2C B "Which sign tells you where you can read a book?" (p.29) in Level 2; labels beyond the book allowed: BAGS, SHOES, PENCILS, BIN, CANTEEN, PLAYGROUND, WASHROOM, WATER, OFFICE. Drag or tap-tap labels onto word-free pictures. Levels: Warm Up, Classroom Signs (Book), Our Classroom, Our School, Which Label?, Super Labels. Classroom theme. 55 lines in Sarah's voice. |
 | 2026-09-26 | A13 Read-along: Our Senses | `games/ENG-APSIS-G1-C02-Read_along_Our_Senses.html` (v-01) | Book 2F text verbatim: p.33 title and labels (see hear smell taste touch), p.34 "We have five senses." and the five boxes with their headings (Sight, Hearing, Smell, Taste, Touch). Read to Me / Read by Myself / Word Hunt. Balloons theme. 64 lines in Sarah's voice. |
+| 2026-09-27 | Slower, clearer reading + all games re-voiced | all `games/` (A2 v-02, A13 v-02, A3 v-03, A4 v-02, A6 v-07, A7 v-05, A14 v-04, A19 v-04) | Read-along sentences are now read phrase by phrase ("We touch and feel things / with our hands."), each phrase slowed inside the voice model (not by slowing playback), with pauses between phrases: about 100 words a minute instead of about 160. Word highlighting follows the recording exactly. Tapped words stay separate, clear clips. All clips re-recorded at the voice's own 24 kHz, 64 kbps, one loudness; short lines pronunciation-checked with espeak. |
+| 2026-09-27 | A8 Capital at the Start | `games/ENG-APSIS-G1-C02-Capital_at_the_Start.html` (v-01) | p.31 2D C (_ook corner, _anger, _top) verbatim in Level 2; the p.31 tip "Signs don't have a full stop" said in Levels 1 and 6; p.39 2I C2 sentences (capital W, then the full stop) in Levels 4 and 5, with the other p.34 sentences. More chapter and everyday signs in Levels 1, 3 and 6. Each sign offers the capital, its small letter and one capital that never makes a word; sentences offer W or w. A wrong tile hears the rule ("Signs start with a capital letter."). Seaside theme. |

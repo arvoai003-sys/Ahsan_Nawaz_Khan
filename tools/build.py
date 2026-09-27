@@ -79,7 +79,16 @@ def voice_clips(chapter, asset):
     if not found:
         return "", 0
     body = ",\n".join('  "%s": "%s"' % (k, v) for k, v in sorted(found.items()))
-    return "/* ---- recorded voice clips ---- */\nwindow.VOICE_CLIPS = {\n%s\n};" % body, len(found)
+    js = "/* ---- recorded voice clips ---- */\nwindow.VOICE_CLIPS = {\n%s\n};" % body
+    # word start times for sentences read aloud phrase by phrase (read-alongs)
+    man_path = os.path.join(clip_dir, "manifest.json")
+    if os.path.exists(man_path):
+        import json
+        man = json.load(open(man_path))
+        times = dict((k, man[k]["times"]) for k in found if k in man and man[k].get("times"))
+        if times:
+            js += "\nwindow.VOICE_TIMES = %s;" % json.dumps(times, separators=(",", ":"))
+    return js, len(found)
 
 
 def release_name(chapter, title):

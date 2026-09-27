@@ -39,11 +39,19 @@ var ReadAlong = (function () {
     var total = 0, w = [], i;
     for (i = 0; i < spans.length; i++) { w.push(weight(spans[i].textContent)); total += w[i]; }
     var t0 = new Date().getTime();
+    var marks = (window.VOICE_TIMES || {})[Shell.clipKey(pages[idx].text)];
+    if (marks && marks.length !== spans.length) { marks = null; }
     timer = window.setInterval(function () {
       var dur = player && player.duration && isFinite(player.duration) ? player.duration - 0.2 : est;
       var now = player && player.duration ? player.currentTime : (new Date().getTime() - t0) / 1000;
-      var at = Math.min(1, now / Math.max(0.3, dur)) * total, acc = 0, k = 0;
-      for (k = 0; k < spans.length; k++) { acc += w[k]; if (at < acc) { break; } }
+      var k = 0, acc = 0, at;
+      if (marks && player) {
+        /* exact word times from the recording */
+        for (k = 0; k + 1 < marks.length && now >= marks[k + 1]; k++) {}
+      } else {
+        at = Math.min(1, now / Math.max(0.3, dur)) * total;
+        for (k = 0; k < spans.length; k++) { acc += w[k]; if (at < acc) { break; } }
+      }
       for (i = 0; i < spans.length; i++) {
         var on = i === k;
         if (on && spans[i].className.indexOf(" on") < 0) { spans[i].className += " on"; lit.push(spans[i]); }
@@ -188,13 +196,13 @@ var ReadAlong = (function () {
   T.allLines = function () {
     var out = [], i, ws, j;
     for (i = 0; i < C.pages.length; i++) {
-      out.push(C.pages[i].text);
+      out.push(C.pages[i].cover ? C.pages[i].text : { text: C.pages[i].text, style: "read" });
       if (C.pages[i].heading) { out.push(C.pages[i].heading); }
       ws = words(C.pages[i].text);
       for (j = 0; j < ws.length; j++) { out.push(bare(ws[j])); }
       if (C.pages[i].hunt) { out.push(["Can you find the word", C.pages[i].hunt]); }
     }
-    if (C.glossary) { out.push(C.glossary.word, C.glossary.meaning); }
+    if (C.glossary) { out.push(C.glossary.word, { text: C.glossary.meaning, style: "read" }); }
     for (i = 0; i < C.levels.length; i++) { out.push(C.levels[i].bannerSay); }
     return out;
   };

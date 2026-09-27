@@ -80,9 +80,16 @@ gets wrong is flagged, not silently used.
   plus its word as one natural sentence. After any content change:
   `node tools/voice_lines.js <src>` → `python3 tools/make_voice.py <chapter>/voice/<ASSET>_voice_script.csv`
   → `python3 tools/build.py <src>`. make_voice gives each line a mood and pace
-  (instruction 0.80, word 0.78, gentle 0.82, cheer 0.95, excited 1.05) and only
-  records new or changed lines. One-time setup: `npm install --prefix tools/voice`
-  and `pip install librosa soundfile lameenc wordfreq`. QA drivers report any
+  (instruction 0.80, word 0.80, gentle 0.82, cheer 0.95, excited 1.05) and only
+  records new or changed lines. Read-along sentences (engine lines marked
+  `{text, style: "read"}`) are read like a teacher reading aloud: split into
+  short phrases, each phrase said at 0.70 by the voice model itself (never by
+  slowing playback), with pauses between phrases, so a page runs at about 100
+  words a minute; the exact time of every word is embedded for highlighting.
+  A tapped word is always its own clip. All clips: 24 kHz, 64 kbps, one
+  loudness; short lines get an espeak pronunciation check. One-time setup:
+  `npm install --prefix tools/voice` and
+  `pip install librosa soundfile lameenc wordfreq espeakng-loader phonemizer`. QA drivers report any
   line that fell back to the device voice; it must be none.
 - **Sound.** A quiet, bouncy background tune (dips under the voice; Music
   on/off on the home page and in Pause), xylophone for right answers, a soft

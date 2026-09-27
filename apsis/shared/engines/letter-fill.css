@@ -101,3 +101,10 @@
   .lf-word { font-size: 88px; }
   .tile { width: 110px; height: 118px; font-size: 72px; line-height: 102px; }
 }
+
+/* sentence card (a line in an exercise book) and a punctuation tile */
+.sign.rect.line { background: #fff; border-color: var(--ink); font-size: 40px; max-width: 86vw; background-image: repeating-linear-gradient(transparent 0 46px, #CDEBFF 46px 49px); }
+.sign.rect.line .txt { text-align: left; }
+@media (max-width: 520px) { .sign.rect.line { font-size: 26px; } }
+@media (max-height: 520px) { .sign.rect.line { font-size: 26px; } }
+.tile.mark { font-size: 80px; line-height: 70px; }

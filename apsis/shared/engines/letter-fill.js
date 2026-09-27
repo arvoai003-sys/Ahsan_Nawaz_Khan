@@ -17,6 +17,9 @@ var LetterFill = (function () {
     octagon: '<svg class="shape" viewBox="0 0 100 100"><path d="M30 3h40l27 27v40L70 97H30L3 70V30z" fill="#FF3B3B" stroke="#2E2A4F" stroke-width="3.2" stroke-linejoin="round"/><path d="M32 9h36l23 23v36L68 91H32L9 68V32z" fill="none" stroke="#fff" stroke-width="2.4"/></svg>'
   };
 
+  /* punctuation tiles (Capital at the Start, Level 5) */
+  var MARKS = { ".": "full stop", "?": "question mark", ",": "comma", "!": "exclamation mark" };
+
   function lock(v) {
     locked = v;
     var st = Shell.$("stage");
@@ -29,6 +32,7 @@ var LetterFill = (function () {
   }
   function instruction() { return instructionFor(item); }
   T.instructionFor = instructionFor; /* tools/voice_lines.js lists these lines */
+  T.linesFor = function (it) { return [it.hint, it.done].filter(function (x) { return x; }); };
   /* words stay whole: the word holding the gap never breaks across lines */
   function patternHtml(p) {
     var words = p.split(" "), out = [], i, w, g;
@@ -57,7 +61,7 @@ var LetterFill = (function () {
     var sayBtn = Shell.speakerBtn("say", "Hear it again");
     sayBtn.onclick = function () { Shell.say(instruction()); };
     prompt.appendChild(sayBtn);
-    prompt.appendChild(Shell.el("div", "prompt-text", item.kind === "sign" ? "Which letter is missing from the sign?" : "Which letter is missing?"));
+    prompt.appendChild(Shell.el("div", "prompt-text", item.prompt || (item.kind === "sign" ? "Which letter is missing from the sign?" : "Which letter is missing?")));
     st.appendChild(prompt);
 
     var board = Shell.el("div", "lf");
@@ -74,10 +78,10 @@ var LetterFill = (function () {
     var letters = Shell.shuffle(item.choices), tint = Math.floor(Math.random() * 6);
     for (i = 0; i < letters.length; i++) {
       (function (ch, k) {
-        var t = Shell.el("div", "tile k" + ((tint + k) % 6), ch);
+        var t = Shell.el("div", "tile k" + ((tint + k) % 6) + (MARKS[ch] ? " mark" : ""), ch);
         t.setAttribute("role", "button");
         t.setAttribute("tabindex", "0");
-        t.setAttribute("aria-label", "letter " + ch);
+        t.setAttribute("aria-label", MARKS[ch] || "letter " + ch);
         t.letter = ch;
         bindTile(t);
         t.onkeydown = function (e) { if (e.keyCode === 13 || e.keyCode === 32) { e.preventDefault(); place(t); } };
@@ -170,7 +174,7 @@ var LetterFill = (function () {
       if (firstTry) { T.score++; }
       starTotal++; Shell.setStars(starTotal);
       var praise = Shell.right(slot);
-      Shell.say([item.full, praise], Shell.guard(function () { Shell.wait(Shell.guard(next), 450); }));
+      Shell.say(item.done ? [praise].concat(item.done) : [item.full, praise], Shell.guard(function () { Shell.wait(Shell.guard(next), 450); }));
     } else {
       firstTry = false;
       attempts++;
@@ -181,6 +185,12 @@ var LetterFill = (function () {
 
   function hint() {
     var slot = Shell.$("slot"), pic = Shell.$("stage").querySelector(".lf-pic, .sign");
+    if (item.hint) {
+      /* the item's own rule, e.g. "Signs start with a capital letter." */
+      if (slot && attempts > 1) { Shell.flash(slot, "glow", 2800); }
+      Shell.say(["Oops! Try again."].concat(item.hint));
+      return;
+    }
     if (attempts === 1) {
       Shell.say(["Oops! Try again.", "Listen.", item.full]);
     } else {

@@ -95,7 +95,7 @@ function answerFor(state, spoken) {
         });
         lay.forEach(x => layoutIssues.add(`L${L + 1} ${x}`));
         if (shot < 2) await page.screenshot({ path: `${out}/${vp.name}-L${L + 1}-${shot++}.png` });
-        const tile = l => page.locator('.tray .tile', { hasText: new RegExp('^' + l + '$') }).first();
+        const tile = l => page.locator('.tray .tile', { hasText: new RegExp('^' + l.replace(/[.?*+^$()[\]{}|\\]/g, '\\$&') + '$') }).first();
         if (L === 0 && items === 0) {
           const wrong = state.letters.find(l => l !== ans);
           for (let k = 0; k < 2; k++) {

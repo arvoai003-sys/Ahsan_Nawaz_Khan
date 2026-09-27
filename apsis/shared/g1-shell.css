@@ -402,3 +402,12 @@ body.has-buddy .panel .mascot { width: 92px; height: 150px; margin: -118px auto 
   .game-buddy .buddy { width: 46px; height: 76px; }
     body.has-buddy .panel .mascot { display: none; }
 }
+
+/* seaside (Capital at the Start) */
+body.theme-seaside { background: linear-gradient(180deg, #4FC3FF 0%, #A9E5FF 45%, #E4F7FF 70%); --t-title: #FF4F6D; }
+#scenery .boat { width: 9vmin; min-width: 54px; left: 10%; bottom: calc(max(22vh, 90px) * .56); animation: bob 3.4s ease-in-out infinite; }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-6px) rotate(3deg); } }
+body.theme-seaside .level { border-radius: 26px 26px 26px 6px; }
+body.theme-seaside .level.c0 { background: #FF4F6D; } body.theme-seaside .level.c1 { background: #1E8FE0; } body.theme-seaside .level.c2 { background: #FF9F1C; }
+body.theme-seaside .level.c3 { background: #23C16B; } body.theme-seaside .level.c4 { background: #9B5DE5; } body.theme-seaside .level.c5 { background: #FF7BAC; }
+body.theme-seaside .banner div { background: #1E8FE0; } body.theme-seaside .progress i.now { background: #FF4F6D; }

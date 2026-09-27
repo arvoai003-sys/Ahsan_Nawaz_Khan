@@ -26,9 +26,10 @@ vm.runInContext(src, ctx);
 bootCfg = vm.runInContext('Shell.__cfg', ctx);
 captured = vm.runInContext(ENGINE + '.__content', ctx);
 var lines = {};
-var pairs = {};
+var pairs = {}, styles = {};
 function add(x) {
   if (x === undefined || x === null || x === '') return;
+  if (typeof x === 'object' && !Array.isArray(x) && x.text) { add(x.text); styles[String(x.text).replace(/<[^>]+>/g, '').trim()] = x.style; return; }
   if (Object.prototype.toString.call(x) === '[object Array]') {
     x.forEach(add);
     // a part without end punctuation runs on into the next one ("Which word starts like" + "sun"):
@@ -68,10 +69,10 @@ if (!engineAll.allLines) captured.levels.forEach(function (L) {
 Object.keys(pairs).forEach(function (r) { lines[r] = 1; });
 var keyOf = vm.runInContext('Shell.clipKey', ctx);
 var seenKey = {};
-var rows = Object.keys(lines).sort().map(function (t) { return [keyOf(t), t]; })
+var rows = Object.keys(lines).sort().map(function (t) { return [keyOf(t), t, styles[t] || '']; })
   .filter(function (r) { if (seenKey[r[0]]) return false; seenKey[r[0]] = 1; return true; });
 var outDir = path.join(path.dirname(path.dirname(gamePath)), 'voice');
 fs.mkdirSync(path.join(outDir, 'clips'), { recursive: true });
-var csv = 'key,text\n' + rows.map(function (r) { return r[0] + ',"' + r[1].replace(/"/g, '""') + '"'; }).join('\n') + '\n';
+var csv = 'key,text,style\n' + rows.map(function (r) { return r[0] + ',"' + r[1].replace(/"/g, '""') + '",' + r[2]; }).join('\n') + '\n';
 fs.writeFileSync(path.join(outDir, asset + '_voice_script.csv'), csv);
 console.log(asset + ': ' + rows.length + ' lines -> ' + path.relative(root, path.join(outDir, asset + '_voice_script.csv')));

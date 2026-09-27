@@ -76,7 +76,7 @@ change only this function when it is known.
 | Engine file | Used by | Notes |
 |---|---|---|
 | `engines/tap-identify.*` | A6 | cards with pictures; one or several answers; target card |
-| `engines/letter-fill.*` | A7 | word or sign with one gap; tap or drag a letter tile |
+| `engines/letter-fill.*` | A7, A8 | word, sign or sentence with one gap; tap or drag a letter (or `.` `?` `,`) tile. Item options: `prompt` (on-screen question), `hint` (rule said after a wrong tile, e.g. "Signs start with a capital letter."), `done` (said after a right tile) |
 | `engines/match.*` | A14 | word chips to picture/sentence targets; tap-tap or drag; `done` line said after each match |
 
 Every engine exposes `T.LINES` (fixed lines) and `T.instructionFor(item)` or

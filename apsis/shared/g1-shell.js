@@ -518,6 +518,13 @@ var Shell = (function () {
       '<path d="M40 90q20-14 40 0" stroke="#FFD23F" stroke-width="3" fill="none" opacity=".8"/></svg>' +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none"><rect x="0" y="40" width="400" height="60" fill="#D99B5F"/>' +
       '<path d="M0 40h400M0 60h400M0 80h400" stroke="#B97A4A" stroke-width="2"/><rect x="0" y="34" width="400" height="8" fill="#FF9F1C"/></svg>',
+    /* seaside: bright sky, a sailing boat on blue waves, a sandy beach */
+    seaside: clouds() +
+      '<svg class="boat" viewBox="0 0 80 70"><path d="M40 4v44" stroke="#2E2A4F" stroke-width="3"/><path d="M42 6l28 36H42z" fill="#fff" stroke="#2E2A4F" stroke-width="2.5" stroke-linejoin="round"/>' +
+      '<path d="M38 12L16 42h22z" fill="#FF4F6D" stroke="#2E2A4F" stroke-width="2.5" stroke-linejoin="round"/><path d="M6 50h68l-10 14H16z" fill="#FFD23F" stroke="#2E2A4F" stroke-width="2.5" stroke-linejoin="round"/></svg>' +
+      '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +
+      '<path d="M0 34q25-10 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0V100H0z" fill="#2EA7FF"/><path d="M0 48q25-8 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0V100H0z" fill="#1E8FE0"/>' +
+      '<path d="M0 72C90 60 180 64 260 70S360 62 400 64V100H0z" fill="#FFE29A"/><g fill="#FF9F1C"><circle cx="60" cy="86" r="3"/><circle cx="190" cy="92" r="3"/><circle cx="320" cy="84" r="3"/></g></svg>',
     /* school street: aqua sky, school with a flag, zebra crossing */
     school: clouds() +
       '<svg class="ground" viewBox="0 0 400 100" preserveAspectRatio="none">' +

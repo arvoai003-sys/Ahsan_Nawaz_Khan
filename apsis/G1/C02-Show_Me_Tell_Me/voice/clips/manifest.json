@@ -1,2997 +1,3279 @@
 {
+ "a-sentence-ends-with-a-full-stop": {
+  "mood": "instruction",
+  "said_as": "A sentence ends with a full stop.",
+  "sig": "5b7f19ba3ecf",
+  "text": "A sentence ends with a full stop.",
+  "voice": "sarah"
+ },
+ "a-sentence-starts-with-a-capital-letter": {
+  "mood": "instruction",
+  "said_as": "A sentence starts with a capital letter.",
+  "sig": "16718c61e5cf",
+  "text": "A sentence starts with a capital letter.",
+  "voice": "sarah"
+ },
  "and": {
   "mood": "word",
   "said_as": "and.",
-  "sig": "15c183e98c98",
+  "sig": "93942ce66215",
   "text": "and",
   "voice": "sarah"
  },
  "arm": {
   "mood": "instruction",
   "said_as": "Arm!",
-  "sig": "904226fac7ca",
+  "sig": "5a9a386d4bd7",
   "text": "Arm!",
   "voice": "sarah"
  },
  "arm-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Arm is a naming word!",
-  "sig": "7b47faa1d9a8",
+  "sig": "0119cbab03fc",
   "text": "Arm is a naming word!",
   "voice": "sarah"
  },
  "bag": {
   "mood": "word",
   "said_as": "bag.",
-  "sig": "46054228b0e3",
+  "sig": "d028333d77ea",
   "text": "bag",
   "voice": "sarah"
  },
  "bags": {
   "mood": "word",
   "said_as": "Bags.",
-  "sig": "8673885d2086",
+  "sig": "65d8dae7d03b",
   "text": "Bags",
   "voice": "sarah"
  },
  "ball": {
   "mood": "word",
   "said_as": "ball.",
-  "sig": "da5e1de1009d",
+  "sig": "c9df41c9b9b8",
   "text": "ball",
   "voice": "sarah"
  },
  "banana": {
   "mood": "word",
   "said_as": "banana.",
-  "sig": "ebb44326f64c",
+  "sig": "62042ab6528f",
   "text": "banana",
   "voice": "sarah"
  },
  "be-careful-the-road-is-slippery": {
   "mood": "instruction",
   "said_as": "Be careful! The road is slippery.",
-  "sig": "3a0503519cb0",
+  "sig": "d12cc6142a7d",
   "text": "Be careful! The road is slippery.",
   "voice": "sarah"
  },
  "bell": {
   "mood": "word",
   "said_as": "bell.",
-  "sig": "1a8bce5816c7",
+  "sig": "38e9e10cb8db",
   "text": "bell",
   "voice": "sarah"
  },
  "big": {
   "mood": "word",
   "said_as": "big.",
-  "sig": "a74a14abc3b7",
+  "sig": "000b01a84b29",
   "text": "big",
   "voice": "sarah"
  },
  "bin": {
   "mood": "word",
   "said_as": "Bin.",
-  "sig": "1816ced56433",
+  "sig": "c39b3a5089ba",
   "text": "Bin",
   "voice": "sarah"
  },
  "book": {
   "mood": "word",
   "said_as": "book.",
-  "sig": "04c1ad99548a",
+  "sig": "c2b36ca09393",
   "text": "book",
+  "voice": "sarah"
+ },
+ "book-corner": {
+  "mood": "word",
+  "said_as": "Book corner.",
+  "sig": "80efd1c10b40",
+  "text": "Book corner",
   "voice": "sarah"
  },
  "books": {
   "mood": "word",
   "said_as": "Books.",
-  "sig": "7fc3a9f0d390",
+  "sig": "b9a58a00a448",
   "text": "Books",
   "voice": "sarah"
  },
  "books-you-can-read-a-book-here": {
   "mood": "instruction",
   "said_as": "Books! You can read a book here.",
-  "sig": "7271d8d459b0",
+  "sig": "c37f1a3275cb",
   "text": "Books! You can read a book here.",
   "voice": "sarah"
  },
  "bugs": {
   "mood": "word",
   "said_as": "Bugs.",
-  "sig": "129752c9f368",
+  "sig": "ed31f3e4b6c3",
   "text": "Bugs",
   "voice": "sarah"
  },
  "bugs-is-about-real-life": {
   "mood": "instruction",
   "said_as": "Bugs is about real life!",
-  "sig": "de143fe47e57",
+  "sig": "45af28a4bcb0",
   "text": "Bugs is about real life!",
   "voice": "sarah"
  },
  "bus": {
   "mood": "word",
   "said_as": "bus.",
-  "sig": "062a045f6d18",
+  "sig": "39c463933e05",
   "text": "bus",
   "voice": "sarah"
  },
  "can-you-find-the": {
   "mood": "instruction",
   "said_as": "Can you find the?",
-  "sig": "028242423daa",
+  "sig": "a9f90bd0a818",
   "text": "Can you find the",
   "voice": "sarah"
  },
  "can-you-find-the-arm": {
   "mood": "instruction",
   "said_as": "Can you find the arm?",
-  "sig": "940eb1849820",
+  "sig": "d50ff8d93f21",
   "text": "Can you find the arm",
   "voice": "sarah"
  },
  "can-you-find-the-chest": {
   "mood": "instruction",
   "said_as": "Can you find the chest?",
-  "sig": "3feda4581a39",
+  "sig": "19abfcc5862d",
   "text": "Can you find the chest",
   "voice": "sarah"
  },
  "can-you-find-the-eyes": {
   "mood": "instruction",
   "said_as": "Can you find the eyes?",
-  "sig": "9444e07d62f4",
+  "sig": "ea23d1be4d8e",
   "text": "Can you find the eyes",
   "voice": "sarah"
  },
  "can-you-find-the-face": {
   "mood": "instruction",
   "said_as": "Can you find the face?",
-  "sig": "ad6898d129d8",
+  "sig": "913400e61144",
   "text": "Can you find the face",
   "voice": "sarah"
  },
  "can-you-find-the-foot": {
   "mood": "instruction",
   "said_as": "Can you find the foot?",
-  "sig": "85dfa0156f88",
+  "sig": "eaceae46dca2",
   "text": "Can you find the foot",
   "voice": "sarah"
  },
  "can-you-find-the-hand": {
   "mood": "instruction",
   "said_as": "Can you find the hand?",
-  "sig": "b09205e07d2e",
+  "sig": "1c24d8465b07",
   "text": "Can you find the hand",
   "voice": "sarah"
  },
  "can-you-find-the-head": {
   "mood": "instruction",
   "said_as": "Can you find the head?",
-  "sig": "f7223de47b86",
+  "sig": "68c3f5409a87",
   "text": "Can you find the head",
   "voice": "sarah"
  },
  "can-you-find-the-leg": {
   "mood": "instruction",
   "said_as": "Can you find the leg?",
-  "sig": "8de3f108b767",
+  "sig": "5fec6a23b307",
   "text": "Can you find the leg",
   "voice": "sarah"
  },
  "can-you-find-the-mouth": {
   "mood": "instruction",
   "said_as": "Can you find the mouth?",
-  "sig": "7951232c97c9",
+  "sig": "1b822f6a9f1f",
   "text": "Can you find the mouth",
   "voice": "sarah"
  },
  "can-you-find-the-nose": {
   "mood": "instruction",
   "said_as": "Can you find the nose?",
-  "sig": "da0d30db189f",
+  "sig": "3808467f2bda",
   "text": "Can you find the nose",
   "voice": "sarah"
  },
  "can-you-find-the-word": {
   "mood": "instruction",
   "said_as": "Can you find the word?",
-  "sig": "d0c801f57893",
+  "sig": "0cc03842048a",
   "text": "Can you find the word",
   "voice": "sarah"
  },
  "can-you-find-the-word-do": {
   "mood": "instruction",
   "said_as": "Can you find the word do?",
-  "sig": "88e93b0cdb68",
+  "sig": "22f5ed938cfa",
   "text": "Can you find the word do",
   "voice": "sarah"
  },
  "can-you-find-the-word-ears": {
   "mood": "instruction",
   "said_as": "Can you find the word ears?",
-  "sig": "8173342c13d0",
+  "sig": "d4df80bca155",
   "text": "Can you find the word ears",
   "voice": "sarah"
  },
  "can-you-find-the-word-eyes": {
   "mood": "instruction",
   "said_as": "Can you find the word eyes?",
-  "sig": "c1661ef66a2b",
+  "sig": "023c7e4d3a24",
   "text": "Can you find the word eyes",
   "voice": "sarah"
  },
  "can-you-find-the-word-find": {
   "mood": "instruction",
   "said_as": "Can you find the word find?",
-  "sig": "5d81488c1e24",
+  "sig": "b01def6eefde",
   "text": "Can you find the word find",
   "voice": "sarah"
  },
  "can-you-find-the-word-five": {
   "mood": "instruction",
   "said_as": "Can you find the word five?",
-  "sig": "ebc0681ef996",
+  "sig": "1759201cb973",
   "text": "Can you find the word five",
   "voice": "sarah"
  },
  "can-you-find-the-word-go": {
   "mood": "instruction",
   "said_as": "Can you find the word go?",
-  "sig": "707f28920a95",
+  "sig": "3a9325c6c24d",
   "text": "Can you find the word go",
   "voice": "sarah"
  },
  "can-you-find-the-word-hands": {
   "mood": "instruction",
   "said_as": "Can you find the word hands?",
-  "sig": "359e38268db4",
+  "sig": "ceca219f7c7b",
   "text": "Can you find the word hands",
   "voice": "sarah"
  },
  "can-you-find-the-word-nose": {
   "mood": "instruction",
   "said_as": "Can you find the word nose?",
-  "sig": "eeaa3ea2fba3",
+  "sig": "1b619eca838f",
   "text": "Can you find the word nose",
   "voice": "sarah"
  },
  "can-you-find-the-word-not": {
   "mood": "instruction",
   "said_as": "Can you find the word not?",
-  "sig": "4503ea22aa4c",
+  "sig": "9e88739e9ffd",
   "text": "Can you find the word not",
   "voice": "sarah"
  },
  "can-you-find-the-word-tongue": {
   "mood": "instruction",
   "said_as": "Can you find the word tongue?",
-  "sig": "096817a8ac8e",
+  "sig": "cf4388b2d532",
   "text": "Can you find the word tongue",
   "voice": "sarah"
  },
  "can-you-find-the-word-touch": {
   "mood": "instruction",
   "said_as": "Can you find the word touch?",
-  "sig": "431893532bd9",
+  "sig": "02c282b12c8e",
   "text": "Can you find the word touch",
   "voice": "sarah"
  },
  "can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Can you find three words that start the same?",
-  "sig": "b8ecf6a06514",
+  "sig": "a876b9148ac1",
   "text": "Can you find three words that start the same?",
   "voice": "sarah"
  },
  "can-you-match-each-sense-to-its-body-part": {
   "mood": "instruction",
   "said_as": "Can you match each sense to its body part?",
-  "sig": "da1709536855",
+  "sig": "1e911daca84c",
   "text": "Can you match each sense to its body part?",
   "voice": "sarah"
  },
  "can-you-match-each-sense-to-what-we-do": {
   "mood": "instruction",
   "said_as": "Can you match each sense to what we do?",
-  "sig": "6c4e9fc7052d",
+  "sig": "92a5dd57b888",
   "text": "Can you match each sense to what we do?",
   "voice": "sarah"
  },
  "can-you-put-each-label-in-the-right-place": {
   "mood": "instruction",
   "said_as": "Can you put each label in the right place?",
-  "sig": "3ca8e818d2ca",
+  "sig": "258c8ccece3c",
   "text": "Can you put each label in the right place?",
   "voice": "sarah"
  },
  "canteen": {
   "mood": "word",
   "said_as": "Canteen.",
-  "sig": "f7f7a48acb31",
+  "sig": "17508c58196f",
   "text": "Canteen",
+  "voice": "sarah"
+ },
+ "capital-at-the-start": {
+  "mood": "instruction",
+  "said_as": "Capital at the Start",
+  "sig": "8bdc964a4d7a",
+  "text": "Capital at the Start",
   "voice": "sarah"
  },
  "chest": {
   "mood": "instruction",
   "said_as": "Chest!",
-  "sig": "e8c3ce6a0bfa",
+  "sig": "8294b2adc02e",
   "text": "Chest!",
   "voice": "sarah"
  },
  "chest-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Chest is a naming word!",
-  "sig": "0c0957f8b491",
+  "sig": "6d76beb86dd5",
   "text": "Chest is a naming word!",
   "voice": "sarah"
  },
  "chin": {
   "mood": "word",
   "said_as": "chin.",
-  "sig": "d3d0b0ed6cdc",
+  "sig": "36a89712dc28",
   "text": "chin",
   "voice": "sarah"
  },
  "choose-a-level": {
   "mood": "instruction",
   "said_as": "Choose a level!",
-  "sig": "5fc4ba251925",
+  "sig": "37c434de3069",
   "text": "Choose a level!",
   "voice": "sarah"
  },
  "classroom": {
   "mood": "word",
   "said_as": "classroom.",
-  "sig": "e2a820acf962",
+  "sig": "ce5d23470f94",
   "text": "classroom",
   "voice": "sarah"
  },
  "closed": {
   "mood": "word",
   "said_as": "Closed.",
-  "sig": "5d3337b5600d",
+  "sig": "1079970860c6",
   "text": "Closed",
   "voice": "sarah"
  },
  "colour": {
   "mood": "word",
   "said_as": "colour.",
-  "sig": "31797a6f0728",
+  "sig": "33e1f32e47cb",
   "text": "colour",
   "voice": "sarah"
  },
  "danger": {
   "mood": "word",
   "said_as": "Danger.",
-  "sig": "5324c196f50e",
+  "sig": "f8ebbc134c02",
   "text": "Danger",
   "voice": "sarah"
  },
  "do": {
   "mood": "word",
   "said_as": "do.",
-  "sig": "9803fc3d0291",
+  "sig": "5b27db5e58e5",
   "text": "do",
   "voice": "sarah"
  },
  "don-t": {
   "mood": "word",
   "said_as": "Don't.",
-  "sig": "953ec6ad7d76",
+  "sig": "c2e15520ad4c",
   "text": "Don't",
   "voice": "sarah"
  },
  "don-t-dive-here": {
   "mood": "instruction",
   "said_as": "Don't dive here.",
-  "sig": "eb3c2727f360",
+  "sig": "6365df7530be",
   "text": "Don't dive here.",
   "voice": "sarah"
  },
  "don-t-drink-this-water": {
   "mood": "instruction",
   "said_as": "Don't drink this water!",
-  "sig": "0eeee6b9af2f",
+  "sig": "a0889c1094a7",
   "text": "Don't drink this water!",
   "voice": "sarah"
  },
  "don-t-go-near-the-deep-water": {
   "mood": "instruction",
   "said_as": "Don't go near the deep water.",
-  "sig": "6f81ab9591d7",
+  "sig": "08fcdbe37245",
   "text": "Don't go near the deep water.",
   "voice": "sarah"
  },
  "don-t-waste-water": {
   "mood": "instruction",
   "said_as": "Don't waste water.",
-  "sig": "2b52c642805e",
+  "sig": "fe68091b34a1",
   "text": "Don't waste water.",
   "voice": "sarah"
  },
  "don-t-waste-water-close-the-tap": {
   "mood": "instruction",
   "said_as": "Don't waste water! Close the tap.",
-  "sig": "3de755b482d7",
+  "sig": "cb65454ed393",
   "text": "Don't waste water! Close the tap.",
   "voice": "sarah"
  },
  "door": {
   "mood": "word",
   "said_as": "door.",
-  "sig": "c47e1615a239",
+  "sig": "e99710cfddaa",
   "text": "door",
   "voice": "sarah"
  },
  "drum": {
   "mood": "word",
   "said_as": "drum.",
-  "sig": "501d8115a14f",
+  "sig": "5d0c8ed74b30",
   "text": "drum",
   "voice": "sarah"
  },
  "duck": {
   "mood": "word",
   "said_as": "duck.",
-  "sig": "1f3c75aff984",
+  "sig": "8ef1795ef220",
   "text": "duck",
   "voice": "sarah"
  },
  "ear": {
   "mood": "word",
   "said_as": "ear.",
-  "sig": "43f81da423fe",
+  "sig": "d930ad3e3ac3",
   "text": "ear",
   "voice": "sarah"
  },
  "ears": {
   "mood": "word",
   "said_as": "ears.",
-  "sig": "76a6aa697c8a",
+  "sig": "2289d00815b8",
   "text": "ears",
   "voice": "sarah"
  },
  "eat-a-banana": {
   "mood": "instruction",
   "said_as": "Eat a banana!",
-  "sig": "d9753870f6c9",
+  "sig": "71a99089d5df",
   "text": "Eat a banana!",
   "voice": "sarah"
  },
  "eat-an-ice-cream": {
   "mood": "instruction",
   "said_as": "Eat an ice cream!",
-  "sig": "ebc9e98e99bf",
+  "sig": "9af685301414",
   "text": "Eat an ice cream!",
   "voice": "sarah"
  },
  "egg": {
   "mood": "word",
   "said_as": "egg.",
-  "sig": "3a29b8e9e04c",
+  "sig": "07d7a62cf8f1",
   "text": "egg",
   "voice": "sarah"
  },
  "elephant": {
   "mood": "word",
   "said_as": "elephant.",
-  "sig": "28a44d6bd2bb",
+  "sig": "5abf2d9879a4",
   "text": "elephant",
   "voice": "sarah"
  },
  "entrance": {
   "mood": "word",
   "said_as": "Entrance.",
-  "sig": "edd045e8ad7d",
+  "sig": "726bd53c2a27",
   "text": "Entrance",
   "voice": "sarah"
  },
  "exit": {
   "mood": "word",
-  "said_as": "Exit.",
-  "sig": "758c3c93b515",
-  "text": "Exit",
+  "said_as": "exit.",
+  "sig": "89b17f6ad460",
+  "text": "exit",
   "voice": "sarah"
  },
  "exit-means-go-out-this-way": {
   "mood": "instruction",
   "said_as": "Exit means: go out this way.",
-  "sig": "8b883cae8d11",
+  "sig": "16e061afb7df",
   "text": "Exit means: go out this way.",
   "voice": "sarah"
  },
  "exit-this-way-out": {
   "mood": "instruction",
   "said_as": "Exit! This way out.",
-  "sig": "cddd352a2519",
+  "sig": "bdcad36f68e3",
   "text": "Exit! This way out.",
   "voice": "sarah"
  },
  "eyes": {
   "mood": "word",
   "said_as": "eyes.",
-  "sig": "971b3293fd72",
+  "sig": "e269b14cdaeb",
   "text": "eyes",
   "voice": "sarah"
  },
  "eyes-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Eyes is a naming word!",
-  "sig": "ce42d5d63df7",
+  "sig": "e5b0452e17fe",
   "text": "Eyes is a naming word!",
   "voice": "sarah"
  },
  "face": {
-  "mood": "instruction",
-  "said_as": "Face!",
-  "sig": "a1507baf3459",
-  "text": "Face!",
+  "mood": "word",
+  "said_as": "face.",
+  "sig": "8fb1038b7702",
+  "text": "face",
   "voice": "sarah"
  },
  "face-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Face is a naming word!",
-  "sig": "a6116180db69",
+  "sig": "e1233d1f2bd3",
   "text": "Face is a naming word!",
   "voice": "sarah"
  },
  "fan": {
   "mood": "word",
   "said_as": "fan.",
-  "sig": "c57672cfeef2",
+  "sig": "b87d4ccb3a02",
   "text": "fan",
   "voice": "sarah"
  },
  "feel": {
   "mood": "word",
   "said_as": "feel.",
-  "sig": "67e476473797",
+  "sig": "2e035688ee05",
   "text": "feel",
   "voice": "sarah"
  },
  "find": {
   "mood": "word",
   "said_as": "find.",
-  "sig": "877644826995",
+  "sig": "2180a603df84",
   "text": "find",
   "voice": "sarah"
  },
  "find-one-more": {
   "mood": "excited",
   "said_as": "Find one more!",
-  "sig": "3a001a4f393b",
+  "sig": "89889b59d79d",
   "text": "Find one more!",
   "voice": "sarah"
  },
  "find-the-missing-letter": {
   "mood": "instruction",
   "said_as": "Find the missing letter.",
-  "sig": "4054f689d6b4",
+  "sig": "9f93672d0d99",
   "text": "Find the missing letter.",
   "voice": "sarah"
  },
  "find-words-that-start-with-the-same-sound": {
   "mood": "instruction",
   "said_as": "Find words that start with the same sound.",
-  "sig": "01ea3be21eac",
+  "sig": "cf352a4cef2c",
   "text": "Find words that start with the same sound.",
   "voice": "sarah"
  },
  "finish-the-sign-word": {
   "mood": "instruction",
   "said_as": "Finish the Sign Word",
-  "sig": "65f9b3a6fc34",
+  "sig": "684eec3635b4",
   "text": "Finish the Sign Word",
   "voice": "sarah"
  },
  "first-atlas": {
   "mood": "word",
   "said_as": "First Atlas.",
-  "sig": "b62b416744c2",
+  "sig": "5325c77a68fb",
   "text": "First Atlas",
   "voice": "sarah"
  },
  "first-atlas-is-about-real-life": {
   "mood": "instruction",
   "said_as": "First Atlas is about real life!",
-  "sig": "03a869e7bce0",
+  "sig": "fb63577ea328",
   "text": "First Atlas is about real life!",
   "voice": "sarah"
  },
  "fish": {
   "mood": "word",
   "said_as": "fish.",
-  "sig": "6e83f2164cde",
+  "sig": "d29e21da84a6",
   "text": "fish",
   "voice": "sarah"
  },
  "five": {
   "mood": "word",
   "said_as": "five.",
-  "sig": "7d97b4416a8b",
+  "sig": "4623a084f6e3",
   "text": "five",
   "voice": "sarah"
  },
  "foot": {
-  "mood": "instruction",
-  "said_as": "Foot!",
-  "sig": "aaf77f37acc6",
-  "text": "Foot!",
+  "mood": "word",
+  "said_as": "foot.",
+  "sig": "f6b3e85b22d9",
+  "text": "foot",
   "voice": "sarah"
  },
  "foot-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Foot is a naming word!",
-  "sig": "d9affac3288a",
+  "sig": "f6a7c842d5f1",
   "text": "Foot is a naming word!",
   "voice": "sarah"
  },
  "funny": {
   "mood": "word",
   "said_as": "funny.",
-  "sig": "faa2b5a47b03",
+  "sig": "d8ca640bd11d",
   "text": "funny",
   "voice": "sarah"
  },
  "go": {
   "mood": "word",
   "said_as": "go.",
-  "sig": "413c3e351922",
+  "sig": "4f4855c53849",
   "text": "go",
   "voice": "sarah"
  },
  "great-job": {
   "mood": "excited",
   "said_as": "Great job!",
-  "sig": "4f02879c8393",
+  "sig": "a6cc501234fd",
   "text": "Great job!",
   "voice": "sarah"
  },
  "hair": {
   "mood": "word",
   "said_as": "hair.",
-  "sig": "cee1e5b87a4a",
+  "sig": "19b7d71c8d3a",
   "text": "hair",
   "voice": "sarah"
  },
  "hand": {
-  "mood": "instruction",
-  "said_as": "Hand!",
-  "sig": "b141a0b5717c",
-  "text": "Hand!",
+  "mood": "word",
+  "said_as": "hand.",
+  "sig": "6f62ee48f668",
+  "text": "hand",
   "voice": "sarah"
  },
  "hand-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Hand is a naming word!",
-  "sig": "695f8fa780df",
+  "sig": "76e2ed3d9826",
   "text": "Hand is a naming word!",
   "voice": "sarah"
  },
  "hands": {
   "mood": "word",
   "said_as": "hands.",
-  "sig": "40e068c017eb",
+  "sig": "dc44cfd498f0",
   "text": "hands",
   "voice": "sarah"
  },
  "happy": {
   "mood": "word",
   "said_as": "happy.",
-  "sig": "dcfc4aa206d6",
+  "sig": "c1d8e8cac7b3",
   "text": "happy",
   "voice": "sarah"
  },
  "hat": {
   "mood": "word",
   "said_as": "hat.",
-  "sig": "83b157bed058",
+  "sig": "7887dd81ed6e",
   "text": "hat",
   "voice": "sarah"
  },
  "have": {
   "mood": "word",
   "said_as": "have.",
-  "sig": "227519bf999a",
+  "sig": "7e3c23bd47f7",
   "text": "have",
   "voice": "sarah"
  },
  "head": {
   "mood": "instruction",
   "said_as": "Head!",
-  "sig": "0b48e199c4ec",
+  "sig": "7b5a464e41e4",
   "text": "Head!",
   "voice": "sarah"
  },
  "head-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Head is a naming word!",
-  "sig": "74e50faca443",
+  "sig": "a764ad678c5a",
   "text": "Head is a naming word!",
   "voice": "sarah"
  },
  "hear": {
   "mood": "word",
   "said_as": "hear.",
-  "sig": "4c666bb0e50d",
+  "sig": "53b07851156e",
   "text": "hear",
   "voice": "sarah"
  },
  "hearing": {
   "mood": "word",
   "said_as": "Hearing.",
-  "sig": "41a9fb6b4d6e",
+  "sig": "489909c4afe8",
   "text": "Hearing",
   "voice": "sarah"
  },
  "help": {
   "mood": "word",
   "said_as": "help.",
-  "sig": "937b53dfdaa1",
+  "sig": "fc2f20a7e00f",
   "text": "help",
   "voice": "sarah"
  },
  "hen": {
   "mood": "word",
   "said_as": "hen.",
-  "sig": "e423784c7e93",
+  "sig": "8e3dce15fe0a",
   "text": "hen",
   "voice": "sarah"
  },
  "hero-academy": {
   "mood": "word",
   "said_as": "Hero Academy.",
-  "sig": "240340c1dddf",
+  "sig": "ace350aa1fb8",
   "text": "Hero Academy",
   "voice": "sarah"
  },
  "hero-academy-is-a-story-book": {
   "mood": "instruction",
   "said_as": "Hero Academy is a story book!",
-  "sig": "6b75e1181881",
+  "sig": "480f2e1faee7",
   "text": "Hero Academy is a story book!",
   "voice": "sarah"
  },
  "hooray": {
   "mood": "excited",
   "said_as": "Hoo-ray!",
-  "sig": "1aa35cd2d8a2",
+  "sig": "0e77ac825622",
   "text": "Hooray!",
   "voice": "sarah"
  },
  "house": {
   "mood": "word",
   "said_as": "house.",
-  "sig": "86768aec0fc8",
+  "sig": "79d2e8e0af5b",
   "text": "house",
   "voice": "sarah"
  },
  "how-to-draw-cartoons": {
   "mood": "instruction",
   "said_as": "How to Draw Cartoons",
-  "sig": "91f1edafbe17",
+  "sig": "3fe3e7529ad3",
   "text": "How to Draw Cartoons",
   "voice": "sarah"
  },
  "how-to-draw-cartoons-is-about-real-life": {
   "mood": "instruction",
   "said_as": "How to Draw Cartoons is about real life!",
-  "sig": "701f5899df1d",
+  "sig": "d29ad213fbc6",
   "text": "How to Draw Cartoons is about real life!",
   "voice": "sarah"
  },
  "how-to-play-guitar": {
   "mood": "instruction",
   "said_as": "How to Play Guitar",
-  "sig": "585ddb397277",
+  "sig": "c437a53af66c",
   "text": "How to Play Guitar",
   "voice": "sarah"
  },
  "how-to-play-guitar-is-about-real-life": {
   "mood": "instruction",
   "said_as": "How to Play Guitar is about real life!",
-  "sig": "dad2846ac5ac",
+  "sig": "e7aa66c99214",
   "text": "How to Play Guitar is about real life!",
   "voice": "sarah"
  },
  "hug-a-teddy": {
   "mood": "instruction",
   "said_as": "Hug a teddy!",
-  "sig": "bab2060711df",
+  "sig": "28410b7f1db0",
   "text": "Hug a teddy!",
   "voice": "sarah"
  },
  "in": {
   "mood": "word",
   "said_as": "in.",
-  "sig": "3d08f1528417",
+  "sig": "b8e255792c7e",
   "text": "in",
   "voice": "sarah"
  },
  "in-the-classroom-signs-help-us-to-find-things": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "In the classroom,",
+   "signs help us",
+   "to find things."
+  ],
   "said_as": "In the classroom, signs help us to find things.",
-  "sig": "e78591970de1",
+  "sig": "7f27e562b0a2",
   "text": "In the classroom, signs help us to find things.",
+  "times": [
+   0.03,
+   0.345,
+   0.659,
+   2.089,
+   2.537,
+   2.985,
+   4.133,
+   4.588,
+   5.043
+  ],
   "voice": "sarah"
  },
  "is-it-a-story-or-about-real-life": {
   "mood": "instruction",
   "said_as": "Is it a story, or about real life?",
-  "sig": "9f708efbf437",
+  "sig": "b3135d66715d",
   "text": "Is it a story, or about real life?",
   "voice": "sarah"
  },
  "is-it-made-up-like-a-fairy-tale": {
   "mood": "instruction",
   "said_as": "Is it made up, like a fairy tale?",
-  "sig": "0cbc34a19d3d",
+  "sig": "2bcf1e426f03",
   "text": "Is it made up, like a fairy tale?",
   "voice": "sarah"
  },
  "is-there-a-red-line-across-it": {
   "mood": "instruction",
   "said_as": "Is there a red line across it?",
-  "sig": "8b7deb8be0b4",
+  "sig": "b4e7917c51f0",
   "text": "Is there a red line across it?",
   "voice": "sarah"
  },
  "is-this-sign-telling-you-to-do-something-or-not-to-do-something": {
   "mood": "instruction",
   "said_as": "Is this sign telling you to do something, or not to do something?",
-  "sig": "65b4c65d24cd",
+  "sig": "df2985c5e054",
   "text": "Is this sign telling you to do something, or not to do something?",
   "voice": "sarah"
  },
  "label-it": {
   "mood": "word",
   "said_as": "Label It.",
-  "sig": "5ccc41b0f789",
+  "sig": "b442e6627fb6",
   "text": "Label It",
   "voice": "sarah"
  },
  "leaf": {
   "mood": "word",
   "said_as": "leaf.",
-  "sig": "b9f155c90afd",
+  "sig": "5b38274304b4",
   "text": "leaf",
   "voice": "sarah"
  },
  "leg": {
-  "mood": "instruction",
-  "said_as": "Leg!",
-  "sig": "3a3f35443786",
-  "text": "Leg!",
+  "mood": "word",
+  "said_as": "leg.",
+  "sig": "64de459ec447",
+  "text": "leg",
   "voice": "sarah"
  },
  "leg-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Leg is a naming word!",
-  "sig": "3b0453654474",
+  "sig": "dff41fbddebb",
   "text": "Leg is a naming word!",
   "voice": "sarah"
  },
  "let-s-listen-to-each-word": {
   "mood": "gentle",
   "said_as": "Let's listen to each word.",
-  "sig": "cbe176daff35",
+  "sig": "fb1e60e2bdc0",
   "text": "Let's listen to each word.",
   "voice": "sarah"
  },
  "let-s-name-the-parts-of-the-body": {
   "mood": "instruction",
   "said_as": "Let's name the parts of the body!",
-  "sig": "cb9f7d02e45c",
+  "sig": "0abbb72978ae",
   "text": "Let's name the parts of the body!",
   "voice": "sarah"
  },
  "let-s-read-about-our-senses": {
   "mood": "instruction",
   "said_as": "Let's read about our senses!",
-  "sig": "78e32f984c64",
+  "sig": "81afd466d20f",
   "text": "Let's read about our senses!",
   "voice": "sarah"
  },
  "let-s-read-about-signs": {
   "mood": "instruction",
   "said_as": "Let's read about signs!",
-  "sig": "0c2fb47f2bee",
+  "sig": "53c3b4369788",
   "text": "Let's read about signs!",
   "voice": "sarah"
  },
  "let-s-read-signs-and-books": {
   "mood": "instruction",
   "said_as": "Let's read signs and books!",
-  "sig": "4db8a19690b5",
+  "sig": "e36d59ec250a",
   "text": "Let's read signs and books!",
+  "voice": "sarah"
+ },
+ "level-five-a-sentence-ends-with-a-full-stop": {
+  "mood": "cheer",
+  "said_as": "Level five! A sentence ends with a full stop.",
+  "sig": "9fc4749d3843",
+  "text": "Level five! A sentence ends with a full stop.",
   "voice": "sarah"
  },
  "level-five-body-words-from-your-book": {
   "mood": "cheer",
   "said_as": "Level five! Body words from your book!",
-  "sig": "c609b2b19bea",
+  "sig": "094322ddc612",
   "text": "Level five! Body words from your book!",
   "voice": "sarah"
  },
  "level-five-mix-it-up": {
   "mood": "cheer",
   "said_as": "Level five! Mix it up!",
-  "sig": "d6baa1e54061",
+  "sig": "86b29e449d5a",
   "text": "Level five! Mix it up!",
   "voice": "sarah"
  },
  "level-five-odd-one-out": {
   "mood": "cheer",
   "said_as": "Level five! Odd one out!",
-  "sig": "42248dd7cf9a",
+  "sig": "04d2f7975530",
   "text": "Level five! Odd one out!",
   "voice": "sarah"
  },
  "level-five-story-or-real-life": {
   "mood": "cheer",
   "said_as": "Level five! Story, or real life?",
-  "sig": "8f169a74555e",
+  "sig": "ca9ebe3b539b",
   "text": "Level five! Story, or real life?",
   "voice": "sarah"
  },
  "level-five-where-does-it-go": {
   "mood": "cheer",
   "said_as": "Level five! Where does it go?",
-  "sig": "f077bfe16de4",
+  "sig": "ea653b3b87f4",
   "text": "Level five! Where does it go?",
   "voice": "sarah"
  },
  "level-five-which-label-goes-here": {
   "mood": "cheer",
   "said_as": "Level five! Which label goes here?",
-  "sig": "9ba25a5bdd66",
+  "sig": "4146f19834c7",
   "text": "Level five! Which label goes here?",
+  "voice": "sarah"
+ },
+ "level-four-a-sentence-starts-with-a-capital-letter": {
+  "mood": "cheer",
+  "said_as": "Level four! A sentence starts with a capital letter.",
+  "sig": "43a52d2b8a96",
+  "text": "Level four! A sentence starts with a capital letter.",
   "voice": "sarah"
  },
  "level-four-do-or-don-t": {
   "mood": "cheer",
   "said_as": "Level four! Do, or don't?",
-  "sig": "31da82bc0eeb",
+  "sig": "2d43411e202d",
   "text": "Level four! Do, or don't?",
   "voice": "sarah"
  },
  "level-four-find-two": {
   "mood": "cheer",
   "said_as": "Level four! Find two!",
-  "sig": "05f262626e00",
+  "sig": "c12688f7a1d9",
   "text": "Level four! Find two!",
   "voice": "sarah"
  },
  "level-four-label-our-school": {
   "mood": "cheer",
   "said_as": "Level four! Label our school!",
-  "sig": "ec0a52b7ef0f",
+  "sig": "4f5c8d4ec518",
   "text": "Level four! Label our school!",
   "voice": "sarah"
  },
  "level-four-letters-in-the-middle": {
   "mood": "cheer",
   "said_as": "Level four! Letters in the middle!",
-  "sig": "a6078f954d2c",
+  "sig": "46101885797e",
   "text": "Level four! Letters in the middle!",
   "voice": "sarah"
  },
  "level-four-match-three": {
   "mood": "cheer",
   "said_as": "Level four! Match three!",
-  "sig": "e6198ec67cdf",
+  "sig": "4eac91be9655",
   "text": "Level four! Match three!",
   "voice": "sarah"
  },
  "level-four-naming-words": {
   "mood": "cheer",
   "said_as": "Level four! Naming words!",
-  "sig": "6a886b8314c7",
+  "sig": "c620cc6b5761",
   "text": "Level four! Naming words!",
   "voice": "sarah"
  },
  "level-one-let-s-go-on-a-sign-hunt": {
   "mood": "cheer",
   "said_as": "Level one! Let's go on a sign hunt!",
-  "sig": "e1dc9a9b1d85",
+  "sig": "57a97ac7623a",
   "text": "Level one! Let's go on a sign hunt!",
   "voice": "sarah"
  },
  "level-one-let-s-warm-up": {
   "mood": "cheer",
   "said_as": "Level one! Let's warm up!",
-  "sig": "7ffef33f4ab8",
+  "sig": "3dac272214bd",
   "text": "Level one! Let's warm up!",
+  "voice": "sarah"
+ },
+ "level-one-signs-start-with-a-capital-letter-signs-don-t-have-a-full-stop-at-the-end": {
+  "mood": "cheer",
+  "said_as": "Level one! Signs start with a capital letter. Signs don't have a full stop at the end.",
+  "sig": "540660562467",
+  "text": "Level one! Signs start with a capital letter. Signs don't have a full stop at the end.",
   "voice": "sarah"
  },
  "level-six-all-five-senses": {
   "mood": "cheer",
   "said_as": "Level six! All five senses!",
-  "sig": "dcc70246d51b",
+  "sig": "230ae16077ad",
   "text": "Level six! All five senses!",
+  "voice": "sarah"
+ },
+ "level-six-signs-start-with-a-capital-letter-and-have-no-full-stop-sentences-start-with-a-capital-letter-and-end-with-a-full-stop": {
+  "mood": "cheer",
+  "said_as": "Level six! Signs start with a capital letter and have no full stop. Sentences start with a capital letter and end with a full stop.",
+  "sig": "594bee948e1d",
+  "text": "Level six! Signs start with a capital letter and have no full stop. Sentences start with a capital letter and end with a full stop.",
   "voice": "sarah"
  },
  "level-six-super-labels": {
   "mood": "cheer",
   "said_as": "Level six! Super labels!",
-  "sig": "f79201c0bef1",
+  "sig": "170e070cc04a",
   "text": "Level six! Super labels!",
   "voice": "sarah"
  },
  "level-six-super-signs": {
   "mood": "cheer",
   "said_as": "Level six! Super signs!",
-  "sig": "4508498270e7",
+  "sig": "9d6ab8c169d2",
   "text": "Level six! Super signs!",
   "voice": "sarah"
  },
  "level-six-super-star-challenge": {
   "mood": "cheer",
   "said_as": "Level six! Super star challenge!",
-  "sig": "9ea6d7dab3a0",
+  "sig": "aadab7c972c8",
   "text": "Level six! Super star challenge!",
   "voice": "sarah"
  },
  "level-three-first-letters": {
   "mood": "cheer",
   "said_as": "Level three! First letters!",
-  "sig": "ba3f97671c91",
+  "sig": "0f37d0b8488d",
   "text": "Level three! First letters!",
   "voice": "sarah"
  },
  "level-three-follow-the-arrow": {
   "mood": "cheer",
   "said_as": "Level three! Follow the arrow!",
-  "sig": "dfe85986e45c",
+  "sig": "97bd7cb5b900",
   "text": "Level three! Follow the arrow!",
   "voice": "sarah"
  },
  "level-three-label-our-classroom": {
   "mood": "cheer",
   "said_as": "Level three! Label our classroom!",
-  "sig": "c826c3e7af92",
+  "sig": "ffda43e985b0",
   "text": "Level three! Label our classroom!",
+  "voice": "sarah"
+ },
+ "level-three-more-signs": {
+  "mood": "cheer",
+  "said_as": "Level three! More signs!",
+  "sig": "5580f7de61df",
+  "text": "Level three! More signs!",
   "voice": "sarah"
  },
  "level-three-same-start": {
   "mood": "cheer",
   "said_as": "Level three! Same start!",
-  "sig": "21bc46b84edf",
+  "sig": "dc7e318b32d9",
   "text": "Level three! Same start!",
   "voice": "sarah"
  },
  "level-three-what-does-the-sign-mean": {
   "mood": "cheer",
   "said_as": "Level three! What does the sign mean?",
-  "sig": "fcbdbee27325",
+  "sig": "858b28a74ec2",
   "text": "Level three! What does the sign mean?",
   "voice": "sarah"
  },
  "level-three-which-sense-do-we-use": {
   "mood": "cheer",
   "said_as": "Level three! Which sense do we use?",
-  "sig": "440c546abd09",
+  "sig": "ca90dbd22ed5",
   "text": "Level three! Which sense do we use?",
   "voice": "sarah"
  },
  "level-two-body-words-from-your-book": {
   "mood": "cheer",
   "said_as": "Level two! Body words from your book!",
-  "sig": "842b6ceefbcd",
+  "sig": "ecd92cfde0a7",
   "text": "Level two! Body words from your book!",
   "voice": "sarah"
  },
  "level-two-our-senses-from-your-book": {
   "mood": "cheer",
   "said_as": "Level two! Our senses, from your book!",
-  "sig": "e05517a74d23",
+  "sig": "1142e054c2e3",
   "text": "Level two! Our senses, from your book!",
   "voice": "sarah"
  },
  "level-two-sign-words-from-your-book": {
   "mood": "cheer",
   "said_as": "Level two! Sign words from your book!",
-  "sig": "fac3ee8f0fa9",
+  "sig": "301e081534f7",
   "text": "Level two! Sign words from your book!",
   "voice": "sarah"
  },
  "level-two-signs-from-your-book": {
   "mood": "cheer",
   "said_as": "Level two! Signs from your book!",
-  "sig": "99b59b30c271",
+  "sig": "6642f67a9f5d",
   "text": "Level two! Signs from your book!",
   "voice": "sarah"
  },
  "light": {
   "mood": "word",
   "said_as": "light.",
-  "sig": "1ec5360b0fbe",
+  "sig": "885b1e6a4d7a",
   "text": "light",
   "voice": "sarah"
  },
  "lion": {
   "mood": "word",
   "said_as": "lion.",
-  "sig": "695485d8b416",
+  "sig": "a4b38b9e4c8f",
   "text": "lion",
   "voice": "sarah"
  },
  "listen": {
   "mood": "instruction",
   "said_as": "Listen.",
-  "sig": "feb34fd73914",
+  "sig": "81fbec237449",
   "text": "Listen.",
   "voice": "sarah"
  },
  "listen-carefully": {
   "mood": "gentle",
   "said_as": "Listen carefully.",
-  "sig": "fa8b771cd71f",
+  "sig": "fed5b009d27d",
   "text": "Listen carefully.",
   "voice": "sarah"
  },
  "listen-to-a-drum": {
   "mood": "instruction",
   "said_as": "Listen to a drum!",
-  "sig": "2ebf8e48d2c3",
+  "sig": "fd3a38963204",
   "text": "Listen to a drum!",
   "voice": "sarah"
  },
  "lollipop": {
   "mood": "word",
   "said_as": "lollipop.",
-  "sig": "ade9837b1399",
+  "sig": "e9007ce70cea",
   "text": "lollipop",
   "voice": "sarah"
  },
  "look-at-the-moon": {
   "mood": "instruction",
   "said_as": "Look at the moon!",
-  "sig": "47a991923a76",
+  "sig": "b847c329d1f4",
   "text": "Look at the moon!",
   "voice": "sarah"
  },
  "look-at-the-red-arrow": {
   "mood": "instruction",
   "said_as": "Look at the red arrow.",
-  "sig": "b254bde33770",
+  "sig": "e9b1c974f621",
   "text": "Look at the red arrow.",
   "voice": "sarah"
  },
  "look-at-the-sign": {
   "mood": "instruction",
   "said_as": "Look at the sign.",
-  "sig": "e96971b821a6",
+  "sig": "1982ccba74e9",
   "text": "Look at the sign.",
   "voice": "sarah"
  },
  "look-carefully": {
-  "mood": "instruction",
+  "mood": "gentle",
   "said_as": "Look carefully.",
-  "sig": "537ab727d6df",
+  "sig": "a701451a85ca",
   "text": "Look carefully.",
   "voice": "sarah"
  },
  "mango": {
   "mood": "word",
   "said_as": "mango.",
-  "sig": "e54e9d9972f6",
+  "sig": "f3ee992e768a",
   "text": "mango",
   "voice": "sarah"
  },
  "match-each-sense-to-its-body-part": {
   "mood": "instruction",
   "said_as": "Match each sense to its body part.",
-  "sig": "d1cd2f402cef",
+  "sig": "89241d7bf2c9",
   "text": "Match each sense to its body part.",
   "voice": "sarah"
  },
  "milk": {
   "mood": "word",
   "said_as": "milk.",
-  "sig": "db58b71e04f8",
+  "sig": "e5b9326188c9",
   "text": "milk",
   "voice": "sarah"
  },
  "monkey-s-magic-pipe": {
   "mood": "instruction",
   "said_as": "Monkey's Magic Pipe",
-  "sig": "6db5487a0d1f",
+  "sig": "cfcb8d3a6f46",
   "text": "Monkey's Magic Pipe",
   "voice": "sarah"
  },
  "monkey-s-magic-pipe-is-a-story-book": {
   "mood": "instruction",
   "said_as": "Monkey's Magic Pipe is a story book!",
-  "sig": "e2f7b789c8f6",
+  "sig": "af8400b0817e",
   "text": "Monkey's Magic Pipe is a story book!",
   "voice": "sarah"
  },
  "moon": {
   "mood": "word",
   "said_as": "moon.",
-  "sig": "cf42efa3f8f3",
+  "sig": "0dbe6bfa30a2",
   "text": "moon",
   "voice": "sarah"
  },
  "mouth": {
-  "mood": "instruction",
-  "said_as": "Mouth!",
-  "sig": "0eabad98782c",
-  "text": "Mouth!",
+  "mood": "word",
+  "said_as": "mouth.",
+  "sig": "f73c3f0e0941",
+  "text": "mouth",
   "voice": "sarah"
  },
  "mouth-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Mouth is a naming word!",
-  "sig": "7bc2c8650a56",
+  "sig": "6be7808ae0b6",
   "text": "Mouth is a naming word!",
   "voice": "sarah"
  },
  "must": {
   "mood": "word",
   "said_as": "must.",
-  "sig": "977f233641da",
+  "sig": "cba4507d5f06",
   "text": "must",
   "voice": "sarah"
  },
  "name-the-body-part": {
   "mood": "instruction",
   "said_as": "Name the Body Part",
-  "sig": "657d97644b5d",
+  "sig": "6c3053a5ba5e",
   "text": "Name the Body Part",
   "voice": "sarah"
  },
  "neck": {
   "mood": "word",
   "said_as": "neck.",
-  "sig": "44a5c3c70b99",
+  "sig": "e81a127e34e2",
   "text": "neck",
   "voice": "sarah"
  },
  "nest": {
   "mood": "word",
   "said_as": "nest.",
-  "sig": "c1a46a5e07bf",
+  "sig": "4c17eae3e699",
   "text": "nest",
   "voice": "sarah"
  },
  "nine": {
   "mood": "word",
   "said_as": "nine.",
-  "sig": "af73801d6c99",
+  "sig": "b5367f4b139e",
   "text": "nine",
   "voice": "sarah"
  },
  "no-diving-here": {
   "mood": "instruction",
   "said_as": "No diving here!",
-  "sig": "b6546e19dc3b",
+  "sig": "04fe41250337",
   "text": "No diving here!",
   "voice": "sarah"
  },
  "no-entry": {
   "mood": "word",
   "said_as": "No entry.",
-  "sig": "142739a7e4eb",
+  "sig": "2e68e0a2cb7d",
   "text": "No entry",
   "voice": "sarah"
  },
  "nose": {
   "mood": "word",
   "said_as": "nose.",
-  "sig": "f296d0a03b91",
+  "sig": "2050f6c298c8",
   "text": "nose",
   "voice": "sarah"
  },
  "nose-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Nose is a naming word!",
-  "sig": "03f390d0e288",
+  "sig": "588c1c338899",
   "text": "Nose is a naming word!",
   "voice": "sarah"
  },
  "not": {
   "mood": "word",
   "said_as": "not.",
-  "sig": "d37b488a6d9c",
+  "sig": "84e502c98c10",
   "text": "not",
   "voice": "sarah"
  },
  "now-find-two": {
   "mood": "cheer",
   "said_as": "Now find two!",
-  "sig": "35f4c278d84e",
+  "sig": "0533df753772",
   "text": "Now find two!",
   "voice": "sarah"
  },
  "office": {
   "mood": "word",
   "said_as": "Office.",
-  "sig": "e5a51d3aac9e",
+  "sig": "36a496ee21d7",
   "text": "Office",
   "voice": "sarah"
  },
  "one-word-starts-with-a-different-sound-can-you-find-it": {
   "mood": "instruction",
   "said_as": "One word starts with a different sound. Can you find it?",
-  "sig": "c2427a87bff0",
+  "sig": "d1bbe505c58e",
   "text": "One word starts with a different sound. Can you find it?",
   "voice": "sarah"
  },
  "oops-try-again": {
   "mood": "gentle",
   "said_as": "Oops! Try again.",
-  "sig": "433402065b1f",
+  "sig": "e95b6756028f",
   "text": "Oops! Try again.",
   "voice": "sarah"
  },
  "open": {
   "mood": "word",
   "said_as": "Open.",
-  "sig": "602fbc2777d6",
+  "sig": "5cdf8bc9914c",
   "text": "Open",
   "voice": "sarah"
  },
  "or": {
   "mood": "word",
   "said_as": "or.",
-  "sig": "a80ee48ca3b0",
+  "sig": "e3ca4387d0e7",
   "text": "or",
   "voice": "sarah"
  },
  "or-does-it-tell-us-true-things": {
   "mood": "instruction",
   "said_as": "Or does it tell us true things?",
-  "sig": "2a92a33dbe38",
+  "sig": "bebc87207b8f",
   "text": "Or does it tell us true things?",
   "voice": "sarah"
  },
  "our": {
   "mood": "word",
   "said_as": "our.",
-  "sig": "a32fb1f94ae0",
+  "sig": "af32d2a9bfaf",
   "text": "our",
   "voice": "sarah"
  },
  "our-oceans": {
   "mood": "word",
   "said_as": "Our Oceans.",
-  "sig": "5c9f36795440",
+  "sig": "65b82f4dafb5",
   "text": "Our Oceans",
   "voice": "sarah"
  },
  "our-oceans-is-about-real-life": {
   "mood": "instruction",
   "said_as": "Our Oceans is about real life!",
-  "sig": "f49cb23a688a",
+  "sig": "717c71b27055",
   "text": "Our Oceans is about real life!",
   "voice": "sarah"
  },
  "our-senses": {
   "mood": "word",
   "said_as": "Our senses.",
-  "sig": "f1322c871086",
+  "sig": "1040872394d2",
   "text": "Our senses",
   "voice": "sarah"
  },
  "our-teeth-are-in-our-mouth": {
   "mood": "instruction",
   "said_as": "Our teeth are in our mouth.",
-  "sig": "427956d08cb0",
+  "sig": "7de4afe3bcfd",
   "text": "Our teeth are in our mouth.",
   "voice": "sarah"
  },
  "pencils": {
   "mood": "word",
   "said_as": "Pencils.",
-  "sig": "50fc6bc62dbb",
+  "sig": "60b3807a02ad",
   "text": "Pencils",
   "voice": "sarah"
  },
  "people": {
   "mood": "word",
   "said_as": "people.",
-  "sig": "d6b935018f5c",
+  "sig": "e244c513a835",
   "text": "people",
   "voice": "sarah"
  },
  "pictures": {
   "mood": "word",
   "said_as": "pictures.",
-  "sig": "a4352aa1f8d7",
+  "sig": "8135bf8f7649",
   "text": "pictures",
   "voice": "sarah"
  },
  "pippi-longstocking": {
   "mood": "word",
   "said_as": "Pippi Longstocking.",
-  "sig": "a269deb80c6c",
+  "sig": "0a186757ade1",
   "text": "Pippi Longstocking",
   "voice": "sarah"
  },
  "pippi-longstocking-is-a-story-book": {
   "mood": "instruction",
   "said_as": "Pippi Longstocking is a story book!",
-  "sig": "f0e7ea3d5821",
+  "sig": "525600e04999",
   "text": "Pippi Longstocking is a story book!",
   "voice": "sarah"
  },
  "playground": {
   "mood": "word",
   "said_as": "Playground.",
-  "sig": "fd05d66dd16f",
+  "sig": "06afc4b25ccb",
   "text": "Playground",
   "voice": "sarah"
  },
  "push": {
   "mood": "word",
   "said_as": "Push.",
-  "sig": "e919df1dbbc0",
+  "sig": "94c908a1901b",
   "text": "Push",
   "voice": "sarah"
  },
  "put-each-label-in-the-right-place": {
   "mood": "instruction",
   "said_as": "Put each label in the right place.",
-  "sig": "8219b2f2564a",
+  "sig": "72e67b679a5c",
   "text": "Put each label in the right place.",
   "voice": "sarah"
  },
  "read-along-our-senses": {
   "mood": "instruction",
   "said_as": "Read-along: Our Senses",
-  "sig": "fdb3eda821c3",
+  "sig": "ad2545d36232",
   "text": "Read-along: Our Senses",
   "voice": "sarah"
  },
  "read-along-signs": {
   "mood": "word",
   "said_as": "Read-along: Signs.",
-  "sig": "dd476b63e35e",
+  "sig": "c156db94d7cb",
   "text": "Read-along: Signs",
   "voice": "sarah"
  },
  "read-by-myself-tap-a-word-to-hear-it": {
   "mood": "instruction",
   "said_as": "Read by myself! Tap a word to hear it.",
-  "sig": "a3c04b30fbb9",
+  "sig": "91aac6e3a71c",
   "text": "Read by myself! Tap a word to hear it.",
   "voice": "sarah"
  },
  "read-the-words-can-you-find-three-words-that-start-the-same": {
   "mood": "instruction",
   "said_as": "Read the words. Can you find three words that start the same?",
-  "sig": "ca8058c0fc10",
+  "sig": "259e67f6f2b0",
   "text": "Read the words. Can you find three words that start the same?",
   "voice": "sarah"
  },
  "read-to-me-listen-and-look-at-the-words": {
   "mood": "instruction",
   "said_as": "Read to me! Listen and look at the words.",
-  "sig": "30bce3024f53",
+  "sig": "e17be2cfbf90",
   "text": "Read to me! Listen and look at the words.",
   "voice": "sarah"
  },
  "real-life": {
   "mood": "word",
   "said_as": "Real life.",
-  "sig": "e0a6e56b2bd2",
+  "sig": "a4239d248720",
   "text": "Real life",
   "voice": "sarah"
  },
  "same-first-sound": {
   "mood": "instruction",
   "said_as": "Same First Sound",
-  "sig": "46f6bb693b2c",
+  "sig": "055771a33c40",
   "text": "Same First Sound",
   "voice": "sarah"
  },
  "see": {
   "mood": "word",
   "said_as": "see.",
-  "sig": "fed91b13430e",
+  "sig": "3019181c7537",
   "text": "see",
   "voice": "sarah"
  },
  "see-hear-smell-taste-touch": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "see",
+   "hear",
+   "smell",
+   "taste",
+   "touch"
+  ],
   "said_as": "see hear smell taste touch",
-  "sig": "37a44ac29a07",
+  "sig": "0dce7637427d",
   "text": "see hear smell taste touch",
+  "times": [
+   0.03,
+   1.199,
+   2.539,
+   3.922,
+   5.369
+  ],
   "voice": "sarah"
  },
  "sense-and-body-part": {
   "mood": "instruction",
   "said_as": "Sense and Body Part",
-  "sig": "2c1cd2d792c4",
+  "sig": "501682a968f4",
   "text": "Sense and Body Part",
   "voice": "sarah"
  },
  "senses": {
   "mood": "word",
   "said_as": "senses.",
-  "sig": "380b0fc0184e",
+  "sig": "73992db2d2fa",
   "text": "senses",
   "voice": "sarah"
  },
  "shoes": {
   "mood": "word",
   "said_as": "Shoes.",
-  "sig": "9cc4484f0b73",
+  "sig": "1a455cc55699",
   "text": "Shoes",
   "voice": "sarah"
  },
  "show": {
   "mood": "word",
   "said_as": "show.",
-  "sig": "86495b6ef28c",
+  "sig": "8f1db15c1fe2",
   "text": "show",
   "voice": "sarah"
  },
  "sight": {
   "mood": "word",
   "said_as": "Sight.",
-  "sig": "ed882abc8db9",
+  "sig": "e8b459de26e5",
   "text": "Sight",
   "voice": "sarah"
  },
  "sign": {
   "mood": "word",
   "said_as": "sign.",
-  "sig": "18558879936a",
+  "sig": "cb475cac38d3",
   "text": "sign",
   "voice": "sarah"
  },
  "signs": {
   "mood": "word",
   "said_as": "Signs.",
-  "sig": "fa372670ae58",
+  "sig": "c2137eb40847",
   "text": "Signs",
   "voice": "sarah"
  },
  "signs-show-us-where-to-go-in": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "Signs show us",
+   "where to go in."
+  ],
   "said_as": "Signs show us where to go in.",
-  "sig": "a17f6b445b6c",
+  "sig": "b620a35cc7df",
   "text": "Signs show us where to go in.",
+  "times": [
+   0.03,
+   0.464,
+   0.898,
+   2.031,
+   2.492,
+   2.723,
+   2.953
+  ],
+  "voice": "sarah"
+ },
+ "signs-start-with-a-capital-letter": {
+  "mood": "instruction",
+  "said_as": "Signs start with a capital letter.",
+  "sig": "3fb0c8688bb0",
+  "text": "Signs start with a capital letter.",
   "voice": "sarah"
  },
  "signs-tell-us-what-to-do": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "Signs tell us",
+   "what to do."
+  ],
   "said_as": "Signs tell us what to do.",
-  "sig": "aa93b59ebfa0",
+  "sig": "0abb270439fc",
   "text": "Signs tell us what to do.",
+  "times": [
+   0.03,
+   0.471,
+   0.912,
+   2.053,
+   2.366,
+   2.678
+  ],
   "voice": "sarah"
  },
  "signs-tell-us-where-we-must-not-go": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "Signs tell us",
+   "where we must not go."
+  ],
   "said_as": "Signs tell us where we must not go.",
-  "sig": "3e6066be192d",
+  "sig": "d823d568f90d",
   "text": "Signs tell us where we must not go.",
+  "times": [
+   0.03,
+   0.471,
+   0.912,
+   2.053,
+   2.607,
+   2.885,
+   3.162,
+   3.439
+  ],
   "voice": "sarah"
  },
  "signs-writing-or-pictures-that-tell-or-show-people-something": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "signs:",
+   "writing or pictures",
+   "that tell or show",
+   "people something."
+  ],
   "said_as": "signs: writing or pictures that tell or show people something.",
-  "sig": "411151395d9e",
+  "sig": "070af4c2b3ff",
   "text": "signs: writing or pictures that tell or show people something.",
+  "times": [
+   0.03,
+   1.798,
+   2.367,
+   2.651,
+   4.205,
+   4.551,
+   4.898,
+   5.245,
+   6.291,
+   6.803
+  ],
   "voice": "sarah"
  },
  "slow": {
   "mood": "word",
   "said_as": "Slow.",
-  "sig": "a6b14d4d3820",
+  "sig": "aa180e3c9d36",
   "text": "Slow",
   "voice": "sarah"
  },
  "slow-go-slowly": {
   "mood": "instruction",
   "said_as": "Slow! Go slowly.",
-  "sig": "c3bdc5417047",
+  "sig": "62b1a7fed1a2",
   "text": "Slow! Go slowly.",
   "voice": "sarah"
  },
  "slow-means-go-slowly": {
   "mood": "instruction",
   "said_as": "Slow means: go slowly.",
-  "sig": "4017b820a51e",
+  "sig": "a09d2faa3ceb",
   "text": "Slow means: go slowly.",
   "voice": "sarah"
  },
  "small": {
   "mood": "word",
   "said_as": "small.",
-  "sig": "53263bd406bd",
+  "sig": "9f8f615bda75",
   "text": "small",
   "voice": "sarah"
  },
  "smell": {
   "mood": "word",
   "said_as": "Smell.",
-  "sig": "62907983ec26",
+  "sig": "68f3cb1d7974",
   "text": "Smell",
   "voice": "sarah"
  },
  "sniff-a-flower": {
   "mood": "instruction",
   "said_as": "Sniff a flower!",
-  "sig": "f0ec4942c5d2",
+  "sig": "e2b5ce54df93",
   "text": "Sniff a flower!",
   "voice": "sarah"
  },
  "sniff-the-soap": {
   "mood": "instruction",
   "said_as": "Sniff the soap!",
-  "sig": "e70d14f36db6",
+  "sig": "5fdf23c73605",
   "text": "Sniff the soap!",
   "voice": "sarah"
  },
  "soap": {
   "mood": "word",
   "said_as": "soap.",
-  "sig": "f7e1eaeee128",
+  "sig": "6d33033ecabe",
   "text": "soap",
   "voice": "sarah"
  },
  "sock": {
   "mood": "word",
   "said_as": "sock.",
-  "sig": "3d278d7a0a03",
+  "sig": "6912a8a413b1",
   "text": "sock",
   "voice": "sarah"
  },
  "soft": {
   "mood": "word",
   "said_as": "soft.",
-  "sig": "f07374f51f70",
+  "sig": "baad915dc47e",
   "text": "soft",
   "voice": "sarah"
  },
  "something": {
   "mood": "word",
   "said_as": "something.",
-  "sig": "459c10b5da4c",
+  "sig": "4e18b60735cf",
   "text": "something",
   "voice": "sarah"
  },
  "staff": {
   "mood": "word",
   "said_as": "staff.",
-  "sig": "455e94c67c07",
+  "sig": "437984482f84",
   "text": "staff",
   "voice": "sarah"
  },
  "staff-only": {
   "mood": "word",
   "said_as": "Staff only.",
-  "sig": "58b5ea814efa",
+  "sig": "1ddd633957e5",
   "text": "Staff only",
   "voice": "sarah"
  },
  "stop": {
   "mood": "word",
-  "said_as": "Stop.",
-  "sig": "ffd2f0f45901",
-  "text": "Stop",
+  "said_as": "stop.",
+  "sig": "f17be059152f",
+  "text": "stop",
   "voice": "sarah"
  },
  "story": {
   "mood": "word",
   "said_as": "Story.",
-  "sig": "e61a61a95363",
+  "sig": "415af4472db3",
   "text": "Story",
   "voice": "sarah"
  },
  "stroke-a-pet": {
   "mood": "instruction",
   "said_as": "Stroke a pet!",
-  "sig": "3e8deb741f1d",
+  "sig": "0eaa0e8c6944",
   "text": "Stroke a pet!",
   "voice": "sarah"
  },
  "sun": {
   "mood": "word",
   "said_as": "sun.",
-  "sig": "7669123c6c82",
+  "sig": "581aa3736783",
   "text": "sun",
   "voice": "sarah"
  },
  "super": {
   "mood": "excited",
   "said_as": "Super!",
-  "sig": "198b5d3ccea5",
+  "sig": "7fb4a17de6ad",
   "text": "Super!",
   "voice": "sarah"
  },
  "tall": {
   "mood": "word",
   "said_as": "tall.",
-  "sig": "61355eae4fa9",
+  "sig": "c16f61761047",
   "text": "tall",
   "voice": "sarah"
  },
  "tap": {
   "mood": "word",
   "said_as": "tap.",
-  "sig": "eeaea49e2abe",
+  "sig": "364107cb6ba3",
   "text": "tap",
   "voice": "sarah"
  },
  "tap-a-letter-or-drag-it-into-the-gap": {
   "mood": "instruction",
   "said_as": "Tap a letter, or drag it into the gap.",
-  "sig": "4932db7d591a",
+  "sig": "d3494310a159",
   "text": "Tap a letter, or drag it into the gap.",
   "voice": "sarah"
  },
  "tap-a-speaker-to-hear-a-word-then-tap-the-word-you-choose": {
   "mood": "instruction",
   "said_as": "Tap a speaker to hear a word. Then tap the word you choose.",
-  "sig": "907a12c992ec",
+  "sig": "28416af29a26",
   "text": "Tap a speaker to hear a word. Then tap the word you choose.",
   "voice": "sarah"
  },
  "tap-a-word-or-drag-it-to-its-picture": {
   "mood": "instruction",
   "said_as": "Tap a word, or drag it to its picture.",
-  "sig": "3edf5d732e19",
+  "sig": "74510bcdebb2",
   "text": "Tap a word, or drag it to its picture.",
   "voice": "sarah"
  },
  "tap-a-word-to-hear-it": {
   "mood": "instruction",
   "said_as": "Tap a word to hear it.",
-  "sig": "cb5210aada55",
+  "sig": "b31af6521b9a",
   "text": "Tap a word to hear it.",
   "voice": "sarah"
  },
  "tap-here-to-hear-it-again": {
   "mood": "instruction",
   "said_as": "Tap here to hear it again.",
-  "sig": "9b24eb6c6cb0",
+  "sig": "f91886f949ad",
   "text": "Tap here to hear it again.",
   "voice": "sarah"
  },
  "tap-here-to-hear-the-question-again": {
   "mood": "instruction",
   "said_as": "Tap here to hear the question again.",
-  "sig": "2d141f4e86a7",
+  "sig": "32dbdb864def",
   "text": "Tap here to hear the question again.",
   "voice": "sarah"
  },
  "tap-the-arrow-to-turn-the-page": {
   "mood": "instruction",
   "said_as": "Tap the arrow to turn the page.",
-  "sig": "89ccbc269686",
+  "sig": "5bab493f5289",
   "text": "Tap the arrow to turn the page.",
   "voice": "sarah"
  },
  "tap-the-picture-you-choose": {
   "mood": "instruction",
   "said_as": "Tap the picture you choose.",
-  "sig": "024753fed7a4",
+  "sig": "d285b62316f7",
   "text": "Tap the picture you choose.",
   "voice": "sarah"
  },
  "taste": {
   "mood": "word",
   "said_as": "Taste.",
-  "sig": "9b6a80ceb4e4",
+  "sig": "60194f7e8111",
   "text": "Taste",
   "voice": "sarah"
  },
  "teeth": {
   "mood": "word",
   "said_as": "teeth.",
-  "sig": "c0bb1bfbd7a7",
+  "sig": "3a6b35f1ee5c",
   "text": "teeth",
   "voice": "sarah"
  },
  "tell": {
   "mood": "word",
   "said_as": "tell.",
-  "sig": "ef4eedd585d4",
+  "sig": "09c202ae969a",
   "text": "tell",
   "voice": "sarah"
  },
  "that": {
   "mood": "word",
   "said_as": "that.",
-  "sig": "e0209df47a14",
+  "sig": "7aa3f62f326f",
   "text": "that",
   "voice": "sarah"
  },
  "the": {
   "mood": "word",
   "said_as": "the.",
-  "sig": "dafa0ec0fc2c",
+  "sig": "af54dab5f08a",
   "text": "the",
   "voice": "sarah"
  },
  "the-end": {
   "mood": "instruction",
   "said_as": "The end!",
-  "sig": "6c6e67c4b4ed",
+  "sig": "e3184c2426b5",
   "text": "The end!",
   "voice": "sarah"
  },
  "the-human-body": {
   "mood": "instruction",
   "said_as": "The Human Body",
-  "sig": "6ff6bc63493d",
+  "sig": "497e398786f4",
   "text": "The Human Body",
   "voice": "sarah"
  },
  "the-human-body-is-about-real-life": {
   "mood": "instruction",
   "said_as": "The Human Body is about real life!",
-  "sig": "bac039ea1cc3",
+  "sig": "ad36c1b13783",
   "text": "The Human Body is about real life!",
   "voice": "sarah"
  },
  "the-tale-of-little-red-riding-hood": {
   "mood": "instruction",
   "said_as": "The Tale of Little Red Riding Hood",
-  "sig": "76517d6dfd54",
+  "sig": "f88e5df8bca6",
   "text": "The Tale of Little Red Riding Hood",
   "voice": "sarah"
  },
  "the-tale-of-little-red-riding-hood-is-a-story-book": {
   "mood": "instruction",
   "said_as": "The Tale of Little Red Riding Hood is a story book!",
-  "sig": "aafcbcc83161",
+  "sig": "e217b4162373",
   "text": "The Tale of Little Red Riding Hood is a story book!",
   "voice": "sarah"
  },
  "things": {
   "mood": "word",
   "said_as": "things.",
-  "sig": "7b58296b1900",
+  "sig": "7ba7eebb645c",
   "text": "things",
   "voice": "sarah"
  },
  "think": {
   "mood": "instruction",
   "said_as": "Think.",
-  "sig": "227c4a0a3e4b",
+  "sig": "ce070add5e25",
   "text": "Think.",
   "voice": "sarah"
  },
  "this-book-is": {
   "mood": "instruction",
   "said_as": "This book is",
-  "sig": "a7bb532c1887",
+  "sig": "9be76782620c",
   "text": "This book is",
   "voice": "sarah"
  },
  "this-book-is-bugs": {
   "mood": "instruction",
   "said_as": "This book is Bugs",
-  "sig": "a87ed8c649d7",
+  "sig": "7011788fc98a",
   "text": "This book is Bugs",
   "voice": "sarah"
  },
  "this-book-is-first-atlas": {
   "mood": "instruction",
   "said_as": "This book is First Atlas",
-  "sig": "30b8624f3806",
+  "sig": "62e37bcebf50",
   "text": "This book is First Atlas",
   "voice": "sarah"
  },
  "this-book-is-hero-academy": {
   "mood": "instruction",
   "said_as": "This book is Hero Academy",
-  "sig": "2da32959e95e",
+  "sig": "5d10cb841933",
   "text": "This book is Hero Academy",
   "voice": "sarah"
  },
  "this-book-is-how-to-draw-cartoons": {
   "mood": "instruction",
   "said_as": "This book is How to Draw Cartoons",
-  "sig": "01a685bc99de",
+  "sig": "bcdba849364d",
   "text": "This book is How to Draw Cartoons",
   "voice": "sarah"
  },
  "this-book-is-how-to-play-guitar": {
   "mood": "instruction",
   "said_as": "This book is How to Play Guitar",
-  "sig": "d3443b60e457",
+  "sig": "231f07b69760",
   "text": "This book is How to Play Guitar",
   "voice": "sarah"
  },
  "this-book-is-monkey-s-magic-pipe": {
   "mood": "instruction",
   "said_as": "This book is Monkey's Magic Pipe",
-  "sig": "6c45e1cdff2f",
+  "sig": "86cced1e5081",
   "text": "This book is Monkey's Magic Pipe",
   "voice": "sarah"
  },
  "this-book-is-our-oceans": {
   "mood": "instruction",
   "said_as": "This book is Our Oceans",
-  "sig": "654a907b9181",
+  "sig": "29f44351ebc7",
   "text": "This book is Our Oceans",
   "voice": "sarah"
  },
  "this-book-is-pippi-longstocking": {
   "mood": "instruction",
   "said_as": "This book is Pippi Longstocking",
-  "sig": "35e3fa8a17ff",
+  "sig": "78aa8324dbb8",
   "text": "This book is Pippi Longstocking",
   "voice": "sarah"
  },
  "this-book-is-the-human-body": {
   "mood": "instruction",
   "said_as": "This book is The Human Body",
-  "sig": "a3c4b693b878",
+  "sig": "79c1cd175d2b",
   "text": "This book is The Human Body",
   "voice": "sarah"
  },
  "this-label-says-bags": {
   "mood": "instruction",
   "said_as": "This label says Bags.",
-  "sig": "d2185f655fc0",
+  "sig": "e4a1dd68c8c1",
   "text": "This label says Bags.",
   "voice": "sarah"
  },
  "this-label-says-bin": {
   "mood": "instruction",
   "said_as": "This label says Bin.",
-  "sig": "ac55f71eccea",
+  "sig": "1d25fe6f7d54",
   "text": "This label says Bin.",
   "voice": "sarah"
  },
  "this-label-says-books": {
   "mood": "instruction",
   "said_as": "This label says Books.",
-  "sig": "e60c01a5a155",
+  "sig": "37def7e1f5c6",
   "text": "This label says Books.",
   "voice": "sarah"
  },
  "this-label-says-canteen": {
   "mood": "instruction",
   "said_as": "This label says Canteen.",
-  "sig": "0994b7a33f7b",
+  "sig": "b2636344ffa8",
   "text": "This label says Canteen.",
   "voice": "sarah"
  },
  "this-label-says-entrance": {
   "mood": "instruction",
   "said_as": "This label says Entrance.",
-  "sig": "79db90303b15",
+  "sig": "191714048bb6",
   "text": "This label says Entrance.",
   "voice": "sarah"
  },
  "this-label-says-office": {
   "mood": "instruction",
   "said_as": "This label says Office.",
-  "sig": "43adfca4abb2",
+  "sig": "dbcdeecb8bc0",
   "text": "This label says Office.",
   "voice": "sarah"
  },
  "this-label-says-pencils": {
   "mood": "instruction",
   "said_as": "This label says Pencils.",
-  "sig": "f65b8a885eba",
+  "sig": "b1cf3e32e36c",
   "text": "This label says Pencils.",
   "voice": "sarah"
  },
  "this-label-says-playground": {
   "mood": "instruction",
   "said_as": "This label says Playground.",
-  "sig": "c11ba7bdd6a4",
+  "sig": "153964091053",
   "text": "This label says Playground.",
   "voice": "sarah"
  },
  "this-label-says-shoes": {
   "mood": "instruction",
   "said_as": "This label says Shoes.",
-  "sig": "b819beeae4f8",
+  "sig": "775741ff324b",
   "text": "This label says Shoes.",
   "voice": "sarah"
  },
  "this-label-says-toys": {
   "mood": "instruction",
   "said_as": "This label says Toys.",
-  "sig": "fc6b75f44a87",
+  "sig": "a44e7bf3a1da",
   "text": "This label says Toys.",
   "voice": "sarah"
  },
  "this-label-says-washroom": {
   "mood": "instruction",
   "said_as": "This label says Washroom.",
-  "sig": "e8d043bd97f4",
+  "sig": "dedca44a8cc0",
   "text": "This label says Washroom.",
   "voice": "sarah"
  },
  "this-label-says-water": {
   "mood": "instruction",
   "said_as": "This label says Water.",
-  "sig": "b7e741da5a3c",
+  "sig": "dcc0ab432dad",
   "text": "This label says Water.",
   "voice": "sarah"
  },
  "this-sign-says": {
   "mood": "instruction",
   "said_as": "This sign says",
-  "sig": "c5d181cb3e82",
+  "sig": "a5de95be461c",
   "text": "This sign says",
+  "voice": "sarah"
+ },
+ "this-sign-says-book-corner": {
+  "mood": "instruction",
+  "said_as": "This sign says: Book corner.",
+  "sig": "34977377397a",
+  "text": "This sign says Book corner",
   "voice": "sarah"
  },
  "this-sign-says-books": {
   "mood": "instruction",
   "said_as": "This sign says: Books.",
-  "sig": "43592666f8db",
+  "sig": "e03231a2e8e2",
   "text": "This sign says Books",
   "voice": "sarah"
  },
  "this-sign-says-closed": {
   "mood": "instruction",
   "said_as": "This sign says: Closed.",
-  "sig": "da60e1868650",
+  "sig": "78b1b21ba865",
   "text": "This sign says Closed",
   "voice": "sarah"
  },
  "this-sign-says-danger": {
   "mood": "instruction",
   "said_as": "This sign says: Danger.",
-  "sig": "a76f51adca9c",
+  "sig": "7331e6e2e1bf",
   "text": "This sign says Danger",
   "voice": "sarah"
  },
  "this-sign-says-entrance": {
   "mood": "instruction",
   "said_as": "This sign says: Entrance.",
-  "sig": "3f9d1c70480c",
+  "sig": "283f65a2788f",
   "text": "This sign says Entrance",
   "voice": "sarah"
  },
  "this-sign-says-exit": {
   "mood": "instruction",
   "said_as": "This sign says: Exit.",
-  "sig": "8daaac2c7450",
+  "sig": "99c3975bb594",
   "text": "This sign says Exit",
   "voice": "sarah"
  },
  "this-sign-says-no-entry": {
   "mood": "instruction",
   "said_as": "This sign says: No entry.",
-  "sig": "8a1e4e05126f",
+  "sig": "a056c3123f6d",
   "text": "This sign says No entry",
   "voice": "sarah"
  },
  "this-sign-says-open": {
   "mood": "instruction",
   "said_as": "This sign says: Open.",
-  "sig": "6350db25e190",
+  "sig": "f65d5e2ce054",
   "text": "This sign says Open",
   "voice": "sarah"
  },
  "this-sign-says-push": {
   "mood": "instruction",
   "said_as": "This sign says: Push.",
-  "sig": "e96e62e16f30",
+  "sig": "919d3b1e1dfe",
   "text": "This sign says Push",
   "voice": "sarah"
  },
  "this-sign-says-slow": {
   "mood": "instruction",
   "said_as": "This sign says: Slow.",
-  "sig": "996cc420f9d5",
+  "sig": "dd918e97fb58",
   "text": "This sign says Slow",
   "voice": "sarah"
  },
  "this-sign-says-staff-only": {
   "mood": "instruction",
   "said_as": "This sign says: Staff only.",
-  "sig": "0ec73d0275b8",
+  "sig": "cea4d1277bd0",
   "text": "This sign says Staff only",
   "voice": "sarah"
  },
  "this-sign-says-stop": {
   "mood": "instruction",
   "said_as": "This sign says: Stop.",
-  "sig": "2965fac14384",
+  "sig": "2043cdce082c",
   "text": "This sign says Stop",
   "voice": "sarah"
  },
  "this-sign-says-toys": {
   "mood": "instruction",
   "said_as": "This sign says: Toys.",
-  "sig": "b6addeac13af",
+  "sig": "e87e3e3a109f",
   "text": "This sign says Toys",
   "voice": "sarah"
  },
  "this-sign-says-wash-your-hands": {
   "mood": "instruction",
   "said_as": "This sign says: Wash your hands.",
-  "sig": "bea91e6ff840",
+  "sig": "1385a952e3df",
   "text": "This sign says Wash your hands",
   "voice": "sarah"
  },
  "to": {
   "mood": "word",
   "said_as": "to.",
-  "sig": "a527e4e19e67",
+  "sig": "003f56abcdbd",
   "text": "to",
   "voice": "sarah"
  },
  "tongue": {
   "mood": "word",
   "said_as": "tongue.",
-  "sig": "2cfa17025c52",
+  "sig": "44b6781e591b",
   "text": "tongue",
   "voice": "sarah"
  },
  "touch": {
   "mood": "word",
   "said_as": "Touch.",
-  "sig": "4b732d7142d5",
+  "sig": "e3c48bb02357",
   "text": "Touch",
   "voice": "sarah"
  },
  "toys": {
   "mood": "word",
-  "said_as": "Toys.",
-  "sig": "3dabc353bed1",
-  "text": "Toys",
+  "said_as": "toys.",
+  "sig": "a906ad5c3941",
+  "text": "toys",
   "voice": "sarah"
  },
  "tree": {
   "mood": "word",
   "said_as": "tree.",
-  "sig": "66bc13a92540",
+  "sig": "e1a80e8253fc",
   "text": "tree",
   "voice": "sarah"
  },
  "two-words-start-the-same-can-you-tap-them-both": {
   "mood": "instruction",
   "said_as": "Two words start the same. Can you tap them both?",
-  "sig": "48488c0c51e3",
+  "sig": "c6e8d25b477c",
   "text": "Two words start the same. Can you tap them both?",
   "voice": "sarah"
  },
  "us": {
   "mood": "word",
   "said_as": "us.",
-  "sig": "f9979faab1f8",
+  "sig": "d9f1d0189216",
   "text": "us",
   "voice": "sarah"
  },
  "wash-your-hands": {
   "mood": "instruction",
   "said_as": "Wash your hands",
-  "sig": "78e1f2337249",
+  "sig": "9097def19507",
   "text": "Wash your hands",
   "voice": "sarah"
  },
  "washroom": {
   "mood": "word",
   "said_as": "Washroom.",
-  "sig": "1bbe0e7d4184",
+  "sig": "51b485764732",
   "text": "Washroom",
   "voice": "sarah"
  },
  "water": {
   "mood": "word",
   "said_as": "Water.",
-  "sig": "3816c3588857",
+  "sig": "ca95653e5dfb",
   "text": "Water",
   "voice": "sarah"
  },
  "we": {
   "mood": "word",
   "said_as": "we.",
-  "sig": "e8078240361f",
+  "sig": "39353bfc4b54",
   "text": "we",
   "voice": "sarah"
  },
  "we-have-five-senses": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We have five senses."
+  ],
   "said_as": "We have five senses.",
-  "sig": "f437053e8171",
+  "sig": "43dae4bfc317",
   "text": "We have five senses.",
+  "times": [
+   0.03,
+   0.289,
+   0.807,
+   1.325
+  ],
   "voice": "sarah"
  },
  "we-hear-with-our": {
   "mood": "instruction",
   "said_as": "We hear with our ....",
-  "sig": "f4b670d6da82",
+  "sig": "5dc087351d1d",
   "text": "We hear with our ....",
   "voice": "sarah"
  },
  "we-hear-with-our-ears": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We hear",
+   "with our ears."
+  ],
   "said_as": "We hear with our ears.",
-  "sig": "6cf0f801b943",
+  "sig": "adc1d5a9ad35",
   "text": "We hear with our ears.",
+  "times": [
+   0.03,
+   0.403,
+   1.477,
+   1.846,
+   2.216
+  ],
   "voice": "sarah"
  },
  "we-look-with-our-eyes": {
   "mood": "instruction",
   "said_as": "We look with our eyes.",
-  "sig": "9c487cbf1ce8",
+  "sig": "b9fdc60c4c4a",
   "text": "We look with our eyes.",
+  "voice": "sarah"
+ },
+ "we-see-light-and-colour": {
+  "mood": "instruction",
+  "said_as": "We see light and colour.",
+  "sig": "3fbb060b4e80",
+  "text": "We see light and colour.",
   "voice": "sarah"
  },
  "we-see-things-with-our": {
   "mood": "instruction",
   "said_as": "We see things with our ....",
-  "sig": "b03ff505b264",
+  "sig": "b53764276639",
   "text": "We see things with our ....",
   "voice": "sarah"
  },
  "we-see-things-with-our-eyes": {
   "mood": "instruction",
   "said_as": "We see things with our eyes.",
-  "sig": "35d20441d629",
+  "sig": "2b6637fe1e19",
   "text": "We see things with our eyes.",
   "voice": "sarah"
  },
  "we-see-things-with-our-eyes-we-see-light-and-colour": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We see things",
+   "with our eyes.",
+   "We see light and colour."
+  ],
   "said_as": "We see things with our eyes. We see light and colour.",
-  "sig": "a662fd6ae406",
+  "sig": "4e4533b30dcf",
   "text": "We see things with our eyes. We see light and colour.",
+  "times": [
+   0.03,
+   0.407,
+   0.784,
+   1.861,
+   2.23,
+   2.6,
+   3.97,
+   4.265,
+   4.56,
+   4.855,
+   5.15
+  ],
   "voice": "sarah"
  },
  "we-smell-with-our": {
   "mood": "instruction",
   "said_as": "We smell with our ....",
-  "sig": "faf18a88755a",
+  "sig": "ba5a1ad84737",
   "text": "We smell with our ....",
   "voice": "sarah"
  },
  "we-smell-with-our-nose": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We smell",
+   "with our nose."
+  ],
   "said_as": "We smell with our nose.",
-  "sig": "199879795c81",
+  "sig": "e4a5f3db4d18",
   "text": "We smell with our nose.",
+  "times": [
+   0.03,
+   0.489,
+   1.647,
+   1.925,
+   2.202
+  ],
   "voice": "sarah"
  },
  "we-taste-with-our": {
   "mood": "instruction",
   "said_as": "We taste with our ....",
-  "sig": "1e46939d5173",
+  "sig": "0c51028dcf86",
   "text": "We taste with our ....",
   "voice": "sarah"
  },
  "we-taste-with-our-tongue": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We taste",
+   "with our tongue."
+  ],
   "said_as": "We taste with our tongue.",
-  "sig": "17f942ab425c",
+  "sig": "e363c276a535",
   "text": "We taste with our tongue.",
+  "times": [
+   0.03,
+   0.329,
+   1.626,
+   1.898,
+   2.17
+  ],
   "voice": "sarah"
  },
  "we-touch-and-feel-things-with-our": {
   "mood": "instruction",
   "said_as": "We touch and feel things with our ....",
-  "sig": "2aefef42c5f3",
+  "sig": "45e898065675",
   "text": "We touch and feel things with our ....",
   "voice": "sarah"
  },
  "we-touch-and-feel-things-with-our-hands": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "We touch and feel things",
+   "with our hands."
+  ],
   "said_as": "We touch and feel things with our hands.",
-  "sig": "d4650fe1d5f9",
+  "sig": "88dc176ad7de",
   "text": "We touch and feel things with our hands.",
+  "times": [
+   0.03,
+   0.418,
+   0.807,
+   1.195,
+   1.583,
+   2.671,
+   3.055,
+   3.439
+  ],
   "voice": "sarah"
  },
  "we-wave-with-our-hand": {
   "mood": "instruction",
   "said_as": "We wave with our hand.",
-  "sig": "1be0b8ad72fa",
+  "sig": "5a4e23ef372f",
   "text": "We wave with our hand.",
   "voice": "sarah"
  },
  "we-wear-a-hat-on-our-head": {
   "mood": "instruction",
   "said_as": "We wear a hat on our head.",
-  "sig": "5be923c91319",
+  "sig": "a2a919e506ac",
   "text": "We wear a hat on our head.",
   "voice": "sarah"
  },
  "we-wear-socks-on-our-feet": {
   "mood": "instruction",
   "said_as": "We wear socks on our feet.",
-  "sig": "ecfadc6560ee",
+  "sig": "62700eb95a72",
   "text": "We wear socks on our feet.",
   "voice": "sarah"
  },
  "well-done": {
   "mood": "excited",
   "said_as": "Well done!",
-  "sig": "d0ca7ea743e5",
+  "sig": "d3bc721276b1",
   "text": "Well done!",
   "voice": "sarah"
  },
  "what": {
   "mood": "word",
   "said_as": "what.",
-  "sig": "2a284260ac46",
+  "sig": "468360cbac7e",
   "text": "what",
   "voice": "sarah"
  },
  "what-do-you-look-through-your-glasses-with": {
   "mood": "instruction",
   "said_as": "What do you look through your glasses with?",
-  "sig": "1578e786e14d",
+  "sig": "8d171bf84837",
   "text": "What do you look through your glasses with?",
   "voice": "sarah"
  },
  "what-do-you-wave-hello-with": {
   "mood": "instruction",
   "said_as": "What do you wave hello with?",
-  "sig": "91a54c818b21",
+  "sig": "18ec0d5e9ced",
   "text": "What do you wave hello with?",
   "voice": "sarah"
  },
  "what-does-the-sign-say": {
   "mood": "instruction",
   "said_as": "What Does the Sign Say?",
-  "sig": "ab2b1fd3f40e",
+  "sig": "26a0d90751d5",
   "text": "What Does the Sign Say?",
+  "voice": "sarah"
+ },
+ "what-goes-at-the-end-of-the-sentence": {
+  "mood": "instruction",
+  "said_as": "What goes at the end of the sentence?",
+  "sig": "9f9c25794cd0",
+  "text": "What goes at the end of the sentence?",
   "voice": "sarah"
  },
  "what-is-the-arrow-pointing-to": {
   "mood": "instruction",
   "said_as": "What is the arrow pointing to?",
-  "sig": "14da73f407a7",
+  "sig": "8c04f6549b1c",
   "text": "What is the arrow pointing to?",
   "voice": "sarah"
  },
  "where": {
   "mood": "word",
   "said_as": "where.",
-  "sig": "35331cf1f74b",
+  "sig": "b4b1c7bc3df3",
   "text": "where",
   "voice": "sarah"
  },
  "where-do-you-wear-a-hat": {
   "mood": "instruction",
   "said_as": "Where do you wear a hat?",
-  "sig": "7bf416489d70",
+  "sig": "84aad3d90508",
   "text": "Where do you wear a hat?",
   "voice": "sarah"
  },
  "where-do-you-wear-socks": {
   "mood": "instruction",
   "said_as": "Where do you wear socks?",
-  "sig": "b78eb42d1eca",
+  "sig": "46584172aa59",
   "text": "Where do you wear socks?",
   "voice": "sarah"
  },
  "which-body-part": {
   "mood": "instruction",
   "said_as": "Which body part?",
-  "sig": "147b55084f4b",
+  "sig": "39dd88d5ef83",
   "text": "Which body part?",
   "voice": "sarah"
  },
  "which-label-goes-here": {
   "mood": "instruction",
   "said_as": "Which label goes here?",
-  "sig": "4f6eb655de1f",
+  "sig": "31ccfb26933c",
   "text": "Which label goes here?",
   "voice": "sarah"
  },
  "which-letter-goes-in-the-gap": {
   "mood": "instruction",
   "said_as": "Which letter goes in the gap?",
-  "sig": "3d5d12c0ca05",
+  "sig": "323d50ee9046",
   "text": "Which letter goes in the gap?",
   "voice": "sarah"
  },
  "which-letter-is-missing": {
   "mood": "instruction",
   "said_as": "Which letter is missing?",
-  "sig": "47bd477c47f5",
+  "sig": "e0e3f1b634d2",
   "text": "Which letter is missing?",
+  "voice": "sarah"
+ },
+ "which-letter-starts-the-sentence": {
+  "mood": "instruction",
+  "said_as": "Which letter starts the sentence?",
+  "sig": "edf93b4bce8b",
+  "text": "Which letter starts the sentence?",
+  "voice": "sarah"
+ },
+ "which-letter-starts-the-sign": {
+  "mood": "instruction",
+  "said_as": "Which letter starts the sign?",
+  "sig": "630e313ad01e",
+  "text": "Which letter starts the sign?",
   "voice": "sarah"
  },
  "which-part-has-your-teeth": {
   "mood": "instruction",
   "said_as": "Which part has your teeth?",
-  "sig": "a2cb133fb43e",
+  "sig": "851ee0ff9d34",
   "text": "Which part has your teeth?",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to": {
   "mood": "instruction",
   "said_as": "Which sense do we use to?",
-  "sig": "5f35b9561010",
+  "sig": "d292071cc5c8",
   "text": "Which sense do we use to",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-eat-a-banana": {
   "mood": "instruction",
   "said_as": "Which sense do we use to eat a banana?",
-  "sig": "08e9a66366e5",
+  "sig": "2235567d92d7",
   "text": "Which sense do we use to eat a banana",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-eat-an-ice-cream": {
   "mood": "instruction",
   "said_as": "Which sense do we use to eat an ice cream?",
-  "sig": "cf37170e7d90",
+  "sig": "ed29a151f354",
   "text": "Which sense do we use to eat an ice cream",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-hug-a-teddy": {
   "mood": "instruction",
   "said_as": "Which sense do we use to hug a teddy?",
-  "sig": "f293c50b66f8",
+  "sig": "eb3885d22bf2",
   "text": "Which sense do we use to hug a teddy",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-listen-to-a-drum": {
   "mood": "instruction",
   "said_as": "Which sense do we use to listen to a drum?",
-  "sig": "c14bbb72953a",
+  "sig": "33eeac3d0c54",
   "text": "Which sense do we use to listen to a drum",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-look-at-the-moon": {
   "mood": "instruction",
   "said_as": "Which sense do we use to look at the moon?",
-  "sig": "fd0783f60c61",
+  "sig": "93aa87a73c05",
   "text": "Which sense do we use to look at the moon",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-sniff-a-flower": {
   "mood": "instruction",
   "said_as": "Which sense do we use to sniff a flower?",
-  "sig": "8c55b5cd4d10",
+  "sig": "0d161fddf065",
   "text": "Which sense do we use to sniff a flower",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-sniff-the-soap": {
   "mood": "instruction",
   "said_as": "Which sense do we use to sniff the soap?",
-  "sig": "4f034cb185e0",
+  "sig": "fda96eb5fb92",
   "text": "Which sense do we use to sniff the soap",
   "voice": "sarah"
  },
  "which-sense-do-we-use-to-stroke-a-pet": {
   "mood": "instruction",
   "said_as": "Which sense do we use to stroke a pet?",
-  "sig": "0cf94ea56e8a",
+  "sig": "2568a5eebe30",
   "text": "Which sense do we use to stroke a pet",
   "voice": "sarah"
  },
  "which-sign-is-it": {
   "mood": "instruction",
   "said_as": "Which sign is it?",
-  "sig": "2e069860770b",
+  "sig": "99876af3c0a5",
   "text": "Which sign is it?",
   "voice": "sarah"
  },
  "which-sign-says": {
   "mood": "instruction",
   "said_as": "Which sign says?",
-  "sig": "b5510fb7e640",
+  "sig": "e16e5bd4b046",
   "text": "Which sign says",
   "voice": "sarah"
  },
  "which-sign-says-books": {
   "mood": "instruction",
   "said_as": "Which sign says Books?",
-  "sig": "f4836875af74",
+  "sig": "8f261719aadd",
   "text": "Which sign says Books",
   "voice": "sarah"
  },
  "which-sign-says-danger": {
   "mood": "instruction",
   "said_as": "Which sign says Danger?",
-  "sig": "8660a85651a8",
+  "sig": "795105ab1933",
   "text": "Which sign says Danger",
   "voice": "sarah"
  },
  "which-sign-says-entrance": {
   "mood": "instruction",
   "said_as": "Which sign says Entrance?",
-  "sig": "53947cd24dab",
+  "sig": "bb2bfa47540c",
   "text": "Which sign says Entrance",
   "voice": "sarah"
  },
  "which-sign-says-exit": {
   "mood": "instruction",
   "said_as": "Which sign says Exit?",
-  "sig": "39053a17cdda",
+  "sig": "cd686642ee56",
   "text": "Which sign says Exit",
   "voice": "sarah"
  },
  "which-sign-says-slow": {
   "mood": "instruction",
   "said_as": "Which sign says Slow?",
-  "sig": "538bbca0a2fd",
+  "sig": "d55ea92228aa",
   "text": "Which sign says Slow",
   "voice": "sarah"
  },
  "which-sign-says-stop": {
   "mood": "instruction",
   "said_as": "Which sign says Stop?",
-  "sig": "61fbd8a7d3df",
+  "sig": "8a8ebe39cff8",
   "text": "Which sign says Stop",
   "voice": "sarah"
  },
  "which-sign-says-toys": {
   "mood": "instruction",
   "said_as": "Which sign says Toys?",
-  "sig": "5603499157c7",
+  "sig": "411b53cb9597",
   "text": "Which sign says Toys",
   "voice": "sarah"
  },
  "which-sign-says-wash-your-hands": {
   "mood": "instruction",
   "said_as": "Which sign says Wash your hands?",
-  "sig": "54e4b2838f96",
+  "sig": "28de01488fdc",
   "text": "Which sign says Wash your hands",
   "voice": "sarah"
  },
  "which-sign-shows-you-where-to-go": {
   "mood": "instruction",
   "said_as": "Which sign shows you where to go?",
-  "sig": "a06395eb49f9",
+  "sig": "899da0d080d3",
   "text": "Which sign shows you where to go?",
   "voice": "sarah"
  },
  "which-sign-tells-you-be-careful-the-road-is-slippery": {
   "mood": "instruction",
   "said_as": "Which sign tells you: be careful, the road is slippery?",
-  "sig": "8c62c04c0811",
+  "sig": "a82da8062bff",
   "text": "Which sign tells you: be careful, the road is slippery?",
   "voice": "sarah"
  },
  "which-sign-tells-you-don-t-waste-water": {
   "mood": "instruction",
   "said_as": "Which sign tells you: don't waste water?",
-  "sig": "ae6ccea2527d",
+  "sig": "40094d5104a1",
   "text": "Which sign tells you: don't waste water?",
   "voice": "sarah"
  },
  "which-sign-tells-you-not-to-dive": {
   "mood": "instruction",
   "said_as": "Which sign tells you not to dive?",
-  "sig": "19e03934f8f2",
+  "sig": "72562edd30ad",
   "text": "Which sign tells you not to dive?",
   "voice": "sarah"
  },
  "which-sign-tells-you-not-to-drink-this-water": {
   "mood": "instruction",
   "said_as": "Which sign tells you not to drink this water?",
-  "sig": "b57e7ee60dd9",
+  "sig": "11ff169a2ed6",
   "text": "Which sign tells you not to drink this water?",
   "voice": "sarah"
  },
  "which-sign-tells-you-to-go-slowly": {
   "mood": "instruction",
   "said_as": "Which sign tells you to go slowly?",
-  "sig": "3ffdcd048cbb",
+  "sig": "61b1f2a68ff0",
   "text": "Which sign tells you to go slowly?",
   "voice": "sarah"
  },
  "which-sign-tells-you-to-wash-your-hands": {
   "mood": "instruction",
   "said_as": "Which sign tells you to wash your hands?",
-  "sig": "9d489d459408",
+  "sig": "737075e06a22",
   "text": "Which sign tells you to wash your hands?",
   "voice": "sarah"
  },
  "which-sign-tells-you-where-you-can-read-a-book": {
   "mood": "instruction",
   "said_as": "Which sign tells you where you can read a book?",
-  "sig": "4752f7d64a1e",
+  "sig": "afbcf67fe107",
   "text": "Which sign tells you where you can read a book?",
   "voice": "sarah"
  },
  "which-word-names-a-part-of-your-body": {
   "mood": "instruction",
   "said_as": "Which word names a part of your body?",
-  "sig": "3b8a7b7914fa",
+  "sig": "2c65f080df3c",
   "text": "Which word names a part of your body?",
   "voice": "sarah"
  },
  "which-word-starts-like": {
   "mood": "instruction",
   "said_as": "Which word starts like?",
-  "sig": "18798697118d",
+  "sig": "6bc26528c225",
   "text": "Which word starts like",
   "voice": "sarah"
  },
  "which-word-starts-like-bag": {
   "mood": "instruction",
   "said_as": "Which word starts like bag?",
-  "sig": "1db7916cf140",
+  "sig": "54ced6afb56a",
   "text": "Which word starts like bag",
   "voice": "sarah"
  },
  "which-word-starts-like-ball": {
   "mood": "instruction",
   "said_as": "Which word starts like ball?",
-  "sig": "daa34000f64f",
+  "sig": "9e4cbcc7fc8c",
   "text": "Which word starts like ball",
   "voice": "sarah"
  },
  "which-word-starts-like-banana": {
   "mood": "instruction",
   "said_as": "Which word starts like banana?",
-  "sig": "b50a0d8f5410",
+  "sig": "e78ff641a10c",
   "text": "Which word starts like banana",
   "voice": "sarah"
  },
  "which-word-starts-like-bell": {
   "mood": "instruction",
   "said_as": "Which word starts like bell?",
-  "sig": "d26a5ce09da8",
+  "sig": "44e3c1f430e2",
   "text": "Which word starts like bell",
   "voice": "sarah"
  },
  "which-word-starts-like-book": {
   "mood": "instruction",
   "said_as": "Which word starts like book?",
-  "sig": "67a6e9564b1d",
+  "sig": "1ddc50875460",
   "text": "Which word starts like book",
   "voice": "sarah"
  },
  "which-word-starts-like-bus": {
   "mood": "instruction",
   "said_as": "Which word starts like bus?",
-  "sig": "7fa98ab20634",
+  "sig": "5690368a52db",
   "text": "Which word starts like bus",
   "voice": "sarah"
  },
  "which-word-starts-like-door": {
   "mood": "instruction",
   "said_as": "Which word starts like door?",
-  "sig": "40c9f8be4a53",
+  "sig": "369d56aa5730",
   "text": "Which word starts like door",
   "voice": "sarah"
  },
  "which-word-starts-like-drum": {
   "mood": "instruction",
   "said_as": "Which word starts like drum?",
-  "sig": "baa649ce8fbf",
+  "sig": "047e6b9d2122",
   "text": "Which word starts like drum",
   "voice": "sarah"
  },
  "which-word-starts-like-duck": {
   "mood": "instruction",
   "said_as": "Which word starts like duck?",
-  "sig": "96db2c97d0c8",
+  "sig": "9890ee755a38",
   "text": "Which word starts like duck",
   "voice": "sarah"
  },
  "which-word-starts-like-egg": {
   "mood": "instruction",
   "said_as": "Which word starts like egg?",
-  "sig": "1ab2fb99c71e",
+  "sig": "a2ac0a6f7198",
   "text": "Which word starts like egg",
   "voice": "sarah"
  },
  "which-word-starts-like-elephant": {
   "mood": "instruction",
   "said_as": "Which word starts like elephant?",
-  "sig": "488ab4feb3f9",
+  "sig": "8f86206e7c45",
   "text": "Which word starts like elephant",
   "voice": "sarah"
  },
  "which-word-starts-like-exit": {
   "mood": "instruction",
   "said_as": "Which word starts like exit?",
-  "sig": "9c53f07ba9c7",
+  "sig": "625142760b53",
   "text": "Which word starts like exit",
   "voice": "sarah"
  },
  "which-word-starts-like-face": {
   "mood": "instruction",
   "said_as": "Which word starts like face?",
-  "sig": "6c4b479c0032",
+  "sig": "f404ed658392",
   "text": "Which word starts like face",
   "voice": "sarah"
  },
  "which-word-starts-like-fan": {
   "mood": "instruction",
   "said_as": "Which word starts like fan?",
-  "sig": "328703deb72a",
+  "sig": "c83d62252188",
   "text": "Which word starts like fan",
   "voice": "sarah"
  },
  "which-word-starts-like-fish": {
   "mood": "instruction",
   "said_as": "Which word starts like fish?",
-  "sig": "c9b4aa9d9da4",
+  "sig": "8e28aa0fd6ba",
   "text": "Which word starts like fish",
   "voice": "sarah"
  },
  "which-word-starts-like-foot": {
   "mood": "instruction",
   "said_as": "Which word starts like foot?",
-  "sig": "1faf3e48e87f",
+  "sig": "802060fdb4e7",
   "text": "Which word starts like foot",
   "voice": "sarah"
  },
  "which-word-starts-like-hand": {
   "mood": "instruction",
   "said_as": "Which word starts like hand?",
-  "sig": "92e6f76b1ae0",
+  "sig": "82cabb1ee691",
   "text": "Which word starts like hand",
   "voice": "sarah"
  },
  "which-word-starts-like-hat": {
   "mood": "instruction",
   "said_as": "Which word starts like hat?",
-  "sig": "c021090a8f96",
+  "sig": "1908264b6e28",
   "text": "Which word starts like hat",
   "voice": "sarah"
  },
  "which-word-starts-like-hen": {
   "mood": "instruction",
   "said_as": "Which word starts like hen?",
-  "sig": "2a90c7c9c7ab",
+  "sig": "c1e084e7d807",
   "text": "Which word starts like hen",
   "voice": "sarah"
  },
  "which-word-starts-like-house": {
   "mood": "instruction",
   "said_as": "Which word starts like house?",
-  "sig": "ee3685ca33fe",
+  "sig": "b00648a348f1",
   "text": "Which word starts like house",
   "voice": "sarah"
  },
  "which-word-starts-like-leaf": {
   "mood": "instruction",
   "said_as": "Which word starts like leaf?",
-  "sig": "4d5889785004",
+  "sig": "d9106dae2de1",
   "text": "Which word starts like leaf",
   "voice": "sarah"
  },
  "which-word-starts-like-leg": {
   "mood": "instruction",
   "said_as": "Which word starts like leg?",
-  "sig": "f2aaf65360d6",
+  "sig": "f1040011d860",
   "text": "Which word starts like leg",
   "voice": "sarah"
  },
  "which-word-starts-like-lion": {
   "mood": "instruction",
   "said_as": "Which word starts like lion?",
-  "sig": "340b2a24211e",
+  "sig": "9cd6ea54ff7f",
   "text": "Which word starts like lion",
   "voice": "sarah"
  },
  "which-word-starts-like-lollipop": {
   "mood": "instruction",
   "said_as": "Which word starts like lollipop?",
-  "sig": "b98ba408ef7e",
+  "sig": "c71c04933637",
   "text": "Which word starts like lollipop",
   "voice": "sarah"
  },
  "which-word-starts-like-mango": {
   "mood": "instruction",
   "said_as": "Which word starts like mango?",
-  "sig": "f0eac38d0ec0",
+  "sig": "9a0278e4dfe8",
   "text": "Which word starts like mango",
   "voice": "sarah"
  },
  "which-word-starts-like-milk": {
   "mood": "instruction",
   "said_as": "Which word starts like milk?",
-  "sig": "8b4ad3c4ad52",
+  "sig": "bcc96ee3ed9f",
   "text": "Which word starts like milk",
   "voice": "sarah"
  },
  "which-word-starts-like-moon": {
   "mood": "instruction",
   "said_as": "Which word starts like moon?",
-  "sig": "ae3981c2eaab",
+  "sig": "1d461d82ff06",
   "text": "Which word starts like moon",
   "voice": "sarah"
  },
  "which-word-starts-like-mouth": {
   "mood": "instruction",
   "said_as": "Which word starts like mouth?",
-  "sig": "709cef29d6c6",
+  "sig": "752be9c33000",
   "text": "Which word starts like mouth",
   "voice": "sarah"
  },
  "which-word-starts-like-nest": {
   "mood": "instruction",
   "said_as": "Which word starts like nest?",
-  "sig": "aab82edb25bb",
+  "sig": "ffcb0f48a542",
   "text": "Which word starts like nest",
   "voice": "sarah"
  },
  "which-word-starts-like-nine": {
   "mood": "instruction",
   "said_as": "Which word starts like nine?",
-  "sig": "8e7c8eeb952e",
+  "sig": "9f3c405ed731",
   "text": "Which word starts like nine",
   "voice": "sarah"
  },
  "which-word-starts-like-nose": {
   "mood": "instruction",
   "said_as": "Which word starts like nose?",
-  "sig": "829063601e3d",
+  "sig": "45b74dbf0d44",
   "text": "Which word starts like nose",
   "voice": "sarah"
  },
  "which-word-starts-like-sign": {
   "mood": "instruction",
   "said_as": "Which word starts like sign?",
-  "sig": "cac544f71a69",
+  "sig": "c95b30a8bcbb",
   "text": "Which word starts like sign",
   "voice": "sarah"
  },
  "which-word-starts-like-soap": {
   "mood": "instruction",
   "said_as": "Which word starts like soap?",
-  "sig": "c8c23d37d959",
+  "sig": "d20d7674eb88",
   "text": "Which word starts like soap",
   "voice": "sarah"
  },
  "which-word-starts-like-sock": {
   "mood": "instruction",
   "said_as": "Which word starts like sock?",
-  "sig": "5fb10b9e363e",
+  "sig": "f4818940b067",
   "text": "Which word starts like sock",
   "voice": "sarah"
  },
  "which-word-starts-like-staff": {
   "mood": "instruction",
   "said_as": "Which word starts like staff?",
-  "sig": "95505e4308fa",
+  "sig": "6644eb17337e",
   "text": "Which word starts like staff",
   "voice": "sarah"
  },
  "which-word-starts-like-stop": {
   "mood": "instruction",
   "said_as": "Which word starts like stop?",
-  "sig": "afdbdf231f7c",
+  "sig": "f28093e5cdaf",
   "text": "Which word starts like stop",
   "voice": "sarah"
  },
  "which-word-starts-like-sun": {
   "mood": "instruction",
   "said_as": "Which word starts like sun?",
-  "sig": "2c1d49273fcd",
+  "sig": "eabc3bdbdd17",
   "text": "Which word starts like sun",
   "voice": "sarah"
  },
  "which-word-starts-like-tap": {
   "mood": "instruction",
   "said_as": "Which word starts like tap?",
-  "sig": "0536300ab4cf",
+  "sig": "6803eb14f40e",
   "text": "Which word starts like tap",
   "voice": "sarah"
  },
  "which-word-starts-like-teeth": {
   "mood": "instruction",
   "said_as": "Which word starts like teeth?",
-  "sig": "7a009dfd95fe",
+  "sig": "cb9be356ee33",
   "text": "Which word starts like teeth",
   "voice": "sarah"
  },
  "which-word-starts-like-toys": {
   "mood": "instruction",
   "said_as": "Which word starts like toys?",
-  "sig": "5cb378e982e6",
+  "sig": "82527d54a070",
   "text": "Which word starts like toys",
   "voice": "sarah"
  },
  "which-word-starts-like-tree": {
   "mood": "instruction",
   "said_as": "Which word starts like tree?",
-  "sig": "aa2cb7111fd6",
+  "sig": "94f23c1927db",
   "text": "Which word starts like tree",
   "voice": "sarah"
  },
  "with": {
   "mood": "word",
   "said_as": "with.",
-  "sig": "b665a7c51da8",
+  "sig": "65c1c5523fdc",
   "text": "with",
   "voice": "sarah"
  },
  "word-hunt-find-the-word-on-each-page": {
   "mood": "instruction",
   "said_as": "Word hunt! Find the word on each page.",
-  "sig": "9c87f6bbabf7",
+  "sig": "3ec44b7db9ce",
   "text": "Word hunt! Find the word on each page.",
   "voice": "sarah"
  },
  "words-that-name-things-are-called-nouns-which-word-is-a-naming-word": {
   "mood": "instruction",
   "said_as": "Words that name things are called nouns. Which word is a naming word?",
-  "sig": "0fc28a24aa52",
+  "sig": "33939717acb8",
   "text": "Words that name things are called nouns. Which word is a naming word?",
   "voice": "sarah"
  },
  "wow": {
   "mood": "excited",
   "said_as": "Wow!",
-  "sig": "45e745e9ef8e",
+  "sig": "cae0f4c3c48a",
   "text": "Wow!",
   "voice": "sarah"
  },
  "writing": {
   "mood": "word",
   "said_as": "writing.",
-  "sig": "7f2a7f716dec",
+  "sig": "15cb810cc30a",
   "text": "writing",
   "voice": "sarah"
  },
  "writing-or-pictures-that-tell-or-show-people-something": {
-  "mood": "instruction",
+  "mood": "read",
+  "phrases": [
+   "writing or pictures",
+   "that tell or show",
+   "people something."
+  ],
   "said_as": "writing or pictures that tell or show people something.",
-  "sig": "67bd10f31a17",
+  "sig": "beb51571c86e",
   "text": "writing or pictures that tell or show people something.",
+  "times": [
+   0.03,
+   0.599,
+   0.883,
+   2.437,
+   2.783,
+   3.13,
+   3.477,
+   4.523,
+   5.035
+  ],
   "voice": "sarah"
  },
  "yay": {
   "mood": "excited",
   "said_as": "Yaaay!",
-  "sig": "8ad10c13f865",
+  "sig": "0c6380ca4813",
   "text": "Yay!",
   "voice": "sarah"
  },
  "yay-three-stars-you-are-a-star": {
   "mood": "excited",
   "said_as": "Yay! Three stars! You are a star!",
-  "sig": "5e8da9d036b6",
+  "sig": "5693d9dc87e6",
   "text": "Yay! Three stars! You are a star!",
   "voice": "sarah"
  },
  "you-finished-level-1": {
   "mood": "instruction",
   "said_as": "You finished level 1!",
-  "sig": "be95bd2033b9",
+  "sig": "ade056088d52",
   "text": "You finished level 1!",
   "voice": "sarah"
  },
  "you-finished-level-2": {
   "mood": "instruction",
   "said_as": "You finished level 2!",
-  "sig": "23afe168aaf4",
+  "sig": "4936b0223832",
   "text": "You finished level 2!",
   "voice": "sarah"
  },
  "you-finished-level-3": {
   "mood": "instruction",
   "said_as": "You finished level 3!",
-  "sig": "03a5da2f5185",
+  "sig": "2c5040acffc6",
   "text": "You finished level 3!",
   "voice": "sarah"
  },
  "you-finished-level-4": {
   "mood": "instruction",
   "said_as": "You finished level 4!",
-  "sig": "19b4b8d72d28",
+  "sig": "ff6388c92a02",
   "text": "You finished level 4!",
   "voice": "sarah"
  },
  "you-finished-level-5": {
   "mood": "instruction",
   "said_as": "You finished level 5!",
-  "sig": "ce97f09af0e6",
+  "sig": "3c30ed783549",
   "text": "You finished level 5!",
   "voice": "sarah"
  },
  "you-finished-level-6": {
   "mood": "instruction",
   "said_as": "You finished level 6!",
-  "sig": "96718ae85c7b",
+  "sig": "6a671c06cf2d",
   "text": "You finished level 6!",
   "voice": "sarah"
  },
  "you-got-it": {
   "mood": "excited",
   "said_as": "Yes! You got it!",
-  "sig": "44617d2e7fe6",
+  "sig": "e405eef7794e",
   "text": "You got it!",
   "voice": "sarah"
  }

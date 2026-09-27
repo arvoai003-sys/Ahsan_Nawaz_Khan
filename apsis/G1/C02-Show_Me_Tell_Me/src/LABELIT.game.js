@@ -1,5 +1,5 @@
 // @asset ENG01CH02LABELIT
-// @version v-01
+// @version v-02
 // @title Label It
 // @engine match
 /* A4 · Label It · Grammar and Vocabulary > Labels · O3
@@ -98,7 +98,7 @@
   Match.init(CONTENT);
   Shell.boot({
     asset: "ENG01CH02LABELIT",
-    version: "v-01",
+    version: "v-02",
     title: "Label It",
     intro: "Put each label in the right place.",
     theme: "classroom",
